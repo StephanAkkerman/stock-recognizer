@@ -252,3 +252,18 @@ def test_cashtag(recognizer):
     assert "MBLY" in results
     assert "INTC" in results
     assert len(results) == 2
+
+
+def test_simple_tickers(recognizer):
+    text = "RDDT and NOK gains Held over the weekend. Just getting started 🔥"
+    results = recognizer.recognize_ai(text)
+    assert "RDDT" in results
+    assert "NOK" in results
+    assert len(results) == 2
+
+
+def test_urls(recognizer):
+    text = """Title:Nasdaq’s top 10 winners averaged +784% gains, surpassing the +622% dot-com peak leaders before the 2000 crash
+Description: Source: [https://finance.yahoo.com/markets/article/the-nasdaqs-top-winners-are-now-running-hotter-than-in-2000-chart-of-the-day-122715863.html](https://finance.yahoo.com/markets/article/the-nasdaqs-top-winners-are-now-running-hotter-than-in-2000-chart-of-the-day-122715863.html)"""
+    results = recognizer.recognize_ai(text)
+    assert len(results) == 0

@@ -11,6 +11,24 @@ EXCHANGE_BLACKLIST = {
     ".HK",
 }
 
+# Major exchange codes used by financedatabase for ticker-universe filtering.
+# US major venues are enabled by default. Global majors can be opt-in.
+US_MAJOR_EXCHANGES = {
+    "NYQ",  # NYSE
+    "NMS",  # NASDAQ Global Select
+    "NGM",  # NASDAQ Global Market
+    "NCM",  # NASDAQ Capital Market
+    "ASE",  # NYSE American
+}
+
+GLOBAL_MAJOR_EXCHANGES = {
+    "LSE",  # London Stock Exchange
+    "JPX",  # Japan Exchange Group (Tokyo)
+    "HKG",  # Hong Kong Exchange
+    "ASX",  # Australian Securities Exchange
+    "TOR",  # Toronto Stock Exchange
+}
+
 COMPANY_SEEDS = {
     "APPLE": "AAPL",
     "MICROSOFT": "MSFT",
@@ -140,6 +158,8 @@ AMBIGUOUS_WORDS = {
     "FED",
     "ETF",
     "IPO",
+    "NASDAQ",
+    "NASDAQS",
     "LLC",
     "USA",
     "USD",

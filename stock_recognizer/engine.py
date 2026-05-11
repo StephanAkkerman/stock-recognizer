@@ -3,24 +3,34 @@ import re
 import financedatabase as fd
 from gliner2 import GLiNER2
 
-from .constants import AMBIGUOUS_WORDS, COMPANY_SEEDS, EXCHANGE_BLACKLIST
+from .constants import (
+    AMBIGUOUS_WORDS,
+    COMPANY_SEEDS,
+    EXCHANGE_BLACKLIST,
+    GLOBAL_MAJOR_EXCHANGES,
+    US_MAJOR_EXCHANGES,
+)
 
 
 class StockRecognizer:
-    def __init__(self, use_ai=False):
+    def __init__(self, use_ai=False, include_global_majors=False):
         print("Initializing Market Intelligence v0.1.7...")
         equities = fd.Equities()
-        self.us_equities = equities.select(country="United States")
+
+        exchanges = set(US_MAJOR_EXCHANGES)
+        if include_global_majors:
+            exchanges.update(GLOBAL_MAJOR_EXCHANGES)
+        self.market_equities = equities.select(exchange=list(exchanges))
 
         self.valid_tickers = {
             t
-            for t in self.us_equities.index
+            for t in self.market_equities.index
             if isinstance(t, str) and not any(ext in t for ext in EXCHANGE_BLACKLIST)
         }
 
         # Build Company Mapper
         self.company_to_ticker = COMPANY_SEEDS.copy()
-        for ticker, row in self.us_equities.iterrows():
+        for ticker, row in self.market_equities.iterrows():
             if isinstance(row.get("name"), str):
                 name = (
                     row["name"]
@@ -45,7 +55,7 @@ class StockRecognizer:
     def _clean_token(self, token):
         """Standardizes tokens by removing 'S and plurals."""
         t = token.upper().strip().replace("$", "")
-        if t.endswith("'S"):
+        if t.endswith("'S") or t.endswith("’S"):
             t = t[:-2]
         # If it's a long word ending in S, try the singular (e.g., AAPLS -> AAPL)
         if len(t) > 3 and t.endswith("S") and t not in self.valid_tickers:
@@ -68,8 +78,15 @@ class StockRecognizer:
 
         # 2. Plain Text Regex
         if not self._is_mostly_uppercase(text):
-            # Match 2-6 uppercase chunks
-            for raw_token in self.ticker_re.findall(text.upper()):
+            text_upper = text.upper()
+            # Match 2-6 uppercase chunks, but skip dot-suffix fragments like .SA/.KL
+            for match in self.ticker_re.finditer(text_upper):
+                start, end = match.span()
+                if start > 0 and text_upper[start - 1] == ".":
+                    continue
+                if end < len(text_upper) and text_upper[end] == ".":
+                    continue
+                raw_token = match.group(0)
                 clean_t = self._clean_token(raw_token)
                 if clean_t in self.valid_tickers and clean_t not in AMBIGUOUS_WORDS:
                     found.add(clean_t)
@@ -102,6 +119,8 @@ class StockRecognizer:
         for mention in all_ai_mentions:
             # 1. Clean the mention
             m_clean = self._clean_token(mention)
+            if any(ext in m_clean for ext in EXCHANGE_BLACKLIST):
+                continue
             if not m_clean or m_clean in AMBIGUOUS_WORDS:
                 continue
 
