@@ -1,4 +1,4 @@
-# Template
+# Stock Recognizer 📈
 
 <!-- Add a banner here like: https://github.com/StephanAkkerman/fintwit-bot/blob/main/img/logo/fintwit-banner.png -->
 
@@ -12,7 +12,7 @@
 
 ## Introduction
 
-In this section you can provide a brief introduction to the project. You can also include a brief description of the project and its features.
+A lightweight, hybrid Python library for extracting stock tickers and company names from messy social media text (Reddit, Twitter, etc.).
 
 ## Table of Contents 🗂
 
@@ -25,7 +25,10 @@ In this section you can provide a brief introduction to the project. You can als
 
 ## Key Features 🔑
 
-This section is optional. If your project has a lot of features, consider adding a list of key features here.
+- **Hybrid Engine**: Combines Regex, `financedatabase` (Market Data), and GLiNER2 (AI).
+- **Context Aware**: Distinguishes between "DD" (Due Diligence) and "DD" (DuPont).
+- **Yelling Protection**: Smart filters for posts written in ALL CAPS.
+- **Auto-Mapping**: Automatically converts "Apple" or "TSMC" to `AAPL` and `TSM`.
 
 ## Installation ⚙️
 <!-- Adjust the link of the second command to your own repo -->
@@ -43,6 +46,21 @@ pip install git+https://github.com/StephanAkkerman/template.git
 ```
 
 ## Usage ⌨️
+```python
+from stock_recognizer import StockRecognizer
+
+# Initialize (Market Data only for speed)
+recognizer = StockRecognizer(use_ai=False)
+
+text = "$PLAB DD: easy to understand TSMC supplier"
+tickers = recognizer.recognize(text)
+print(tickers) # ['PLAB'] (TSMC needs AI mapping)
+
+# Initialize with AI for deep extraction
+recognizer_ai = StockRecognizer(use_ai=True)
+tickers_ai = recognizer_ai.recognize_ai(text)
+print(tickers_ai) # ['PLAB', 'TSM']
+```
 
 ## Citation ✍️
 <!-- Be sure to adjust everything here so it matches your name and repo -->

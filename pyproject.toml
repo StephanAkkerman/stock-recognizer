@@ -1,3 +1,28 @@
+[project]
+name = "stock-recognizer"
+version = "0.1.0"
+authors = [{ name="Stephan Akkerman", email="stephan@akkerman.ai" }]
+description = "High-precision stock ticker and company recognition for social media."
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "financedatabase>=2.2.0",
+    "pandas",
+    "gliner2",
+    "transformers",
+    "torch"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project.urls]
+"Homepage" = "https://github.com/StephanAkkerman/stock-recognizer"
+
+[tool.setuptools.packages.find]
+include = ["stock-recognizer*"]
+
 [tool.isort]
 multi_line_output = 3
 include_trailing_comma = true
