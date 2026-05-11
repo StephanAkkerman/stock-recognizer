@@ -21,7 +21,8 @@ build-backend = "setuptools.build_meta"
 "Homepage" = "https://github.com/StephanAkkerman/stock-recognizer"
 
 [tool.setuptools.packages.find]
-include = ["stock-recognizer*"]
+where = ["."]
+include = ["stock_recognizer*"]
 
 [tool.isort]
 multi_line_output = 3
