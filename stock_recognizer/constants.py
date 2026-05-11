@@ -104,6 +104,10 @@ AMBIGUOUS_WORDS = {
     "LINE",
     "WORK",
     "BOTH",
+    "WWW",
+    "HTTP",
+    "HTTPS",
+    "COM",
     # Slang / Finance
     "DD",
     "WSB",

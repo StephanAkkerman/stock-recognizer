@@ -61,7 +61,9 @@ class StockRecognizer:
         # 1. Cashtags (Golden Rule)
         for tag in self.cashtag_re.findall(text.upper()):
             clean_tag = self._clean_token(tag)
-            if clean_tag in self.valid_tickers:
+            # Cashtags are explicit user intent; trust them even if the
+            # symbol is absent from the current market snapshot.
+            if clean_tag:
                 found.add(clean_tag)
 
         # 2. Plain Text Regex
