@@ -33,16 +33,10 @@ A lightweight, hybrid Python library for extracting stock tickers and company na
 ## Installation ⚙️
 <!-- Adjust the link of the second command to your own repo -->
 
-The required packages to run this code can be found in the requirements.txt file. To run this file, execute the following code block after cloning the repository:
+Installation can be done via pip:
 
 ```bash
-pip install -r requirements.txt
-```
-
-or
-
-```bash
-pip install git+https://github.com/StephanAkkerman/stock-recognizer.git
+pip install stock-recognizer
 ```
 
 ## Usage ⌨️
