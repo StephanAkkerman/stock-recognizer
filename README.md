@@ -5,8 +5,8 @@
 ---
 <!-- Adjust the link of the first and second badges to your own repo -->
 <p align="center">
-  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/StephanAkkerman/template/pyversions.yml?label=python%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13&logo=python&style=flat-square">
-  <img src="https://img.shields.io/github/license/StephanAkkerman/template.svg?color=brightgreen" alt="License">
+  <img alt="GitHub Actions Workflow Status" src="https://img.shields.io/github/actions/workflow/status/StephanAkkerman/stock-recognizer/pyversions.yml?label=python%203.10%20%7C%203.11%20%7C%203.12%20%7C%203.13&logo=python&style=flat-square">
+  <img src="https://img.shields.io/github/license/StephanAkkerman/stock-recognizer.svg?color=brightgreen" alt="License">
   <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
 </p>
 
@@ -42,7 +42,7 @@ pip install -r requirements.txt
 or
 
 ```bash
-pip install git+https://github.com/StephanAkkerman/template.git
+pip install git+https://github.com/StephanAkkerman/stock-recognizer.git
 ```
 
 ## Usage ⌨️
@@ -69,18 +69,18 @@ If you use this project in your research, please cite as follows:
 ```bibtex
 @misc{project_name,
   author  = {Stephan Akkerman},
-  title   = {Project Name},
-  year    = {2024},
+  title   = {Stock Recognizer},
+  year    = {2026},
   publisher = {GitHub},
   journal = {GitHub repository},
-  howpublished = {\url{https://github.com/StephanAkkerman/template}}
+  howpublished = {\url{https://github.com/StephanAkkerman/stock-recognizer}}
 }
 ```
 
 ## Contributing 🛠
 <!-- Be sure to adjust the repo name here for both the URL and GitHub link -->
 Contributions are welcome! If you have a feature request, bug report, or proposal for code refactoring, please feel free to open an issue on GitHub. We appreciate your help in improving this project.\
-![https://github.com/StephanAkkerman/template/graphs/contributors](https://contributors-img.firebaseapp.com/image?repo=StephanAkkerman/template)
+![https://github.com/StephanAkkerman/stock-recognizer/graphs/contributors](https://contributors-img.firebaseapp.com/image?repo=StephanAkkerman/stock-recognizer)
 
 ## License 📜
 

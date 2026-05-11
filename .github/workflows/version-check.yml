@@ -1,0 +1,55 @@
+name: Check Version Consistency
+
+on:
+    pull_request:
+        paths:
+            - pyproject.toml
+            - stock_recognizer/__init__.py
+            - .github/workflows/version-check.yml
+    push:
+        branches: [main]
+        paths:
+            - pyproject.toml
+            - stock_recognizer/__init__.py
+
+permissions:
+    contents: read
+
+jobs:
+    version-consistency:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v4
+
+            - name: Set up Python
+              uses: actions/setup-python@v5
+              with:
+                  python-version: "3.11"
+
+            - name: Validate package versions match
+              run: |
+                  python - <<'PY'
+                  import pathlib
+                  import re
+                  import tomllib
+
+                  pyproject_path = pathlib.Path("pyproject.toml")
+                  init_path = pathlib.Path("stock_recognizer/__init__.py")
+
+                  with pyproject_path.open("rb") as f:
+                      pyproject = tomllib.load(f)
+                  pyproject_version = pyproject["project"]["version"]
+
+                  init_text = init_path.read_text(encoding="utf-8")
+                  m = re.search(r"^__version__\s*=\s*\"([^\"]+)\"", init_text, re.MULTILINE)
+                  if not m:
+                      raise SystemExit("Missing __version__ in stock_recognizer/__init__.py")
+                  init_version = m.group(1)
+
+                  if init_version != pyproject_version:
+                      raise SystemExit(
+                          f"Version mismatch: __init__.py has {init_version}, pyproject.toml has {pyproject_version}"
+                      )
+
+                  print(f"Version check passed: {pyproject_version}")
+                  PY
