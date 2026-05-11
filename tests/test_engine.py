@@ -136,3 +136,119 @@ def test_long_reddit_dd_simulation(recognizer):
     assert "10-Q" not in results
     assert "IS" not in results  # from the all-caps sentence
     assert "THE" not in results
+
+
+def test_reddit_noise_cleanup(recognizer):
+    # Tests 'S', 'AM', 'HI', 'ADD' from your output
+    text = "It’s almost Monday! I am getting ready. The CEO ate his hat. Robinhood adds short selling."
+    results = recognizer.recognize(text)
+    # These words are valid tickers in the DB but should be blocked by our Ambiguity Shield
+    assert "S" not in results
+    assert "AM" not in results
+    assert "HI" not in results
+    assert "ADD" not in results
+
+
+def test_international_suffix_removal(recognizer):
+    # Tests 'N1DA34.SA' and '7195.KL'
+    text = "Nasdaq winners N1DA34.SA and Intel SK Hynix 7195.KL"
+    results = recognizer.recognize(text)
+    assert "N1DA34.SA" not in results
+    assert "7195.KL" not in results
+
+
+def test_url_and_artifact_filter(recognizer):
+    # Tests 'WWW', 'EYES', 'AMP'
+    text = "Source: https://www.techpowerup.com/sk-hynix-eyes-intel-amp"
+    results = recognizer.recognize(text)
+    assert "WWW" not in results
+    assert "EYES" not in results
+    assert "AMP" not in results
+
+
+def test_all_caps_sentence_protection(recognizer):
+    # Tests 'IS', 'THE', 'FED'
+    text = "IS THE FED GOING TO PIVOT? Who knows."
+    results = recognizer.recognize(text)
+    assert "IS" not in results
+    assert "THE" not in results
+    assert "FED" not in results
+
+
+def test_new_company_seeds(recognizer):
+    # Tests the updated seeds for Micron and Canon
+    case1 = "Deutsche Bank raises Micron stock price target to $1,000"
+    results1 = recognizer.recognize_ai(case1)
+    assert "MU" in results1
+
+    case2 = "The Lithography Canon $CAJPY"
+    results2 = recognizer.recognize_ai(case2)
+    assert "CAJPY" in results2
+
+
+def test_reddit_noise_filter(recognizer):
+    # Tests the specific noise words found in your last run
+    text = "It’s almost Monday! I am getting ready. The CEO ate his hat. Robinhood adds short selling."
+    results = recognizer.recognize(text)
+
+    # These are all valid tickers that should be blocked by the Ambiguity Shield
+    noise = ["AM", "HI", "S", "ADD"]
+    for word in noise:
+        assert word not in results
+
+
+def test_financial_jargon_shield(recognizer):
+    # Tests common financial terms that are also tickers
+    text = "I am currently watching the AI and MIN futures. UPS is up. PSA: keep a cool head."
+    results = recognizer.recognize(text)
+
+    # 'AI' (C3.ai) and 'UPS' (United Parcel Service) are real tickers,
+    # but in this context they are noise/words.
+    # Without a $, they should be ignored.
+    assert "AI" not in results
+    assert "MIN" not in results
+    assert "UPS" not in results
+    assert "PSA" not in results
+
+
+def test_international_denial(recognizer):
+    # Tests that .SA and .KL and other suffixes are totally ignored
+    text = "Nasdaq winners N1DA34.SA and Intel 7195.KL"
+    results = recognizer.recognize(text)
+    assert "N1DA34.SA" not in results
+    assert "7195.KL" not in results
+
+
+def test_lowercase_cashtag(recognizer):
+    # Tests that $aapl works just as well as $AAPL
+    text = "I am buying more $mram and $rklb"
+    results = recognizer.recognize(text)
+    assert "MRAM" in results
+    assert "RKLB" in results
+
+
+def test_complex_description_parsing(recognizer):
+    # A simulated messy post body
+    text = """
+    Iran war could prompt Federal Reserve to raise rates, Pimco says.
+    This is not financial advice, just my plan. I made it back to my peak.
+    Some continued oil plays and SPY 0DTEs. Shift from AI to SPACE.
+    Focus on Arxis, Inc. (ARXS).
+    """
+    results = recognizer.recognize_ai(text)
+
+    # Arxis is a real ticker (ARXS) and has 'Inc' in the name, testing mapping
+    assert "ARXS" in results
+
+    # Ensure noise words used in this specific text are blocked
+    blocked = ["BY", "SAY", "PLAN", "BACK", "PEAK", "SOME", "AI", "SO", "BE"]
+    for word in blocked:
+        assert word not in results
+
+
+def test_cashtag(recognizer):
+    text = "£500,000 on $MBLY 🤖 Good enough for Intel good enough for me. 5x my position after discussing this name with you degens over the weekend. Let’s ride. 😆"
+    results = recognizer.recognize_ai(text)
+    assert "MBLY" in results
+    assert "INTC" in results
+    assert len(results) == 2
