@@ -267,3 +267,34 @@ def test_urls(recognizer):
 Description: Source: [https://finance.yahoo.com/markets/article/the-nasdaqs-top-winners-are-now-running-hotter-than-in-2000-chart-of-the-day-122715863.html](https://finance.yahoo.com/markets/article/the-nasdaqs-top-winners-are-now-running-hotter-than-in-2000-chart-of-the-day-122715863.html)"""
     results = recognizer.recognize_ai(text)
     assert len(results) == 0
+
+
+def test_long_form_post(recognizer):
+    text = """
+    Title:Eugene's back in the game with a high conviction bet: KEEL
+Description: Hi Regards, been a while. Well, I'm getting back in the game a bit.
+
+This whole AI frothy space can be pretty tricky to navigate, and hardware is already way overpriced, and who the fuck knows what's happening with software in this environment... but one thing is clear: There is insatiable hunger for data center infrastructure.
+
+Many players that are further ahead in this space have already had massive run-ups: NBIS, HUT, VRT.
+
+**Why KEEL**? Because they are still early in their transformation from running crypto data centers to their AI datacenter pivot. Market cap is still relatively low at $2.5BB.
+
+They just had their latest ER in which they articulated that they already have 2 Gigawatts of energy secured across north-american data center sites. These sites can go live as early as 2027... and they are looking to close 3 lease deals by end of 2026. As soon as they announce any one of these deals, I expect the stock to moon. They have enough cash and liquidity on hand through 2028 - well enough time to secure said lease deals. This means dilution events are unlikely.
+
+So, just look at the charts for NBIS and HUT as their closest analogs. If they get all those deals signed, I expect this stock to 2-3x by end of year, and a 10x by end of 2028 once they actually start operating.
+
+This is free money.
+
+**Positions:**
+
+10k shares
+
+100 Jan 15 2027 $5 calls
+    """
+    results = recognizer.recognize_ai(text)
+    assert "KEEL" in results
+    assert "NBIS" in results
+    assert "HUT" in results
+    assert "VRT" in results
+    assert len(results) == 4
