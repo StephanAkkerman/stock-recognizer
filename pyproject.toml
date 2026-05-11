@@ -1,6 +1,6 @@
 [project]
 name = "stock-recognizer"
-version = "0.1.0"
+version = "0.1.1"
 authors = [{ name="Stephan Akkerman", email="stephan@akkerman.ai" }]
 description = "High-precision stock ticker and company recognition for social media."
 readme = "README.md"
