@@ -380,4 +380,10 @@ https://preview.redd.it/ur547m9ndp0h1.png?width=1195&format=png&auto=webp&s=3d6a
 """
     results = recognizer.recognize_ai(text)
     assert "BIRK" in results
-    assert len(results) == 1
+    assert "DECK" in results
+    assert "NKE" in results
+    assert "ONON" in results
+    assert "RL" in results
+    assert "TPR" in results
+    assert "DAL" in results
+    assert len(results) == 7
