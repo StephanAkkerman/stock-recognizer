@@ -387,3 +387,12 @@ https://preview.redd.it/ur547m9ndp0h1.png?width=1195&format=png&auto=webp&s=3d6a
     assert "TPR" in results
     assert "DAL" in results
     assert len(results) == 7
+
+
+def test_common_slang(recognizer):
+    text = "My DD is that this is an ITM play, YOLO!"
+    results = recognizer.recognize_ai(text)
+    assert "DD" not in results
+    assert "ITM" not in results
+    assert "YOLO" not in results
+    assert len(results) == 0

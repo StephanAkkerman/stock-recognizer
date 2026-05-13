@@ -21,7 +21,7 @@ class StockRecognizer:
         if include_global_majors:
             exchanges.update(GLOBAL_MAJOR_EXCHANGES)
         self.market_equities = equities.select(exchange=list(exchanges))
-
+        self.ambiguous = AMBIGUOUS_WORDS
         self.valid_tickers = {
             t
             for t in self.market_equities.index

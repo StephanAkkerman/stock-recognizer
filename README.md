@@ -10,6 +10,9 @@
   <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
 </p>
 
+> [!WARNING]
+> This project is still in its alpha stage. The API is not stable and may change without warning. Use with caution and expect breaking changes. I am still busy optimizing the engine.
+
 ## Introduction
 
 A lightweight, hybrid Python library for extracting stock tickers and company names from messy social media text (Reddit, Twitter, etc.).
