@@ -15,7 +15,8 @@ from .constants import (
 
 
 class StockRecognizer:
-    def __init__(self, use_ai=False, include_global_majors=False):
+
+    def __init__(self, use_ai=False, include_global_majors=False, adapter_path=None):
         print("Initializing Market Intelligence v0.1.7...")
         equities = fd.Equities()
 
@@ -58,7 +59,10 @@ class StockRecognizer:
             self.extractor = GLiNER2.from_pretrained("fastino/gliner2-large-v1")
 
             # 2. Snap on your custom adapter
-            adapter_path = "trainer/models/reddit_adapter/final"
+            # Use the provided path, fallback if none provided
+            if adapter_path and os.path.exists(adapter_path):
+                self.extractor.load_adapter(adapter_path)
+
             if os.path.exists(adapter_path):
                 self.logger.info(f"Loading LoRA adapter from {adapter_path}...")
                 self.extractor.load_adapter(adapter_path)

@@ -1,0 +1,7 @@
+<View>
+  <Labels name="label" toName="text">
+    <Label value="ticker" background="#FFA39E"/>
+    <Label value="company" background="#91BAF8"/>
+  </Labels>
+  <Text name="text" value="$text"/>
+</View>
