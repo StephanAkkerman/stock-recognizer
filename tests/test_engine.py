@@ -309,7 +309,7 @@ def test_reddit_post(recognizer):
 
 
 def test_very_long_post(recognizer):
-    text = """
+    text = r"""
 Title:$BIRK May 13th Earnings DD: The Triple Tariff Catalyst. Why Illegal Taxes and Refund Claims make this a $55+ Stock.
 Description: I put the TLDR at the top cause I know you regards won't read the bulk of this:
 
@@ -396,3 +396,10 @@ def test_common_slang(recognizer):
     assert "ITM" not in results
     assert "YOLO" not in results
     assert len(results) == 0
+
+
+def test_ethe_post(recognizer):
+    text = "Grayscale Trust Selling at a huge discount. will climb when it forks to proof of stake. ETHE will get both forks, will probably sell off the proof of work stake and pay a special dividend. Then the trust will most likely start paying a dividend when it gets paid for its proof of stake. Could be 12% or more per year. Plus ETHE is heavily shorted. This is rocketing higher this month. No doubts."
+    results = recognizer.recognize_ai(text)
+    assert "ETHE" in results
+    assert len(results) == 1

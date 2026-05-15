@@ -1,3 +1,5 @@
+import logging
+import os
 import re
 
 import financedatabase as fd
@@ -47,10 +49,39 @@ class StockRecognizer:
         # Simplified Regex: Just find blocks of 2-6 letters
         self.ticker_re = re.compile(r"\b[A-Z]{2,6}\b")
         self.cashtag_re = re.compile(r"\$([A-Z]{1,6})\b")
+        self.logger = logging.getLogger(__name__)
 
         self.extractor = None
+        self.use_ai = use_ai
         if use_ai:
-            self.extractor = GLiNER2.from_pretrained("fastino/gliner2-base-v1")
+            # 1. Load the Large base model
+            self.extractor = GLiNER2.from_pretrained("fastino/gliner2-large-v1")
+
+            # 2. Snap on your custom adapter
+            adapter_path = "trainer/models/reddit_adapter/final"
+            if os.path.exists(adapter_path):
+                self.logger.info(f"Loading LoRA adapter from {adapter_path}...")
+                self.extractor.load_adapter(adapter_path)
+
+            # 3. Store the successful descriptions
+            self.ai_labels = {
+                "ticker": "A stock market ticker symbol, usually 1-5 uppercase letters...",
+                "company": "The name of a corporation, brand, or business entity...",
+            }
+
+    def get_ai_entities(self, text):
+        """Helper to get flattened AI results."""
+        raw = self.extractor.extract_entities(
+            text, self.ai_labels, threshold=0.7, include_spans=True
+        )
+        flat = []
+        if isinstance(raw, dict) and "entities" in raw:
+            for label, items in raw["entities"].items():
+                for item in items:
+                    flat.append(
+                        {"start": item["start"], "end": item["end"], "label": label}
+                    )
+        return flat
 
     def _clean_token(self, token):
         """Standardizes tokens by removing 'S and plurals."""
@@ -108,7 +139,8 @@ class StockRecognizer:
         try:
             # We treat 'company' and 'ticker' labels as "potential entities"
             result = self.extractor.extract_entities(text, ["company", "ticker"])
-        except:
+        except Exception:
+            self.logger.warning("Failed to extract entities with AI model.")
             return list(found)
 
         entities = result.get("entities", result) if isinstance(result, dict) else {}
