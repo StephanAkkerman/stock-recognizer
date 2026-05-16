@@ -1,6 +1,7 @@
 import glob
 import json
 import os
+import re
 
 from gliner2 import GLiNER2
 from rich.console import Console
@@ -8,6 +9,39 @@ from rich.progress import Progress
 from rich.table import Table
 
 console = Console()
+
+
+def get_all_adapters(models_dir="./models"):
+    """Scans the models directory and returns a sorted list of all valid adapters."""
+    if not os.path.exists(models_dir):
+        return []
+
+    adapters = glob.glob(os.path.join(models_dir, "reddit_adapter*"))
+    valid_adapters = []
+
+    for adapter_dir in adapters:
+        final_path = os.path.join(adapter_dir, "final")
+        if not os.path.exists(final_path):
+            continue
+
+        folder_name = os.path.basename(adapter_dir)
+
+        # Extract version number
+        match = re.search(r"_v(\d+)$", folder_name)
+        if match:
+            v = int(match.group(1))
+        elif folder_name == "reddit_adapter":
+            v = 1
+        else:
+            continue
+
+        valid_adapters.append(
+            {"version": v, "name": f"GLiNER2 Large + Adapter v{v}", "path": final_path}
+        )
+
+    # Sort by version number ascending (so slicing [-X:] gives the absolute latest)
+    valid_adapters.sort(key=lambda x: x["version"])
+    return valid_adapters
 
 
 def parse_all_label_studio_exports(folder_path):
@@ -136,6 +170,10 @@ def evaluate_model(
 
 
 if __name__ == "__main__":
+    # --- CUSTOMIZATION SETTINGS ---
+    NUM_VERSIONS_TO_TEST = 2  # Set to None to test all versions, or an integer like 2
+    # ------------------------------
+
     ls_export_folder = "data/labeled"
     dataset = parse_all_label_studio_exports(ls_export_folder)
 
@@ -152,19 +190,30 @@ if __name__ == "__main__":
         )
         results = []
 
+        # Start with the Base Model Configuration
         model_configs = [
             ("fastino/gliner2-large-v1", "GLiNER2 Large Base", None),
-            (
-                "fastino/gliner2-large-v1",
-                "GLiNER2 Large + Adapter v1",
-                "./models/reddit_adapter/final",
-            ),
-            (
-                "fastino/gliner2-large-v1",
-                "GLiNER2 Large + Adapter v2",
-                "./models/reddit_adapter_v2/final",
-            ),
         ]
+
+        # Get all trained adapters
+        available_adapters = get_all_adapters()
+
+        # Slice to keep only the latest X versions if requested
+        if NUM_VERSIONS_TO_TEST and len(available_adapters) > NUM_VERSIONS_TO_TEST:
+            console.print(
+                f"[dim]Slicing to show only the last {NUM_VERSIONS_TO_TEST} adapters.[/dim]"
+            )
+            available_adapters = available_adapters[-NUM_VERSIONS_TO_TEST:]
+
+        # Append them to the configurations execution list
+        for adapter in available_adapters:
+            model_configs.append(
+                (
+                    "fastino/gliner2-large-v1",
+                    adapter["name"],
+                    adapter["path"],
+                )
+            )
 
         with Progress() as progress:
             task = progress.add_task(
