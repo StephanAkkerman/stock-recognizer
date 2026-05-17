@@ -1,3 +1,4 @@
+import copy
 import glob
 import json
 import os
@@ -39,7 +40,7 @@ def get_all_adapters(models_dir="./models"):
             {"version": v, "name": f"GLiNER2 Large + Adapter v{v}", "path": final_path}
         )
 
-    # Sort by version number ascending (so slicing [-X:] gives the absolute latest)
+    # Sort by version number ascending
     valid_adapters.sort(key=lambda x: x["version"])
     return valid_adapters
 
@@ -99,24 +100,48 @@ def calculate_metrics(tp, fp, fn):
     return {"p": precision, "r": recall, "f1": f1}
 
 
+def chunk_text_for_inference(text, chunk_word_size=150, overlap_words=40):
+    """
+    Slices text into overlapping chunks, returning the chunk string and its
+    absolute character start index so predictions can be mapped back accurately.
+    """
+    matches = list(re.finditer(r"\S+", text))
+    chunks = []
+    if not matches:
+        return [(text, 0)]
+
+    step_size = max(1, chunk_word_size - overlap_words)
+
+    for i in range(0, len(matches), step_size):
+        chunk_matches = matches[i : i + chunk_word_size]
+        if not chunk_matches:
+            break
+
+        start_char = chunk_matches[0].start()
+        end_char = chunk_matches[-1].end()
+
+        chunk_text = text[start_char:end_char]
+        chunks.append((chunk_text, start_char))
+
+        if i + chunk_word_size >= len(matches):
+            break
+
+    return chunks
+
+
 def evaluate_model(
-    base_model_path,
+    model_instance,
     test_data,
     model_name="Model",
     label_descriptions=None,
     adapter_path=None,
+    progress_context=None,  # <--- NEW PARAMETER
 ):
-    """Calculates NER metrics, broken down by entity type."""
-    is_local = os.path.isdir(base_model_path)
-    model = GLiNER2.from_pretrained(base_model_path, local_files_only=is_local)
+    """Calculates NER metrics using a pre-instantiated model, batching chunks together."""
 
-    if adapter_path:
-        if os.path.exists(adapter_path):
-            model.load_adapter(adapter_path)
-        else:
-            console.print(
-                f"[bold yellow]Warning: Adapter at {adapter_path} not found![/bold yellow]"
-            )
+    model = model_instance
+    if adapter_path and os.path.exists(adapter_path):
+        model.load_adapter(adapter_path)
 
     labels_to_pass = label_descriptions if label_descriptions else ["ticker", "company"]
     label_keys = (
@@ -125,34 +150,43 @@ def evaluate_model(
         else labels_to_pass
     )
 
-    # Track metrics separately for each label, plus an overall bucket
     metrics_counts = {k: {"tp": 0, "fp": 0, "fn": 0} for k in label_keys}
     metrics_counts["overall"] = {"tp": 0, "fp": 0, "fn": 0}
+
+    # Unpack the progress bar tools if they were passed in
+    progress, task_id = progress_context if progress_context else (None, None)
 
     for entry in test_data:
         text = entry["text"]
         gold_entities = {(e["start"], e["end"], e["label"]) for e in entry["entities"]}
+        pred_entities = set()
 
-        raw_output = model.extract_entities(
-            text, labels_to_pass, threshold=0.75, include_spans=True
+        chunks = chunk_text_for_inference(text, chunk_word_size=150, overlap_words=40)
+        chunk_texts = [c[0] for c in chunks]
+
+        batch_outputs = model.batch_extract_entities(
+            chunk_texts, labels_to_pass, threshold=0.75, include_spans=True
         )
 
-        flat_predictions = []
-        if isinstance(raw_output, dict) and "entities" in raw_output:
-            for label, items in raw_output["entities"].items():
-                for item in items:
-                    flat_predictions.append(
-                        {"start": item["start"], "end": item["end"], "label": label}
-                    )
+        for (chunk_text, chunk_char_offset), raw_output in zip(chunks, batch_outputs):
+            if isinstance(raw_output, dict) and "entities" in raw_output:
+                for label, items in raw_output["entities"].items():
+                    for item in items:
+                        abs_start = chunk_char_offset + item["start"]
+                        abs_end = chunk_char_offset + item["end"]
+                        pred_entities.add((abs_start, abs_end, label))
+            elif isinstance(raw_output, list):
+                for item in raw_output:
+                    abs_start = chunk_char_offset + item["start"]
+                    abs_end = chunk_char_offset + item["end"]
+                    pred_entities.add((abs_start, abs_end, item["label"]))
 
-        pred_entities = {(p["start"], p["end"], p["label"]) for p in flat_predictions}
-
-        # 1. Calculate Overall Metrics
+        # Calculate Overall Metrics
         metrics_counts["overall"]["tp"] += len(pred_entities & gold_entities)
         metrics_counts["overall"]["fp"] += len(pred_entities - gold_entities)
         metrics_counts["overall"]["fn"] += len(gold_entities - pred_entities)
 
-        # 2. Calculate Per-Label Metrics
+        # Calculate Per-Label Metrics
         for label in label_keys:
             gold_label = {e for e in gold_entities if e[2] == label}
             pred_label = {e for e in pred_entities if e[2] == label}
@@ -161,7 +195,10 @@ def evaluate_model(
             metrics_counts[label]["fp"] += len(pred_label - gold_label)
             metrics_counts[label]["fn"] += len(gold_label - pred_label)
 
-    # Compile final scores
+        # --- UPDATE THE PROGRESS BAR PER DOCUMENT ---
+        if progress and task_id is not None:
+            progress.update(task_id, advance=1)
+
     final_scores = {"name": model_name}
     for key, counts in metrics_counts.items():
         final_scores[key] = calculate_metrics(counts["tp"], counts["fp"], counts["fn"])
@@ -171,7 +208,7 @@ def evaluate_model(
 
 if __name__ == "__main__":
     # --- CUSTOMIZATION SETTINGS ---
-    NUM_VERSIONS_TO_TEST = 2  # Set to None to test all versions, or an integer like 2
+    NUM_VERSIONS_TO_TEST = 2
     # ------------------------------
 
     ls_export_folder = "data/labeled"
@@ -190,49 +227,70 @@ if __name__ == "__main__":
         )
         results = []
 
-        # Start with the Base Model Configuration
+        # SPEED OPTIMIZATION: Instantiate base model EXACTLY ONCE globally
+        console.print("[cyan]Loading base GLiNER2 architecture into memory...[/cyan]")
+        shared_base_model = GLiNER2.from_pretrained("fastino/gliner2-large-v1")
+
+        # Set up evaluation targets
         model_configs = [
-            ("fastino/gliner2-large-v1", "GLiNER2 Large Base", None),
+            ("Base Model (Clean)", None),
         ]
 
-        # Get all trained adapters
         available_adapters = get_all_adapters()
-
-        # Slice to keep only the latest X versions if requested
         if NUM_VERSIONS_TO_TEST and len(available_adapters) > NUM_VERSIONS_TO_TEST:
-            console.print(
-                f"[dim]Slicing to show only the last {NUM_VERSIONS_TO_TEST} adapters.[/dim]"
-            )
             available_adapters = available_adapters[-NUM_VERSIONS_TO_TEST:]
 
-        # Append them to the configurations execution list
         for adapter in available_adapters:
-            model_configs.append(
-                (
-                    "fastino/gliner2-large-v1",
-                    adapter["name"],
-                    adapter["path"],
+            model_configs.append((adapter["name"], adapter["path"]))
+
+        # We add some extra formatting columns to make the progress bar look great
+        from rich.progress import (
+            BarColumn,
+            TaskProgressColumn,
+            TextColumn,
+            TimeRemainingColumn,
+        )
+
+        with Progress(
+            TextColumn("[progress.description]{task.description}"),
+            BarColumn(),
+            TaskProgressColumn(),
+            TimeRemainingColumn(),
+        ) as progress:
+
+            # 1. The overall tracker (e.g., 0/3 Models)
+            overall_task = progress.add_task(
+                "[bold cyan]Overall Evaluation...", total=len(model_configs)
+            )
+
+            for name, adapter_path in model_configs:
+                # 2. The granular tracker (e.g., 0/457 Documents)
+                doc_task = progress.add_task(
+                    f"[green]Testing {name}...", total=len(dataset)
                 )
-            )
 
-        with Progress() as progress:
-            task = progress.add_task(
-                "[cyan]Evaluating models...", total=len(model_configs)
-            )
+                model_copy = (
+                    copy.deepcopy(shared_base_model)
+                    if adapter_path
+                    else shared_base_model
+                )
 
-            for base_path, name, adapter_path in model_configs:
                 results.append(
                     evaluate_model(
-                        base_path,
+                        model_copy,
                         dataset,
                         name,
                         label_descriptions=labels,
                         adapter_path=adapter_path,
+                        progress_context=(progress, doc_task),
                     )
                 )
-                progress.update(task, advance=1)
 
-        # Output Table (Multi-row per model)
+                # Advance the overall model tracker and remove the finished document tracker
+                progress.update(overall_task, advance=1)
+                progress.remove_task(doc_task)
+
+        # Output Table
         table = Table(title="NER Benchmark Breakdown (Per-Entity)", show_lines=False)
         table.add_column("Model Configuration", style="cyan", width=35)
         table.add_column("Entity Type", style="blue")
@@ -241,7 +299,6 @@ if __name__ == "__main__":
         table.add_column("F1-Score", style="bold magenta", justify="right")
 
         for r in results:
-            # Row 1: Ticker
             table.add_row(
                 f"[bold]{r['name']}[/bold]",
                 "ticker",
@@ -249,7 +306,6 @@ if __name__ == "__main__":
                 f"{r['ticker']['r']:.2%}",
                 f"{r['ticker']['f1']:.2%}",
             )
-            # Row 2: Company
             table.add_row(
                 "",
                 "company",
@@ -257,7 +313,6 @@ if __name__ == "__main__":
                 f"{r['company']['r']:.2%}",
                 f"{r['company']['f1']:.2%}",
             )
-            # Row 3: Overall
             table.add_row(
                 "",
                 "[bold white]OVERALL[/bold white]",
@@ -265,7 +320,6 @@ if __name__ == "__main__":
                 f"[bold white]{r['overall']['r']:.2%}[/bold white]",
                 f"[bold white]{r['overall']['f1']:.2%}[/bold white]",
             )
-            # Add a line separating the models
             table.add_section()
 
         console.print(table)
