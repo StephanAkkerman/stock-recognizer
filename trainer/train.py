@@ -13,7 +13,7 @@ from rich.console import Console
 console = Console()
 
 SEED = 42
-VAL_FRACTION = 0.1
+VAL_FRACTION = 0.15
 
 ENTITY_DESCRIPTIONS = {
     "ticker": "A stock market ticker symbol, usually 1-5 letters, often preceded by a dollar sign (e.g., $AAPL, TSLA). MUST NOT be option strikes, prices, index names, or internet slang acronyms.",
@@ -220,4 +220,40 @@ if __name__ == "__main__":
 
     console.print(
         f"[bold green]v{next_version} Adapter trained and saved to {output_dir}/final/[/bold green]"
+    )
+
+    # Benchmark the freshly trained adapter and persist the result so the
+    # next ``python trainer/benchmark.py`` run can short-circuit this version.
+    from trainer.benchmark import benchmark_adapter, locate_adapter_weights
+
+    adapter_final = locate_adapter_weights(output_dir)
+    if adapter_final is None:
+        console.print(
+            f"[yellow]No adapter weights found under {output_dir}; "
+            "skipping post-train benchmark.[/yellow]"
+        )
+        raise SystemExit(0)
+    adapter_label = f"GLiNER2 Large + Adapter v{next_version}"
+    training_params = {
+        "num_epochs": config.num_epochs,
+        "batch_size": config.batch_size,
+        "effective_batch_size": EFFECTIVE_BATCH_SIZE,
+        "encoder_lr": config.encoder_lr,
+        "task_lr": config.task_lr,
+        "max_grad_norm": config.max_grad_norm,
+        "early_stopping": config.early_stopping,
+        "early_stopping_patience": config.early_stopping_patience,
+        "seed": SEED,
+        "val_fraction": VAL_FRACTION,
+        "train_samples": len(train_data),
+        "val_samples": len(val_data),
+    }
+    console.print(f"[cyan]Benchmarking {adapter_label}...[/cyan]")
+    metrics, test_hash = benchmark_adapter(
+        adapter_label, adapter_final, training_params=training_params
+    )
+    overall = metrics["overall"]
+    console.print(
+        f"[bold]{adapter_label}[/bold] vs test set [yellow]{test_hash}[/yellow]: "
+        f"P={overall['p']:.2%}  R={overall['r']:.2%}  F1={overall['f1']:.2%}"
     )
