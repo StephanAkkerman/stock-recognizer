@@ -1,8 +1,10 @@
+import copy
 import glob
 import json
 import os
 import re
 
+import torch
 from gliner2 import GLiNER2
 from rich.console import Console
 from rich.progress import (
@@ -169,10 +171,14 @@ def evaluate_model(
 
     # Single inference pass over all chunks, outer-batched so the progress bar
     # can advance and the underlying call sees full batches on GPU.
-    chunk_texts = [c[1] for c in flat_chunks]
-    all_outputs = []
-    for i in range(0, len(chunk_texts), batch_size):
-        batch = chunk_texts[i : i + batch_size]
+    # Sort chunks by length so each batch contains similarly-sized inputs —
+    # cuts padding waste dramatically when chunk lengths are uneven.
+    n = len(flat_chunks)
+    order = sorted(range(n), key=lambda i: len(flat_chunks[i][1]))
+    sorted_texts = [flat_chunks[i][1] for i in order]
+    sorted_outputs = [None] * n
+    for i in range(0, n, batch_size):
+        batch = sorted_texts[i : i + batch_size]
         outputs = model.batch_extract_entities(
             batch,
             labels_to_pass,
@@ -180,9 +186,15 @@ def evaluate_model(
             threshold=0.75,
             include_spans=True,
         )
-        all_outputs.extend(outputs)
+        for j, out in enumerate(outputs):
+            sorted_outputs[i + j] = out
         if progress and task_id is not None:
             progress.update(task_id, advance=len(batch))
+
+    # Restore original chunk order so doc_chunk_ranges indices line up.
+    all_outputs = [None] * n
+    for sorted_idx, original_idx in enumerate(order):
+        all_outputs[original_idx] = sorted_outputs[sorted_idx]
 
     # Scatter chunk outputs back to per-document prediction sets.
     for doc_idx, (start, end) in enumerate(doc_chunk_ranges):
@@ -226,7 +238,7 @@ def evaluate_model(
 if __name__ == "__main__":
     # --- CUSTOMIZATION SETTINGS ---
     NUM_VERSIONS_TO_TEST = 2
-    BATCH_SIZE = 128
+    BATCH_SIZE = 64
     # ------------------------------
 
     ls_export_folder = "data/labeled"
@@ -273,11 +285,21 @@ if __name__ == "__main__":
             f"across {len(dataset)} documents."
         )
 
-        # Load base model once; reuse for every config. ``load_adapter`` uses
-        # ``auto_unload=True`` internally, so successive calls replace the
-        # previous adapter without contamination.
-        console.print("[cyan]Loading base GLiNER2 architecture into memory...[/cyan]")
-        shared_model = GLiNER2.from_pretrained("fastino/gliner2-large-v1")
+        # Load base model ONCE onto GPU in fp16. The original code left the
+        # model on CPU (from_pretrained defaults to CPU), which is the main
+        # reason inference was slow — the GPU was completely idle. fp16 (via
+        # quantize=True) roughly doubles throughput on supported GPUs with
+        # negligible NER quality loss.
+        device = "cuda" if torch.cuda.is_available() else "cpu"
+        console.print(
+            f"[cyan]Loading base GLiNER2 architecture onto [bold]{device}[/bold]"
+            f"{' (fp16)' if device == 'cuda' else ''}...[/cyan]"
+        )
+        shared_base_model = GLiNER2.from_pretrained(
+            "fastino/gliner2-large-v1",
+            map_location=device,
+            quantize=(device == "cuda"),
+        )
 
         model_configs = [
             ("Base Model (Clean)", None),
@@ -302,13 +324,17 @@ if __name__ == "__main__":
             )
 
             for name, adapter_path in model_configs:
-                # Swap the adapter on the shared model. If we're evaluating the
-                # clean base but an adapter is currently loaded (defensive: only
-                # happens if config order changes), unload it first.
+                # Each adapter is loaded onto a fresh deep copy of the base.
+                # We cannot reuse one shared model across adapters because
+                # ``load_adapter(auto_unload=True)`` merges the previous
+                # adapter's delta into the base before loading the next one,
+                # which would contaminate subsequent evaluations. The clean
+                # base run gets the original model directly (no copy).
                 if adapter_path and os.path.exists(adapter_path):
-                    shared_model.load_adapter(adapter_path)
-                elif shared_model.has_adapter:
-                    shared_model.unload_adapter()
+                    model = copy.deepcopy(shared_base_model)
+                    model.load_adapter(adapter_path)
+                else:
+                    model = shared_base_model
 
                 chunk_task = progress.add_task(
                     f"[green]Testing {name}...", total=len(flat_chunks)
@@ -316,7 +342,7 @@ if __name__ == "__main__":
 
                 results.append(
                     evaluate_model(
-                        shared_model,
+                        model,
                         flat_chunks,
                         doc_chunk_ranges,
                         gold_per_doc,
@@ -330,6 +356,12 @@ if __name__ == "__main__":
 
                 progress.update(overall_task, advance=1)
                 progress.remove_task(chunk_task)
+                # Drop the adapter copy so its GPU memory is freed before the
+                # next deepcopy allocates a fresh one.
+                if model is not shared_base_model:
+                    del model
+                    if device == "cuda":
+                        torch.cuda.empty_cache()
 
         # Output Table
         table = Table(title="NER Benchmark Breakdown (Per-Entity)", show_lines=False)
