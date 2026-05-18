@@ -191,7 +191,7 @@ if __name__ == "__main__":
     config = TrainingConfig(
         output_dir=output_dir,
         experiment_name=f"fintwit_lora_v{next_version}",
-        num_epochs=25,
+        num_epochs=10,
         batch_size=BATCH_SIZE,
         max_len=256,
         gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
@@ -207,11 +207,15 @@ if __name__ == "__main__":
         fp16=False,
         bf16=True,
         seed=SEED,
+        # v5 collapsed to "predict nothing" because we 5x'd the data via
+        # augmentation but kept num_epochs=25 and never acted on validation.
+        # eval_strategy="steps" + eval_steps=500 are the defaults; early
+        # stopping uses them to bail when val loss stops improving.
+        early_stopping=True,
+        early_stopping_patience=3,
     )
 
     trainer = GLiNER2Trainer(model=model, config=config)
-    # If GLiNER2Trainer uses a different kwarg name for validation data
-    # (e.g. `eval_dataset` or `validation_data`), rename here.
     trainer.train(train_data=train_data, eval_data=val_data)
 
     console.print(

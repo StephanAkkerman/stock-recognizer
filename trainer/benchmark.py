@@ -238,7 +238,7 @@ def evaluate_model(
 if __name__ == "__main__":
     # --- CUSTOMIZATION SETTINGS ---
     NUM_VERSIONS_TO_TEST = 2
-    BATCH_SIZE = 64
+    BATCH_SIZE = 32
     # ------------------------------
 
     ls_export_folder = "data/labeled"

@@ -52,6 +52,56 @@ def build_replacement_pool_from_labels(folder_path):
     return {k: sorted(v) for k, v in pool.items()}
 
 
+def _resolve_overlaps(label_results):
+    """Resolves overlapping annotations into independent swap groups.
+
+    Returns a list of ``(start, end, [annotations])`` tuples — one per unique
+    span that will receive a single swap. Annotations sharing a span (e.g.
+    "BP" labeled as both ticker and company) are grouped so they receive the
+    same replacement. Annotations contained within a larger span are dropped
+    from the output entirely (we lose that single label but the outer span
+    stays consistent with the swapped text).
+
+    Also returns the set of dropped annotation ids so the caller can remove
+    them from the augmented task. The second return value is ``None`` if the
+    task has unresolvable overlaps (partial non-containment) and should be
+    skipped.
+    """
+    by_span = {}
+    for r in label_results:
+        v = r["value"]
+        key = (v["start"], v["end"])
+        by_span.setdefault(key, []).append(r)
+
+    spans = sorted(by_span.keys())
+    keep = set(spans)
+
+    # Drop spans strictly contained within another. ``s1 <= s2 and e2 <= e1``
+    # with the spans non-equal means span2 is inside span1.
+    for s1, e1 in spans:
+        for s2, e2 in spans:
+            if (s1, e1) == (s2, e2):
+                continue
+            if s1 <= s2 and e2 <= e1:
+                keep.discard((s2, e2))
+
+    kept_sorted = sorted(keep)
+
+    # After dropping containments, any remaining overlap is a "weird" partial
+    # overlap (e.g. (10,15) and (12,18)). Bail on the whole task — these are
+    # rare and not worth the complexity to repair.
+    last_end = -1
+    for s, e in kept_sorted:
+        if s < last_end:
+            return None, None
+        last_end = e
+
+    groups = [(s, e, by_span[(s, e)]) for s, e in kept_sorted]
+    kept_ids = {id(r) for _, _, rs in groups for r in rs}
+    dropped_ids = {id(r) for r in label_results if id(r) not in kept_ids}
+    return groups, dropped_ids
+
+
 def augment_task(task, pool):
     """Swaps labeled entities from back-to-front to preserve index integrity."""
     augmented_task = copy.deepcopy(task)
@@ -59,21 +109,29 @@ def augment_task(task, pool):
     results = annotation.get("result", [])
 
     label_results = [r for r in results if r.get("type") == "labels"]
-    label_results.sort(key=lambda x: x["value"]["start"], reverse=True)
+
+    groups, dropped_ids = _resolve_overlaps(label_results)
+    if groups is None:
+        return None
+
+    # Process from rightmost span to leftmost so earlier indices stay valid
+    # as we mutate the text in place.
+    groups.sort(key=lambda g: g[0], reverse=True)
 
     text = augmented_task["data"]["text"]
     changed = False
 
-    for r in label_results:
-        val = r["value"]
-        label = val["labels"][0]
+    for start, end, group in groups:
+        # All annotations in this group share the span; the label they use to
+        # pick a replacement comes from the first one. (For multi-label spans
+        # like "BP" being both ticker and company, we just pick one pool.)
+        primary = group[0]
+        label = primary["value"]["labels"][0]
 
         candidates = pool.get(label)
         if not candidates:
             continue
 
-        start = val["start"]
-        end = val["end"]
         original_word = text[start:end]
         original_bare = original_word.lstrip("$")
 
@@ -88,12 +146,17 @@ def augment_task(task, pool):
 
         text = text[:start] + replacement + text[end:]
         len_diff = len(replacement) - len(original_word)
+        new_end = start + len(replacement)
 
-        val["end"] = start + len(replacement)
-        if "text" in val:
-            val["text"] = replacement
+        for r in group:
+            r["value"]["end"] = new_end
+            if "text" in r["value"]:
+                r["value"]["text"] = replacement
         changed = True
 
+        # Shift every annotation strictly to the right of this span. Group
+        # members share start == ``start`` so they aren't shifted; spans
+        # already processed sit to the right and need their offsets updated.
         for other_r in label_results:
             other_val = other_r["value"]
             if other_val["start"] > start:
@@ -102,6 +165,14 @@ def augment_task(task, pool):
 
     if not changed:
         return None
+
+    # Drop contained annotations; the surviving outer span already covers
+    # the region and its text has been swapped.
+    if dropped_ids:
+        annotation["result"] = [
+            r for r in results
+            if r.get("type") != "labels" or id(r) not in dropped_ids
+        ]
 
     augmented_task["data"]["text"] = text
 

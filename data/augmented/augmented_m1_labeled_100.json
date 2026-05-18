@@ -10,7 +10,7 @@
             "value": {
               "start": 45,
               "end": 48,
-              "text": "GFS",
+              "text": "Vix",
               "labels": [
                 "ticker"
               ]
@@ -46,7 +46,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Hey guys, I was on the call this morning and GFS seems like a good play right about now. Was wondering what the rest of you apes think. Contract exp?"
+      "text": "Hey guys, I was on the call this morning and Vix seems like a good play right about now. Was wondering what the rest of you apes think. Contract exp?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -72,9 +72,9 @@
         "result": [
           {
             "value": {
-              "start": 97,
+              "start": 96,
               "end": 106,
-              "text": "Wikipedia",
+              "text": "QuickBooks",
               "labels": [
                 "company"
               ]
@@ -88,8 +88,8 @@
           {
             "value": {
               "start": 59,
-              "end": 63,
-              "text": "RKLB",
+              "end": 62,
+              "text": "HUT",
               "labels": [
                 "ticker"
               ]
@@ -102,9 +102,9 @@
           },
           {
             "value": {
-              "start": 134,
-              "end": 136,
-              "text": "NU",
+              "start": 130,
+              "end": 134,
+              "text": "INTU",
               "labels": [
                 "ticker"
               ]
@@ -118,8 +118,8 @@
           {
             "value": {
               "start": 111,
-              "end": 119,
-              "text": "Tapestry",
+              "end": 115,
+              "text": "TSMC",
               "labels": [
                 "company"
               ]
@@ -132,9 +132,9 @@
           },
           {
             "value": {
-              "start": 236,
-              "end": 247,
-              "text": "Warner Bros",
+              "start": 234,
+              "end": 242,
+              "text": "Illumina",
               "labels": [
                 "company"
               ]
@@ -147,9 +147,9 @@
           },
           {
             "value": {
-              "start": 252,
-              "end": 257,
-              "text": "Honda",
+              "start": 247,
+              "end": 285,
+              "text": "Taiwan Semiconductor Manufacturing Co.",
               "labels": [
                 "company"
               ]
@@ -185,7 +185,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Hey everybody, I was wondering if anyone was hoping on the RKLB train, especially after hoe well Wikipedia and Tapestry bounced back. NU hasn't had that large upward moment yet, though it seems it should be just doesn't have the volume Warner Bros and Honda have. Any thoughts?"
+      "text": "Hey everybody, I was wondering if anyone was hoping on the HUT train, especially after hoe well QuickBooks and TSMC bounced back. INTU hasn't had that large upward moment yet, though it seems it should be just doesn't have the volume Illumina and Taiwan Semiconductor Manufacturing Co. have. Any thoughts?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -213,7 +213,7 @@
             "value": {
               "start": 83,
               "end": 86,
-              "text": "ABR",
+              "text": "DTC",
               "labels": [
                 "ticker"
               ]
@@ -228,7 +228,7 @@
             "value": {
               "start": 317,
               "end": 320,
-              "text": "OGI",
+              "text": "GME",
               "labels": [
                 "ticker"
               ]
@@ -243,7 +243,7 @@
             "value": {
               "start": 0,
               "end": 10,
-              "text": "LunarCrush",
+              "text": "QuickBooks",
               "labels": [
                 "company"
               ]
@@ -279,7 +279,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "LunarCrush Selling at a huge discount. will climb when it forks to proof of stake. ABR will get both forks, will probably sell off the proof of work stake and pay a special dividend. Then the trust will most likely start paying a dividend when it gets paid for its proof of stake. Could be 12% or more per year. Plus OGI is heavily shorted. This is rocketing higher this month. No doubts."
+      "text": "QuickBooks Selling at a huge discount. will climb when it forks to proof of stake. DTC will get both forks, will probably sell off the proof of work stake and pay a special dividend. Then the trust will most likely start paying a dividend when it gets paid for its proof of stake. Could be 12% or more per year. Plus GME is heavily shorted. This is rocketing higher this month. No doubts."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -306,8 +306,8 @@
           {
             "value": {
               "start": 456,
-              "end": 465,
-              "text": "BlackRock",
+              "end": 469,
+              "text": "Venture Globa",
               "labels": [
                 "company"
               ]
@@ -343,7 +343,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Supreme Court is going to decide on the case of West Virginia v. EPA tomorrow and based on previous opinions from the court, Im pretty confident theyre going to limit the EPAs power. This will make it so that Congress will have to decide on laws for the regulation of power plants and we all know Congress cant get jacked shit done. This will be a big boon for the utility companies, especially those that still have a lot of coal plants in operation like BlackRock"
+      "text": "Supreme Court is going to decide on the case of West Virginia v. EPA tomorrow and based on previous opinions from the court, Im pretty confident theyre going to limit the EPAs power. This will make it so that Congress will have to decide on laws for the regulation of power plants and we all know Congress cant get jacked shit done. This will be a big boon for the utility companies, especially those that still have a lot of coal plants in operation like Venture Globa"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -370,8 +370,8 @@
           {
             "value": {
               "start": 48,
-              "end": 52,
-              "text": "ARLP",
+              "end": 51,
+              "text": "SIX",
               "labels": [
                 "ticker"
               ]
@@ -407,7 +407,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Absolutely fantastic good sir. Doubling down on ARLP tomorrow in your honor"
+      "text": "Absolutely fantastic good sir. Doubling down on SIX tomorrow in your honor"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -434,8 +434,8 @@
           {
             "value": {
               "start": 9,
-              "end": 13,
-              "text": "ARLP",
+              "end": 12,
+              "text": "REV",
               "labels": [
                 "ticker"
               ]
@@ -471,7 +471,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "What are ARLP calls? We just call a spy and the spy is able to call us to let us know about stocks going up or down to purchase, right?"
+      "text": "What are REV calls? We just call a spy and the spy is able to call us to let us know about stocks going up or down to purchase, right?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -498,8 +498,8 @@
           {
             "value": {
               "start": 0,
-              "end": 5,
-              "text": "$RKLB",
+              "end": 4,
+              "text": "$VIX",
               "labels": [
                 "ticker"
               ]
@@ -535,7 +535,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "$RKLB has 40% short interest. It will probably go bankrupt and everyone knows it. Play it for a trade to fill the gap to at-least a price of $16."
+      "text": "$VIX has 40% short interest. It will probably go bankrupt and everyone knows it. Play it for a trade to fill the gap to at-least a price of $16."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -562,8 +562,8 @@
           {
             "value": {
               "start": 187,
-              "end": 201,
-              "text": "Collyer Bridge",
+              "end": 209,
+              "text": "Warner Bros. Discovery",
               "labels": [
                 "company"
               ]
@@ -576,9 +576,9 @@
           },
           {
             "value": {
-              "start": 251,
-              "end": 276,
-              "text": "Hive Digital Technologies",
+              "start": 259,
+              "end": 273,
+              "text": "USA Rare Earth",
               "labels": [
                 "company"
               ]
@@ -591,9 +591,9 @@
           },
           {
             "value": {
-              "start": 285,
-              "end": 289,
-              "text": "RDDT",
+              "start": 282,
+              "end": 285,
+              "text": "HUT",
               "labels": [
                 "ticker"
               ]
@@ -629,7 +629,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "[https://finance.yahoo.com/news/bbby-bull-ken-griffin-10-130338501.html](https://finance.yahoo.com/news/bbby-bull-ken-griffin-10-130338501.html) At the end of the second quarter of 2022, Collyer Bridge owned CALL options on over 2.8 million shares of Hive Digital Technologies (NASDAQ:RDDT) worth $14.3 million."
+      "text": "[https://finance.yahoo.com/news/bbby-bull-ken-griffin-10-130338501.html](https://finance.yahoo.com/news/bbby-bull-ken-griffin-10-130338501.html) At the end of the second quarter of 2022, Warner Bros. Discovery owned CALL options on over 2.8 million shares of USA Rare Earth (NASDAQ:HUT) worth $14.3 million."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -656,8 +656,8 @@
           {
             "value": {
               "start": 50,
-              "end": 58,
-              "text": "SK Hynix",
+              "end": 54,
+              "text": "CMIG",
               "labels": [
                 "company"
               ]
@@ -693,7 +693,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Stock is exploding over last three days. They own SK Hynix which is going public next week and have partnerships to promotes and distribute their hemp cigarettes. However.....share structure appears to be dog shit. Was curious if anyone has looked at this before or had any thoughts on the matter?"
+      "text": "Stock is exploding over last three days. They own CMIG which is going public next week and have partnerships to promotes and distribute their hemp cigarettes. However.....share structure appears to be dog shit. Was curious if anyone has looked at this before or had any thoughts on the matter?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -720,8 +720,8 @@
           {
             "value": {
               "start": 142,
-              "end": 144,
-              "text": "MP",
+              "end": 146,
+              "text": "DRAM",
               "labels": [
                 "ticker"
               ]
@@ -757,7 +757,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "War is driven by profit. This is magnified by long-time inclusion of war companies into the S&P500 and other prominent stock indices like the MP. Most people work hard and try to grow their wealth through investment. Historical results clearly show that investing into companies representing the S&P500 is a good idea. Naturally, this translates into a situation where the people themselves are incentivized into growing the S&P500 further. The US economy, as dire as it looks, is now at a point where market capitalizations of prominent corporations are now in the Trillions of dollars. Capitalism has made the USA so powerful that companies that are considered Small are worth Billions of dollars. This maturity of the US economy is so substantial that war companies cannot compete anymore with Technology and other businesses that are thriving. There are not enough bombs and places to bomb that can ever sustain profitability for these companies without hijacking the citizens' tax dollars through US \"defense\" spending and other leechlike tactics. Our society is at a point in time where we do not have a real need for war companies any longer. However, there are misaligned incentives that are still in place. As long as these companies represent a significant portion of the S&P500 and other indices there will always be a stirring hunger towards unnecessary conflicts in the world. It's time to cut off the head of the snake and de-list them from the S&P500. This will start a massive push towards their irrelevancy and they will no longer be supported by the money machine."
+      "text": "War is driven by profit. This is magnified by long-time inclusion of war companies into the S&P500 and other prominent stock indices like the DRAM. Most people work hard and try to grow their wealth through investment. Historical results clearly show that investing into companies representing the S&P500 is a good idea. Naturally, this translates into a situation where the people themselves are incentivized into growing the S&P500 further. The US economy, as dire as it looks, is now at a point where market capitalizations of prominent corporations are now in the Trillions of dollars. Capitalism has made the USA so powerful that companies that are considered Small are worth Billions of dollars. This maturity of the US economy is so substantial that war companies cannot compete anymore with Technology and other businesses that are thriving. There are not enough bombs and places to bomb that can ever sustain profitability for these companies without hijacking the citizens' tax dollars through US \"defense\" spending and other leechlike tactics. Our society is at a point in time where we do not have a real need for war companies any longer. However, there are misaligned incentives that are still in place. As long as these companies represent a significant portion of the S&P500 and other indices there will always be a stirring hunger towards unnecessary conflicts in the world. It's time to cut off the head of the snake and de-list them from the S&P500. This will start a massive push towards their irrelevancy and they will no longer be supported by the money machine."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -784,8 +784,8 @@
           {
             "value": {
               "start": 53,
-              "end": 58,
-              "text": "$DXYZ",
+              "end": 56,
+              "text": "$GS",
               "labels": [
                 "ticker"
               ]
@@ -798,9 +798,9 @@
           },
           {
             "value": {
-              "start": 582,
-              "end": 586,
-              "text": "$BIG",
+              "start": 576,
+              "end": 581,
+              "text": "$PLAB",
               "labels": [
                 "ticker"
               ]
@@ -813,9 +813,9 @@
           },
           {
             "value": {
-              "start": 808,
-              "end": 813,
-              "text": "$TMCs",
+              "start": 803,
+              "end": 808,
+              "text": "$Msft",
               "labels": [
                 "ticker"
               ]
@@ -828,9 +828,9 @@
           },
           {
             "value": {
-              "start": 865,
-              "end": 870,
-              "text": "$ILMN",
+              "start": 860,
+              "end": 865,
+              "text": "$AVIR",
               "labels": [
                 "ticker"
               ]
@@ -843,9 +843,9 @@
           },
           {
             "value": {
-              "start": 1188,
-              "end": 1191,
-              "text": "$MP",
+              "start": 1183,
+              "end": 1187,
+              "text": "$MRU",
               "labels": [
                 "ticker"
               ]
@@ -858,9 +858,9 @@
           },
           {
             "value": {
-              "start": 394,
-              "end": 398,
-              "text": "CHTR",
+              "start": 392,
+              "end": 396,
+              "text": "HIVE",
               "labels": [
                 "ticker"
               ]
@@ -873,9 +873,9 @@
           },
           {
             "value": {
-              "start": 542,
-              "end": 546,
-              "text": "SCHF",
+              "start": 536,
+              "end": 540,
+              "text": "tsla",
               "labels": [
                 "ticker"
               ]
@@ -888,9 +888,9 @@
           },
           {
             "value": {
-              "start": 982,
-              "end": 986,
-              "text": "VTHR",
+              "start": 977,
+              "end": 981,
+              "text": "MAXR",
               "labels": [
                 "ticker"
               ]
@@ -903,9 +903,9 @@
           },
           {
             "value": {
-              "start": 1056,
-              "end": 1060,
-              "text": "WKEY",
+              "start": 1051,
+              "end": 1055,
+              "text": "BBSC",
               "labels": [
                 "ticker"
               ]
@@ -918,9 +918,9 @@
           },
           {
             "value": {
-              "start": 430,
-              "end": 444,
-              "text": "Melvin Capital",
+              "start": 428,
+              "end": 437,
+              "text": "Six flags",
               "labels": [
                 "company"
               ]
@@ -933,9 +933,9 @@
           },
           {
             "value": {
-              "start": 533,
-              "end": 540,
-              "text": "Digital",
+              "start": 526,
+              "end": 534,
+              "text": "Fidelity",
               "labels": [
                 "company"
               ]
@@ -971,7 +971,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "It's the day after FOMC and markets are selling off. $DXYZ, however, briefly dipped below its June lows and has since recovered, making it one of the few large-cap stocks in the green today. That being said, this dip below support could be a deviation before pushing higher or the beginning of much more downside ahead. Regardless, something of interest to note right now is that the number of CHTR social mentions, as tracked by Melvin Capital, is showing sustained growth with more and more people creating posts and talking about Digital (SCHF) right now at these price levels. [$BIG Price & Social Mentions \\(1-Year Activity\\)](https://preview.redd.it/xk8m052t3gp91.png?width=1500&format=png&auto=webp&s=949dd21edb92d4706dd3e50572a672d6e82cea1c) I find this interesting because, for the first time since $TMCs's ATH back in Nov 2021, the social activity around $ILMN is trending up again, after months of trending down. So according to this data, there is a peak of interest in VTHR right now and it continues to grow. Whether this peak of interest in WKEY is short-sighted or long-sighted is up to interpretation but is interesting nonetheless. What do you guys think about this? Is $MP's rising social activity a bullish sign? Are people fearful right now? Are they wanting to buy? Let's discuss!"
+      "text": "It's the day after FOMC and markets are selling off. $GS, however, briefly dipped below its June lows and has since recovered, making it one of the few large-cap stocks in the green today. That being said, this dip below support could be a deviation before pushing higher or the beginning of much more downside ahead. Regardless, something of interest to note right now is that the number of HIVE social mentions, as tracked by Six flags, is showing sustained growth with more and more people creating posts and talking about Fidelity (tsla) right now at these price levels. [$PLAB Price & Social Mentions \\(1-Year Activity\\)](https://preview.redd.it/xk8m052t3gp91.png?width=1500&format=png&auto=webp&s=949dd21edb92d4706dd3e50572a672d6e82cea1c) I find this interesting because, for the first time since $Msft's ATH back in Nov 2021, the social activity around $AVIR is trending up again, after months of trending down. So according to this data, there is a peak of interest in MAXR right now and it continues to grow. Whether this peak of interest in BBSC is short-sighted or long-sighted is up to interpretation but is interesting nonetheless. What do you guys think about this? Is $MRU's rising social activity a bullish sign? Are people fearful right now? Are they wanting to buy? Let's discuss!"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -998,8 +998,8 @@
           {
             "value": {
               "start": 0,
-              "end": 6,
-              "text": "Revlon",
+              "end": 22,
+              "text": "Warner Bros. Discovery",
               "labels": [
                 "company"
               ]
@@ -1012,9 +1012,9 @@
           },
           {
             "value": {
-              "start": 58,
-              "end": 61,
-              "text": "SIX",
+              "start": 74,
+              "end": 78,
+              "text": "ANPA",
               "labels": [
                 "ticker"
               ]
@@ -1050,7 +1050,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Revlon filed for bankruptcy on Sep 15, the very next day, SIX rallied, same week it even gapped up 10 points. Next three weeks it dumped & gapped down for a total of 40% drop from Sep 19 highs. When the MMs see the market going down, they will make as many bagholders as possible by sucker rallies."
+      "text": "Warner Bros. Discovery filed for bankruptcy on Sep 15, the very next day, ANPA rallied, same week it even gapped up 10 points. Next three weeks it dumped & gapped down for a total of 40% drop from Sep 19 highs. When the MMs see the market going down, they will make as many bagholders as possible by sucker rallies."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1076,9 +1076,9 @@
         "result": [
           {
             "value": {
-              "start": 87,
-              "end": 92,
-              "text": "$nvda",
+              "start": 89,
+              "end": 93,
+              "text": "$WTS",
               "labels": [
                 "ticker"
               ]
@@ -1091,9 +1091,9 @@
           },
           {
             "value": {
-              "start": 575,
-              "end": 579,
-              "text": "$MRU",
+              "start": 577,
+              "end": 582,
+              "text": "$HIVE",
               "labels": [
                 "ticker"
               ]
@@ -1108,7 +1108,7 @@
             "value": {
               "start": 0,
               "end": 4,
-              "text": "LUNR",
+              "text": "GOOG",
               "labels": [
                 "ticker"
               ]
@@ -1121,9 +1121,9 @@
           },
           {
             "value": {
-              "start": 569,
-              "end": 572,
-              "text": "HKD",
+              "start": 570,
+              "end": 574,
+              "text": "SYLD",
               "labels": [
                 "ticker"
               ]
@@ -1137,8 +1137,8 @@
           {
             "value": {
               "start": 79,
-              "end": 86,
-              "text": "Twitter",
+              "end": 88,
+              "text": "Coca Cola",
               "labels": [
                 "company"
               ]
@@ -1174,7 +1174,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "LUNR was a SPAC that just got approval for the merger and will be merging with Twitter $nvda on Monday. When the deal was announced the stock quickly tanked to the SPAC floor price of $10 and stayed at $10 for an entire year. Recently it ran up like 40% on the \"buy the rumor, sell the news\" event of the merger but people don't realize when it trades on Monday it can FINALLY fall below $10 which it will. My price target is $5. Puts are super cheap. I think traders are forgetting once a SPAC mergers it no longer has that $10 floor lol Positions: Shorts and Puts on HKD / $MRU [https://i.imgur.com/e5fIx7y.png](https://i.imgur.com/e5fIx7y.png) &#x200B; https://preview.redd.it/eskn1sgf91o91.png?width=1926&format=png&auto=webp&s=fd689f36a323f43ed35fc87eb1fec2c325c31aa1"
+      "text": "GOOG was a SPAC that just got approval for the merger and will be merging with Coca Cola $WTS on Monday. When the deal was announced the stock quickly tanked to the SPAC floor price of $10 and stayed at $10 for an entire year. Recently it ran up like 40% on the \"buy the rumor, sell the news\" event of the merger but people don't realize when it trades on Monday it can FINALLY fall below $10 which it will. My price target is $5. Puts are super cheap. I think traders are forgetting once a SPAC mergers it no longer has that $10 floor lol Positions: Shorts and Puts on SYLD / $HIVE [https://i.imgur.com/e5fIx7y.png](https://i.imgur.com/e5fIx7y.png) &#x200B; https://preview.redd.it/eskn1sgf91o91.png?width=1926&format=png&auto=webp&s=fd689f36a323f43ed35fc87eb1fec2c325c31aa1"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1202,7 +1202,7 @@
             "value": {
               "start": 50,
               "end": 54,
-              "text": "PPTA",
+              "text": "GENI",
               "labels": [
                 "ticker"
               ]
@@ -1238,7 +1238,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "The whole market is making a corrigation, so does PPTA, do not think they are winning! Wait until tomorrow!"
+      "text": "The whole market is making a corrigation, so does GENI, do not think they are winning! Wait until tomorrow!"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1265,8 +1265,8 @@
           {
             "value": {
               "start": 200,
-              "end": 203,
-              "text": "VST",
+              "end": 204,
+              "text": "GILT",
               "labels": [
                 "ticker"
               ]
@@ -1302,7 +1302,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "I truly have extremely fundamental understanding of stocks but I enjoy the advice this sub gives. All of your advice has been terrible for me, but its ok as long as were all having fun. I bought some VST puts today"
+      "text": "I truly have extremely fundamental understanding of stocks but I enjoy the advice this sub gives. All of your advice has been terrible for me, but its ok as long as were all having fun. I bought some GILT puts today"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1393,8 +1393,8 @@
           {
             "value": {
               "start": 29,
-              "end": 32,
-              "text": "HTZ",
+              "end": 33,
+              "text": "NBIS",
               "labels": [
                 "ticker"
               ]
@@ -1430,7 +1430,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Why is this sub so much into HTZ? genuine question"
+      "text": "Why is this sub so much into NBIS? genuine question"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1457,8 +1457,8 @@
           {
             "value": {
               "start": 0,
-              "end": 9,
-              "text": "Paramount",
+              "end": 7,
+              "text": "Sparkle",
               "labels": [
                 "company"
               ]
@@ -1494,7 +1494,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Paramount likes to rip on fridays ive noticed so I got 5 lotto 140c"
+      "text": "Sparkle likes to rip on fridays ive noticed so I got 5 lotto 140c"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1522,7 +1522,7 @@
             "value": {
               "start": 50,
               "end": 54,
-              "text": "SLYG",
+              "text": "CHTR",
               "labels": [
                 "ticker"
               ]
@@ -1536,8 +1536,8 @@
           {
             "value": {
               "start": 175,
-              "end": 179,
-              "text": "NUSC",
+              "end": 178,
+              "text": "QQQ",
               "labels": [
                 "ticker"
               ]
@@ -1573,7 +1573,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Alright Apes, now it's a perfect time to buy into SLYG. New York City is working toward legalizing weed in the city. NYC pretty much wants a different type of fog, smoke from NUSC. Right now it's at $1.13. The highest this stock was this year was almost $4. Where is the movement at to beat these suits at their own game?"
+      "text": "Alright Apes, now it's a perfect time to buy into CHTR. New York City is working toward legalizing weed in the city. NYC pretty much wants a different type of fog, smoke from QQQ. Right now it's at $1.13. The highest this stock was this year was almost $4. Where is the movement at to beat these suits at their own game?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1600,8 +1600,8 @@
           {
             "value": {
               "start": 11,
-              "end": 16,
-              "text": "Xylem",
+              "end": 26,
+              "text": "Lockheed Martin",
               "labels": [
                 "company"
               ]
@@ -1614,9 +1614,9 @@
           },
           {
             "value": {
-              "start": 74,
-              "end": 83,
-              "text": "Regencell",
+              "start": 84,
+              "end": 90,
+              "text": "growth",
               "labels": [
                 "company"
               ]
@@ -1629,9 +1629,9 @@
           },
           {
             "value": {
-              "start": 162,
-              "end": 168,
-              "text": "Mizuho",
+              "start": 169,
+              "end": 175,
+              "text": "tilray",
               "labels": [
                 "company"
               ]
@@ -1644,9 +1644,9 @@
           },
           {
             "value": {
-              "start": 199,
-              "end": 205,
-              "text": "TikTok",
+              "start": 206,
+              "end": 214,
+              "text": "JPMorgan",
               "labels": [
                 "company"
               ]
@@ -1659,9 +1659,9 @@
           },
           {
             "value": {
-              "start": 251,
-              "end": 255,
-              "text": "META",
+              "start": 260,
+              "end": 268,
+              "text": "Facebook",
               "labels": [
                 "company"
               ]
@@ -1697,7 +1697,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "On Friday, Xylem is expected to buy back over 15 Billion dollars worth of Regencell stocks. This will make every shareholders a little bit wealthier and rice the Mizuho stock value to at least $110. TikTok is an excellent investment at current price. META has oceans of money and it is one of the 3 most profitable and solid companies on the planet. https://ycharts.com/companies/GOOG/stock_buyback"
+      "text": "On Friday, Lockheed Martin is expected to buy back over 15 Billion dollars worth of growth stocks. This will make every shareholders a little bit wealthier and rice the tilray stock value to at least $110. JPMorgan is an excellent investment at current price. Facebook has oceans of money and it is one of the 3 most profitable and solid companies on the planet. https://ycharts.com/companies/GOOG/stock_buyback"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1725,7 +1725,7 @@
             "value": {
               "start": 47,
               "end": 54,
-              "text": "SanDisk",
+              "text": "Open AI",
               "labels": [
                 "company"
               ]
@@ -1740,7 +1740,7 @@
             "value": {
               "start": 11,
               "end": 15,
-              "text": "IUSS",
+              "text": "VELO",
               "labels": [
                 "ticker"
               ]
@@ -1755,7 +1755,7 @@
             "value": {
               "start": 20,
               "end": 24,
-              "text": "HIVE",
+              "text": "FNDB",
               "labels": [
                 "ticker"
               ]
@@ -1791,7 +1791,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Looking at IUSS and HIVE price action, I think SanDisk could be a multi-bagger next several weeks leading up to earnings. \\~Doubled down on riding shares. No DD. Just a feeling."
+      "text": "Looking at VELO and FNDB price action, I think Open AI could be a multi-bagger next several weeks leading up to earnings. \\~Doubled down on riding shares. No DD. Just a feeling."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1818,8 +1818,8 @@
           {
             "value": {
               "start": 0,
-              "end": 7,
-              "text": "Marvell",
+              "end": 8,
+              "text": "Caesar's",
               "labels": [
                 "company"
               ]
@@ -1854,7 +1854,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Marvell Index > Oculus X.. and I'm sure same case for next gen sets"
+      "text": "Caesar's Index > Oculus X.. and I'm sure same case for next gen sets"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1881,8 +1881,8 @@
           {
             "value": {
               "start": 118,
-              "end": 122,
-              "text": "VITL",
+              "end": 121,
+              "text": "GFS",
               "labels": [
                 "ticker"
               ]
@@ -1918,7 +1918,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Buy actual shares!!!! Not options, not CFDs, not spreadbet. Hodl those shares with diamond hands. Force the price up. VITL that money!"
+      "text": "Buy actual shares!!!! Not options, not CFDs, not spreadbet. Hodl those shares with diamond hands. Force the price up. GFS that money!"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -1945,8 +1945,8 @@
           {
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "BBSC",
+              "end": 3,
+              "text": "XLF",
               "labels": [
                 "ticker"
               ]
@@ -1959,9 +1959,9 @@
           },
           {
             "value": {
-              "start": 75,
+              "start": 74,
               "end": 78,
-              "text": "SPX",
+              "text": "PBSM",
               "labels": [
                 "ticker"
               ]
@@ -1976,7 +1976,7 @@
             "value": {
               "start": 167,
               "end": 171,
-              "text": "PLAB",
+              "text": "AMPX",
               "labels": [
                 "ticker"
               ]
@@ -2012,7 +2012,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "BBSC should take off well up over $3 a share today with the release of its SPX dividend distribution date of 29 June today. You can still buy in today to get the free PLAB shares. Get in now before it moons!"
+      "text": "XLF should take off well up over $3 a share today with the release of its PBSM dividend distribution date of 29 June today. You can still buy in today to get the free AMPX shares. Get in now before it moons!"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2039,8 +2039,8 @@
           {
             "value": {
               "start": 6,
-              "end": 24,
-              "text": "irrationalanalysis",
+              "end": 17,
+              "text": "green thumb",
               "labels": [
                 "company"
               ]
@@ -2052,9 +2052,9 @@
           },
           {
             "value": {
-              "start": 35,
-              "end": 42,
-              "text": "Moderna",
+              "start": 28,
+              "end": 35,
+              "text": "TMobile",
               "labels": [
                 "company"
               ]
@@ -2089,7 +2089,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "So is irrationalanalysis as bad as Moderna. The guy that runs looks like a turd wiating to be flushed. If you read up the stocks hes shorted they are on the death bed. When will this guy have his day and feel some pain. He goes by the name Hal Mintz. If you know you know. Fined by the sec mulitple times but what are fines to these guys. Time to make take collective action."
+      "text": "So is green thumb as bad as TMobile. The guy that runs looks like a turd wiating to be flushed. If you read up the stocks hes shorted they are on the death bed. When will this guy have his day and feel some pain. He goes by the name Hal Mintz. If you know you know. Fined by the sec mulitple times but what are fines to these guys. Time to make take collective action."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2116,8 +2116,8 @@
           {
             "value": {
               "start": 152,
-              "end": 156,
-              "text": "PPTA",
+              "end": 155,
+              "text": "IWM",
               "labels": [
                 "ticker"
               ]
@@ -2153,7 +2153,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Hello regards, JPow and Musk are going to send us to Nirvana, they will dump the stock market by raising rates. Once the US 10yr hits 4.20% the play is PPTA 400c 3 months out. You heard it here first."
+      "text": "Hello regards, JPow and Musk are going to send us to Nirvana, they will dump the stock market by raising rates. Once the US 10yr hits 4.20% the play is IWM 400c 3 months out. You heard it here first."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2179,9 +2179,9 @@
         "result": [
           {
             "value": {
-              "start": 48,
-              "end": 57,
-              "text": "Six flags",
+              "start": 47,
+              "end": 53,
+              "text": "Public",
               "labels": [
                 "company"
               ]
@@ -2194,9 +2194,9 @@
           },
           {
             "value": {
-              "start": 150,
-              "end": 152,
-              "text": "MU",
+              "start": 146,
+              "end": 149,
+              "text": "COX",
               "labels": [
                 "ticker"
               ]
@@ -2209,9 +2209,9 @@
           },
           {
             "value": {
-              "start": 285,
-              "end": 287,
-              "text": "BA",
+              "start": 282,
+              "end": 286,
+              "text": "SCGX",
               "labels": [
                 "ticker"
               ]
@@ -2224,9 +2224,9 @@
           },
           {
             "value": {
-              "start": 299,
+              "start": 298,
               "end": 302,
-              "text": "CVS",
+              "text": "HEMP",
               "labels": [
                 "ticker"
               ]
@@ -2240,8 +2240,8 @@
           {
             "value": {
               "start": 4,
-              "end": 10,
-              "text": "taekim",
+              "end": 9,
+              "text": "North",
               "labels": [
                 "company"
               ]
@@ -2277,7 +2277,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "The taekim meme rally was halted, however, when Six flags Chairman Ryan Cohen, who owned about 10% of the companys shares, dumped his entire position.MU, meanwhile, recently debuted its preferred equity shares, or APEs, on the NYSE. The debut was marked by huge trading volume in both BA shares and CVS shares, leading to several trading halts due to volatility. More info at https://www.google.com/amp/s/www.thestreet.com/memestocks/.amp/other-memes/bbby-gme-and-amc-which-meme-stock-has-the-most-momentum"
+      "text": "The North meme rally was halted, however, when Public Chairman Ryan Cohen, who owned about 10% of the companys shares, dumped his entire position.COX, meanwhile, recently debuted its preferred equity shares, or APEs, on the NYSE. The debut was marked by huge trading volume in both SCGX shares and HEMP shares, leading to several trading halts due to volatility. More info at https://www.google.com/amp/s/www.thestreet.com/memestocks/.amp/other-memes/bbby-gme-and-amc-which-meme-stock-has-the-most-momentum"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2304,8 +2304,8 @@
           {
             "value": {
               "start": 2,
-              "end": 4,
-              "text": "BB",
+              "end": 6,
+              "text": "AMRN",
               "labels": [
                 "ticker"
               ]
@@ -2341,7 +2341,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "\\#BB soars 21% in continued volatility. The rally appears to be driven by long buying vs. short covering, as #ShortInterest is just 118k shares (0.15% of free float). High Avg CTB of 356% suggests that rally is starting to attract shorts.Will be $18 or higher today"
+      "text": "\\#AMRN soars 21% in continued volatility. The rally appears to be driven by long buying vs. short covering, as #ShortInterest is just 118k shares (0.15% of free float). High Avg CTB of 356% suggests that rally is starting to attract shorts.Will be $18 or higher today"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2368,8 +2368,8 @@
           {
             "value": {
               "start": 0,
-              "end": 3,
-              "text": "CVS",
+              "end": 4,
+              "text": "AMPX",
               "labels": [
                 "ticker"
               ]
@@ -2405,7 +2405,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "CVS loosing 105 Bull r fuk"
+      "text": "AMPX loosing 105 Bull r fuk"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2432,8 +2432,8 @@
           {
             "value": {
               "start": 52,
-              "end": 56,
-              "text": "$LTH",
+              "end": 55,
+              "text": "$BP",
               "labels": [
                 "ticker"
               ]
@@ -2446,9 +2446,9 @@
           },
           {
             "value": {
-              "start": 451,
-              "end": 456,
-              "text": "ARKVX",
+              "start": 450,
+              "end": 453,
+              "text": "Spx",
               "labels": [
                 "ticker"
               ]
@@ -2484,7 +2484,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "The next best stock to gamble your college fund on. $LTH is an insanely profitable company and the stock price is skyrocketing. Up 17% in one day on an earnings report and even more the rest of the week. The company grossed over 1 billion in sales and keeps going up. Its got great fundamentals. And with this extreme pop in the price we have seen a lot of shorting going on, and a potential short squeeze could happen if the price continues to rise. ARKVX stock cannot be stopped as of now, so hop on the train and ride it to ape city. The shorting will only help us. Dont take my word for it though, do a little research and see for yourself! I see this stock taking off, I hope to see you on the moon!"
+      "text": "The next best stock to gamble your college fund on. $BP is an insanely profitable company and the stock price is skyrocketing. Up 17% in one day on an earnings report and even more the rest of the week. The company grossed over 1 billion in sales and keeps going up. Its got great fundamentals. And with this extreme pop in the price we have seen a lot of shorting going on, and a potential short squeeze could happen if the price continues to rise. Spx stock cannot be stopped as of now, so hop on the train and ride it to ape city. The shorting will only help us. Dont take my word for it though, do a little research and see for yourself! I see this stock taking off, I hope to see you on the moon!"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2511,8 +2511,8 @@
           {
             "value": {
               "start": 14,
-              "end": 23,
-              "text": "Microsoft",
+              "end": 29,
+              "text": "Andretti Global",
               "labels": [
                 "company"
               ]
@@ -2548,7 +2548,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "I bought some Microsoft stock and it keeps dropping."
+      "text": "I bought some Andretti Global stock and it keeps dropping."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2575,8 +2575,8 @@
           {
             "value": {
               "start": 31,
-              "end": 38,
-              "text": "Citadel",
+              "end": 35,
+              "text": "POET",
               "labels": [
                 "company"
               ]
@@ -2612,7 +2612,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "So what does everyone think of Citadel stock I don't have a ton in it right now but it seems to be on the rise. Curious to hear other's thoughts."
+      "text": "So what does everyone think of POET stock I don't have a ton in it right now but it seems to be on the rise. Curious to hear other's thoughts."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2639,8 +2639,8 @@
           {
             "value": {
               "start": 17,
-              "end": 21,
-              "text": "SNDK",
+              "end": 20,
+              "text": "VIX",
               "labels": [
                 "ticker"
               ]
@@ -2676,7 +2676,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "I have a feeling SNDK could pull down to $270 by close on option expiry day that stock is always a magnet to even numbers"
+      "text": "I have a feeling VIX could pull down to $270 by close on option expiry day that stock is always a magnet to even numbers"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2704,7 +2704,7 @@
             "value": {
               "start": 0,
               "end": 3,
-              "text": "REV",
+              "text": "BBY",
               "labels": [
                 "ticker"
               ]
@@ -2718,8 +2718,8 @@
           {
             "value": {
               "start": 68,
-              "end": 71,
-              "text": "SPY",
+              "end": 72,
+              "text": "LYFT",
               "labels": [
                 "ticker"
               ]
@@ -2732,9 +2732,9 @@
           },
           {
             "value": {
-              "start": 143,
-              "end": 147,
-              "text": "RALS",
+              "start": 144,
+              "end": 148,
+              "text": "HIVE",
               "labels": [
                 "ticker"
               ]
@@ -2747,9 +2747,9 @@
           },
           {
             "value": {
-              "start": 228,
-              "end": 231,
-              "text": "CVM",
+              "start": 229,
+              "end": 233,
+              "text": "CVNA",
               "labels": [
                 "ticker"
               ]
@@ -2762,9 +2762,9 @@
           },
           {
             "value": {
-              "start": 274,
-              "end": 278,
-              "text": "SCHF",
+              "start": 276,
+              "end": 280,
+              "text": "UUUU",
               "labels": [
                 "ticker"
               ]
@@ -2777,9 +2777,9 @@
           },
           {
             "value": {
-              "start": 346,
-              "end": 349,
-              "text": "SLV",
+              "start": 348,
+              "end": 352,
+              "text": "PACS",
               "labels": [
                 "ticker"
               ]
@@ -2815,7 +2815,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "REV just had a spike on its MACD from 0.48 to 1.61 a 3.3x increase. SPY experienced a similar bump in Jan 2021. 0.98 to 5.45, a 5.5x increase. RALS only had a 5.5x pop the week after its entire option chain went ITM. As of now, CVM's entire option chain is over 80% ITM. If SCHF goes to 45 before Friday, it's safe to say this thing will blow to SLV regard levels. I'm buying call options +50% above share price when the new chain is out. Currently hold 45$ AUG 19 call options. Holding until tomorrow because I expect massive AH/PM movement with this much volume. I do not think brokers are capable of settling this many trades which will lead to force settlements in the AH/PM before opening bell tomorrow. By law, you shares have to be settled before opening bell T+2. With the massive volumes we've been having, I highly doubt they've been able to keep up meaning they'll have to buy AH or PM before Thursday. If the volume keeps up the way it is, it's just going to keep chaining and chaining and this is gonna be stupid."
+      "text": "BBY just had a spike on its MACD from 0.48 to 1.61 a 3.3x increase. LYFT experienced a similar bump in Jan 2021. 0.98 to 5.45, a 5.5x increase. HIVE only had a 5.5x pop the week after its entire option chain went ITM. As of now, CVNA's entire option chain is over 80% ITM. If UUUU goes to 45 before Friday, it's safe to say this thing will blow to PACS regard levels. I'm buying call options +50% above share price when the new chain is out. Currently hold 45$ AUG 19 call options. Holding until tomorrow because I expect massive AH/PM movement with this much volume. I do not think brokers are capable of settling this many trades which will lead to force settlements in the AH/PM before opening bell tomorrow. By law, you shares have to be settled before opening bell T+2. With the massive volumes we've been having, I highly doubt they've been able to keep up meaning they'll have to buy AH or PM before Thursday. If the volume keeps up the way it is, it's just going to keep chaining and chaining and this is gonna be stupid."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2842,8 +2842,8 @@
           {
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "SOXX",
+              "end": 3,
+              "text": "LTH",
               "labels": [
                 "ticker"
               ]
@@ -2856,9 +2856,9 @@
           },
           {
             "value": {
-              "start": 7,
-              "end": 30,
-              "text": "Mott Capital Management",
+              "start": 6,
+              "end": 16,
+              "text": "volkswagon",
               "labels": [
                 "company"
               ]
@@ -2894,7 +2894,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "SOXX - Mott Capital Management up on FDA approval with another potential approval on November 24th. Fuck the shorts, this thing is going to the moon!"
+      "text": "LTH - volkswagon up on FDA approval with another potential approval on November 24th. Fuck the shorts, this thing is going to the moon!"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.412716Z",
@@ -2921,8 +2921,8 @@
           {
             "value": {
               "start": 31,
-              "end": 40,
-              "text": "Papa John",
+              "end": 36,
+              "text": "North",
               "labels": [
                 "company"
               ]
@@ -2935,9 +2935,9 @@
           },
           {
             "value": {
-              "start": 185,
-              "end": 191,
-              "text": "TikTok",
+              "start": 181,
+              "end": 187,
+              "text": "Nvidia",
               "labels": [
                 "company"
               ]
@@ -2973,7 +2973,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "The other day robinhood showed Papa John stocks at like around 800 but i check rn and its around 200? And i didnt lose any money, but when i check the history it shows no evidence that TikTok was ever at 800. What is going on?"
+      "text": "The other day robinhood showed North stocks at like around 800 but i check rn and its around 200? And i didnt lose any money, but when i check the history it shows no evidence that Nvidia was ever at 800. What is going on?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.413712Z",
@@ -3001,7 +3001,7 @@
             "value": {
               "start": 65,
               "end": 68,
-              "text": "WTS",
+              "text": "FSK",
               "labels": [
                 "ticker"
               ]
@@ -3037,7 +3037,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "I am wondering what does a soft landing mean? I am invested as a WTS and I don't want to deinvest for the next couple of years.With this economy a \"soft landing\" could mean more pain ahead until the bottom? It seems like the example of the frog in boiled water."
+      "text": "I am wondering what does a soft landing mean? I am invested as a FSK and I don't want to deinvest for the next couple of years.With this economy a \"soft landing\" could mean more pain ahead until the bottom? It seems like the example of the frog in boiled water."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.416222Z",
@@ -3064,8 +3064,8 @@
           {
             "value": {
               "start": 51,
-              "end": 55,
-              "text": "SPSM",
+              "end": 54,
+              "text": "SLY",
               "labels": [
                 "ticker"
               ]
@@ -3078,9 +3078,9 @@
           },
           {
             "value": {
-              "start": 339,
-              "end": 343,
-              "text": "PLTR",
+              "start": 338,
+              "end": 342,
+              "text": "PLAB",
               "labels": [
                 "ticker"
               ]
@@ -3116,7 +3116,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "So the idea is that people have short contracts on SPSM. In other words they bet on the stock to go down, and at a certain date they will be obligated to by shares at the market price at that time. Is that correct? And by making the stock price go up, we are forcing them to buy later at an elevated price. But when will the bulk of these PLTR short contracts come due? And where can you find that info?"
+      "text": "So the idea is that people have short contracts on SLY. In other words they bet on the stock to go down, and at a certain date they will be obligated to by shares at the market price at that time. Is that correct? And by making the stock price go up, we are forcing them to buy later at an elevated price. But when will the bulk of these PLAB short contracts come due? And where can you find that info?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.416222Z",
@@ -3142,9 +3142,9 @@
         "result": [
           {
             "value": {
-              "start": 316,
-              "end": 327,
-              "text": "Intel Corp.",
+              "start": 323,
+              "end": 341,
+              "text": "Seagate Technology",
               "labels": [
                 "company"
               ]
@@ -3158,8 +3158,8 @@
           {
             "value": {
               "start": 34,
-              "end": 47,
-              "text": "Anthropic PBC",
+              "end": 46,
+              "text": "Celestial AI",
               "labels": [
                 "company"
               ]
@@ -3172,9 +3172,9 @@
           },
           {
             "value": {
-              "start": 52,
-              "end": 60,
-              "text": "Mercedes",
+              "start": 51,
+              "end": 61,
+              "text": "Blue Orgin",
               "labels": [
                 "company"
               ]
@@ -3187,9 +3187,9 @@
           },
           {
             "value": {
-              "start": 62,
-              "end": 66,
-              "text": "CHYM",
+              "start": 63,
+              "end": 67,
+              "text": "ttwo",
               "labels": [
                 "ticker"
               ]
@@ -3202,9 +3202,9 @@
           },
           {
             "value": {
-              "start": 239,
-              "end": 251,
-              "text": "NBCUniversal",
+              "start": 238,
+              "end": 258,
+              "text": "Lamb Weston Holdings",
               "labels": [
                 "company"
               ]
@@ -3217,9 +3217,9 @@
           },
           {
             "value": {
-              "start": 328,
-              "end": 338,
-              "text": "Perplexity",
+              "start": 342,
+              "end": 348,
+              "text": "Circle",
               "labels": [
                 "company"
               ]
@@ -3232,9 +3232,9 @@
           },
           {
             "value": {
-              "start": 89,
-              "end": 95,
-              "text": "Traine",
+              "start": 90,
+              "end": 94,
+              "text": "SIGA",
               "labels": [
                 "company"
               ]
@@ -3270,7 +3270,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Right now I'm a really big fan of Anthropic PBC and Mercedes (CHYM-TSE). My reasoning is Traine owns the most low end food stores in Canada (food basics) and no matter what happens with the economy people will still have to eat. Same with NBCUniversal. People will still need everyday items and imo will switch from Intel Corp. Perplexity ect. To a cheaper alternative."
+      "text": "Right now I'm a really big fan of Celestial AI and Blue Orgin (ttwo-TSE). My reasoning is SIGA owns the most low end food stores in Canada (food basics) and no matter what happens with the economy people will still have to eat. Same with Lamb Weston Holdings. People will still need everyday items and imo will switch from Seagate Technology Circle ect. To a cheaper alternative."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.416222Z",
@@ -3297,8 +3297,8 @@
           {
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "BABA",
+              "end": 3,
+              "text": "BBY",
               "labels": [
                 "ticker"
               ]
@@ -3311,9 +3311,9 @@
           },
           {
             "value": {
-              "start": 225,
-              "end": 229,
-              "text": "PSCD",
+              "start": 224,
+              "end": 226,
+              "text": "LW",
               "labels": [
                 "ticker"
               ]
@@ -3349,7 +3349,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "BABA got fda approval for their first acting anti depressant. This is the best drug out their for now .FDA approved this type of drug after almost 60 years. 14% short interest. No offering for now as the ceo mentioned in ER. PSCD could easily 2X by a few months given the enormous potential of the drug."
+      "text": "BBY got fda approval for their first acting anti depressant. This is the best drug out their for now .FDA approved this type of drug after almost 60 years. 14% short interest. No offering for now as the ceo mentioned in ER. LW could easily 2X by a few months given the enormous potential of the drug."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.416222Z",
@@ -3376,8 +3376,8 @@
           {
             "value": {
               "start": 95,
-              "end": 101,
-              "text": "PZZA.O",
+              "end": 100,
+              "text": "Bcoin",
               "labels": [
                 "ticker"
               ]
@@ -3413,7 +3413,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Im not trusting anyone who posts with a Bloomberg screenshot as an example. Im seeing a lot of PZZA.O posts with Bloomberg terminal screenshots. I dont like it because the only people who can afford those are the ones who have an incentive to spread disinformation. stronger together"
+      "text": "Im not trusting anyone who posts with a Bloomberg screenshot as an example. Im seeing a lot of Bcoin posts with Bloomberg terminal screenshots. I dont like it because the only people who can afford those are the ones who have an incentive to spread disinformation. stronger together"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.416222Z",
@@ -3440,8 +3440,8 @@
           {
             "value": {
               "start": 331,
-              "end": 335,
-              "text": "META",
+              "end": 334,
+              "text": "LTH",
               "labels": [
                 "ticker"
               ]
@@ -3477,7 +3477,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "This stock hit Nasdaq today as an IPO. This stock, after doing research is a giant in the making. This ISRAELI stock is no P&D, and is currently trading in Israel at 9300, which equates to about $2388 per share in USD. On top of that large number, 96% of all trades today have been dark pool routed. Thats exactly what happened to META, rioted everything to the DP UNTIL BAM 3 days later sees $1900. Look at it and get in. Suppressed volume all morning, so somebody of loading hard. NFA"
+      "text": "This stock hit Nasdaq today as an IPO. This stock, after doing research is a giant in the making. This ISRAELI stock is no P&D, and is currently trading in Israel at 9300, which equates to about $2388 per share in USD. On top of that large number, 96% of all trades today have been dark pool routed. Thats exactly what happened to LTH, rioted everything to the DP UNTIL BAM 3 days later sees $1900. Look at it and get in. Suppressed volume all morning, so somebody of loading hard. NFA"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.416222Z",
@@ -3505,7 +3505,7 @@
             "value": {
               "start": 30,
               "end": 34,
-              "text": "SNDL",
+              "text": "CRML",
               "labels": [
                 "ticker"
               ]
@@ -3541,7 +3541,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Some simple math for y'all... SNDL is down about 19% from its high. In the prior 20 years or so the market has had much larger declines. After the dotcom bust it declined about 42% and during the Housing bust it declined about 48%. A measly 19% drop off outrageous highs is a mere curiosity. If you want to know what will happen with the market... it might decline another 20% or so, it might go up or it might stay flat. In the long-run it should go up especially with inflation going to drive nominal increases long-term in earnings."
+      "text": "Some simple math for y'all... CRML is down about 19% from its high. In the prior 20 years or so the market has had much larger declines. After the dotcom bust it declined about 42% and during the Housing bust it declined about 48%. A measly 19% drop off outrageous highs is a mere curiosity. If you want to know what will happen with the market... it might decline another 20% or so, it might go up or it might stay flat. In the long-run it should go up especially with inflation going to drive nominal increases long-term in earnings."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -3568,8 +3568,8 @@
           {
             "value": {
               "start": 285,
-              "end": 289,
-              "text": "AMPX",
+              "end": 288,
+              "text": "USB",
               "labels": [
                 "ticker"
               ]
@@ -3582,9 +3582,9 @@
           },
           {
             "value": {
-              "start": 756,
-              "end": 759,
-              "text": "VRT",
+              "start": 755,
+              "end": 758,
+              "text": "XLF",
               "labels": [
                 "ticker"
               ]
@@ -3597,9 +3597,9 @@
           },
           {
             "value": {
-              "start": 702,
-              "end": 705,
-              "text": "TMC",
+              "start": 701,
+              "end": 704,
+              "text": "SPX",
               "labels": [
                 "ticker"
               ]
@@ -3612,9 +3612,9 @@
           },
           {
             "value": {
-              "start": 1398,
-              "end": 1401,
-              "text": "XLF",
+              "start": 1397,
+              "end": 1400,
+              "text": "AMP",
               "labels": [
                 "ticker"
               ]
@@ -3627,9 +3627,9 @@
           },
           {
             "value": {
-              "start": 2196,
-              "end": 2200,
-              "text": "BABA",
+              "start": 2195,
+              "end": 2199,
+              "text": "SENS",
               "labels": [
                 "ticker"
               ]
@@ -3642,9 +3642,9 @@
           },
           {
             "value": {
-              "start": 3447,
-              "end": 3459,
-              "text": "Ralph Lauren",
+              "start": 3446,
+              "end": 3458,
+              "text": "Irth Capital",
               "labels": [
                 "company"
               ]
@@ -3657,9 +3657,9 @@
           },
           {
             "value": {
-              "start": 3562,
-              "end": 3576,
-              "text": "VENTURE GLOBAL",
+              "start": 3561,
+              "end": 3580,
+              "text": "Micron Technologies",
               "labels": [
                 "company"
               ]
@@ -3672,9 +3672,9 @@
           },
           {
             "value": {
-              "start": 3679,
-              "end": 3684,
-              "text": "metro",
+              "start": 3683,
+              "end": 3692,
+              "text": "Wikipedia",
               "labels": [
                 "company"
               ]
@@ -3687,9 +3687,9 @@
           },
           {
             "value": {
-              "start": 3686,
-              "end": 3692,
-              "text": "Velo3D",
+              "start": 3694,
+              "end": 3704,
+              "text": "Apple Inc.",
               "labels": [
                 "company"
               ]
@@ -3702,9 +3702,9 @@
           },
           {
             "value": {
-              "start": 3697,
-              "end": 3705,
-              "text": "Cheniere",
+              "start": 3709,
+              "end": 3716,
+              "text": "Oshkosh",
               "labels": [
                 "company"
               ]
@@ -3717,9 +3717,9 @@
           },
           {
             "value": {
-              "start": 3796,
-              "end": 3807,
-              "text": "Birkenstock",
+              "start": 3807,
+              "end": 3812,
+              "text": "Intel",
               "labels": [
                 "company"
               ]
@@ -3732,9 +3732,9 @@
           },
           {
             "value": {
-              "start": 3966,
-              "end": 3969,
-              "text": "SIX",
+              "start": 3971,
+              "end": 3975,
+              "text": "DFAU",
               "labels": [
                 "ticker"
               ]
@@ -3747,9 +3747,9 @@
           },
           {
             "value": {
-              "start": 3983,
-              "end": 3985,
-              "text": "VG",
+              "start": 3989,
+              "end": 3992,
+              "text": "SOS",
               "labels": [
                 "ticker"
               ]
@@ -3762,9 +3762,9 @@
           },
           {
             "value": {
-              "start": 4138,
-              "end": 4144,
-              "text": "NVIDIA",
+              "start": 4145,
+              "end": 4157,
+              "text": "Celestial AI",
               "labels": [
                 "company"
               ]
@@ -3777,9 +3777,9 @@
           },
           {
             "value": {
-              "start": 4192,
-              "end": 4201,
-              "text": "Regencell",
+              "start": 4205,
+              "end": 4210,
+              "text": "Ralph",
               "labels": [
                 "company"
               ]
@@ -3792,9 +3792,9 @@
           },
           {
             "value": {
-              "start": 4398,
-              "end": 4402,
-              "text": "CRML",
+              "start": 4407,
+              "end": 4410,
+              "text": "NDQ",
               "labels": [
                 "ticker"
               ]
@@ -3807,9 +3807,9 @@
           },
           {
             "value": {
-              "start": 4446,
-              "end": 4449,
-              "text": "AMD",
+              "start": 4454,
+              "end": 4458,
+              "text": "TSLA",
               "labels": [
                 "ticker"
               ]
@@ -3822,9 +3822,9 @@
           },
           {
             "value": {
-              "start": 4506,
-              "end": 4514,
-              "text": "Addentax",
+              "start": 4515,
+              "end": 4521,
+              "text": "Nvidia",
               "labels": [
                 "company"
               ]
@@ -3837,9 +3837,9 @@
           },
           {
             "value": {
-              "start": 4559,
-              "end": 4572,
-              "text": "Broadcom Inc.",
+              "start": 4566,
+              "end": 4571,
+              "text": "Figma",
               "labels": [
                 "company"
               ]
@@ -3852,9 +3852,9 @@
           },
           {
             "value": {
-              "start": 4636,
-              "end": 4640,
-              "text": "SFYF",
+              "start": 4635,
+              "end": 4639,
+              "text": "CINE",
               "labels": [
                 "ticker"
               ]
@@ -3867,9 +3867,9 @@
           },
           {
             "value": {
-              "start": 4933,
-              "end": 4937,
-              "text": "HEMP",
+              "start": 4932,
+              "end": 4935,
+              "text": "cgc",
               "labels": [
                 "ticker"
               ]
@@ -3882,9 +3882,9 @@
           },
           {
             "value": {
-              "start": 5039,
-              "end": 5047,
-              "text": "Cheniere",
+              "start": 5037,
+              "end": 5049,
+              "text": "Crowsdstrike",
               "labels": [
                 "company"
               ]
@@ -3897,9 +3897,9 @@
           },
           {
             "value": {
-              "start": 5323,
-              "end": 5330,
-              "text": "Discord",
+              "start": 5325,
+              "end": 5331,
+              "text": "Micron",
               "labels": [
                 "company"
               ]
@@ -3912,9 +3912,9 @@
           },
           {
             "value": {
-              "start": 5633,
-              "end": 5639,
-              "text": "reddit",
+              "start": 5634,
+              "end": 5645,
+              "text": "green thumb",
               "labels": [
                 "company"
               ]
@@ -3927,9 +3927,9 @@
           },
           {
             "value": {
-              "start": 5724,
-              "end": 5728,
-              "text": "Birk",
+              "start": 5730,
+              "end": 5733,
+              "text": "TGT",
               "labels": [
                 "ticker"
               ]
@@ -3942,9 +3942,9 @@
           },
           {
             "value": {
-              "start": 5746,
-              "end": 5751,
-              "text": "Yahoo",
+              "start": 5751,
+              "end": 5756,
+              "text": "Honda",
               "labels": [
                 "company"
               ]
@@ -3957,9 +3957,9 @@
           },
           {
             "value": {
-              "start": 5917,
-              "end": 5924,
-              "text": "Navient",
+              "start": 5922,
+              "end": 5927,
+              "text": "APPLE",
               "labels": [
                 "company"
               ]
@@ -3972,9 +3972,9 @@
           },
           {
             "value": {
-              "start": 6040,
-              "end": 6044,
-              "text": "meta",
+              "start": 6043,
+              "end": 6067,
+              "text": "Microvast Technology LLC",
               "labels": [
                 "company"
               ]
@@ -3987,9 +3987,9 @@
           },
           {
             "value": {
-              "start": 6488,
-              "end": 6492,
-              "text": "PBSM",
+              "start": 6511,
+              "end": 6515,
+              "text": "AVUS",
               "labels": [
                 "ticker"
               ]
@@ -4002,9 +4002,9 @@
           },
           {
             "value": {
-              "start": 6668,
-              "end": 6671,
-              "text": "SLY",
+              "start": 6691,
+              "end": 6694,
+              "text": "SPG",
               "labels": [
                 "ticker"
               ]
@@ -4017,9 +4017,9 @@
           },
           {
             "value": {
-              "start": 6719,
-              "end": 6723,
-              "text": "SNAP",
+              "start": 6742,
+              "end": 6746,
+              "text": "BBBY",
               "labels": [
                 "ticker"
               ]
@@ -4032,9 +4032,9 @@
           },
           {
             "value": {
-              "start": 6842,
-              "end": 6845,
-              "text": "VGT",
+              "start": 6865,
+              "end": 6869,
+              "text": "SNDK",
               "labels": [
                 "ticker"
               ]
@@ -4047,9 +4047,9 @@
           },
           {
             "value": {
-              "start": 7172,
-              "end": 7174,
-              "text": "BA",
+              "start": 7196,
+              "end": 7199,
+              "text": "SLY",
               "labels": [
                 "ticker"
               ]
@@ -4062,9 +4062,9 @@
           },
           {
             "value": {
-              "start": 7095,
-              "end": 7099,
-              "text": "APRN",
+              "start": 7119,
+              "end": 7123,
+              "text": "SSLY",
               "labels": [
                 "ticker"
               ]
@@ -4077,9 +4077,9 @@
           },
           {
             "value": {
-              "start": 6897,
-              "end": 6901,
-              "text": "UPST",
+              "start": 6921,
+              "end": 6925,
+              "text": "SLYG",
               "labels": [
                 "ticker"
               ]
@@ -4092,9 +4092,9 @@
           },
           {
             "value": {
-              "start": 7004,
-              "end": 7008,
-              "text": "Birk",
+              "start": 7028,
+              "end": 7032,
+              "text": "SENS",
               "labels": [
                 "ticker"
               ]
@@ -4107,9 +4107,9 @@
           },
           {
             "value": {
-              "start": 7233,
-              "end": 7237,
-              "text": "ARKK",
+              "start": 7258,
+              "end": 7262,
+              "text": "SNAP",
               "labels": [
                 "ticker"
               ]
@@ -4122,9 +4122,9 @@
           },
           {
             "value": {
-              "start": 7315,
-              "end": 7319,
-              "text": "HOOD",
+              "start": 7340,
+              "end": 7344,
+              "text": "GILT",
               "labels": [
                 "ticker"
               ]
@@ -4137,9 +4137,9 @@
           },
           {
             "value": {
-              "start": 7443,
-              "end": 7445,
-              "text": "VG",
+              "start": 7468,
+              "end": 7472,
+              "text": "INTC",
               "labels": [
                 "ticker"
               ]
@@ -4152,9 +4152,9 @@
           },
           {
             "value": {
-              "start": 7451,
-              "end": 7454,
-              "text": "SAA",
+              "start": 7478,
+              "end": 7481,
+              "text": "CAR",
               "labels": [
                 "ticker"
               ]
@@ -4167,9 +4167,9 @@
           },
           {
             "value": {
-              "start": 7687,
-              "end": 7691,
-              "text": "BBSC",
+              "start": 7714,
+              "end": 7718,
+              "text": "Birk",
               "labels": [
                 "ticker"
               ]
@@ -4182,9 +4182,9 @@
           },
           {
             "value": {
-              "start": 7790,
-              "end": 7794,
-              "text": "AVGO",
+              "start": 7817,
+              "end": 7821,
+              "text": "PLAB",
               "labels": [
                 "ticker"
               ]
@@ -4197,9 +4197,9 @@
           },
           {
             "value": {
-              "start": 9118,
-              "end": 9121,
-              "text": "VBR",
+              "start": 9145,
+              "end": 9149,
+              "text": "SOXL",
               "labels": [
                 "ticker"
               ]
@@ -4212,9 +4212,9 @@
           },
           {
             "value": {
-              "start": 9130,
-              "end": 9134,
-              "text": "AVUS",
+              "start": 9158,
+              "end": 9161,
+              "text": "gme",
               "labels": [
                 "ticker"
               ]
@@ -4227,9 +4227,9 @@
           },
           {
             "value": {
-              "start": 9371,
-              "end": 9386,
-              "text": "Western Digital",
+              "start": 9398,
+              "end": 9413,
+              "text": "Lockheed Martin",
               "labels": [
                 "company"
               ]
@@ -4242,9 +4242,9 @@
           },
           {
             "value": {
-              "start": 9410,
-              "end": 9428,
-              "text": "irrationalanalysis",
+              "start": 9437,
+              "end": 9449,
+              "text": "Rumble Video",
               "labels": [
                 "company"
               ]
@@ -4280,7 +4280,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "As exciting as it is to live through these once in life time moments they are getting quite old. Today we just closed our 6th red day in a row This is something that has not happened since the Feb 2020 covid crash which saw 7 red days in a row and dropped 15.7% over that time period. AMPX currently has fallen 7.4% over 6 days now. Kinda crazy to think we have had 6 red days in a row for the first time in 2.5 years yet we have only fallen half the distance that the covid crash saw. However, since August 16th (30 trading days) we have seen a total drop of 16.5%... falling just a few % short of the March 29th to May 20th 17.7% sell off over 38 days before we finally saw a meaningful bounce. With TMC officially putting a new low of year in here, the VRT making a new higher high (breaking the downward trend started in January) its hard to be bullish here especially with from what I have seen besides the CPI -4.35% red day I havent felt capitulation or that fear pumping scary that the bottoms never coming sell off. CNBC on Friday mentioned that historically this is the worst week of the year for stocks with the weekly only being down -1.24% total currently and some -5% to -6% red weeks to compete with I wonder how this week is going to finish out. &#x200B; https://preview.redd.it/tkfhdtxyahq91.png?width=975&format=png&auto=webp&s=22112a516715d92cf1c159a93a57b3a5e9bfbea5 Looking at XLF weekly here we have the black downward channel still intact, we have a blue falling wedge forming and we also have a red falling wedge forming inside of that falling wedge. The one thing that I am really seeing here though is that the red horizontal channel with resistance at 370.6 was broken underneath on September 23rd and we have now rejected that resistance 3 days in a row and made a new lower low each day. I am actually a little surprised that when we made a new official low for the year that we didnt just see a face melting dump. We consolidated for almost 3 hours around that 362 level. I do wonder if we are about to see that level broken and see the 350s for the first time since November 2020 tomorrow. Despite the now 6 red days in a row I have a hard time being bullish while BABA rejects 370 and make a new low for the last 11 days straight. Support- 362.1 -> 360.2 (red support) -> 358.2 (blue support) -> 355.4 -> 352.3 Resistance- 364.3 -> 365.6 (red resistance) -> 368.2 -> 370.6 -> 373.7 (blue resistance and gap fill) &#x200B; https://preview.redd.it/31g6d9hzahq91.png?width=975&format=png&auto=webp&s=e6b228a328b8a341912e0b7d350cedd73b32f1b9 Taking a look at futures we are seeing a fairly similar pattern with the black bear channel and the blue falling wedge. I have highlighted two arrows (in blue) where we could be at. Looking at the trend of two days of sell candles followed by a gravestone doji we could be starting a two day bigger sell off tomorrow. Looking at trends generally when a gravestone doji like todays candle pops up on a downward sell off it usually leads to a continuation not a reversal. I do suspect further downside. I would be bearish based off futures as long as we are making lower lows, closing lower lows and as long as we hold under 3770. Key support- 3635 -> 3615 (blue support) -> 3590 -> 3545 Key resistance- 3670 -> 3706 (blue resistance) -> 3770 &#x200B; https://preview.redd.it/mul8f900bhq91.png?width=975&format=png&auto=webp&s=381e87f542780f0db41d5345bedf97b0f419ed3c Looking at Ralph Lauren this morning once again which has been trend for the last week we have seen nothing but strength from VENTURE GLOBAL and tech overall. Today however, we did see weakness in the tech side of things with the exception of metro, Velo3D and Cheniere. However despite an early morning breakout attempt we saw weakness end of day and did see Birkenstock even flash red momentarily. With a break of that potential V bottom support we should be looking at further downside. I was as I called out yesterday (before SIX rocketed and VG made a new lower low) that we would see a potential breakout with a inverse head and shoulders. AS of now that is technically still intact, however, if NVIDIA loses 149.2 that will negate the pattern. With Regencell attempting to break out, closing its 4th doji daily candle in a row, and failing to close over its daily 8ema 3 days in a row I would suspect downside to come. The thing I am waiting for now that CRML put in a new low is for the tech sell off. AMD is at the 75% retracement of its 2022 bear channel with Addentax still holding at 50% retracement along with Broadcom Inc.. Tech is in far better shape then the general stock market and SFYF. We have seen a NYSE driven sell off for the last week. The reason in my opinion we havent hit capitulation and we havent been seeing 3-4%+ sell offs is because people have not abandoned their tech positions yet. If and when tech finally loses support and loses its buy pressure that is when HEMP will put the bottom in and that is when we see the worse week in market history play out. As long as Cheniere and tech in general hold semi bullish this is likely to be a slow burn sell off. Key supports- 150.7 -> 149.3 -> 147.1 Key resistance- 152.4 -> 154.5 &#x200B; https://preview.redd.it/rabr1ak0bhq91.png?width=975&format=png&auto=webp&s=421f0e076579dbbf7cccfc8a56f8f154fa23a45e Discord is another one that I was expecting could see a bigger breakout despite a looming downward pattern. With the rejection at daily 8ema and rejecting/ closing below 283.9. I suspect with that big 4 day sell off last week followed by now a 2 day dead cat bounce is about to see its next leg down. Which if reddit truly is on its next leg down here that means tech could be the catalyst of doom forBirk and the markets. Yahoo actually had a ton of movement today with a total of $11.16. Being up almost 4.5% and down the lowest I saw a +0.7% closing up 2.51% may seem like a victory for the Navient bulls, however, to me this showed weakness. I will be keeping an eye on that 283.8 resistance tomorrow. As long as meta holds below that I am bearish. Once and If we break through 270.3 support I think that will trigger that bigger sell off I was alluding to. Support- 270.3 -> 264.4 (50% retracement/ black falling wedge support) Resistance- 283.8 (falling wedge resistance) -> 292 &#x200B; https://preview.redd.it/5gasyw21bhq91.png?width=975&format=png&auto=webp&s=6448fd81850b4f6eed3e8b5f0f007ea3619718d7 Just when I finally said it was time to give up on the PBSM and it was no longer pertinent to my everyday trading it goes and makes itself important again. Today actually was an extreme bearish day overall technical wise. Not only did SLY put in a new lower low for the year we saw the SNAP break its black dotted bear channel resistance line that dates back to January 24th 2022. This means the trend of the VGTcontinuously making lower lows has been broken. The UPST is now pushing higher and higher. Many people have been saying true bottom is not in until we see the Birk hit 40-50 I am not saying that is what is going to happen but this is the highest the APRN has been since the June 16th previous low. The question now is will the BA attempt to make a 52week high (38.94) tomorrow, or is the ARKK reaching max fear levels and much like January, March, May and June when the HOOD breached 33.7 the top was in. I am pretty indifferent here. On one hand historically speaking for 2022 making a new low on VG, and SAA breaking 33.7 is a time that we should consider going long on some Calls. However, I havent really seen that big flip back to bullish sentiment, and we have not seen tech catch up (more like drop down) to the sell of intensity that BBSC is experiencing. The next few days are going to be interesting on SPY and you can expect with the AVGO over 32 again for high volatility and unpredictability. 10% challenge- &#x200B; https://preview.redd.it/bqhagwr1bhq91.png?width=766&format=png&auto=webp&s=ccfb99337d2ece731e9d1ada0d441082a2798fec You know honestly not my best day today I had some 1dte and 3dte calls that were hella red overnight that I swung. Was able to close the 3dte naturally for a nice win at open and then a quick average down at open got me to breakeven on the 1dte calls. From there it was downhill for a little while. I was still under the impression that we were going to be seeing a green close today and I was also under the impression that the bottom was in and that we were going to take 370 out finally. I was very wrong. Thankfully EOD I was able to get on board and able to close out a decent week day. This is one of those days where being TOO biased to start the days and being smarter than the markets can really hurt you. The best thing I did today was having hard stop loss price targets for my calls. I was able to recognize I COULD be wrong and that if I WAS wrong it was time to GTFO before a manageable loser became an unmanageable loser. I am very indifferent where markets are going to go from here. On one hand I really do think we could see the 340s-350s this week and on the other hand we are hitting some extreme levels on VBR and the AVUS and we very well could have just put the bottom in. I really dont know where to go from here but thats why when in doubt we dont swing and why for the most part I recommend intraday plays. Overall I think as long as tech holds support (Western Digital closing over 149.2 and irrationalanalysis over 270.1) it is hard for me to be full bear. But in a market as volatile and vulnerable as now anything can happen overnight. Youtube video be up later tonight &#x200B; https://preview.redd.it/uag90dc2bhq91.png?width=967&format=png&auto=webp&s=c06102d15361ce3a98c6c2e79dcaf9c8dbd90a4c"
+      "text": "As exciting as it is to live through these once in life time moments they are getting quite old. Today we just closed our 6th red day in a row This is something that has not happened since the Feb 2020 covid crash which saw 7 red days in a row and dropped 15.7% over that time period. USB currently has fallen 7.4% over 6 days now. Kinda crazy to think we have had 6 red days in a row for the first time in 2.5 years yet we have only fallen half the distance that the covid crash saw. However, since August 16th (30 trading days) we have seen a total drop of 16.5%... falling just a few % short of the March 29th to May 20th 17.7% sell off over 38 days before we finally saw a meaningful bounce. With SPX officially putting a new low of year in here, the XLF making a new higher high (breaking the downward trend started in January) its hard to be bullish here especially with from what I have seen besides the CPI -4.35% red day I havent felt capitulation or that fear pumping scary that the bottoms never coming sell off. CNBC on Friday mentioned that historically this is the worst week of the year for stocks with the weekly only being down -1.24% total currently and some -5% to -6% red weeks to compete with I wonder how this week is going to finish out. &#x200B; https://preview.redd.it/tkfhdtxyahq91.png?width=975&format=png&auto=webp&s=22112a516715d92cf1c159a93a57b3a5e9bfbea5 Looking at AMP weekly here we have the black downward channel still intact, we have a blue falling wedge forming and we also have a red falling wedge forming inside of that falling wedge. The one thing that I am really seeing here though is that the red horizontal channel with resistance at 370.6 was broken underneath on September 23rd and we have now rejected that resistance 3 days in a row and made a new lower low each day. I am actually a little surprised that when we made a new official low for the year that we didnt just see a face melting dump. We consolidated for almost 3 hours around that 362 level. I do wonder if we are about to see that level broken and see the 350s for the first time since November 2020 tomorrow. Despite the now 6 red days in a row I have a hard time being bullish while SENS rejects 370 and make a new low for the last 11 days straight. Support- 362.1 -> 360.2 (red support) -> 358.2 (blue support) -> 355.4 -> 352.3 Resistance- 364.3 -> 365.6 (red resistance) -> 368.2 -> 370.6 -> 373.7 (blue resistance and gap fill) &#x200B; https://preview.redd.it/31g6d9hzahq91.png?width=975&format=png&auto=webp&s=e6b228a328b8a341912e0b7d350cedd73b32f1b9 Taking a look at futures we are seeing a fairly similar pattern with the black bear channel and the blue falling wedge. I have highlighted two arrows (in blue) where we could be at. Looking at the trend of two days of sell candles followed by a gravestone doji we could be starting a two day bigger sell off tomorrow. Looking at trends generally when a gravestone doji like todays candle pops up on a downward sell off it usually leads to a continuation not a reversal. I do suspect further downside. I would be bearish based off futures as long as we are making lower lows, closing lower lows and as long as we hold under 3770. Key support- 3635 -> 3615 (blue support) -> 3590 -> 3545 Key resistance- 3670 -> 3706 (blue resistance) -> 3770 &#x200B; https://preview.redd.it/mul8f900bhq91.png?width=975&format=png&auto=webp&s=381e87f542780f0db41d5345bedf97b0f419ed3c Looking at Irth Capital this morning once again which has been trend for the last week we have seen nothing but strength from Micron Technologies and tech overall. Today however, we did see weakness in the tech side of things with the exception of Wikipedia, Apple Inc. and Oshkosh. However despite an early morning breakout attempt we saw weakness end of day and did see Intel even flash red momentarily. With a break of that potential V bottom support we should be looking at further downside. I was as I called out yesterday (before DFAU rocketed and SOS made a new lower low) that we would see a potential breakout with a inverse head and shoulders. AS of now that is technically still intact, however, if Celestial AI loses 149.2 that will negate the pattern. With Ralph attempting to break out, closing its 4th doji daily candle in a row, and failing to close over its daily 8ema 3 days in a row I would suspect downside to come. The thing I am waiting for now that NDQ put in a new low is for the tech sell off. TSLA is at the 75% retracement of its 2022 bear channel with Nvidia still holding at 50% retracement along with Figma. Tech is in far better shape then the general stock market and CINE. We have seen a NYSE driven sell off for the last week. The reason in my opinion we havent hit capitulation and we havent been seeing 3-4%+ sell offs is because people have not abandoned their tech positions yet. If and when tech finally loses support and loses its buy pressure that is when cgc will put the bottom in and that is when we see the worse week in market history play out. As long as Crowsdstrike and tech in general hold semi bullish this is likely to be a slow burn sell off. Key supports- 150.7 -> 149.3 -> 147.1 Key resistance- 152.4 -> 154.5 &#x200B; https://preview.redd.it/rabr1ak0bhq91.png?width=975&format=png&auto=webp&s=421f0e076579dbbf7cccfc8a56f8f154fa23a45e Micron is another one that I was expecting could see a bigger breakout despite a looming downward pattern. With the rejection at daily 8ema and rejecting/ closing below 283.9. I suspect with that big 4 day sell off last week followed by now a 2 day dead cat bounce is about to see its next leg down. Which if green thumb truly is on its next leg down here that means tech could be the catalyst of doom forTGT and the markets. Honda actually had a ton of movement today with a total of $11.16. Being up almost 4.5% and down the lowest I saw a +0.7% closing up 2.51% may seem like a victory for the APPLE bulls, however, to me this showed weakness. I will be keeping an eye on that 283.8 resistance tomorrow. As long as Microvast Technology LLC holds below that I am bearish. Once and If we break through 270.3 support I think that will trigger that bigger sell off I was alluding to. Support- 270.3 -> 264.4 (50% retracement/ black falling wedge support) Resistance- 283.8 (falling wedge resistance) -> 292 &#x200B; https://preview.redd.it/5gasyw21bhq91.png?width=975&format=png&auto=webp&s=6448fd81850b4f6eed3e8b5f0f007ea3619718d7 Just when I finally said it was time to give up on the AVUS and it was no longer pertinent to my everyday trading it goes and makes itself important again. Today actually was an extreme bearish day overall technical wise. Not only did SPG put in a new lower low for the year we saw the BBBY break its black dotted bear channel resistance line that dates back to January 24th 2022. This means the trend of the SNDKcontinuously making lower lows has been broken. The SLYG is now pushing higher and higher. Many people have been saying true bottom is not in until we see the SENS hit 40-50 I am not saying that is what is going to happen but this is the highest the SSLY has been since the June 16th previous low. The question now is will the SLY attempt to make a 52week high (38.94) tomorrow, or is the SNAP reaching max fear levels and much like January, March, May and June when the GILT breached 33.7 the top was in. I am pretty indifferent here. On one hand historically speaking for 2022 making a new low on INTC, and CAR breaking 33.7 is a time that we should consider going long on some Calls. However, I havent really seen that big flip back to bullish sentiment, and we have not seen tech catch up (more like drop down) to the sell of intensity that Birk is experiencing. The next few days are going to be interesting on SPY and you can expect with the PLAB over 32 again for high volatility and unpredictability. 10% challenge- &#x200B; https://preview.redd.it/bqhagwr1bhq91.png?width=766&format=png&auto=webp&s=ccfb99337d2ece731e9d1ada0d441082a2798fec You know honestly not my best day today I had some 1dte and 3dte calls that were hella red overnight that I swung. Was able to close the 3dte naturally for a nice win at open and then a quick average down at open got me to breakeven on the 1dte calls. From there it was downhill for a little while. I was still under the impression that we were going to be seeing a green close today and I was also under the impression that the bottom was in and that we were going to take 370 out finally. I was very wrong. Thankfully EOD I was able to get on board and able to close out a decent week day. This is one of those days where being TOO biased to start the days and being smarter than the markets can really hurt you. The best thing I did today was having hard stop loss price targets for my calls. I was able to recognize I COULD be wrong and that if I WAS wrong it was time to GTFO before a manageable loser became an unmanageable loser. I am very indifferent where markets are going to go from here. On one hand I really do think we could see the 340s-350s this week and on the other hand we are hitting some extreme levels on SOXL and the gme and we very well could have just put the bottom in. I really dont know where to go from here but thats why when in doubt we dont swing and why for the most part I recommend intraday plays. Overall I think as long as tech holds support (Lockheed Martin closing over 149.2 and Rumble Video over 270.1) it is hard for me to be full bear. But in a market as volatile and vulnerable as now anything can happen overnight. Youtube video be up later tonight &#x200B; https://preview.redd.it/uag90dc2bhq91.png?width=967&format=png&auto=webp&s=c06102d15361ce3a98c6c2e79dcaf9c8dbd90a4c"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4307,8 +4307,8 @@
           {
             "value": {
               "start": 13,
-              "end": 18,
-              "text": "ARKVX",
+              "end": 17,
+              "text": "ILMN",
               "labels": [
                 "ticker"
               ]
@@ -4344,7 +4344,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "I care about ARKVX."
+      "text": "I care about ILMN."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4371,8 +4371,8 @@
           {
             "value": {
               "start": 0,
-              "end": 3,
-              "text": "AMP",
+              "end": 2,
+              "text": "VB",
               "labels": [
                 "ticker"
               ]
@@ -4408,7 +4408,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "AMP dropped over $22 from the high today (exact $415), and we are still up since this time last week. We have a lot more pain to come between now and when JPow announces what rate hike he wants. Fed will pivot my fucking ass, if they do, it would go down as invading Russia in the winter levels of poor decision making."
+      "text": "VB dropped over $22 from the high today (exact $415), and we are still up since this time last week. We have a lot more pain to come between now and when JPow announces what rate hike he wants. Fed will pivot my fucking ass, if they do, it would go down as invading Russia in the winter levels of poor decision making."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4435,8 +4435,8 @@
           {
             "value": {
               "start": 0,
-              "end": 9,
-              "text": "Instagram",
+              "end": 5,
+              "text": "North",
               "labels": [
                 "company"
               ]
@@ -4472,7 +4472,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Instagram has had nothing but woke dumpster fires for a long time. Also theyve messed with their subscription costs and more.Whos down to throw the puts volume off the scale!?!?"
+      "text": "North has had nothing but woke dumpster fires for a long time. Also theyve messed with their subscription costs and more.Whos down to throw the puts volume off the scale!?!?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4499,8 +4499,8 @@
           {
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "$BIG",
+              "end": 3,
+              "text": "$TT",
               "labels": [
                 "ticker"
               ]
@@ -4536,7 +4536,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "$BIG has a short interest of 73% of the float as of 6/15/2021. This is very high and havent seen such a high short interest recently like this. What are your thoughts and is this something we should be looking more into? They recently came out with news about their mining activities and should continue to increase profits quarter over quarter. This stock should get some attention based on how it currently looks. Lets talk about this."
+      "text": "$TT has a short interest of 73% of the float as of 6/15/2021. This is very high and havent seen such a high short interest recently like this. What are your thoughts and is this something we should be looking more into? They recently came out with news about their mining activities and should continue to increase profits quarter over quarter. This stock should get some attention based on how it currently looks. Lets talk about this."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4562,9 +4562,9 @@
         "result": [
           {
             "value": {
-              "start": 147,
-              "end": 153,
-              "text": "BEYOND",
+              "start": 156,
+              "end": 166,
+              "text": "TastyWorks",
               "labels": [
                 "company"
               ]
@@ -4578,8 +4578,8 @@
           {
             "value": {
               "start": 11,
-              "end": 20,
-              "text": "Microsoft",
+              "end": 29,
+              "text": "Seagate Technology",
               "labels": [
                 "company"
               ]
@@ -4615,7 +4615,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Being that Microsoft has now reached under 5p per share due to filing for chapter 11 bankruptcy I'm just trying to refinance. Could it be the next BEYOND or is it just two higher risk?"
+      "text": "Being that Seagate Technology has now reached under 5p per share due to filing for chapter 11 bankruptcy I'm just trying to refinance. Could it be the next TastyWorks or is it just two higher risk?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4642,8 +4642,8 @@
           {
             "value": {
               "start": 28,
-              "end": 30,
-              "text": "LW",
+              "end": 32,
+              "text": "CINE",
               "labels": [
                 "ticker"
               ]
@@ -4656,9 +4656,9 @@
           },
           {
             "value": {
-              "start": 236,
-              "end": 239,
-              "text": "HBM",
+              "start": 238,
+              "end": 241,
+              "text": "DTC",
               "labels": [
                 "ticker"
               ]
@@ -4694,7 +4694,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "I remember agitating to buy LW at 4.6$-5.2$ range. WSB said its dog shit company, but when hype got going, you guys bought at 10-25$ range. Gotta say that WSB specialty is buying when Cramer and MSM starts baiting. And here we are now, HBM is at 7$ range and you guys saying its dogshit company... I guess you guys are waiting for Cramer MSM baits ?"
+      "text": "I remember agitating to buy CINE at 4.6$-5.2$ range. WSB said its dog shit company, but when hype got going, you guys bought at 10-25$ range. Gotta say that WSB specialty is buying when Cramer and MSM starts baiting. And here we are now, DTC is at 7$ range and you guys saying its dogshit company... I guess you guys are waiting for Cramer MSM baits ?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4721,8 +4721,8 @@
           {
             "value": {
               "start": 111,
-              "end": 116,
-              "text": "Figma",
+              "end": 120,
+              "text": "Papa John",
               "labels": [
                 "company"
               ]
@@ -4758,7 +4758,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "As Warren Buffet rightly said \" ...get greedy when others r fearful\", this is the right time to invest and buy Figma With a $800M contract on its hand and the EU + UK + China all announcing massive investments to the tune of $650+ Billion in Green Hydrogen contracts...the potential and upside is limitless. Except the stock to rocket in the coming days/weeks, as they continue to expand. Plus we have 16% SI here...so except another squeeze from retail investors : ))...as soon as price starts going up."
+      "text": "As Warren Buffet rightly said \" ...get greedy when others r fearful\", this is the right time to invest and buy Papa John With a $800M contract on its hand and the EU + UK + China all announcing massive investments to the tune of $650+ Billion in Green Hydrogen contracts...the potential and upside is limitless. Except the stock to rocket in the coming days/weeks, as they continue to expand. Plus we have 16% SI here...so except another squeeze from retail investors : ))...as soon as price starts going up."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4786,7 +4786,7 @@
             "value": {
               "start": 0,
               "end": 4,
-              "text": "crwd",
+              "text": "PACS",
               "labels": [
                 "ticker"
               ]
@@ -4822,7 +4822,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "crwd dropped 7%. Bloody red day today"
+      "text": "PACS dropped 7%. Bloody red day today"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4850,7 +4850,7 @@
             "value": {
               "start": 24,
               "end": 28,
-              "text": "PTON",
+              "text": "FVRR",
               "labels": [
                 "ticker"
               ]
@@ -4886,7 +4886,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Can someone explain why PTON is dropping so much?"
+      "text": "Can someone explain why FVRR is dropping so much?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4913,8 +4913,8 @@
           {
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "PZZA",
+              "end": 3,
+              "text": "NEO",
               "labels": [
                 "ticker"
               ]
@@ -4950,7 +4950,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "PZZA is so fucked."
+      "text": "NEO is so fucked."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -4978,7 +4978,7 @@
             "value": {
               "start": 713,
               "end": 717,
-              "text": "DOCS",
+              "text": "IREN",
               "labels": [
                 "ticker"
               ]
@@ -5014,7 +5014,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Wall. Street. BETS. Thats what were here for. There has been a lot of DD posts and I can't argue with anyone trying to learn a little more about their investment, but right now all its providing is little more than gut feeling sentimwnt one way or another. But this has and will always be a gamble and if you dont belive it then you're fooling yourself and disuading others. A lot of hate and shaming going on towards people who are willing to take the risk. They've seen the same thing as eveyone else by now. This isnt a team sport but you cant deny there is definite strenth in numbers here. Especially with such a small number of outstanding. We all know that its either RC pulled out and theyre bankrupt, or DOCS has a plan in place we dont know about and the news by end of the month will rocket. Thats the bet. There's a little more to it than that I suppose but... is there really? Good luck out there to all my fellow WSB degenerates and may the odds be ever in your favor"
+      "text": "Wall. Street. BETS. Thats what were here for. There has been a lot of DD posts and I can't argue with anyone trying to learn a little more about their investment, but right now all its providing is little more than gut feeling sentimwnt one way or another. But this has and will always be a gamble and if you dont belive it then you're fooling yourself and disuading others. A lot of hate and shaming going on towards people who are willing to take the risk. They've seen the same thing as eveyone else by now. This isnt a team sport but you cant deny there is definite strenth in numbers here. Especially with such a small number of outstanding. We all know that its either RC pulled out and theyre bankrupt, or IREN has a plan in place we dont know about and the news by end of the month will rocket. Thats the bet. There's a little more to it than that I suppose but... is there really? Good luck out there to all my fellow WSB degenerates and may the odds be ever in your favor"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5040,9 +5040,9 @@
         "result": [
           {
             "value": {
-              "start": 220,
-              "end": 224,
-              "text": "NVDA",
+              "start": 224,
+              "end": 228,
+              "text": "tsla",
               "labels": [
                 "ticker"
               ]
@@ -5055,9 +5055,9 @@
           },
           {
             "value": {
-              "start": 340,
-              "end": 344,
-              "text": "Birk",
+              "start": 344,
+              "end": 347,
+              "text": "BIG",
               "labels": [
                 "ticker"
               ]
@@ -5071,8 +5071,8 @@
           {
             "value": {
               "start": 0,
-              "end": 5,
-              "text": "APPLE",
+              "end": 9,
+              "text": "ROBINHOOD",
               "labels": [
                 "company"
               ]
@@ -5085,9 +5085,9 @@
           },
           {
             "value": {
-              "start": 1303,
-              "end": 1304,
-              "text": "H",
+              "start": 1306,
+              "end": 1310,
+              "text": "MSTR",
               "labels": [
                 "ticker"
               ]
@@ -5123,7 +5123,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "APPLE stock was sinking fast on Monday and had dropped more than 11% in trading after the theater chain announced a new distribution agreement to sell up to $1.4 billion worth of APE shares. The so-called APE shares, or NVDAPreferred Equity Units, have the same economic value and voting rights as a share of common stock. The idea was for Birk to use the proceeds from the sale of the new stock to repay, refinance, redeem or repurchase existing debt, as it said in Mondays filing. The APEs are even named after the meme traders that helped to boost the companys stock price last year. The market however soured at that idea, and while the APEs are up on the day, theyve dropped 41% in value in the past month since the new stocks were first announced by Chief Executive Officer Adam Aron on August 22 at a price of $6, now sitting at $3.78. Meanwhile, AMCs stock itself over that same period has also dropped 21.1%. While it was disclosed that up to 425 million shares of APEs would be sold, the announcement is a placeholder and does not specifically indicate how many will ultimately be sold or by when. Aron has previously argued that since the shares are going to already existing shareholders rather than going directly on sale, APEs would not dilute AMCs stock value. With the creation of APEs, H is deeply and fundamentally strengthening our company. Given the flexibility that APEs will give us, we will likely be able to raise money if we need or so choose, which inmmensely lessens any survival risk as we continue to work our way through this pandemic to recovery and transformation, Aron said in the letter announcing their creation last month. Source: [https://www.yahoo.com/entertainment/amc-stock-sinks-11-amid-184901845.html#:\\~:text=The%20so%2Dcalled%20%E2%80%9CAPE%E2%80%9D,it%20said%20in%20Monday's%20filing](https://www.yahoo.com/entertainment/amc-stock-sinks-11-amid-184901845.html#:~:text=The%20so%2Dcalled%20%E2%80%9CAPE%E2%80%9D,it%20said%20in%20Monday's%20filing)."
+      "text": "ROBINHOOD stock was sinking fast on Monday and had dropped more than 11% in trading after the theater chain announced a new distribution agreement to sell up to $1.4 billion worth of APE shares. The so-called APE shares, or tslaPreferred Equity Units, have the same economic value and voting rights as a share of common stock. The idea was for BIG to use the proceeds from the sale of the new stock to repay, refinance, redeem or repurchase existing debt, as it said in Mondays filing. The APEs are even named after the meme traders that helped to boost the companys stock price last year. The market however soured at that idea, and while the APEs are up on the day, theyve dropped 41% in value in the past month since the new stocks were first announced by Chief Executive Officer Adam Aron on August 22 at a price of $6, now sitting at $3.78. Meanwhile, AMCs stock itself over that same period has also dropped 21.1%. While it was disclosed that up to 425 million shares of APEs would be sold, the announcement is a placeholder and does not specifically indicate how many will ultimately be sold or by when. Aron has previously argued that since the shares are going to already existing shareholders rather than going directly on sale, APEs would not dilute AMCs stock value. With the creation of APEs, MSTR is deeply and fundamentally strengthening our company. Given the flexibility that APEs will give us, we will likely be able to raise money if we need or so choose, which inmmensely lessens any survival risk as we continue to work our way through this pandemic to recovery and transformation, Aron said in the letter announcing their creation last month. Source: [https://www.yahoo.com/entertainment/amc-stock-sinks-11-amid-184901845.html#:\\~:text=The%20so%2Dcalled%20%E2%80%9CAPE%E2%80%9D,it%20said%20in%20Monday's%20filing](https://www.yahoo.com/entertainment/amc-stock-sinks-11-amid-184901845.html#:~:text=The%20so%2Dcalled%20%E2%80%9CAPE%E2%80%9D,it%20said%20in%20Monday's%20filing)."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5150,8 +5150,8 @@
           {
             "value": {
               "start": 362,
-              "end": 366,
-              "text": "SOFI",
+              "end": 368,
+              "text": "Spacex",
               "labels": [
                 "company"
               ]
@@ -5187,7 +5187,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Today I learned that we each have two hearts. A heart attack occurs when the two hearts compete for dominance which is why it's important to do cardiovascular activities to keep them distracted, so they don't contemplate conquering the other hearts territory. This information is cutting edge but it is becoming more mainstream. It is only a matter of time till SOFI breaks out and rides its way up to new all time highs."
+      "text": "Today I learned that we each have two hearts. A heart attack occurs when the two hearts compete for dominance which is why it's important to do cardiovascular activities to keep them distracted, so they don't contemplate conquering the other hearts territory. This information is cutting edge but it is becoming more mainstream. It is only a matter of time till Spacex breaks out and rides its way up to new all time highs."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5215,7 +5215,7 @@
             "value": {
               "start": 74,
               "end": 79,
-              "text": "$DOCN",
+              "text": "$DFAU",
               "labels": [
                 "ticker"
               ]
@@ -5229,8 +5229,8 @@
           {
             "value": {
               "start": 81,
-              "end": 90,
-              "text": "Papa John",
+              "end": 93,
+              "text": "Shutterstock",
               "labels": [
                 "company"
               ]
@@ -5266,7 +5266,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "PS: I'm new in investing. Need to know a summary of the earnings call for $DOCN (Papa John) that happened today. (03/30/2021) Any insights? TIA."
+      "text": "PS: I'm new in investing. Need to know a summary of the earnings call for $DFAU (Shutterstock) that happened today. (03/30/2021) Any insights? TIA."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5293,8 +5293,8 @@
           {
             "value": {
               "start": 32,
-              "end": 35,
-              "text": "AMC",
+              "end": 36,
+              "text": "OMFS",
               "labels": [
                 "ticker"
               ]
@@ -5330,7 +5330,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "So I got assigned 300 shares of AMC early from a short leg, I just found out that the dividend snapshot is on the 19th which is when the rest of the position expires. If I was able to hold the shares till end of day with out the broker closing it early on me, would I still qualify for dividends? at what time is the snapshot taken?"
+      "text": "So I got assigned 300 shares of OMFS early from a short leg, I just found out that the dividend snapshot is on the 19th which is when the rest of the position expires. If I was able to hold the shares till end of day with out the broker closing it early on me, would I still qualify for dividends? at what time is the snapshot taken?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5358,7 +5358,7 @@
             "value": {
               "start": 114,
               "end": 118,
-              "text": "OPEN",
+              "text": "WKEY",
               "labels": [
                 "ticker"
               ]
@@ -5394,7 +5394,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "A lot of paper hands getting out before blast off. Might looks scary now, but itll all be worth it in the end. If OPEN doesnt want to go bankrupt, they will do whatever it takes to save it. The company has a lot more to lose than the individual investors. The announcement will be their Hail Mary to save the company so its going to be good!"
+      "text": "A lot of paper hands getting out before blast off. Might looks scary now, but itll all be worth it in the end. If WKEY doesnt want to go bankrupt, they will do whatever it takes to save it. The company has a lot more to lose than the individual investors. The announcement will be their Hail Mary to save the company so its going to be good!"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5420,9 +5420,9 @@
         "result": [
           {
             "value": {
-              "start": 35,
-              "end": 39,
-              "text": "META",
+              "start": 36,
+              "end": 40,
+              "text": "MRNA",
               "labels": [
                 "ticker"
               ]
@@ -5437,7 +5437,7 @@
             "value": {
               "start": 24,
               "end": 27,
-              "text": "SPY",
+              "text": "SPG",
               "labels": [
                 "ticker"
               ]
@@ -5451,8 +5451,8 @@
           {
             "value": {
               "start": 29,
-              "end": 32,
-              "text": "APE",
+              "end": 33,
+              "text": "ETHE",
               "labels": [
                 "ticker"
               ]
@@ -5488,7 +5488,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Looking for thoughts on SPY, APE & META? Is it worth a long term hold? Short term?"
+      "text": "Looking for thoughts on SPG, ETHE & MRNA? Is it worth a long term hold? Short term?"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5515,8 +5515,8 @@
           {
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "AMAT",
+              "end": 3,
+              "text": "CVX",
               "labels": [
                 "ticker"
               ]
@@ -5552,7 +5552,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "AMAT Company have been beating earnings, GOT APPROVAL TO ENTER A DRUG INTO EUROPES (which is huge!) market and they are still shorting. Also word is a buy out deal is being worked on the hush."
+      "text": "CVX Company have been beating earnings, GOT APPROVAL TO ENTER A DRUG INTO EUROPES (which is huge!) market and they are still shorting. Also word is a buy out deal is being worked on the hush."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5580,7 +5580,7 @@
             "value": {
               "start": 376,
               "end": 380,
-              "text": "ULCC",
+              "text": "nvda",
               "labels": [
                 "ticker"
               ]
@@ -5616,7 +5616,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "Uhh, if J Pow said anything of substance or different, bonds would have moved. Not only did they not move, long bonds actually went up. Equity traders are skittish trend followers in their mom's basement. Bond traders are fucking nerds who wear penny loafers. 70% of a likelihood of a big green day on Monday. 100% chance of a net green by end of next week. We end up back at ULCC 415."
+      "text": "Uhh, if J Pow said anything of substance or different, bonds would have moved. Not only did they not move, long bonds actually went up. Equity traders are skittish trend followers in their mom's basement. Bond traders are fucking nerds who wear penny loafers. 70% of a likelihood of a big green day on Monday. 100% chance of a net green by end of next week. We end up back at nvda 415."
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
@@ -5643,8 +5643,8 @@
           {
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "CRML",
+              "end": 3,
+              "text": "VGT",
               "labels": [
                 "ticker"
               ]
@@ -5680,7 +5680,7 @@
     "drafts": [],
     "predictions": [],
     "data": {
-      "text": "CRML slow pump to $370 all day huh"
+      "text": "VGT slow pump to $370 all day huh"
     },
     "meta": {},
     "created_at": "2026-05-13T19:07:25.417727Z",
