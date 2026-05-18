@@ -1,0 +1,4607 @@
+[
+  {
+    "id": 455,
+    "annotations": [
+      {
+        "id": 560,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 7,
+              "end": 21,
+              "text": "Melvin capital",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "o1ezl-kxwy",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:24:22.041161Z",
+        "updated_at": "2026-05-15T14:24:22.041161Z",
+        "draft_created_at": "2026-05-15T14:24:18.104223Z",
+        "lead_time": 9.48,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "a3ec49c0-e301-4071-9350-dafdb7cc2a90",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 455,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Called Melvin capital and asked them for a stock shorting feature, I'm going to start shorting Tech stocks because I think technology has gone to far and has less of a chance coming full circle. Who is with?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:24:22.081147Z",
+    "allow_skip": true,
+    "inner_id": 4,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 456,
+    "annotations": [
+      {
+        "id": 561,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 68,
+              "end": 72,
+              "text": "NRDY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "jcGEVj-Znz",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:24:25.708721Z",
+        "updated_at": "2026-05-15T14:24:25.708721Z",
+        "draft_created_at": null,
+        "lead_time": 2.977,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "7a8f3a11-126b-447f-9a70-5288aaae60fd",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 456,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "A friend of mine wants me to join this friends and family raise for NRDY, $0.50 a stock min buy in $10k. Yay or nay?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:24:25.743303Z",
+    "allow_skip": true,
+    "inner_id": 5,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 458,
+    "annotations": [
+      {
+        "id": 563,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 84,
+              "end": 88,
+              "text": "TILT",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "ItR-J7hzWa",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 185,
+              "end": 191,
+              "text": "PZZA.O",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "F115PW1Z39",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 749,
+              "end": 753,
+              "text": "AMPX",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "Q-40mQcoto",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:25:04.244900Z",
+        "updated_at": "2026-05-15T14:25:04.244900Z",
+        "draft_created_at": "2026-05-15T14:24:39.764475Z",
+        "lead_time": 34.005,
+        "prediction": {},
+        "result_count": 3,
+        "unique_id": "b693b6e2-265d-4611-91b1-36742d86f8f7",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 458,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "you heard it here first folks, market crash is coming hard, and fast. almost like a TILT type of exhilarating ride. you can believe me, last time i was on this trip, It was just before PZZA.O tanked after having held steady for who knows how long in the $300 range. it's consolidating they said, its, they ran out of shorts they said, just hodl. and and on and on So market close on Friday was bullish, so strong, and because of that clear cut indication. the sheer amount of glee for the sudden reversal that was so in quad witching hour is undoubtedly the greediness of the pigs, that they deserve to be slaughtered. but its those who have faith that can rejoice, for their wager, might be what pays for the bills. So inverse me who unversed wsb. AMPX ATH Guaranteeed! &#x200B; TLDR: Stonks only go up. and all money is fake anyway. 1 385P 9/19 exp"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:25:04.285583Z",
+    "allow_skip": true,
+    "inner_id": 7,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 459,
+    "annotations": [
+      {
+        "id": 564,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "SATS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "eSEWjNvnhB",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:25:06.833286Z",
+        "updated_at": "2026-05-15T14:25:06.833286Z",
+        "draft_created_at": null,
+        "lead_time": 1.797,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "2b978ad9-5082-4e2a-b65a-d692d806e570",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 459,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "SATS has much more potential to take off right now. Check it out"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:25:06.872769Z",
+    "allow_skip": true,
+    "inner_id": 8,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 464,
+    "annotations": [
+      {
+        "id": 569,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 36,
+              "end": 39,
+              "text": "IJS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "wmJvBk4Wvq",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:25:54.702765Z",
+        "updated_at": "2026-05-15T14:25:54.702765Z",
+        "draft_created_at": "2026-05-15T14:25:53.747174Z",
+        "lead_time": 6.511,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "ec20a271-ade1-4a9d-80e3-f1dcd044d105",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 464,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Seriouslywe get ityoure invested in IJSbut there are already countless posts about this shit. Goddamn. Pointless words here because auto-moderator is dumb and requires lengthy posts even when unnecessary. Words words words words words words words words words words words words words words words words words words words words words"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:25:54.741709Z",
+    "allow_skip": true,
+    "inner_id": 13,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 465,
+    "annotations": [
+      {
+        "id": 570,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 0,
+              "end": 5,
+              "text": "GOOGL",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "jRs2TokVcM",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:25:57.796229Z",
+        "updated_at": "2026-05-15T14:25:57.796229Z",
+        "draft_created_at": null,
+        "lead_time": 1.612,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "b062c29b-9a3a-4083-9c64-e60a8c9c92e0",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 465,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "GOOGL is not allowed to drop 360?![img](emote|t5_2th52|4886)"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:25:57.832373Z",
+    "allow_skip": true,
+    "inner_id": 14,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 466,
+    "annotations": [
+      {
+        "id": 571,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 81,
+              "end": 84,
+              "text": "$ZM",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "UXnFgNwENx",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 13,
+              "end": 23,
+              "text": "Rocket Lab",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "uB8g2xEcJQ",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:05.676554Z",
+        "updated_at": "2026-05-15T14:27:05.676554Z",
+        "draft_created_at": "2026-05-15T14:26:07.391654Z",
+        "lead_time": 67.23,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "44ea62d1-4b2f-457c-b2f5-864bc0757fa8",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 466,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I trade with Rocket Lab and keep getting this message when I go to buy. Not just $ZM but any other stock. Is anyone else out there having this problem? TIA."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:05.716076Z",
+    "allow_skip": true,
+    "inner_id": 15,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 468,
+    "annotations": [
+      {
+        "id": 573,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 34,
+              "end": 37,
+              "text": "HTZ",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "RBl7HSahpk",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:11.462683Z",
+        "updated_at": "2026-05-15T14:27:11.462683Z",
+        "draft_created_at": null,
+        "lead_time": 2.061,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "a1f08638-8399-45c5-9c55-c433661251e8",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 468,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Everyday I'm thankful that I sold HTZ at $8 literally the day before it started its plunge Thank you Lord Jesus for guiding my hands on that day"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:11.501067Z",
+    "allow_skip": true,
+    "inner_id": 17,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 469,
+    "annotations": [
+      {
+        "id": 574,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 117,
+              "end": 121,
+              "text": "avgo",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "nxc8Z-hxpJ",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:15.405942Z",
+        "updated_at": "2026-05-15T14:27:15.405942Z",
+        "draft_created_at": null,
+        "lead_time": 3.29,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "6039d068-cebf-4dd9-9fc2-804377e97d99",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 469,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Im 16 and dont have a ton of money to spend the question be should I Yeet my last paycheck of the summer ($900) into avgo or do I just put it towards my truck like a normal person"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:15.444857Z",
+    "allow_skip": true,
+    "inner_id": 18,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 470,
+    "annotations": [
+      {
+        "id": 575,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 7,
+              "end": 11,
+              "text": "BIRK",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "8CVajywchW",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:18.472636Z",
+        "updated_at": "2026-05-15T14:27:18.472636Z",
+        "draft_created_at": null,
+        "lead_time": 2.479,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "4a1d9602-a33a-40b3-aec9-f6e227ff9d6a",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 470,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I hold BIRK puts lmao"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:18.510294Z",
+    "allow_skip": true,
+    "inner_id": 19,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 471,
+    "annotations": [
+      {
+        "id": 576,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 43,
+              "end": 48,
+              "text": "$PZZA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "hq5mduf4-P",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 58,
+              "end": 63,
+              "text": "$VELO",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "mn6Fl2w4i6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 68,
+              "end": 74,
+              "text": "$eeenf",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "Rjhk5dqx6z",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 164,
+              "end": 167,
+              "text": "$SP",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "8HWXXmqak9",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 172,
+              "end": 177,
+              "text": "$BABA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "t_Rng_SqYR",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 207,
+              "end": 211,
+              "text": "$CEG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "_YHW1LWMjn",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 226,
+              "end": 231,
+              "text": "$STSB",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "ztch2lB7e6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 281,
+              "end": 285,
+              "text": "$SPX",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "kVnQalkmEo",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 319,
+              "end": 323,
+              "text": "$LNG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "7haK2J8TDy",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 424,
+              "end": 429,
+              "text": "$GNRC",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "G1QMoiEPEt",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 677,
+              "end": 682,
+              "text": "$USAR",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "463p7GLGPz",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 30,
+              "end": 41,
+              "text": "green thumb",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "0m1R956isz",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:31.938633Z",
+        "updated_at": "2026-05-15T14:27:31.938633Z",
+        "draft_created_at": "2026-05-15T14:27:24.927291Z",
+        "lead_time": 12.805,
+        "prediction": {},
+        "result_count": 12,
+        "unique_id": "6e96de97-a0ad-46db-b09e-0d28b4031cae",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 471,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "There is an ongoing fight for green thumb ($PZZA) between $VELO and $eeenf. My question is, why is nobody talking about this or buying it? Apparently, at the start $SP and $BABA were supposed to merge where $CEG would acquire $STSB and deal would be for approximately $25.84. Then $SPX saw that and offered cash to buy $LNG and they keep throwing more and more cash on this deal, I think up to $33 per share. Now, currently $GNRC is trading around $22, so if any of these deals goes through = free money. If not, then you are still buying an airline stock for fairly cheap in an environment where air travel is increasing. And for those who like to YOLO, there is some sort of $USAR shareholder meeting tonight where they would decide (hopefully) what is the future of the company and what deal they want to go with."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:31.979037Z",
+    "allow_skip": true,
+    "inner_id": 20,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 472,
+    "annotations": [
+      {
+        "id": 577,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 45,
+              "end": 49,
+              "text": "USAR",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "B5Iix7hFNF",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:36.703988Z",
+        "updated_at": "2026-05-15T14:27:36.703988Z",
+        "draft_created_at": null,
+        "lead_time": 3.563,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "75ed4e20-9475-4a92-9294-676d614bf8fd",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 472,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Just put half of my very modest savings into USAR to buy at market open (straight buy at mkt no options). I havent YOLOd before so Im hoping my dollarydoos go to the moon. Ball size increased 2%, girth 1%."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:36.741925Z",
+    "allow_skip": true,
+    "inner_id": 21,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 473,
+    "annotations": [
+      {
+        "id": 578,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 77,
+              "end": 80,
+              "text": "AMC",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "_6bfdKuMXi",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 68,
+              "end": 73,
+              "text": "fivem",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "Yx0a4g1oNm",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 150,
+              "end": 156,
+              "text": "Micron",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "v2OEuUOsLd",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:45.641479Z",
+        "updated_at": "2026-05-15T14:27:45.641479Z",
+        "draft_created_at": "2026-05-15T14:27:44.619910Z",
+        "lead_time": 7.994,
+        "prediction": {},
+        "result_count": 3,
+        "unique_id": "f0870f50-50be-48f3-b75e-a139c3f15fd4",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 473,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Thinking about spending $1000 but im not sure if i should use it on fivem or AMC. Looked up how many charging stations they had across the US through Micron maps and it looks like an even fight but i wanna hear you guys opinion."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:45.681230Z",
+    "allow_skip": true,
+    "inner_id": 22,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 474,
+    "annotations": [
+      {
+        "id": 579,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 58,
+              "end": 62,
+              "text": "ILMN",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "jMNo6kize-",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 67,
+              "end": 70,
+              "text": "XLF",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "dwsRC8KtSq",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:58.598557Z",
+        "updated_at": "2026-05-15T14:27:58.598557Z",
+        "draft_created_at": "2026-05-15T14:27:54.102211Z",
+        "lead_time": 12.254,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "fa5cacbb-a898-40dd-91fa-627c959f04b3",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 474,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Can someone smarter than I explain why what was done with ILMN and XLF was not just a roundabout way of diluting share count? Yes, it was dividends without value distributed as stock, with the exact same results of just a stock split.Help me understand please."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:58.637341Z",
+    "allow_skip": true,
+    "inner_id": 23,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 475,
+    "annotations": [
+      {
+        "id": 580,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 6,
+              "end": 9,
+              "text": "IJT",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "QUvahiYuHK",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:28:03.526660Z",
+        "updated_at": "2026-05-15T14:28:03.526660Z",
+        "draft_created_at": null,
+        "lead_time": 4.389,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "407cc645-b335-4e47-9396-01f85ee4b232",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 475,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "CNBC: IJT bulls on suicide watch. This is breaking news. Check back for updates"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:28:03.563573Z",
+    "allow_skip": true,
+    "inner_id": 24,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 477,
+    "annotations": [
+      {
+        "id": 582,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 156,
+              "end": 160,
+              "text": "UPST",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "JbEHMSIn2x",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:28:12.017585Z",
+        "updated_at": "2026-05-15T14:28:12.017585Z",
+        "draft_created_at": null,
+        "lead_time": 5.244,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "07eb7e63-6b9a-4fd5-90b1-fbbc5f858f10",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 477,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "The people in this sub remind me of a bunch of rock headed redards smackin a giant dead tree waiting for a magic nut to fall from the sky. The last nut was UPST and guess what, most of you made nothing and lost your grandmas birthday money. You wouldn't stick your dick in a snake hole would you? So dont stick your cash in the market. Be safe out there. Be patient"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:28:12.054691Z",
+    "allow_skip": true,
+    "inner_id": 26,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 478,
+    "annotations": [
+      {
+        "id": 583,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 53,
+              "end": 57,
+              "text": "$VBR",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "JNQjmj2H_I",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 0,
+              "end": 6,
+              "text": "Traine",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "eQUEjPkN2S",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 17,
+              "end": 21,
+              "text": "Uber",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "uv4JWe4952",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:28:25.024662Z",
+        "updated_at": "2026-05-15T14:28:25.024662Z",
+        "draft_created_at": "2026-05-15T14:28:20.769017Z",
+        "lead_time": 11.358,
+        "prediction": {},
+        "result_count": 3,
+        "unique_id": "f7210f48-af9f-424a-a24f-f97330534680",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 478,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Traine pulling a Uber by not letting people purchase $VBR.What is going on???"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:28:25.062244Z",
+    "allow_skip": true,
+    "inner_id": 27,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 482,
+    "annotations": [
+      {
+        "id": 587,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 212,
+              "end": 217,
+              "text": "$HIMS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "0a5tygwr12",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 234,
+              "end": 239,
+              "text": "$INTU",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "jgUZHQ482B",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 257,
+              "end": 262,
+              "text": "$AMPX",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "xSh36qH1hr",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:28:50.203382Z",
+        "updated_at": "2026-05-15T14:28:50.203382Z",
+        "draft_created_at": null,
+        "lead_time": 5.032,
+        "prediction": {},
+        "result_count": 3,
+        "unique_id": "60bab1c4-f34f-494f-8b50-22d00c7789cd",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 482,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "It's been years since we've had multiple circuit breakers hit in one day. Puts were basically an atm machine. We need to rally the old gay bears to finally wake up, they don't have the QE to stop us anymore 10 x $HIMS 320P @ 10/211 x $INTU 365P @ 10/1914 x $AMPX 370P @ 09/30 Bless your puts and ur holes tmw brethren, im praying for a deep red dild at open."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:28:50.240511Z",
+    "allow_skip": true,
+    "inner_id": 31,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 483,
+    "annotations": [
+      {
+        "id": 588,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 299,
+              "end": 303,
+              "text": "GSSC",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "D0KsYRqljo",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:29:09.258577Z",
+        "updated_at": "2026-05-15T14:29:09.258577Z",
+        "draft_created_at": "2026-05-15T14:29:00.091711Z",
+        "lead_time": 18.14,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "5bf7976a-8839-48bf-83c4-415a422ddf0c",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 483,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "If you see the word \"FUD\", run as far as you can. Every time you see someone using the concept of \"FUD\" in their post ESPECIALLY when the post is about how a stock is going to moon - you can be 99.999% positive, that person is a bag holder and trying to pass their bags onto you. If you look at the GSSC cult sub, they create their own tinfoil hat theories, preach them, circlejerk and it goes on and on. No official data is correct to them - everything is FUD. There is literally no fact they cannot twist to present it as a FUD to make them sell. These apes have been bent over many times already but they continue believing in fairy tales and cherry-picking data to justify their wet fantasies. Any information that doesn't justify the bag holder's bias is FUD. Which means you must become a blind sheep and follow the fake DD until your losses are 100%. Be smart. Nobody has a goal to make you rich other than yourself."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:29:09.298414Z",
+    "allow_skip": true,
+    "inner_id": 32,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 484,
+    "annotations": [
+      {
+        "id": 589,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 50,
+              "end": 55,
+              "text": "$PINS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "vIz3LCp5an",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:29:20.597992Z",
+        "updated_at": "2026-05-15T14:29:20.597992Z",
+        "draft_created_at": "2026-05-15T14:29:16.268896Z",
+        "lead_time": 10.666,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "d4ad7bbc-044e-49c3-9589-2563847e5c49",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 484,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Thank God I had class. I was going to buy PUTS on $PINS for ER"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:29:20.637009Z",
+    "allow_skip": true,
+    "inner_id": 33,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 486,
+    "annotations": [
+      {
+        "id": 591,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 89,
+              "end": 92,
+              "text": "NIO",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "LgplkEiWkI",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:29:41.279635Z",
+        "updated_at": "2026-05-15T14:29:41.279635Z",
+        "draft_created_at": "2026-05-15T14:29:38.537221Z",
+        "lead_time": 9.16,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "2485ae23-3fe9-4180-af7d-e9b84c4bede9",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 486,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Somehow you retards did it again. I listened to a few of you talking about the oil stock NIO and after one week boom 150%. I didn't risk alot, but hey my mortgage is paid for the month. GG my fellow tards"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:29:41.313588Z",
+    "allow_skip": true,
+    "inner_id": 35,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 487,
+    "annotations": [
+      {
+        "id": 592,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 108,
+              "end": 114,
+              "text": "Genius",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "CEo5FK1uTw",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:29:46.545377Z",
+        "updated_at": "2026-05-15T14:29:46.545377Z",
+        "draft_created_at": null,
+        "lead_time": 4.353,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "87c212fc-860d-4a27-ba23-f455113b8054",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 487,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Short interest at 38%. Looks like the pandemic wrecked profits and shorts piled in betting on a bankruptcy. Genius down 82% this year and shares trading at a paltry 2.00 bucks. The best part? Free float at 7.5 million shares!!! Love to hear what wsb thinks. Is the play viable??"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:29:46.585266Z",
+    "allow_skip": true,
+    "inner_id": 36,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 489,
+    "annotations": [
+      {
+        "id": 594,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 3,
+              "end": 21,
+              "text": "ARK Innovation ETF",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "oVR2pHhRsl",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:29:53.250344Z",
+        "updated_at": "2026-05-15T14:29:53.250344Z",
+        "draft_created_at": null,
+        "lead_time": 2.265,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "738bc2cf-b6aa-40c7-8c27-98a745904bfc",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 489,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Th ARK Innovation ETF next to my house closed indefinitely due to lack of staff bankruptcy is imminent. Position: Nov 18 , 82.50 strike puts"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:29:53.288382Z",
+    "allow_skip": true,
+    "inner_id": 38,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 491,
+    "annotations": [
+      {
+        "id": 596,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 7,
+              "end": 22,
+              "text": "Western Digital",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "lceUf8QnJ6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:29:59.648021Z",
+        "updated_at": "2026-05-15T14:29:59.648021Z",
+        "draft_created_at": null,
+        "lead_time": 1.566,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "1e24ab4a-79d1-4523-912a-af12e899a18a",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 491,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Buying Western Digital puts here. Bulls are dead"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:29:59.693288Z",
+    "allow_skip": true,
+    "inner_id": 40,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 492,
+    "annotations": [
+      {
+        "id": 597,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 11,
+              "end": 15,
+              "text": "VTWO",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "NlVbNIaV0Q",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:03.922997Z",
+        "updated_at": "2026-05-15T14:30:03.922997Z",
+        "draft_created_at": null,
+        "lead_time": 3.628,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "49f229a8-e6a6-4797-a0c4-1c79f4031794",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 492,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Dude, high VTWO and flat/green market is probably one of the best signal for a reversal"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:30:03.958644Z",
+    "allow_skip": true,
+    "inner_id": 41,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 493,
+    "annotations": [
+      {
+        "id": 598,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "DXYZ",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "lRWBiyhn_0",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:06.962317Z",
+        "updated_at": "2026-05-15T14:30:06.962317Z",
+        "draft_created_at": null,
+        "lead_time": 2.291,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "794efe89-d7dc-4d00-a304-cc4c7da50428",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 493,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "DXYZ is my first stock ever. And I put 100% of my portofolio into it. I am already down 10% my first day. So please help me and everyone else get this to the"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:30:07.001548Z",
+    "allow_skip": true,
+    "inner_id": 42,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 494,
+    "annotations": [
+      {
+        "id": 599,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 133,
+              "end": 135,
+              "text": "SP",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "4PoHBqBVaF",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:15.177223Z",
+        "updated_at": "2026-05-15T14:30:15.177223Z",
+        "draft_created_at": "2026-05-15T14:30:13.726732Z",
+        "lead_time": 7.271,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "5cf9f867-0c44-4f57-954f-7eac5a02e0b7",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 494,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Hello fellow idiots. I have stumbled upon something that has made me money. With said money I have bought a bunch of crap as well as SP. I got in to EDXC around April when it fell off a cliff. This thing has been going crazy over the last two weeks, doubling from .04 to .08. I could try to spout off a bunch of book learned bullcrap on why this could go up such as volume being insane already today, but let me instead use a movie to convince the smooth brained clan. This is a pink slip stock, like in wolf of wall street. Get in your underwear, rail some coke, start humming the Matthew Mcconaughey song/chest smack music and buy up some of this stock before it goes parabolic. Currently have 27,750 shares @ .06618 cost basis for anyone who gives a shit. Not a ton of money to anyone except me, about 85% of my Roth. I know it ain't much money, but for a broke idiot like me it is substantial."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:30:15.211288Z",
+    "allow_skip": true,
+    "inner_id": 43,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 496,
+    "annotations": [
+      {
+        "id": 601,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 105,
+              "end": 109,
+              "text": "NBIS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "3npUw1dPdm",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:21.394447Z",
+        "updated_at": "2026-05-15T14:30:21.394447Z",
+        "draft_created_at": null,
+        "lead_time": 2.012,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "aaba1ad0-b674-4912-b10f-1a0bb327305f",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 496,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Only thing holding up this market from impending doom is some retards collectively buying over 1 million NBIS 1dte call contracts"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:30:21.431601Z",
+    "allow_skip": true,
+    "inner_id": 45,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 500,
+    "annotations": [
+      {
+        "id": 605,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 55,
+              "end": 59,
+              "text": "PZZA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "fMWZnNCIQG",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:34.597092Z",
+        "updated_at": "2026-05-15T14:30:34.597092Z",
+        "draft_created_at": null,
+        "lead_time": 2.274,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "41d95bb3-9a72-4673-97d3-17c886ce6630",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 500,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "They are hunting for stop losses to lower the price of PZZA. Just hodl and relax and you will make many moneys"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:30:34.632390Z",
+    "allow_skip": true,
+    "inner_id": 49,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 501,
+    "annotations": [
+      {
+        "id": 606,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 57,
+              "end": 61,
+              "text": "rose",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "Py3SODtTtj",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 92,
+              "end": 95,
+              "text": "VBR",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "5iijYQvWjk",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:40.710701Z",
+        "updated_at": "2026-05-15T14:30:40.710701Z",
+        "draft_created_at": null,
+        "lead_time": 5.361,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "d246d0b3-6644-49be-a789-c128bf1235fb",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 501,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "As the market seems to keep free falling like Tom Petty, rose is holding true. Up ~5% while VBR is down ~10% over the past month. Trial is set for October 17th, and is suppose to be a 5 day trail. If Daddy Elon wins to pull out of buying twatter, the puts will print, and vice versa. Calls to $50 or puts to $30?? What say you!?!"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:30:40.750837Z",
+    "allow_skip": true,
+    "inner_id": 50,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 502,
+    "annotations": [
+      {
+        "id": 607,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 17,
+              "end": 21,
+              "text": "ONON",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "RdaE4D5Uiz",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:42.735007Z",
+        "updated_at": "2026-05-15T14:30:42.735007Z",
+        "draft_created_at": null,
+        "lead_time": 1.215,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "ea363a66-bff8-43e8-ac5c-834179ef5ca5",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 502,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "anybody own some ONON?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.166472Z",
+    "updated_at": "2026-05-15T14:30:42.770909Z",
+    "allow_skip": true,
+    "inner_id": 51,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 503,
+    "annotations": [
+      {
+        "id": 608,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 250,
+              "end": 258,
+              "text": "AllBirds",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "2_lPzbH9Lv",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 93,
+              "end": 97,
+              "text": "EDXC",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "hAsyz7Jjqv",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 196,
+              "end": 202,
+              "text": "reddit",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "kZjG6kXr1u",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 163,
+              "end": 174,
+              "text": "Intel Corp.",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "7fXCz_hi5Z",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:56.721349Z",
+        "updated_at": "2026-05-15T14:30:56.721349Z",
+        "draft_created_at": "2026-05-15T14:30:48.957343Z",
+        "lead_time": 13.128,
+        "prediction": {},
+        "result_count": 4,
+        "unique_id": "5c801c97-8f73-4a4d-830d-65081f1888a3",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 503,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I am back again with even more hope. Even tho we didnt get $15 cuz some dumbasses didnt hodl EDXC. Next week friday if we close at $30 i will buy 30 plungers from Intel Corp. and stick em outside reddit. This time hodl and we will go to the moon and AllBirds"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.166472Z",
+    "updated_at": "2026-05-15T14:30:56.758442Z",
+    "allow_skip": true,
+    "inner_id": 52,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 506,
+    "annotations": [
+      {
+        "id": 611,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 28,
+              "end": 30,
+              "text": "ZM",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "QpH7Oz3r0U",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:31:21.062584Z",
+        "updated_at": "2026-05-15T14:31:21.062584Z",
+        "draft_created_at": "2026-05-15T14:31:14.094036Z",
+        "lead_time": 12.062,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "5d8a14df-9053-48de-8d63-1cdeb8bcc847",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 506,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "There have been a few DD on ZM. What is everyone's opinion on this as the next potential squeeze? It's largely bottomed out, high short interest and fundamentally undervalued."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.168477Z",
+    "updated_at": "2026-05-15T14:31:21.098751Z",
+    "allow_skip": true,
+    "inner_id": 55,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 507,
+    "annotations": [
+      {
+        "id": 612,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 20,
+              "end": 24,
+              "text": "GSSC",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "NFv5O0JTVO",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 29,
+              "end": 33,
+              "text": "WKEY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "EyQlLoUFUX",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:31:24.666956Z",
+        "updated_at": "2026-05-15T14:31:24.666956Z",
+        "draft_created_at": null,
+        "lead_time": 2.708,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "cb05168b-7245-4b59-b551-d94f56f30c6d",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 507,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Picked up some more GSSC and WKEY on the dip this morning. Diamond hands and may the great apes strength be with us."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.168477Z",
+    "updated_at": "2026-05-15T14:31:24.706632Z",
+    "allow_skip": true,
+    "inner_id": 56,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 508,
+    "annotations": [
+      {
+        "id": 613,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 22,
+              "end": 26,
+              "text": "SFYF",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "wf-2PhQ8v8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:31:26.902010Z",
+        "updated_at": "2026-05-15T14:31:26.902010Z",
+        "draft_created_at": null,
+        "lead_time": 1.144,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "68734507-2798-45a0-9963-956ca34b6a67",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 508,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "So people say load up SFYF. Others say to sell that we are going down for a few weeks. What the fuck do i do"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.168477Z",
+    "updated_at": "2026-05-15T14:31:26.943140Z",
+    "allow_skip": true,
+    "inner_id": 57,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 510,
+    "annotations": [
+      {
+        "id": 615,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 52,
+              "end": 56,
+              "text": "MSTR",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "LmgUWk-TFc",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 73,
+              "end": 77,
+              "text": "BBBY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "QxfjYpdasB",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:31:36.738604Z",
+        "updated_at": "2026-05-15T14:31:36.738604Z",
+        "draft_created_at": null,
+        "lead_time": 5.592,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "a0469a8b-c82d-43fc-b19e-56c57419c332",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 510,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "What is the consensus? .75% interest rate increase? MSTR goes up Higher? BBBY go down. What do yall think?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.168477Z",
+    "updated_at": "2026-05-15T14:31:36.776575Z",
+    "allow_skip": true,
+    "inner_id": 59,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 514,
+    "annotations": [
+      {
+        "id": 619,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 247,
+              "end": 252,
+              "text": "$UUUU",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "iG4mcz7Hes",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 232,
+              "end": 245,
+              "text": "Venture Globa",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "WiR_8UrVbO",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "SoFi",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "S1SPMlp6Ay",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:31:56.949853Z",
+        "updated_at": "2026-05-15T14:31:56.949853Z",
+        "draft_created_at": "2026-05-15T14:31:52.762602Z",
+        "lead_time": 9.569,
+        "prediction": {},
+        "result_count": 3,
+        "unique_id": "3deba4b6-0c5d-4da9-abcb-5a9ef594991e",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 514,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "SoFi is the perfect stock for those who want to YOLO into a short term call short squeeze or a long term investment. Jan 2025 Calls are available to buy LEAPS for those looking for a long term option trade. I bought leaps & own the Venture Globa. $UUUU offers a 6.5% dividend yield and has a PE ratio of 7. The underlying business is solid. They had a few missteps with excess inventory last quarter and fired their merchandising manager as a result. This cause a lot of write downs and a loss on the quarter. This was latched onto by the institutional shorts and here we are - a good company being shorted into the ground. Buy the calls! Buy the stock!"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:31:56.985733Z",
+    "allow_skip": true,
+    "inner_id": 63,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 515,
+    "annotations": [
+      {
+        "id": 620,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 18,
+              "end": 26,
+              "text": "SpaceXAI",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "04SFPTq1q2",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 177,
+              "end": 187,
+              "text": "M1 Finance",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "trwgUJWWa_",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 189,
+              "end": 195,
+              "text": "Public",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "zP7P1Q2mQO",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:01.385936Z",
+        "updated_at": "2026-05-15T14:32:01.385936Z",
+        "draft_created_at": null,
+        "lead_time": 3.402,
+        "prediction": {},
+        "result_count": 3,
+        "unique_id": "236a72f7-7e06-44ae-b718-66ac4c0e3d48",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 515,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I have been using SpaceXAI for a little over a year but feel like I should switch to a different brokerage just in case they try to screw us over. What does everyone recommend? M1 Finance, Public does it matter? Thanks for the help."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:01.426527Z",
+    "allow_skip": true,
+    "inner_id": 64,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 516,
+    "annotations": [
+      {
+        "id": 621,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 55,
+              "end": 58,
+              "text": "FSK",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "2CQgG6C8uB",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:09.594688Z",
+        "updated_at": "2026-05-15T14:32:09.594688Z",
+        "draft_created_at": "2026-05-15T14:32:08.578212Z",
+        "lead_time": 7.561,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "283185f7-525e-4346-aa04-c3260232e106",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 516,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I have a question If at the start of the day I look at FSK and buy 5 options for out of the moneybouts expiring today priced at approx $0.50 each and then try to sell them with limit orders at $0.6, $0.70, $0.80,$0.90 and $1.0. Would that be profitable overtime doing that daily? If they go above $1 then I'm done and I made $150, but if they expire as worthless I lose $500, but don't sub $1 options bounce around a lot? Couldnt I tried trade them and make a profit before they all expire at the end of the day?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:09.630172Z",
+    "allow_skip": true,
+    "inner_id": 65,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 517,
+    "annotations": [
+      {
+        "id": 622,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 37,
+              "end": 41,
+              "text": "SWBI",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "D3rkz66Y4z",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:13.471333Z",
+        "updated_at": "2026-05-15T14:32:13.471333Z",
+        "draft_created_at": null,
+        "lead_time": 2.99,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "684cea74-cba6-4d3a-acca-6f088b024774",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 517,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I might buy here if Im being honest. SWBI over 9% means we should get a bounce within the next two days. Lets close at a new low and then all aboard."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:13.511332Z",
+    "allow_skip": true,
+    "inner_id": 66,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 518,
+    "annotations": [
+      {
+        "id": 623,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 12,
+              "end": 16,
+              "text": "$WMT",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "kfw1kU6UmK",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 146,
+              "end": 151,
+              "text": "$Axsm",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "K-R-6iLz3k",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:15.758623Z",
+        "updated_at": "2026-05-15T14:32:15.758623Z",
+        "draft_created_at": null,
+        "lead_time": 1.67,
+        "prediction": {},
+        "result_count": 2,
+        "unique_id": "ebbf30c3-a2f8-42e7-82a1-1bfd2ebd9087",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 518,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "So tomorrow $WMT are revealing their Q2 statements. Loads of sources are predicting prices jumping to 5$.Do we have any Redditors who have bought $Axsm? If so how many stocks do you own"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:15.795361Z",
+    "allow_skip": true,
+    "inner_id": 67,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 519,
+    "annotations": [
+      {
+        "id": 624,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 55,
+              "end": 60,
+              "text": "$AMRN",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "lecyKzUZfD",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:21.036462Z",
+        "updated_at": "2026-05-15T14:32:21.036462Z",
+        "draft_created_at": null,
+        "lead_time": 4.053,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "357028ff-5d63-4389-a922-bd3fb44c3222",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 519,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Apes... Need a little K to post where I might like to. $AMRN PSA for you below. [Aug 22 P\\/L](https://preview.redd.it/w1jntjvreyh91.png?width=1500&format=png&auto=webp&s=f353949b68eb76aa3d45e61ec745a3c96809a59b)"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:21.073514Z",
+    "allow_skip": true,
+    "inner_id": 68,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 520,
+    "annotations": [
+      {
+        "id": 625,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 52,
+              "end": 55,
+              "text": "CEG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "9vWUbjlrO1",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:23.768073Z",
+        "updated_at": "2026-05-15T14:32:23.768073Z",
+        "draft_created_at": null,
+        "lead_time": 2.121,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "9159c52b-8bc1-47bc-83d5-e1e6a66a6acf",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 520,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I swear to god my boomer dad put all his money into CEG at 1145"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:23.805266Z",
+    "allow_skip": true,
+    "inner_id": 69,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 521,
+    "annotations": [
+      {
+        "id": 626,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 65,
+              "end": 68,
+              "text": "REV",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "rEsZkHE-18",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:27.001601Z",
+        "updated_at": "2026-05-15T14:32:27.001601Z",
+        "draft_created_at": null,
+        "lead_time": 1.872,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "7896bf80-20bd-49ca-96f7-a02956107d94",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 521,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I was wondering if this sub can come together and create another REV. Please no bashing and shit talking. There are enough posts in this sub already."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:27.039953Z",
+    "allow_skip": true,
+    "inner_id": 70,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 522,
+    "annotations": [
+      {
+        "id": 627,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 63,
+              "end": 66,
+              "text": "$GE",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "Al-9-cZeqv",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:30.971879Z",
+        "updated_at": "2026-05-15T14:32:30.971879Z",
+        "draft_created_at": null,
+        "lead_time": 3.342,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "d9982b16-c6d8-4a64-8d34-f78f3a3a157b",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 522,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Couldn't find any threads so starting a new one. Anyone buying $GE? I'm evaluating if I should go in with 2-3K or not. [https://twitter.com/realwillmeade/status/1559266180371779585](https://twitter.com/realwillmeade/status/1559266180371779585)"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:31.009784Z",
+    "allow_skip": true,
+    "inner_id": 71,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 523,
+    "annotations": [
+      {
+        "id": 628,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 12,
+              "end": 16,
+              "text": "ANPA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "ZBB3RVPDt8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:35.125085Z",
+        "updated_at": "2026-05-15T14:32:46.195530Z",
+        "draft_created_at": null,
+        "lead_time": 9.286,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "77b36eb1-c3d4-4efa-a666-9376c2e763f9",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 523,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I am buying ANPA in the Hope It raises to one euro.Can we make it? Fantasy ??Any thoughts? Lets make it happen"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:46.262654Z",
+    "allow_skip": true,
+    "inner_id": 72,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 526,
+    "annotations": [
+      {
+        "id": 631,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 0,
+              "end": 3,
+              "text": "GFS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "G4z2zqC7td",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:33:21.640756Z",
+        "updated_at": "2026-05-15T14:33:21.640756Z",
+        "draft_created_at": "2026-05-15T14:33:19.619027Z",
+        "lead_time": 29.237,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "7ee5cb6b-ed2d-48bb-b3a4-3aec0b4487be",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 526,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "GFS is the future. The time is coming where it will be used for food packages when all other compost friendly products are in shortage....which is happening now."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:33:21.677839Z",
+    "allow_skip": true,
+    "inner_id": 75,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 528,
+    "annotations": [
+      {
+        "id": 633,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 18,
+              "end": 22,
+              "text": "CLNE",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "yEATI40Si5",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:33:39.239859Z",
+        "updated_at": "2026-05-15T14:33:39.239859Z",
+        "draft_created_at": "2026-05-15T14:33:34.502983Z",
+        "lead_time": 10.804,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "9ee901c5-6a0b-4aad-8a89-ad19542f33c1",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 528,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Went in bigggg on CLNE calls today. I bought a total of 125 Jan 2023 $6 calls. I think that this stock could fly on a catalyst. Seems oversold looking at their last earnings. What do you all think? Does this stock still have some legs left to run, or is it bound for the trashcan? Strangely it didn't move at all today with the big jump after FOMC. Not sure why..seems like it should've gotten a little bit of love at least. I really want this thing to run to $8 before the end of the year. I think that has a reasonable chance of happening if it builds up before earnings."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:33:39.272278Z",
+    "allow_skip": true,
+    "inner_id": 77,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 531,
+    "annotations": [
+      {
+        "id": 636,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 227,
+              "end": 233,
+              "text": "TikTok",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "TETTz_WhSz",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 141,
+              "end": 145,
+              "text": "GENI",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "ZDeaHq5Rb8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 240,
+              "end": 243,
+              "text": "Spx",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "NsWFLfmFcu",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 131,
+              "end": 136,
+              "text": "Tesla",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "2XF7CCp9e8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:33:58.962004Z",
+        "updated_at": "2026-05-15T14:33:58.962004Z",
+        "draft_created_at": "2026-05-15T14:33:52.977195Z",
+        "lead_time": 11.341,
+        "prediction": {},
+        "result_count": 4,
+        "unique_id": "458d4298-66c9-4f15-a211-5d6117e43a86",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 531,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "https://www.investing.com/news/stock-market-news/revlon-stock-explodes-50-on-report-indias-reliance-considers-buyout-432SI-2838227 Tesla (NS:GENI), an India-based conglomerate headed by Mukesh Ambani, is considering buying out TikTok (NYSE:Spx), the Economic Times reported today. Guess that explains it being over 100% in a day"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:33:58.998632Z",
+    "allow_skip": true,
+    "inner_id": 80,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 532,
+    "annotations": [
+      {
+        "id": 637,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 0,
+              "end": 7,
+              "text": "YouTube",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "YZAwuLI4vg",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:34:20.344793Z",
+        "updated_at": "2026-05-15T14:34:20.344793Z",
+        "draft_created_at": "2026-05-15T14:34:07.813994Z",
+        "lead_time": 19.74,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "0b8e28b3-a6ff-44f9-81c5-6e1d0086d9fc",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 532,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "YouTube closed out a position I held for a year over $5 I didnt even know I owed for some BS RH Gold. No warning, just we closed out a position And GF yourself."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:34:20.383514Z",
+    "allow_skip": true,
+    "inner_id": 81,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 533,
+    "annotations": [
+      {
+        "id": 638,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 22,
+              "end": 25,
+              "text": "LNG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "7SRYolbTdT",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:34:30.334164Z",
+        "updated_at": "2026-05-15T14:34:30.334164Z",
+        "draft_created_at": null,
+        "lead_time": 5.693,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "2ec72290-5d76-42df-a335-77c142f3341f",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 533,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Just bought some more LNG bc why not. I think its just a bump in the road but itll shoot back to $30 soon. If you sold, thats on you and cool if you did but Im holding and will continue to hold. (:"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:34:30.370694Z",
+    "allow_skip": true,
+    "inner_id": 82,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 534,
+    "annotations": [
+      {
+        "id": 639,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 49,
+              "end": 52,
+              "text": "Spy",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "MtC09HY4Gn",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:34:33.825368Z",
+        "updated_at": "2026-05-15T14:34:33.825368Z",
+        "draft_created_at": null,
+        "lead_time": 2.855,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "1e118f17-f610-471a-b5f9-7f7b72559cdd",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 534,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Hey guys, got the word from god him/herself, buy Spy calls for tmw. The cook is to undercook the order flow"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:34:33.859694Z",
+    "allow_skip": true,
+    "inner_id": 83,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 537,
+    "annotations": [
+      {
+        "id": 642,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 46,
+              "end": 50,
+              "text": "COST",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "aSlkmAgEnZ",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 53,
+              "end": 57,
+              "text": "Msft",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "Yi4EBmVD5W",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 60,
+              "end": 68,
+              "text": "JPMorgan",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "QPQfzn0pnY",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 121,
+              "end": 123,
+              "text": "VG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "mzt7HcIySW",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          },
+          {
+            "value": {
+              "start": 246,
+              "end": 250,
+              "text": "AVGO",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "bOc7WCYbkV",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          },
+          {
+            "value": {
+              "start": 355,
+              "end": 357,
+              "text": "CS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "YGdGcTMTc7",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:35:03.403775Z",
+        "updated_at": "2026-05-15T14:35:03.403775Z",
+        "draft_created_at": "2026-05-15T14:34:48.751650Z",
+        "lead_time": 21.766,
+        "prediction": {},
+        "result_count": 6,
+        "unique_id": "82b269e4-fa1d-4477-9267-d0f6ffeb1869",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 537,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "So I have read that there will be over $3T in COST / Msft / JPMorgan / etc options expiring on Friday with a max pain at VG 422. In the past it seems like we magically get to max pain for these days. Can someone explain to me why I shouldn't buy AVGO on open Monday and hold it till Friday? It seems like with that much money on the line people will make CS hit close to 422. Am I wrong about this, or is it a good move?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:35:03.439104Z",
+    "allow_skip": true,
+    "inner_id": 86,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 538,
+    "annotations": [
+      {
+        "id": 643,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 83,
+              "end": 88,
+              "text": "BAABA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "obY2IKe8Xt",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 90,
+              "end": 93,
+              "text": "MRU",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "tAExjkTFxa",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 213,
+              "end": 217,
+              "text": "PACS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "VsCHXGTgn_",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 69,
+              "end": 73,
+              "text": "just",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "Y1KU0j01lC",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 75,
+              "end": 81,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "Br3zWiql--",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:35:14.420383Z",
+        "updated_at": "2026-05-15T14:35:14.420383Z",
+        "draft_created_at": "2026-05-15T14:35:10.928986Z",
+        "lead_time": 10.068,
+        "prediction": {},
+        "result_count": 5,
+        "unique_id": "72354e12-7064-4b93-af9f-1ef9b253c429",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 538,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Hundreds of millions of shares have been sold short, naked, and MMs (just, Nvidia, BAABA, MRU, etc.) are pulling every stop in the book to keep above water. All these synthetic shares that are created out of thin PACS to facilitate an efficient market operation, as our golden boy Kenny Griffin loves to say, need to be settled soon and as long as people continue to buy and hold, the market will eventually capitulate and loses all control of the price. They are now on panic mode stage, I would not be surprised if theyre holding meetings with NASDAQ, regulators, and big banks to see what can be done to stop the madness because theres no way they can fulfill these obligations. I would also not be surprised to hear about a hedge fund or two getting Melvined in the next few days."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:35:14.454592Z",
+    "allow_skip": true,
+    "inner_id": 87,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 540,
+    "annotations": [
+      {
+        "id": 645,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 4,
+              "end": 8,
+              "text": "LYFT",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "94LRzHGArT",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:35:20.076456Z",
+        "updated_at": "2026-05-15T14:35:20.076456Z",
+        "draft_created_at": null,
+        "lead_time": 1.98,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "dbcbf0be-b38d-4c01-9af5-66e41551a2de",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 540,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Buy LYFT rn its going to go crazy tmr"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:35:20.111428Z",
+    "allow_skip": true,
+    "inner_id": 89,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 542,
+    "annotations": [
+      {
+        "id": 647,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 20,
+              "end": 23,
+              "text": "WDC",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "B0BJR0NGLW",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:35:29.344916Z",
+        "updated_at": "2026-05-15T14:35:29.344916Z",
+        "draft_created_at": null,
+        "lead_time": 4.071,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "4ea01f7f-094a-4905-a7c4-c2e5c6b7eb59",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 542,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "I havent bought any WDC. Figured Id see how today went, and well like everything else in the market it absolutely collapsed. Pretty cheap now though, think its a good time to buy? Or have you lost all hope. $12 would be a good mark. Might still go up after the announcement ? Maybe today was a blessing in disguise"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:35:29.381470Z",
+    "allow_skip": true,
+    "inner_id": 91,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 543,
+    "annotations": [
+      {
+        "id": 648,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 19,
+              "end": 23,
+              "text": "AMDG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "VU936mSQxg",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:35:36.392284Z",
+        "updated_at": "2026-05-15T14:35:36.392284Z",
+        "draft_created_at": "2026-05-15T14:35:35.678763Z",
+        "lead_time": 5.992,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "b8ddb123-8671-4f40-9161-590172637dae",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 543,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "Any suggestions on AMDG? BUY, HOLD or SELL?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:35:36.428880Z",
+    "allow_skip": true,
+    "inner_id": 92,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 545,
+    "annotations": [
+      {
+        "id": 650,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 240,
+              "end": 243,
+              "text": "WTS",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "PHHjUDvCMY",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:35:54.345611Z",
+        "updated_at": "2026-05-15T14:35:54.345611Z",
+        "draft_created_at": "2026-05-15T14:35:47.801149Z",
+        "lead_time": 12.632,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "427ba4a7-9b73-4542-884b-4f8f6b149c3d",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 545,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "the stock was green today what else do I need to say ?Investor Conference next Wednesday where they may announce good news or possible buy back which may light the realIf that isnt a catalyst very small float and higher short interest than WTSBlue Ape Run What are you looking at next week?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:35:54.380235Z",
+    "allow_skip": true,
+    "inner_id": 94,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 549,
+    "annotations": [
+      {
+        "id": 654,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 367,
+              "end": 372,
+              "text": "$SLYV",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "DUQT7JPCtN",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 416,
+              "end": 420,
+              "text": "$NQ1",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "eVjIuzLdov",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 465,
+              "end": 470,
+              "text": "$avgo",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "_egNSzvtnS",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 501,
+              "end": 505,
+              "text": "$Ben",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "GKIKh9KKLU",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 492,
+              "end": 499,
+              "text": "ubisoft",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "6Lla5P2dEn",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 293,
+              "end": 308,
+              "text": "Lockheed Martin",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "BFZuFNuwKR",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 552,
+              "end": 555,
+              "text": "BMW",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "_-LoxjZwm3",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 20,
+              "end": 24,
+              "text": "Velo",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "6BcLmO-7gs",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:36:22.617774Z",
+        "updated_at": "2026-05-15T14:36:22.617774Z",
+        "draft_created_at": "2026-05-15T14:36:14.705878Z",
+        "lead_time": 15.24,
+        "prediction": {},
+        "result_count": 8,
+        "unique_id": "a8010df1-0e68-4664-931f-fbd822253e21",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 549,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "**Who is with me in Velo?** **Monkeypox/MPVX** **\\~10% increase** PER DAY, the last 7 days.DOUBLES every 8 days...7 x doubles (2,5 months) and we reach **1 million cases.***\\*3,157 confirmed cases as of 6/21/22, an increase of 68% since last week.* **TOMORROW WHO EMERGENCY MEETING...** so... Lockheed Martin has 73 million outstanding shares.With a marketcap of 10B $SLYV: **136.85 DOLLAR.**With a marketcap of 50B $NQ1: **684.27 DOLLAR.**With a marketcap of 175B $avgo: **2400 DOLLAR.** *\\*ubisoft ($Ben) reached 175B at it's peak Covid-19 cycle.* **BMW is currently: $12** | 850 million marketcap"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:36:22.652208Z",
+    "allow_skip": true,
+    "inner_id": 98,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 551,
+    "annotations": [
+      {
+        "id": 656,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 17,
+              "end": 20,
+              "text": "CEG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "tHoQjEbYiG",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:36:28.994347Z",
+        "updated_at": "2026-05-15T14:36:28.994347Z",
+        "draft_created_at": null,
+        "lead_time": 1.581,
+        "prediction": {},
+        "result_count": 1,
+        "unique_id": "3d3f50c6-b538-4153-8db9-221525c5ad6a",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 551,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": null,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [],
+    "data": {
+      "text": "90 minutes until CEG turns red"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:36:29.028107Z",
+    "allow_skip": true,
+    "inner_id": 100,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  }
+]
