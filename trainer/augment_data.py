@@ -114,13 +114,16 @@ def augment_task(task, pool):
     return augmented_task
 
 
-def run_augmentation(folder_path, multiplier=5, seed=None):
-    """Builds a dynamic pool from existing labels and creates synthetic variations."""
+def run_augmentation(source_folder, output_folder, multiplier=5, seed=None):
+    """Builds a dynamic pool from labels in `source_folder` and writes synthetic
+    variations into `output_folder`."""
     if seed is not None:
         random.seed(seed)
 
+    os.makedirs(output_folder, exist_ok=True)
+
     print("Scanning dataset to build dynamic replacement pool...")
-    dynamic_pool = build_replacement_pool_from_labels(folder_path)
+    dynamic_pool = build_replacement_pool_from_labels(source_folder)
 
     print(f"Discovered unique tickers  : {len(dynamic_pool['ticker'])}")
     print(f"Discovered unique companies: {len(dynamic_pool['company'])}")
@@ -129,7 +132,7 @@ def run_augmentation(folder_path, multiplier=5, seed=None):
         print("Error: Not enough unique labels found to safely perform swaps.")
         return
 
-    files = glob.glob(os.path.join(folder_path, "*.json"))
+    files = glob.glob(os.path.join(source_folder, "*.json"))
     original_files = [f for f in files if "augmented_" not in os.path.basename(f)]
 
     total_generated = 0
@@ -162,16 +165,17 @@ def run_augmentation(folder_path, multiplier=5, seed=None):
                 augmented_batch.append(aug_task)
                 total_generated += 1
 
-            output_name = os.path.join(folder_path, f"augmented_m{i}_{file_filename}")
+            output_name = os.path.join(output_folder, f"augmented_m{i}_{file_filename}")
             with open(output_name, "w", encoding="utf-8") as out_f:
                 json.dump(augmented_batch, out_f, indent=2, ensure_ascii=False)
 
     print(
         f"Generated {total_generated} augmented samples across {multiplier} variants "
-        f"({total_skipped} skipped)."
+        f"({total_skipped} skipped). Wrote to {output_folder}."
     )
 
 
 if __name__ == "__main__":
     labeled_folder = "data/labeled"
-    run_augmentation(labeled_folder, multiplier=5)
+    augmented_folder = "data/augmented"
+    run_augmentation(labeled_folder, augmented_folder, multiplier=5)
