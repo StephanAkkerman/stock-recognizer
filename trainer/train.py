@@ -131,12 +131,26 @@ def _load_tasks(folder_path):
 
 
 def parse_all_labeled_data(
-    labeled_folder, augmented_folder=None, val_fraction=VAL_FRACTION, seed=SEED
+    labeled_folder,
+    augmented_folder=None,
+    test_folder=None,
+    val_fraction=VAL_FRACTION,
+    seed=SEED,
 ):
     """Loads originals from `labeled_folder` and (optionally) augmented variants
     from `augmented_folder`, splitting by source task id so augmented copies of
-    validation tasks never leak into training."""
-    originals = list(_load_tasks(labeled_folder))
+    validation tasks never leak into training.
+
+    If `test_folder` is given, every task id present there is excluded from
+    train and val — including augmented duplicates that carry the same id —
+    so the held-out test set never contaminates training.
+    """
+    test_ids = set()
+    if test_folder and os.path.isdir(test_folder):
+        for task, _ in _load_tasks(test_folder):
+            test_ids.add(task["id"])
+
+    originals = [(t, fp) for t, fp in _load_tasks(labeled_folder) if t["id"] not in test_ids]
 
     # Split task ids deterministically.
     rng = random.Random(seed)
@@ -156,8 +170,13 @@ def parse_all_labeled_data(
             train_samples.extend(task_to_samples(task))
 
     # Augmented: training only, and only for tasks whose source is in train_ids.
+    # The `test_ids` guard catches augmented variants of test tasks that still
+    # live on disk (e.g. `augmented_m*_labeled_300.json` after the 300-file move).
     for task, _ in _load_tasks(augmented_folder):
-        if task["id"] in train_ids:
+        tid = task["id"]
+        if tid in test_ids:
+            continue
+        if tid in train_ids:
             train_samples.extend(task_to_samples(task))
 
     return train_samples, val_samples
@@ -176,7 +195,10 @@ if __name__ == "__main__":
 
     labeled_folder = "data/labeled"
     augmented_folder = "data/augmented"
-    train_data, val_data = parse_all_labeled_data(labeled_folder, augmented_folder)
+    test_folder = "data/test"
+    train_data, val_data = parse_all_labeled_data(
+        labeled_folder, augmented_folder, test_folder=test_folder
+    )
     console.print(
         f"[bold green]Train: {len(train_data)} samples | Val: {len(val_data)} samples[/bold green]"
     )
@@ -224,7 +246,10 @@ if __name__ == "__main__":
 
     # Benchmark the freshly trained adapter and persist the result so the
     # next ``python trainer/benchmark.py`` run can short-circuit this version.
-    from trainer.benchmark import benchmark_adapter, locate_adapter_weights
+    try:
+        from trainer.benchmark import benchmark_adapter, locate_adapter_weights
+    except ImportError:
+        from benchmark import benchmark_adapter, locate_adapter_weights
 
     adapter_final = locate_adapter_weights(output_dir)
     if adapter_final is None:

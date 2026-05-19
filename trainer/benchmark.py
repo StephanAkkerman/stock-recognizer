@@ -16,17 +16,28 @@ from rich.progress import (
 )
 from rich.table import Table
 
-from trainer.results_store import (
-    compute_test_set_hash,
-    derive_adapter_params,
-    get_cached,
-    load_store,
-    put_result,
-    register_test_set,
-    save_store,
-)
+try:
+    from trainer.results_store import (
+        compute_test_set_hash,
+        derive_adapter_params,
+        get_cached,
+        load_store,
+        put_result,
+        register_test_set,
+        save_store,
+    )
+except ImportError:
+    from results_store import (
+        compute_test_set_hash,
+        derive_adapter_params,
+        get_cached,
+        load_store,
+        put_result,
+        register_test_set,
+        save_store,
+    )
 
-DEFAULT_TEST_FOLDER = "data/labeled"
+DEFAULT_TEST_FOLDER = "data/test"
 DEFAULT_LABELS = {
     "ticker": "A stock market ticker symbol, usually 1-5 letters, often preceded by a dollar sign (e.g., $AAPL, TSLA). MUST NOT be option strikes (e.g., 140c), prices, index names, or internet slang acronyms (e.g., NFA, Lmfao, JPOW).",
     "company": "The name of a corporation, hedge fund, or business entity (e.g., Microsoft, Melvin Capital, Valve). MUST NOT be an uppercase ticker symbol, an index (e.g., Dow Jones), or generic finance terms.",
@@ -173,6 +184,7 @@ def evaluate_model(
     label_descriptions=None,
     batch_size=128,
     progress_context=None,
+    threshold=0.75,
 ):
     """Calculates NER metrics by running batched inference across the whole dataset.
 
@@ -210,7 +222,7 @@ def evaluate_model(
             batch,
             labels_to_pass,
             batch_size=batch_size,
-            threshold=0.75,
+            threshold=threshold,
             include_spans=True,
         )
         for j, out in enumerate(outputs):
