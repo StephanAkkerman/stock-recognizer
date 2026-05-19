@@ -3,9 +3,35 @@ import glob
 import json
 import os
 import random
+import re
+
+import financedatabase as fd
+
+from stock_recognizer.constants import (
+    AMBIGUOUS_WORDS,
+    EXCHANGE_BLACKLIST,
+    US_MAJOR_EXCHANGES,
+)
 
 
 LABEL_TYPES = ("ticker", "company")
+
+# How often to draw replacements from the broad financedatabase pool versus
+# the small pool harvested from human labels. 0.7 keeps labeled entities
+# heavily over-represented per-item (since the labeled pool is ~10-100x
+# smaller) while still exposing the model to unseen real tickers.
+# Lower this if recall on the entities you care about drops; raise it if
+# the model is over-fitting to the labeled vocabulary.
+EXPANDED_POOL_WEIGHT = 0.7
+
+# Legal/structural suffixes stripped before extracting a "first significant
+# word" company short-form. Reddit users write "Microsoft", not "Microsoft
+# Corporation" — matching that distribution matters more than completeness.
+_COMPANY_SUFFIX_TOKENS = {
+    "INC", "CORP", "CORPORATION", "LTD", "LIMITED", "PLC", "CO",
+    "COMPANY", "HOLDINGS", "GROUP", "AG", "SA", "NV", "LLC", "LP",
+    "THE", "&",
+}
 
 
 def build_replacement_pool_from_labels(folder_path):
@@ -50,6 +76,75 @@ def build_replacement_pool_from_labels(folder_path):
                 pool[label].add(entity_text)
 
     return {k: sorted(v) for k, v in pool.items()}
+
+
+def _clean_company_short_form(name):
+    """Extract a Reddit-style short company name (e.g., 'Microsoft Corporation' → 'Microsoft').
+
+    Returns None if no usable short form can be recovered. Length-2 tokens
+    are rejected because they typically clash with tickers (AT, BP, GM).
+    """
+    if not isinstance(name, str):
+        return None
+    cleaned = re.sub(r"[.,&]", " ", name)
+    for tok in cleaned.split():
+        if tok.upper() in _COMPANY_SUFFIX_TOKENS:
+            continue
+        if len(tok) <= 2:
+            continue
+        # Reject tokens that are mostly digits/punctuation (e.g. "000%", "1847",
+        # "1RT"). Real Reddit-style company mentions need a substantive word.
+        if sum(1 for c in tok if c.isalpha()) < 3:
+            continue
+        return tok
+    return None
+
+
+def build_financedatabase_pool():
+    """Pull a US-only pool of tickers and short company names from financedatabase.
+
+    Mirrors the inference-time filter in ``stock_recognizer.engine``:
+    US major exchanges only, exchange-suffix blacklist applied, and entries
+    that collide with ``AMBIGUOUS_WORDS`` dropped so the model isn't trained
+    to recognise tokens the regex path will reject anyway.
+    """
+    market = fd.Equities().select(exchange=list(US_MAJOR_EXCHANGES))
+
+    tickers = set()
+    companies = set()
+    for ticker, row in market.iterrows():
+        if not isinstance(ticker, str):
+            continue
+        if any(ext in ticker for ext in EXCHANGE_BLACKLIST):
+            continue
+        if ticker.upper() in AMBIGUOUS_WORDS:
+            continue
+        tickers.add(ticker)
+
+        short = _clean_company_short_form(row.get("name"))
+        if short and short.upper() not in AMBIGUOUS_WORDS:
+            companies.add(short)
+
+    return {"ticker": sorted(tickers), "company": sorted(companies)}
+
+
+def _sample_replacement(label, labeled_pool, expanded_pool, original_bare):
+    """Pick a non-trivial replacement, biased toward `expanded_pool` per `EXPANDED_POOL_WEIGHT`.
+
+    Falls back to whichever pool has data if the preferred source is empty
+    for this label, so a missing expanded pool never blocks augmentation.
+    """
+    prefer_expanded = random.random() < EXPANDED_POOL_WEIGHT
+    primary = expanded_pool.get(label, []) if prefer_expanded else labeled_pool.get(label, [])
+    secondary = labeled_pool.get(label, []) if prefer_expanded else expanded_pool.get(label, [])
+
+    source = primary or secondary
+    if not source:
+        return None
+    alternatives = [c for c in source if c != original_bare]
+    if not alternatives:
+        return None
+    return random.choice(alternatives)
 
 
 def _resolve_overlaps(label_results):
@@ -102,8 +197,17 @@ def _resolve_overlaps(label_results):
     return groups, dropped_ids
 
 
-def augment_task(task, pool):
-    """Swaps labeled entities from back-to-front to preserve index integrity."""
+def augment_task(task, labeled_pool, expanded_pool=None):
+    """Swaps labeled entities from back-to-front to preserve index integrity.
+
+    Replacement candidates are drawn from `labeled_pool` and `expanded_pool`
+    with weight `EXPANDED_POOL_WEIGHT` favouring the broad financedatabase
+    pool. Pass `expanded_pool=None` to fall back to the legacy labeled-only
+    behaviour (e.g. for tests).
+    """
+    if expanded_pool is None:
+        expanded_pool = {}
+
     augmented_task = copy.deepcopy(task)
     annotation = augmented_task["annotations"][0]
     results = annotation.get("result", [])
@@ -128,18 +232,14 @@ def augment_task(task, pool):
         primary = group[0]
         label = primary["value"]["labels"][0]
 
-        candidates = pool.get(label)
-        if not candidates:
-            continue
-
         original_word = text[start:end]
         original_bare = original_word.lstrip("$")
 
-        # Avoid no-op swaps that just re-emit the original token.
-        alternatives = [c for c in candidates if c != original_bare]
-        if not alternatives:
+        replacement = _sample_replacement(
+            label, labeled_pool, expanded_pool, original_bare
+        )
+        if replacement is None:
             continue
-        replacement = random.choice(alternatives)
 
         if original_word.startswith("$") and not replacement.startswith("$"):
             replacement = "$" + replacement
@@ -185,21 +285,38 @@ def augment_task(task, pool):
     return augmented_task
 
 
-def run_augmentation(source_folder, output_folder, multiplier=5, seed=None):
-    """Builds a dynamic pool from labels in `source_folder` and writes synthetic
-    variations into `output_folder`."""
+def run_augmentation(
+    source_folder, output_folder, multiplier=3, seed=None, use_expanded_pool=True
+):
+    """Builds replacement pools from `source_folder` (plus financedatabase if
+    `use_expanded_pool=True`) and writes synthetic variations into `output_folder`.
+
+    Default multiplier dropped to 3 — with a ~10x larger entity pool, every
+    pass already covers much more vocabulary than the old 5× labeled-only
+    setup, so additional passes mostly inflate training time.
+    """
     if seed is not None:
         random.seed(seed)
 
     os.makedirs(output_folder, exist_ok=True)
 
-    print("Scanning dataset to build dynamic replacement pool...")
-    dynamic_pool = build_replacement_pool_from_labels(source_folder)
+    print("Scanning labeled dataset to build replacement pool...")
+    labeled_pool = build_replacement_pool_from_labels(source_folder)
+    print(f"  Labeled tickers  : {len(labeled_pool['ticker'])}")
+    print(f"  Labeled companies: {len(labeled_pool['company'])}")
 
-    print(f"Discovered unique tickers  : {len(dynamic_pool['ticker'])}")
-    print(f"Discovered unique companies: {len(dynamic_pool['company'])}")
+    expanded_pool = {}
+    if use_expanded_pool:
+        print("Loading financedatabase pool (US majors, blacklist-filtered)...")
+        expanded_pool = build_financedatabase_pool()
+        print(f"  Expanded tickers  : {len(expanded_pool['ticker'])}")
+        print(f"  Expanded companies: {len(expanded_pool['company'])}")
+        print(f"  Mix weight: {EXPANDED_POOL_WEIGHT:.0%} expanded / "
+              f"{1 - EXPANDED_POOL_WEIGHT:.0%} labeled")
 
-    if len(dynamic_pool["ticker"]) < 2 or len(dynamic_pool["company"]) < 2:
+    if (len(labeled_pool["ticker"]) + len(expanded_pool.get("ticker", []))) < 2 or (
+        len(labeled_pool["company"]) + len(expanded_pool.get("company", []))
+    ) < 2:
         print("Error: Not enough unique labels found to safely perform swaps.")
         return
 
@@ -223,7 +340,7 @@ def run_augmentation(source_folder, output_folder, multiplier=5, seed=None):
                 ):
                     continue
                 try:
-                    aug_task = augment_task(task, dynamic_pool)
+                    aug_task = augment_task(task, labeled_pool, expanded_pool)
                 except Exception as exc:
                     print(f"  ! skipped task {task.get('id')} in {file_filename}: {exc}")
                     total_skipped += 1
@@ -249,4 +366,4 @@ def run_augmentation(source_folder, output_folder, multiplier=5, seed=None):
 if __name__ == "__main__":
     labeled_folder = "data/labeled"
     augmented_folder = "data/augmented"
-    run_augmentation(labeled_folder, augmented_folder, multiplier=5)
+    run_augmentation(labeled_folder, augmented_folder, multiplier=3)

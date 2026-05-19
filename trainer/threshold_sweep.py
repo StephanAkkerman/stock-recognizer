@@ -52,7 +52,7 @@ console = Console()
 
 # Inclusive range — 0.30 to 0.80 in 0.05 steps. Below 0.30 noise dominates;
 # above 0.80 every model collapses.
-THRESHOLDS = [round(0.30 + 0.05 * i, 2) for i in range(11)]
+THRESHOLDS = [round(0.30 + 0.05 * i, 2) for i in range(13)]
 BATCH_SIZE = 32
 
 

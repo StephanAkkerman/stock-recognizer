@@ -3,12 +3,6 @@ import os
 import re
 
 import pandas as pd
-from dataset_builder import (
-    DatasetBuilder,
-    get_latest_adapter_path,
-)  # Assumes previous scripts are saved here
-
-from stock_recognizer.engine import StockRecognizer
 
 
 def clean_reddit_markdown(text: str) -> str:
@@ -39,6 +33,9 @@ def clean_reddit_markdown(text: str) -> str:
 
 
 if __name__ == "__main__":
+    from dataset_builder import DatasetBuilder, get_latest_adapter_path
+    from stock_recognizer.engine import StockRecognizer
+
     # 1. Load the Auto-discovering Engine
     latest_adapter = get_latest_adapter_path("./models")
     recognizer = StockRecognizer(use_ai=True, adapter_path=latest_adapter)
