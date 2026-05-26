@@ -24,12 +24,27 @@ class StockRecognizer:
         if include_global_majors:
             exchanges.update(GLOBAL_MAJOR_EXCHANGES)
         self.market_equities = equities.select(exchange=list(exchanges))
+
+        # ETFs are absent from fd.Equities() but heavily mentioned on Reddit
+        # (SPY, QQQ, VOO, IWM, JETS, ULCC...). Without them in valid_tickers,
+        # `recognize_ai` silently drops correct AI predictions of these symbols.
+        # They're kept out of `company_to_ticker` below — ETF legal names like
+        # "SPDR S&P 500 ETF Trust" don't make useful company aliases.
+        try:
+            etf_index = fd.ETFs().select().index
+            etf_tickers = {
+                t for t in etf_index
+                if isinstance(t, str) and not any(ext in t for ext in EXCHANGE_BLACKLIST)
+            }
+        except Exception:
+            etf_tickers = set()
+
         self.ambiguous = AMBIGUOUS_WORDS
         self.valid_tickers = {
             t
             for t in self.market_equities.index
             if isinstance(t, str) and not any(ext in t for ext in EXCHANGE_BLACKLIST)
-        }
+        } | etf_tickers
 
         # Build Company Mapper
         self.company_to_ticker = COMPANY_SEEDS.copy()

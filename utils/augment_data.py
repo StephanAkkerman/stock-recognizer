@@ -24,6 +24,13 @@ LABEL_TYPES = ("ticker", "company")
 # the model is over-fitting to the labeled vocabulary.
 EXPANDED_POOL_WEIGHT = 0.7
 
+# Probability that a bare ticker swap is rewritten in cashtag form ($XXX).
+# Cashtags are ~16% of labeled annotations but dominate the FN list on the
+# test set — every adapter through v8 missed $SAVE, $ULCC, $JETS, $SPY,
+# $SIGA repeatedly. This boosts cashtag exposure during training without
+# changing which entities the model sees. Companies don't get the prefix.
+CASHTAG_FORMAT_PROB = 0.30
+
 # Legal/structural suffixes stripped before extracting a "first significant
 # word" company short-form. Reddit users write "Microsoft", not "Microsoft
 # Corporation" — matching that distribution matters more than completeness.
@@ -243,6 +250,13 @@ def augment_task(task, labeled_pool, expanded_pool=None):
 
         if original_word.startswith("$") and not replacement.startswith("$"):
             replacement = "$" + replacement
+        elif (
+            label == "ticker"
+            and not replacement.startswith("$")
+            and (start == 0 or text[start - 1] != "$")
+            and random.random() < CASHTAG_FORMAT_PROB
+        ):
+            replacement = "$" + replacement
 
         text = text[:start] + replacement + text[end:]
         len_diff = len(replacement) - len(original_word)
@@ -286,7 +300,7 @@ def augment_task(task, labeled_pool, expanded_pool=None):
 
 
 def run_augmentation(
-    source_folder, output_folder, multiplier=3, seed=None, use_expanded_pool=True
+    source_folder, output_folder, multiplier=3, seed=None, use_expanded_pool=False
 ):
     """Builds replacement pools from `source_folder` (plus financedatabase if
     `use_expanded_pool=True`) and writes synthetic variations into `output_folder`.

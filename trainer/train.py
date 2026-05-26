@@ -229,10 +229,12 @@ if __name__ == "__main__":
         fp16=False,
         bf16=True,
         seed=SEED,
-        # v5 collapsed to "predict nothing" because we 5x'd the data via
-        # augmentation but kept num_epochs=25 and never acted on validation.
-        # eval_strategy="steps" + eval_steps=500 are the defaults; early
-        # stopping uses them to bail when val loss stops improving.
+        # Early stopping IS necessary here. v9 (25 epochs, no early stop, w/
+        # 55 hard negatives) collapsed to "predict nothing" by step ~6000 —
+        # all intermediate checkpoints from 6000 onward score 0% F1. The
+        # negatives dominate the gradient once training runs long enough.
+        # Patience=3 stops on the noisy val signal, but stopping early is
+        # better than collapse.
         early_stopping=True,
         early_stopping_patience=3,
     )
