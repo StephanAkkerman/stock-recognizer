@@ -1,0 +1,453 @@
+"""Auto-label scraped Reddit posts via a reusable few-shot prompt + SOTA LLM.
+
+Workflow (manual mode — recommended for the first batch):
+  Single post:
+    1) `python utils/auto_label.py --post-index 0 --print-prompt > prompt.txt`
+    2) Paste prompt.txt into your LLM, save the JSON reply as response.json
+    3) `python utils/auto_label.py --post-index 0 --response-file response.json`
+
+  Batch (recommended for long-context models like Gemini):
+    1) `python utils/auto_label.py --posts 0-9 --print-prompt > prompt.txt`
+    2) Paste prompt.txt into the LLM, save the JSON reply as response.json
+    3) `python utils/auto_label.py --posts 0-9 --response-file response.json`
+
+  The batch output shape is `{"results": [{"index": N, "entities": [...]}, ...]}`
+  with one entry per input. Re-running with the same --posts overwrites those
+  task IDs rather than duplicating them.
+
+Once the prompt is dialled in (the LLM's outputs match what you'd label by hand
+on ~5-10 spot checks), this same module can be called from a thin API wrapper
+to scale up — `build_prompt()` and `parse_response_to_task()` are pure functions.
+
+Design choices worth knowing:
+  - The LLM returns entity *text* + label, not character offsets. We locate
+    offsets ourselves with `re.finditer` — LLMs are notoriously bad at offsets,
+    and re-finding text is robust to whitespace/quoting changes.
+  - Output lands in `data/preds/`, not `data/labeled/`. Pre-labels need review
+    before becoming training data, matching the existing pipeline convention.
+  - Posts are deduped against existing labeled+test so the LLM never wastes
+    effort on something already annotated.
+"""
+
+import argparse
+import glob
+import hashlib
+import json
+import os
+import re
+import sys
+import textwrap
+
+import pandas as pd
+from rich.console import Console
+
+console = Console()
+
+
+# Hand-picked from data/labeled — chosen to cover the patterns v4-v12 stumbled on:
+#   1) bare-ticker short post
+#   2) bare ticker amid slang (anti-pattern: "lmfao" stays unlabeled)
+#   3) cashtag + multi-word company + 2-letter company collision (RH)
+#   4) company name with its ticker in parens — both labeled as separate entities
+#   5) multi-word company headline + $price-NOT-a-ticker
+#   6) all-negative post — slang/finance terms that look entity-shaped but aren't
+#
+# Edit / extend this list if the LLM starts missing a specific pattern in practice.
+FEW_SHOT_EXAMPLES = [
+    {
+        "input": "I care about BBBY.",
+        "output": {"entities": [{"text": "BBBY", "label": "ticker"}]},
+    },
+    {
+        "input": "Spx down 100 lmfao",
+        "output": {"entities": [{"text": "Spx", "label": "ticker"}]},
+    },
+    {
+        "input": "Cash app pulling a RH by not letting people purchase $AMC.What is going on???",
+        "output": {
+            "entities": [
+                {"text": "Cash app", "label": "company"},
+                {"text": "RH", "label": "company"},
+                {"text": "$AMC", "label": "ticker"},
+            ]
+        },
+    },
+    {
+        "input": "Shorted Nebius (NBIS) by 730,000 today, checkin tomorrow after earnings.",
+        "output": {
+            "entities": [
+                {"text": "Nebius", "label": "company"},
+                {"text": "NBIS", "label": "ticker"},
+            ]
+        },
+    },
+    {
+        "input": "Paramount makes $108.4 billion hostile bid for Warner Bros Discovery",
+        "output": {
+            "entities": [
+                {"text": "Paramount", "label": "company"},
+                {"text": "Warner Bros Discovery", "label": "company"},
+            ]
+        },
+    },
+    {
+        "input": "Anybody else gonna YOLO into puts? JPOW about to crash this market. NFA",
+        "output": {"entities": []},
+    },
+]
+
+
+BATCH_INSTRUCTIONS = textwrap.dedent("""\
+    BATCH MODE: You will receive multiple posts labeled "Input 1:", "Input 2:", etc.
+    Return ONE JSON object with this structure (no commentary, no code fence):
+
+    {"results": [
+      {"index": 1, "entities": [{"text": "...", "label": "ticker" | "company"}]},
+      {"index": 2, "entities": [...]},
+      ...
+    ]}
+
+    The "index" field MUST match the corresponding "Input N:" number. Include an
+    entry for EVERY input, even when entities is empty (use "entities": []).
+""")
+
+
+SYSTEM_INSTRUCTIONS = textwrap.dedent("""\
+    You are an expert at extracting stock tickers and company names from Reddit posts about finance.
+
+    TASK: identify every ticker symbol and company name in the input text.
+
+    DEFINITIONS:
+    - ticker: A stock symbol like AAPL, TSLA, $MSFT. Usually 1-5 uppercase letters,
+      often preceded by $. INCLUDE the $ sign in the entity span when present.
+      ETFs (SPY, QQQ, VOO, IWM, JETS, ULCC) are tickers. Index abbreviations used
+      as tradeable (SPX, NDX) are tickers. Crypto symbols (BTC, ETH, LUNA) are
+      tickers when used in a trading context.
+    - company: A real corporation, hedge fund, ETF issuer, fintech app, or business
+      entity referenced by name. Can be multiple words ("Bed Bath & Beyond",
+      "SIGA Technologies", "Warner Bros Discovery", "Cash app").
+
+    DO NOT LABEL:
+    - Internet slang or finance generics: BUY, SELL, HOLD, DUMP, PUMP, YOLO, DD,
+      FUD, FOMO, ATH, ATL, NFA, IMO, TLDR, LMFAO, AMA, OP, MOD.
+    - Macro terms or people: JPOW, POWELL, FED, SEC, IRS, CEO, CFO, IPO, BULL,
+      BEAR, MOON, EARNINGS, GAINS, LOSS, PUTS, CALLS, STOCK, MARKET, OPTIONS.
+    - News outlets: CNBC, MSNBC, WSJ, FT, BLOOMBERG.
+    - Dollar amounts: $100, $5.50, $3T — only $-prefixed *letter* sequences are tickers.
+    - Index names spelled out: "Dow Jones", "S&P 500", "Nasdaq" (the index).
+      But their ETF tickers (SPY, QQQ) ARE tickers.
+
+    EDGE CASES:
+    - A token used differently in one post can be both: "Tesla" → company,
+      "TSLA" → ticker — label them separately.
+    - Label EVERY occurrence. If $AAPL appears 5 times, return 5 entries.
+    - Preserve exact casing and punctuation from the source — do not normalize.
+
+    OUTPUT FORMAT — return ONLY a JSON object, no commentary, no code fence:
+    {"entities": [{"text": "<exact substring from input>", "label": "ticker" | "company"}]}
+
+    Empty entities array (`{"entities": []}`) is correct for posts with no entities.
+""")
+
+
+def build_prompt(texts, examples=None):
+    """Assemble: instructions + few-shot examples + target input(s).
+
+    `texts` may be a single string or a list of strings. With one input the
+    output format is `{"entities": [...]}`. With 2+ inputs we switch to batch
+    mode and ask for `{"results": [{"index": N, "entities": [...]}, ...]}`.
+    """
+    if isinstance(texts, str):
+        texts = [texts]
+    is_batch = len(texts) > 1
+
+    examples = examples if examples is not None else FEW_SHOT_EXAMPLES
+    parts = [SYSTEM_INSTRUCTIONS]
+    if is_batch:
+        parts.append(BATCH_INSTRUCTIONS)
+    parts.append("EXAMPLES (single-input format, showing what to label):")
+    for i, ex in enumerate(examples, 1):
+        parts.append(f"\nExample {i}")
+        parts.append(f"Input: {ex['input']}")
+        parts.append(f"Output: {json.dumps(ex['output'], ensure_ascii=False)}")
+
+    if is_batch:
+        parts.append(
+            f"\nNow label the following {len(texts)} inputs. "
+            "Return ONE JSON object with a 'results' array as described above."
+        )
+        for i, text in enumerate(texts, 1):
+            parts.append(f"\nInput {i}: {text}")
+    else:
+        parts.append("\nNow label this input. Return ONLY the JSON object.")
+        parts.append(f"\nInput: {texts[0]}")
+    parts.append("\nOutput:")
+    return "\n".join(parts)
+
+
+def parse_response_to_task(text, response_obj, task_id):
+    """Convert LLM JSON response to a Label Studio task, finding offsets in `text`.
+
+    Drops entities whose `text` field can't be located in the source — better
+    than emitting fabricated offsets.
+    """
+    annotation_results = []
+    dropped = []
+    for ent in response_obj.get("entities", []):
+        ent_text = (ent.get("text") or "").strip()
+        ent_label = ent.get("label", "")
+        if not ent_text or ent_label not in ("ticker", "company"):
+            dropped.append((ent_text, ent_label, "invalid"))
+            continue
+        matches = list(re.finditer(re.escape(ent_text), text))
+        if not matches:
+            dropped.append((ent_text, ent_label, "not_found"))
+            continue
+        for match in matches:
+            annotation_results.append({
+                "type": "labels",
+                "value": {
+                    "start": match.start(),
+                    "end": match.end(),
+                    "text": ent_text,
+                    "labels": [ent_label],
+                },
+            })
+    return {
+        "id": task_id,
+        "data": {"text": text},
+        "annotations": [{
+            "was_cancelled": False,
+            "result": annotation_results,
+        }],
+    }, dropped
+
+
+def _text_hash(text):
+    norm = re.sub(r"\s+", " ", text.strip().lower())[:200]
+    return hashlib.sha1(norm.encode("utf-8")).hexdigest()
+
+
+def _load_known_hashes(folders):
+    hashes = set()
+    for folder in folders:
+        if not os.path.isdir(folder):
+            continue
+        for fp in glob.glob(os.path.join(folder, "*.json")):
+            try:
+                with open(fp, "r", encoding="utf-8") as f:
+                    data = json.load(f)
+            except (json.JSONDecodeError, OSError):
+                continue
+            if not isinstance(data, list):
+                continue
+            for task in data:
+                text = task.get("data", {}).get("text") if isinstance(task, dict) else None
+                if text:
+                    hashes.add(_text_hash(text))
+    return hashes
+
+
+def load_unlabeled_posts(csv_path, dedup_text_folders=None):
+    """Read CSV, combine title+text, dedupe against labeled+test+output corpus."""
+    df = pd.read_csv(csv_path)
+
+    known = _load_known_hashes(dedup_text_folders or ["data/labeled", "data/test", "data/preds"])
+
+    posts = []
+    for _, row in df.iterrows():
+        body = str(row.get("text") or "").strip()
+        title = str(row.get("title") or "").strip()
+        if body in ("", "nan"):
+            continue
+        combined = (title + "\n\n" + body).strip() if title and title != "nan" else body
+        if _text_hash(combined) in known:
+            continue
+        posts.append({
+            "reddit_id": str(row.get("id")),
+            "text": combined,
+        })
+    return posts
+
+
+def _strip_code_fence(s):
+    """LLMs often wrap JSON in ```json ... ``` — peel that off before parsing."""
+    s = s.strip()
+    if s.startswith("```"):
+        s = re.sub(r"^```(?:json)?\s*\n?", "", s)
+        s = re.sub(r"\n?```\s*$", "", s)
+    return s
+
+
+def parse_post_spec(spec):
+    """Parse '0-9', '0,3,5', or '7' into a sorted unique list of indices."""
+    ids = set()
+    for part in spec.split(","):
+        part = part.strip()
+        if not part:
+            continue
+        if "-" in part:
+            a, b = part.split("-", 1)
+            ids.update(range(int(a), int(b) + 1))
+        else:
+            ids.add(int(part))
+    return sorted(ids)
+
+
+def parse_batch_response(texts, response_obj, task_id_offset, post_indices):
+    """Convert a batch `{"results": [...]}` response into Label Studio tasks.
+
+    `texts` is the list of input strings (1-indexed by the LLM's "index" field).
+    `post_indices` is the corresponding list of original CSV post indices, used
+    to assign stable task IDs (so re-running with the same posts overwrites
+    rather than duplicates).
+    Returns (list_of_tasks, list_of_(input_idx, dropped_entries)).
+    """
+    results_by_idx = {}
+    for r in response_obj.get("results", []):
+        idx = r.get("index")
+        if isinstance(idx, int):
+            results_by_idx[idx] = r
+
+    tasks = []
+    all_dropped = []
+    missing = []
+    for input_idx, text in enumerate(texts, 1):
+        result = results_by_idx.get(input_idx)
+        if result is None:
+            missing.append(input_idx)
+            continue
+        post_idx = post_indices[input_idx - 1]
+        task, dropped = parse_response_to_task(text, result, task_id_offset + post_idx)
+        tasks.append(task)
+        if dropped:
+            all_dropped.append((input_idx, dropped))
+    return tasks, all_dropped, missing
+
+
+def main():
+    parser = argparse.ArgumentParser(
+        description="Build / parse auto-label prompts for Reddit posts.",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog=__doc__,
+    )
+    parser.add_argument("--csv", default="data/wallstreetbets_posts.csv",
+                        help="Scraped posts CSV (default: %(default)s)")
+    parser.add_argument("--post-index", type=int,
+                        help="Single-post shortcut, equivalent to --posts N.")
+    parser.add_argument("--posts", default=None,
+                        help="Posts to label. '0-9' for a range, '0,3,5' for a list, "
+                             "or a single index. Defaults to '0'.")
+    parser.add_argument("--print-prompt", action="store_true",
+                        help="Write the full prompt to stdout (suitable for pasting into an LLM).")
+    parser.add_argument("--response-file",
+                        help="Path to an LLM JSON response. Parses + appends to --output.")
+    parser.add_argument("--task-id-offset", type=int, default=8_000_000,
+                        help="Starting ID for auto-labeled tasks (avoids labeled.json collisions).")
+    parser.add_argument("--output", default="data/preds/auto_labeled.json",
+                        help="Where to append parsed Label Studio tasks.")
+    args = parser.parse_args()
+
+    posts = load_unlabeled_posts(args.csv)
+    if not posts:
+        console.print(f"[red]No unlabeled posts in {args.csv} after dedup.[/red]")
+        sys.exit(1)
+
+    # Resolve the post-index spec into a concrete list of CSV positions.
+    if args.posts is not None:
+        post_indices = parse_post_spec(args.posts)
+    elif args.post_index is not None:
+        post_indices = [args.post_index]
+    else:
+        post_indices = [0]
+
+    for idx in post_indices:
+        if idx < 0 or idx >= len(posts):
+            console.print(
+                f"[red]post index {idx} out of range (0..{len(posts)-1}).[/red]"
+            )
+            sys.exit(1)
+
+    targets = [posts[i] for i in post_indices]
+    texts = [t["text"] for t in targets]
+    is_batch = len(targets) > 1
+
+    if args.response_file:
+        with open(args.response_file, "r", encoding="utf-8") as f:
+            raw = _strip_code_fence(f.read())
+        try:
+            response_obj = json.loads(raw)
+        except json.JSONDecodeError as exc:
+            console.print(f"[red]Response file is not valid JSON: {exc}[/red]")
+            console.print(f"[dim]First 200 chars: {raw[:200]}[/dim]")
+            sys.exit(1)
+
+        if is_batch:
+            tasks, all_dropped, missing = parse_batch_response(
+                texts, response_obj, args.task_id_offset, post_indices
+            )
+        else:
+            task, dropped = parse_response_to_task(
+                texts[0], response_obj, args.task_id_offset + post_indices[0]
+            )
+            tasks = [task]
+            all_dropped = [(1, dropped)] if dropped else []
+            missing = []
+
+        existing = []
+        if os.path.exists(args.output):
+            with open(args.output, "r", encoding="utf-8") as f:
+                existing = json.load(f)
+        new_ids = {t["id"] for t in tasks}
+        existing = [t for t in existing if t.get("id") not in new_ids]
+        existing.extend(tasks)
+        os.makedirs(os.path.dirname(args.output), exist_ok=True)
+        with open(args.output, "w", encoding="utf-8") as f:
+            json.dump(existing, f, indent=2, ensure_ascii=False)
+
+        n_ents = sum(len(t["annotations"][0]["result"]) for t in tasks)
+        console.print(
+            f"[green]Saved {len(tasks)} task(s) ({n_ents} entity spans total) "
+            f"to {args.output}[/green]"
+        )
+        if missing:
+            console.print(
+                f"[yellow]Missing results for input index(es): {missing} "
+                f"— LLM didn't return entries for these.[/yellow]"
+            )
+        if all_dropped:
+            console.print("[yellow]Dropped entities (not found in source text):[/yellow]")
+            for inp_i, dropped in all_dropped:
+                for txt, lab, reason in dropped:
+                    console.print(f"  - input {inp_i}: {reason}: {txt!r} ({lab})")
+        return
+
+    prompt = build_prompt(texts)
+
+    if args.print_prompt:
+        sys.stdout.write(prompt)
+        sys.stdout.write("\n")
+        return
+
+    range_desc = (
+        f"posts {post_indices[0]}-{post_indices[-1]} ({len(targets)} total)"
+        if is_batch else f"post {post_indices[0]}"
+    )
+    console.print(
+        f"\n[bold cyan]{range_desc}[/bold cyan] "
+        f"of {len(posts)-1} available "
+        f"({sum(len(t) for t in texts)} chars total input)"
+    )
+    if not is_batch:
+        console.print("[dim]--- POST PREVIEW ---[/dim]")
+        preview = texts[0][:400].replace("\n", " ")
+        console.print(preview + ("..." if len(texts[0]) > 400 else ""))
+    console.print(
+        f"\n[dim]--- PROMPT ({len(prompt)} chars) — "
+        f"use --print-prompt to write raw to stdout ---[/dim]\n"
+    )
+    print(prompt)
+
+
+if __name__ == "__main__":
+    main()

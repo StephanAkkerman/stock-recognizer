@@ -1,0 +1,434 @@
+{
+    "results": [
+        {
+            "index": 1,
+            "entities": [
+                {
+                    "text": "Amazon",
+                    "label": "company"
+                },
+                {
+                    "text": "Oracle",
+                    "label": "company"
+                },
+                {
+                    "text": "Meta",
+                    "label": "company"
+                },
+                {
+                    "text": "Google",
+                    "label": "company"
+                },
+                {
+                    "text": "OpenAI",
+                    "label": "company"
+                }
+            ]
+        },
+        {
+            "index": 2,
+            "entities": [
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "Step Distinctive Limited",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle Limited",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle Limited",
+                    "label": "company"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Wei Wei & Co",
+                    "label": "company"
+                },
+                {
+                    "text": "LinkedIn",
+                    "label": "company"
+                },
+                {
+                    "text": "Facebook",
+                    "label": "company"
+                },
+                {
+                    "text": "Twitter",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Eddid Securities",
+                    "label": "company"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Digital",
+                    "label": "company"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Regencell",
+                    "label": "company"
+                },
+                {
+                    "text": "Addentax",
+                    "label": "company"
+                },
+                {
+                    "text": "CMIG",
+                    "label": "company"
+                },
+                {
+                    "text": "CMIG",
+                    "label": "company"
+                },
+                {
+                    "text": "Coca Cola",
+                    "label": "company"
+                },
+                {
+                    "text": "Facebook",
+                    "label": "company"
+                },
+                {
+                    "text": "Walmart",
+                    "label": "company"
+                },
+                {
+                    "text": "Eddid",
+                    "label": "company"
+                },
+                {
+                    "text": "Digital",
+                    "label": "company"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Digital",
+                    "label": "company"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Eddid",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                }
+            ]
+        },
+        {
+            "index": 3,
+            "entities": []
+        },
+        {
+            "index": 4,
+            "entities": []
+        },
+        {
+            "index": 5,
+            "entities": []
+        },
+        {
+            "index": 6,
+            "entities": []
+        },
+        {
+            "index": 7,
+            "entities": [
+                {
+                    "text": "Intel",
+                    "label": "company"
+                },
+                {
+                    "text": "Intel",
+                    "label": "company"
+                }
+            ]
+        },
+        {
+            "index": 8,
+            "entities": [
+                {
+                    "text": "Paramount",
+                    "label": "company"
+                },
+                {
+                    "text": "Warner Bros Discovery",
+                    "label": "company"
+                },
+                {
+                    "text": "Paramount",
+                    "label": "company"
+                },
+                {
+                    "text": "Warner Bros Discovery",
+                    "label": "company"
+                }
+            ]
+        },
+        {
+            "index": 9,
+            "entities": [
+                {
+                    "text": "Amazon",
+                    "label": "company"
+                },
+                {
+                    "text": "Oracle",
+                    "label": "company"
+                },
+                {
+                    "text": "Meta",
+                    "label": "company"
+                },
+                {
+                    "text": "Google",
+                    "label": "company"
+                },
+                {
+                    "text": "OpenAI",
+                    "label": "company"
+                }
+            ]
+        },
+        {
+            "index": 10,
+            "entities": [
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "Step Distinctive Limited",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle Limited",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle Limited",
+                    "label": "company"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "TikTok",
+                    "label": "company"
+                },
+                {
+                    "text": "ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Wei Wei & Co",
+                    "label": "company"
+                },
+                {
+                    "text": "LinkedIn",
+                    "label": "company"
+                },
+                {
+                    "text": "Facebook",
+                    "label": "company"
+                },
+                {
+                    "text": "Twitter",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                },
+                {
+                    "text": "Eddid Securities",
+                    "label": "company"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Digital",
+                    "label": "company"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Regencell",
+                    "label": "company"
+                },
+                {
+                    "text": "Addentax",
+                    "label": "company"
+                },
+                {
+                    "text": "CMIG",
+                    "label": "company"
+                },
+                {
+                    "text": "CMIG",
+                    "label": "company"
+                },
+                {
+                    "text": "Coca Cola",
+                    "label": "company"
+                },
+                {
+                    "text": "Facebook",
+                    "label": "company"
+                },
+                {
+                    "text": "Walmart",
+                    "label": "company"
+                },
+                {
+                    "text": "Eddid",
+                    "label": "company"
+                },
+                {
+                    "text": "Digital",
+                    "label": "company"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Digital",
+                    "label": "company"
+                },
+                {
+                    "text": "$ANPA",
+                    "label": "ticker"
+                },
+                {
+                    "text": "AMTD",
+                    "label": "company"
+                },
+                {
+                    "text": "Eddid",
+                    "label": "company"
+                },
+                {
+                    "text": "Rich Sparkle",
+                    "label": "company"
+                }
+            ]
+        }
+    ]
+}

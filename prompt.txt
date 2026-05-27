@@ -1,0 +1,324 @@
+You are an expert at extracting stock tickers and company names from Reddit posts about finance.
+
+TASK: identify every ticker symbol and company name in the input text.
+
+DEFINITIONS:
+- ticker: A stock symbol like AAPL, TSLA, $MSFT. Usually 1-5 uppercase letters,
+  often preceded by $. INCLUDE the $ sign in the entity span when present.
+  ETFs (SPY, QQQ, VOO, IWM, JETS, ULCC) are tickers. Index abbreviations used
+  as tradeable (SPX, NDX) are tickers. Crypto symbols (BTC, ETH, LUNA) are
+  tickers when used in a trading context.
+- company: A real corporation, hedge fund, ETF issuer, fintech app, or business
+  entity referenced by name. Can be multiple words ("Bed Bath & Beyond",
+  "SIGA Technologies", "Warner Bros Discovery", "Cash app").
+
+DO NOT LABEL:
+- Internet slang or finance generics: BUY, SELL, HOLD, DUMP, PUMP, YOLO, DD,
+  FUD, FOMO, ATH, ATL, NFA, IMO, TLDR, LMFAO, AMA, OP, MOD.
+- Macro terms or people: JPOW, POWELL, FED, SEC, IRS, CEO, CFO, IPO, BULL,
+  BEAR, MOON, EARNINGS, GAINS, LOSS, PUTS, CALLS, STOCK, MARKET, OPTIONS.
+- News outlets: CNBC, MSNBC, WSJ, FT, BLOOMBERG.
+- Dollar amounts: $100, $5.50, $3T — only $-prefixed *letter* sequences are tickers.
+- Index names spelled out: "Dow Jones", "S&P 500", "Nasdaq" (the index).
+  But their ETF tickers (SPY, QQQ) ARE tickers.
+
+EDGE CASES:
+- A token used differently in one post can be both: "Tesla" → company,
+  "TSLA" → ticker — label them separately.
+- Label EVERY occurrence. If $AAPL appears 5 times, return 5 entries.
+- Preserve exact casing and punctuation from the source — do not normalize.
+
+OUTPUT FORMAT — return ONLY a JSON object, no commentary, no code fence:
+{"entities": [{"text": "<exact substring from input>", "label": "ticker" | "company"}]}
+
+Empty entities array (`{"entities": []}`) is correct for posts with no entities.
+
+BATCH MODE: You will receive multiple posts labeled "Input 1:", "Input 2:", etc.
+Return ONE JSON object with this structure (no commentary, no code fence):
+
+{"results": [
+  {"index": 1, "entities": [{"text": "...", "label": "ticker" | "company"}]},
+  {"index": 2, "entities": [...]},
+  ...
+]}
+
+The "index" field MUST match the corresponding "Input N:" number. Include an
+entry for EVERY input, even when entities is empty (use "entities": []).
+
+EXAMPLES (single-input format, showing what to label):
+
+Example 1
+Input: I care about BBBY.
+Output: {"entities": [{"text": "BBBY", "label": "ticker"}]}
+
+Example 2
+Input: Spx down 100 lmfao
+Output: {"entities": [{"text": "Spx", "label": "ticker"}]}
+
+Example 3
+Input: Cash app pulling a RH by not letting people purchase $AMC.What is going on???
+Output: {"entities": [{"text": "Cash app", "label": "company"}, {"text": "RH", "label": "company"}, {"text": "$AMC", "label": "ticker"}]}
+
+Example 4
+Input: Shorted Nebius (NBIS) by 730,000 today, checkin tomorrow after earnings.
+Output: {"entities": [{"text": "Nebius", "label": "company"}, {"text": "NBIS", "label": "ticker"}]}
+
+Example 5
+Input: Paramount makes $108.4 billion hostile bid for Warner Bros Discovery
+Output: {"entities": [{"text": "Paramount", "label": "company"}, {"text": "Warner Bros Discovery", "label": "company"}]}
+
+Example 6
+Input: Anybody else gonna YOLO into puts? JPOW about to crash this market. NFA
+Output: {"entities": []}
+
+Now label the following 10 inputs. Return ONE JSON object with a 'results' array as described above.
+
+Input 1: Nearly half of planned US data centers have been delayed or canceled limited by shortages of power
+
+https://www.bloomberg.com/news/features/2026-04-01/us-ai-data-center-expansion-relies-on-chinese-electrical-equipment-imports
+
+Companies like Amazon, Oracle, Meta, Google, and OpenAI have committed over 600B this year to building out datacenters. However, electrical power components like transformers, switchgears, and batteries, are not able to keep up with demand. Exports of these critical parts have increased coming out from China, but it isn't enoughto meet the unsatiable demand for AI in the US. US companies have also increased purchasing from companies from Canada, Mexico, and South Korea, but this is still not enough. Will this change the outlook on other supplier companies like memory and gpus for 2026?
+
+Input 2: TikTok's most popular influencer sold his company for $975m... to a sketchy Chinese "printing" company doing $6m in revenue: a write-up.
+
+https://preview.redd.it/ijwnqmqq6zgg1.png?width=1367&format=png&auto=webp&s=23d24c80c7ed6c7cb20aa25441e6b10ef3416fda
+
+*(For disclosure: I don't hold any position in $ANPA, nor do I plan to. I wrote this write up since I found it interesting, and also intersects with other work I'm doing)*
+
+***TLDR: Khaby Lame, the most-followed creator on TikTok, sold his holding company to an extremely suspicious Chinese company that sells financial statement printing services and only does $6m in revenue... yes, this is real.***
+
+***A deeper dive into the company shows a valuation completely disconnected from reality, with an auditor resignation at the end of last year being replaced by an auditor with only one publicly-known employee and hardly any public presence. The underwriter for the traded listing is also involved with the most high-profile case of suspicious Hong Kong IPOs.***
+
+***Simply put, the acquisition is as suspect as it gets on the markets.***
+
+Hola fellow regards,
+
+If you’ve been reading the news lately, you might’ve seen this piece of news pop up regarding TikTok’s most followed creator, Khaby Lame, selling his name and likeness for just shy of a [billion dollars.](https://africa.businessinsider.com/local/markets/worlds-biggest-tiktoker-from-senegal-sells-company-in-dollar900m-deal/z9nr4ex)
+
+It’s a deal that seems virtually unprecedented within the space of social media influencers, and a deal that should make you feel good about Khaby Lame’s success story. The laid-off machine operator turned global TikTok superstar that sold his company for a billion dollars *looks* built for the movie theatres… until you actually look a bit more into this deal. 
+
+According to the SEC filing, Khaby Lame sold *Step Distinctive Limited* from a Hong Kong-based holding company, *Rich Sparkle Limited*, for the consideration of $975m USD, through **the issuance of 75m ordinary shares** of Rich Sparkle to Distinctive’s shareholders. No cash got exchanged at all, purely shares.
+
+Rich Sparkle Limited themselves trade on the NASDAQ under the ticker $ANPA, and the news of the acquisition of this deal sent shares skyrocketing, up to 600% from previous levels seen at the start of the month at some point.
+
+[Quite a return if you ask me.](https://preview.redd.it/c424745w6zgg1.png?width=699&format=png&auto=webp&s=99c941f3186ecab4713ed82a0b21f57eee141894)
+
+Yet take an actual dive into the company that’s acquiring Khaby’s company, and more specifically, who even underwrote them within the first place, and you’re going to get a picture filled with so many red-flags you’d think it was a USSR propaganda piece…
+
+# Rich Sparkle is a "printing company" that has no business making a deal of this nature... like at all.
+
+With a consideration of nearly $975 million dollars, most would think that Rich Sparkle is, in some way, a firm that’s engaged within the social media or technology space. Maybe an A.I influencer company or something?
+
+It’s what I thought too, but Rich Sparkle’s prospectus lists themselves as… a financial printing company that produces and designs financial statements. Yes. Printing and designing financial statements.
+
+[Taken right from their prospectus on July 9th, 2025.](https://preview.redd.it/edbr2kyz7zgg1.png?width=768&format=png&auto=webp&s=25f537806165f65d87c5de4d2a9cd560301470de)
+
+A financial statements printing company is paying $975m for a company that owns the likeliness of TikTok’s most popular influencer.  What’s even stranger is the fact that this company barely has made any revenue anywhere close to the consideration that they’re paying Khaby Lame for this company. The company only raked in just $5.88m in revenue the previous year, yet somehow this company is able to acquire a company for just shy of a billion dollars?
+
+[Again, per the prospectus.](https://preview.redd.it/knix5nka8zgg1.png?width=844&format=png&auto=webp&s=2a1387f49442563acf5459cdcd5914c1df3aa5ed)
+
+[Listed on the prospectus, ANPA offered 1.25m shares to trade.](https://preview.redd.it/cawn2q4cazgg1.png?width=824&format=png&auto=webp&s=d195fd24926ecc6d390e12e78aefdf4ae880a9ef)
+
+$ANPA went public on the NASDAQ offering 1.25m shares on July 8th, 2025, raising just **$5m in IPO proceeds** [**(6-k pg.11)**](https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=319481647&type=PDF&symbol=ANPA&companyName=Rich+Sparkle+Holdings+Limited&formType=6-K&formDescription=Report+of+foreign+private+issuer+pursuant+to+Rule+13a-16+or+15d-16+under+the+Securities+Exchange+Act+of+1934&dateFiled=2025-09-30)**.**  The company issued out just 10% of their current shares, which gave the IPO a valuation of nearly $50m come the time of the IPO (shares would eventually dilute out to \~5% of outstanding shares being publicly traded).
+
+Just a month later, the stock that initially IPO'd at price of around $4 is trading at [$30 bucks and has added nearly $250m in market capitalization](https://ca.finance.yahoo.com/quote/ANPA/history/?period1=1738456733&period2=1754611200) with literally no material events happening within that time that neither EDGAR nor anywhere else on the internet I could find could give a reason too. Inexplicably [the ticker just... stays in that price range for no real reason at all, no material events, nothing](https://ca.finance.yahoo.com/quote/ANPA/history/?period1=1738456733&period2=1764547200) for the next few months. That changes on  December 15th, 2025.
+
+[6-k on December 15th.](https://preview.redd.it/esgxwivhazgg1.png?width=1125&format=png&auto=webp&s=1fe9b1ef63d7c6fbe818886f32c1dad8e7c595d1)
+
+The auditor for Rich Sparkle, Wei Wei & Co, resigned as Sparkle's auditor [effective immediately. ](https://www.sec.gov/Archives/edgar/data/2031688/000121390025121935/ea0262416-6k_rich.htm)This wouldn't be too much of a problem (for a company of their stature)  if it weren't for the fact that the company has [filed notice that their 20-F is going to come late.](https://www.sec.gov/Archives/edgar/data/2031688/000121390026009879/ea0274580-nt20f_rich.htm)
+
+The latest auditor that Sparkle appointed the same day the previous one resigned has only [one affiliated person with a job there on their LinkedIn (who only has one follower), despite being an American company,](https://www.linkedin.com/company/fundcertify-cpa/people/) and Facebook and Twitter accounts both with [zero followers](https://www.facebook.com/people/FundCertify-CPA/61566746430615/) and [filler posts that are just stock images](https://www.facebook.com/people/FundCertify-CPA/61566746430615/).
+
+I'm not one to want to cyberbully a small business, but this audit firm being in charge of auditing a billion dollar company (as of 2/1/26) that just did a $975m acquisition... yeah that's a bit sketchy.
+
+# The biggest IPO Sparkle's underwriter got involved in... was historic for all the wrong reasons.
+
+I mentioned in my disclosure that this intersects with another piece I'm working on. This section is where I'll clear that up.
+
+The most obvious link to figuring out how on earth a shitco like Rich Sparkle could achieve a billion dollar valuation from literally printing paper for money, would be through looking at the underwriting structure to see who had been in control of allocating shares.
+
+[Per prospectus](https://preview.redd.it/t4wlygqqhzgg1.png?width=1248&format=png&auto=webp&s=3feb2ebe385cf2f7b3b8da55c12531f7dfc6d4d2)
+
+Eddid Securities. [Their website](https://www.eddidusa.com/) says that they help bring small to medium-size companies to the market, stuff the big investment banks don't have the time for. *Small to medium-size companies*, with the exception of one.
+
+[Ain't that a lovely throwback](https://preview.redd.it/8kzfsy9ajzgg1.png?width=1400&format=png&auto=webp&s=e1ff44c14350e32af2bd3467bf2df985e956306d)
+
+To any WSBers that were here during 2022, I'm sure AMTD might sound like a familiar name to you. Their subsidiary, Digital, randomly skyrocketed 30,000% within the span of mere weeks in July-August 2022 to become one of the most valuable companies in the world. The only problem is that no one exactly knew how this was even possible, and no, it wasn't a meme stock as the media often claimed.
+
+AMTD is probably the most infamous name from a bunch of Hong Kong-related stocks (Regencell, Addentax, etc) that ballooned to a cartoonish valuation of $400b+ at its peak only to dump 90% right after. The guy behind the IPO, Calvin Choi was banned months before the IPO, and, a year and a half before, was publicly accused of siphoning hundreds of millions of dollars by one of China's biggest investment firms, CMIG.
+
+This feud was so public, CMIG hung banners around Hong Kong to tell people that Choi was a *fraudster they shouldn't invest with.*
+
+[one of us if I'm being real 😶‍🌫️](https://preview.redd.it/2wktkzejlzgg1.png?width=1024&format=png&auto=webp&s=4b5739c632b1a96b17600f93f512c09d4fc36d20)
+
+While AMTD's stock surge still hasn't been publicly explained yet, it's pretty obvious to infer that there had to be some sort of insider co-ordination to manage to get a shell shitco worth more than Coca Cola, Facebook, and Walmart (no I'm not joking) within the span of weeks.
+
+The most obvious way to see that parties involved in that process? Looking at the underwriting records, where none other than Eddid themselves were involved in that process ([prospectus](https://d18rn0p25nwr6d.cloudfront.net/CIK-0001809691/89df4242-a74e-41fc-b948-a5f0a2956d83.pdf))
+
+[Cited from the prospectus for Digital in 2022](https://preview.redd.it/93y6q0bymzgg1.png?width=1599&format=png&auto=webp&s=d49786009f06a1b1241dd4958c6936924299137f)
+
+Of course, this isn't definitive proof that they colluded with AMTD with whatever happened in Digital, but it gives us a pretty good idea of the sort of companies this underwriter chooses to associate with, while also considering that $ANPA has the hallmarks of a stock that has some level on insider co-ordination.
+
+AMTD themselves are being investigated for their underwriting practices by the SFC (Hong Kong's version of the SEC). They recently got fined for failing to [produce records subponaed from companies they help bring to market.](https://apps.sfc.hk/edistributionWeb/gateway/EN/news-and-announcements/news/doc?refNo=25PR165) Eddid seems to have associated themselves with an underwriter that claimed to "*have lost records and books relating to the listing of multi-million dollar companies*"
+
+# Conclusion.
+
+I'm not here to make any definitive claims, but mostly here to point out how ridiculously insane this rabbit hole of a story is, and that the media is not reporting on any of it, at all.
+
+With the clear influencer angle, and the suspect financials and history that Rich Sparkle has,  I feel like it's hard to deny that this being used in a scheme to deceive retail investors or people that don't really know any better to buy into a stock that is fundamentally *cooked*.
+
+Anyways, hope you enjoyed this write-up. I'm out.
+
+Input 3: Most Trump tariffs ruled illegal in blow to White House trade policy
+
+https://www.cnbc.com/2025/08/29/trump-trade-tariffs-appeals-court-ieepa.html?__source=androidappshare
+
+What do we think here? Looks like market and bitcoin are reacting
+
+Input 4: Judge blocks subpoenas against Fed Chair Jerome Powell, citing 'essentially zero evidence'
+
+[https://www.nbcnews.com/business/economy/powell-subpoenas-blocked-trump-probe-rcna263401](https://www.nbcnews.com/business/economy/powell-subpoenas-blocked-trump-probe-rcna263401)
+
+Nobody fucks with JPow.
+
+Input 5: Iran says Strait of Hormuz closed and warns it will attack ships trying to pass
+
+https://www.reuters.com/world/iran-live-israel-strikes-hezbollah-uk-base-hit-cyprus-conflict-widens-2026-03-02/
+
+Input 6: Trump unveils a 50% tariff on copper and threatens to impose 200% duties on pharmaceuticals
+
+No paywall: [https://finance.yahoo.com/news/trump-unveils-a-50-tariff-on-copper-and-threatens-to-impose-200-duties-on-pharmaceuticals-181231693.html](https://finance.yahoo.com/news/trump-unveils-a-50-tariff-on-copper-and-threatens-to-impose-200-duties-on-pharmaceuticals-181231693.html)
+
+President Trump said Tuesday that an ongoing investigation of tariffs on copper will end with 50% duties on the metal in remarks where he also threatened 200% tariffs on pharmaceuticals.
+
+The comments came during a wide-ranging cabinet meeting where he also said Europe will get tariffs dictated to them this week and that Jerome Powell should resign, adding more developments to what was already a week dominated by trade and economics in Washington, D.C.
+
+“Today we're doing copper,” Trump said during the meeting, and turned to Commerce Secretary Howard Lutnick who confirmed that the rate will be 50%.
+
+The apparent move will match the current 50% tariffs on two other commodities — steel and aluminum. The announcement sent copper prices immediately up over 10% before prices retreated some later Tuesday afternoon.
+
+The president didn't specifically outline when the new copper tariff would take effect but he has the power to implement them immediately once an investigation by his administration is concluded.
+
+The president also teased other major announcements set for the coming weeks on top of this week’s focus on “reciprocal” tariffs, saying “we're going to be announcing pharmaceuticals, chips” in the weeks ahead — a reference to upcoming plans around prescription drugs and semiconductors.
+
+He didn’t offer a specific timeline on the pharmaceutical tariffs but suggested there could be a extended easing in period.
+
+"We're going to give people about a year, a year and a half to come in, and after that they're going to be tariffed," he said, while also offering an eye-popping number for the final duty by saying it will be “a very, very high rate, like 200%.”
+
+“We'll give them a certain period of time to get their act together,” Trump added.
+
+His action on copper could be felt more quickly, with the president signaling an end to an ongoing Commerce Department investigation of possible duties under Section 232 tariff authority that began in February.
+
+Trump implemented tariffs on steel and aluminum in March but held off on copper.
+
+It was yet another aggressive Trump move on trade in a week where he threatened of 25% duties on South Korea and Japan on Monday and then said on Tuesday that a new tariff deadline of Aug. 1 won't be extended.
+
+It was a return to trade rhetoric from Trump that has been more muted in recent weeks but was on full display during the cabinet meeting and has marked Trump's political career as part of what he says is his quest to protect America.
+
+"People that sat in this room allowed it to happen," he said of previous trade policies while talking in the White House's Cabinet room, "and I don't allow it to happen."
+
+Input 7: Intel shares drop after Trump calls for CEO to resign immediately
+
+Intel shares drop after Trump calls for CEO to resign immediately https://www.cnbc.com/2025/08/07/intel-ceo-trump-lip-bu-tan.html
+
+Input 8: Paramount makes $108.4 billion hostile bid for Warner Bros Discovery
+
+https://www.reuters.com/legal/transactional/paramount-makes-1084-billion-bid-warner-bros-discovery-2025-12-08/
+
+Input 9: Nearly half of planned US data centers have been delayed or canceled limited by shortages of power
+
+https://www.bloomberg.com/news/features/2026-04-01/us-ai-data-center-expansion-relies-on-chinese-electrical-equipment-imports
+
+Companies like Amazon, Oracle, Meta, Google, and OpenAI have committed over 600B this year to building out datacenters. However, electrical power components like transformers, switchgears, and batteries, are not able to keep up with demand. Exports of these critical parts have increased coming out from China, but it isn't enoughto meet the unsatiable demand for AI in the US. US companies have also increased purchasing from companies from Canada, Mexico, and South Korea, but this is still not enough. Will this change the outlook on other supplier companies like memory and gpus for 2026?
+
+Input 10: TikTok's most popular influencer sold his company for $975m... to a sketchy Chinese "printing" company doing $6m in revenue: a write-up.
+
+https://preview.redd.it/ijwnqmqq6zgg1.png?width=1367&format=png&auto=webp&s=23d24c80c7ed6c7cb20aa25441e6b10ef3416fda
+
+*(For disclosure: I don't hold any position in $ANPA, nor do I plan to. I wrote this write up since I found it interesting, and also intersects with other work I'm doing)*
+
+***TLDR: Khaby Lame, the most-followed creator on TikTok, sold his holding company to an extremely suspicious Chinese company that sells financial statement printing services and only does $6m in revenue... yes, this is real.***
+
+***A deeper dive into the company shows a valuation completely disconnected from reality, with an auditor resignation at the end of last year being replaced by an auditor with only one publicly-known employee and hardly any public presence. The underwriter for the traded listing is also involved with the most high-profile case of suspicious Hong Kong IPOs.***
+
+***Simply put, the acquisition is as suspect as it gets on the markets.***
+
+Hola fellow regards,
+
+If you’ve been reading the news lately, you might’ve seen this piece of news pop up regarding TikTok’s most followed creator, Khaby Lame, selling his name and likeness for just shy of a [billion dollars.](https://africa.businessinsider.com/local/markets/worlds-biggest-tiktoker-from-senegal-sells-company-in-dollar900m-deal/z9nr4ex)
+
+It’s a deal that seems virtually unprecedented within the space of social media influencers, and a deal that should make you feel good about Khaby Lame’s success story. The laid-off machine operator turned global TikTok superstar that sold his company for a billion dollars *looks* built for the movie theatres… until you actually look a bit more into this deal. 
+
+According to the SEC filing, Khaby Lame sold *Step Distinctive Limited* from a Hong Kong-based holding company, *Rich Sparkle Limited*, for the consideration of $975m USD, through **the issuance of 75m ordinary shares** of Rich Sparkle to Distinctive’s shareholders. No cash got exchanged at all, purely shares.
+
+Rich Sparkle Limited themselves trade on the NASDAQ under the ticker $ANPA, and the news of the acquisition of this deal sent shares skyrocketing, up to 600% from previous levels seen at the start of the month at some point.
+
+[Quite a return if you ask me.](https://preview.redd.it/c424745w6zgg1.png?width=699&format=png&auto=webp&s=99c941f3186ecab4713ed82a0b21f57eee141894)
+
+Yet take an actual dive into the company that’s acquiring Khaby’s company, and more specifically, who even underwrote them within the first place, and you’re going to get a picture filled with so many red-flags you’d think it was a USSR propaganda piece…
+
+# Rich Sparkle is a "printing company" that has no business making a deal of this nature... like at all.
+
+With a consideration of nearly $975 million dollars, most would think that Rich Sparkle is, in some way, a firm that’s engaged within the social media or technology space. Maybe an A.I influencer company or something?
+
+It’s what I thought too, but Rich Sparkle’s prospectus lists themselves as… a financial printing company that produces and designs financial statements. Yes. Printing and designing financial statements.
+
+[Taken right from their prospectus on July 9th, 2025.](https://preview.redd.it/edbr2kyz7zgg1.png?width=768&format=png&auto=webp&s=25f537806165f65d87c5de4d2a9cd560301470de)
+
+A financial statements printing company is paying $975m for a company that owns the likeliness of TikTok’s most popular influencer.  What’s even stranger is the fact that this company barely has made any revenue anywhere close to the consideration that they’re paying Khaby Lame for this company. The company only raked in just $5.88m in revenue the previous year, yet somehow this company is able to acquire a company for just shy of a billion dollars?
+
+[Again, per the prospectus.](https://preview.redd.it/knix5nka8zgg1.png?width=844&format=png&auto=webp&s=2a1387f49442563acf5459cdcd5914c1df3aa5ed)
+
+[Listed on the prospectus, ANPA offered 1.25m shares to trade.](https://preview.redd.it/cawn2q4cazgg1.png?width=824&format=png&auto=webp&s=d195fd24926ecc6d390e12e78aefdf4ae880a9ef)
+
+$ANPA went public on the NASDAQ offering 1.25m shares on July 8th, 2025, raising just **$5m in IPO proceeds** [**(6-k pg.11)**](https://app.quotemedia.com/data/downloadFiling?webmasterId=90423&ref=319481647&type=PDF&symbol=ANPA&companyName=Rich+Sparkle+Holdings+Limited&formType=6-K&formDescription=Report+of+foreign+private+issuer+pursuant+to+Rule+13a-16+or+15d-16+under+the+Securities+Exchange+Act+of+1934&dateFiled=2025-09-30)**.**  The company issued out just 10% of their current shares, which gave the IPO a valuation of nearly $50m come the time of the IPO (shares would eventually dilute out to \~5% of outstanding shares being publicly traded).
+
+Just a month later, the stock that initially IPO'd at price of around $4 is trading at [$30 bucks and has added nearly $250m in market capitalization](https://ca.finance.yahoo.com/quote/ANPA/history/?period1=1738456733&period2=1754611200) with literally no material events happening within that time that neither EDGAR nor anywhere else on the internet I could find could give a reason too. Inexplicably [the ticker just... stays in that price range for no real reason at all, no material events, nothing](https://ca.finance.yahoo.com/quote/ANPA/history/?period1=1738456733&period2=1764547200) for the next few months. That changes on  December 15th, 2025.
+
+[6-k on December 15th.](https://preview.redd.it/esgxwivhazgg1.png?width=1125&format=png&auto=webp&s=1fe9b1ef63d7c6fbe818886f32c1dad8e7c595d1)
+
+The auditor for Rich Sparkle, Wei Wei & Co, resigned as Sparkle's auditor [effective immediately. ](https://www.sec.gov/Archives/edgar/data/2031688/000121390025121935/ea0262416-6k_rich.htm)This wouldn't be too much of a problem (for a company of their stature)  if it weren't for the fact that the company has [filed notice that their 20-F is going to come late.](https://www.sec.gov/Archives/edgar/data/2031688/000121390026009879/ea0274580-nt20f_rich.htm)
+
+The latest auditor that Sparkle appointed the same day the previous one resigned has only [one affiliated person with a job there on their LinkedIn (who only has one follower), despite being an American company,](https://www.linkedin.com/company/fundcertify-cpa/people/) and Facebook and Twitter accounts both with [zero followers](https://www.facebook.com/people/FundCertify-CPA/61566746430615/) and [filler posts that are just stock images](https://www.facebook.com/people/FundCertify-CPA/61566746430615/).
+
+I'm not one to want to cyberbully a small business, but this audit firm being in charge of auditing a billion dollar company (as of 2/1/26) that just did a $975m acquisition... yeah that's a bit sketchy.
+
+# The biggest IPO Sparkle's underwriter got involved in... was historic for all the wrong reasons.
+
+I mentioned in my disclosure that this intersects with another piece I'm working on. This section is where I'll clear that up.
+
+The most obvious link to figuring out how on earth a shitco like Rich Sparkle could achieve a billion dollar valuation from literally printing paper for money, would be through looking at the underwriting structure to see who had been in control of allocating shares.
+
+[Per prospectus](https://preview.redd.it/t4wlygqqhzgg1.png?width=1248&format=png&auto=webp&s=3feb2ebe385cf2f7b3b8da55c12531f7dfc6d4d2)
+
+Eddid Securities. [Their website](https://www.eddidusa.com/) says that they help bring small to medium-size companies to the market, stuff the big investment banks don't have the time for. *Small to medium-size companies*, with the exception of one.
+
+[Ain't that a lovely throwback](https://preview.redd.it/8kzfsy9ajzgg1.png?width=1400&format=png&auto=webp&s=e1ff44c14350e32af2bd3467bf2df985e956306d)
+
+To any WSBers that were here during 2022, I'm sure AMTD might sound like a familiar name to you. Their subsidiary, Digital, randomly skyrocketed 30,000% within the span of mere weeks in July-August 2022 to become one of the most valuable companies in the world. The only problem is that no one exactly knew how this was even possible, and no, it wasn't a meme stock as the media often claimed.
+
+AMTD is probably the most infamous name from a bunch of Hong Kong-related stocks (Regencell, Addentax, etc) that ballooned to a cartoonish valuation of $400b+ at its peak only to dump 90% right after. The guy behind the IPO, Calvin Choi was banned months before the IPO, and, a year and a half before, was publicly accused of siphoning hundreds of millions of dollars by one of China's biggest investment firms, CMIG.
+
+This feud was so public, CMIG hung banners around Hong Kong to tell people that Choi was a *fraudster they shouldn't invest with.*
+
+[one of us if I'm being real 😶‍🌫️](https://preview.redd.it/2wktkzejlzgg1.png?width=1024&format=png&auto=webp&s=4b5739c632b1a96b17600f93f512c09d4fc36d20)
+
+While AMTD's stock surge still hasn't been publicly explained yet, it's pretty obvious to infer that there had to be some sort of insider co-ordination to manage to get a shell shitco worth more than Coca Cola, Facebook, and Walmart (no I'm not joking) within the span of weeks.
+
+The most obvious way to see that parties involved in that process? Looking at the underwriting records, where none other than Eddid themselves were involved in that process ([prospectus](https://d18rn0p25nwr6d.cloudfront.net/CIK-0001809691/89df4242-a74e-41fc-b948-a5f0a2956d83.pdf))
+
+[Cited from the prospectus for Digital in 2022](https://preview.redd.it/93y6q0bymzgg1.png?width=1599&format=png&auto=webp&s=d49786009f06a1b1241dd4958c6936924299137f)
+
+Of course, this isn't definitive proof that they colluded with AMTD with whatever happened in Digital, but it gives us a pretty good idea of the sort of companies this underwriter chooses to associate with, while also considering that $ANPA has the hallmarks of a stock that has some level on insider co-ordination.
+
+AMTD themselves are being investigated for their underwriting practices by the SFC (Hong Kong's version of the SEC). They recently got fined for failing to [produce records subponaed from companies they help bring to market.](https://apps.sfc.hk/edistributionWeb/gateway/EN/news-and-announcements/news/doc?refNo=25PR165) Eddid seems to have associated themselves with an underwriter that claimed to "*have lost records and books relating to the listing of multi-million dollar companies*"
+
+# Conclusion.
+
+I'm not here to make any definitive claims, but mostly here to point out how ridiculously insane this rabbit hole of a story is, and that the media is not reporting on any of it, at all.
+
+With the clear influencer angle, and the suspect financials and history that Rich Sparkle has,  I feel like it's hard to deny that this being used in a scheme to deceive retail investors or people that don't really know any better to buy into a stock that is fundamentally *cooked*.
+
+Anyways, hope you enjoyed this write-up. I'm out.
+
+Output:
