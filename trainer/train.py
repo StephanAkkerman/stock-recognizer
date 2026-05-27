@@ -13,6 +13,8 @@ from rich.console import Console
 console = Console()
 
 SEED = 42
+EARLY_STOPPING = True
+EPOCHS = 10
 VAL_FRACTION = 0.15
 
 ENTITY_DESCRIPTIONS = {
@@ -150,7 +152,9 @@ def parse_all_labeled_data(
         for task, _ in _load_tasks(test_folder):
             test_ids.add(task["id"])
 
-    originals = [(t, fp) for t, fp in _load_tasks(labeled_folder) if t["id"] not in test_ids]
+    originals = [
+        (t, fp) for t, fp in _load_tasks(labeled_folder) if t["id"] not in test_ids
+    ]
 
     # Split task ids deterministically.
     rng = random.Random(seed)
@@ -213,7 +217,7 @@ if __name__ == "__main__":
     config = TrainingConfig(
         output_dir=output_dir,
         experiment_name=f"fintwit_lora_v{next_version}",
-        num_epochs=10,
+        num_epochs=EPOCHS,
         batch_size=BATCH_SIZE,
         max_len=256,
         gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
@@ -235,7 +239,7 @@ if __name__ == "__main__":
         # negatives dominate the gradient once training runs long enough.
         # Patience=3 stops on the noisy val signal, but stopping early is
         # better than collapse.
-        early_stopping=True,
+        early_stopping=EARLY_STOPPING,
         early_stopping_patience=3,
     )
 

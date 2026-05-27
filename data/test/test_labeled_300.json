@@ -1,0 +1,1634 @@
+[
+  {
+    "id": 456,
+    "annotations": [
+      {
+        "id": 561,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 68,
+              "end": 72,
+              "text": "SCGX",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "jcGEVj-Znz",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:24:25.708721Z",
+        "updated_at": "2026-05-15T14:24:25.708721Z",
+        "draft_created_at": null,
+        "lead_time": 2.977,
+        "prediction": {
+          "id": 305,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 82,
+                "end": 87,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 88,
+                "end": 91,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 68,
+                "end": 72,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "0 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.175984Z",
+          "updated_at": "2026-05-15T14:23:26.175984Z",
+          "model": null,
+          "model_run": null,
+          "task": 456,
+          "project": 5
+        },
+        "result_count": 1,
+        "unique_id": "7a8f3a11-126b-447f-9a70-5288aaae60fd",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 456,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 305,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      305
+    ],
+    "data": {
+      "text": "A friend of mine wants me to join this friends and family raise for SCGX, $0.50 a stock min buy in $10k. Yay or nay?"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:24:25.743303Z",
+    "allow_skip": true,
+    "inner_id": 5,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 474,
+    "annotations": [
+      {
+        "id": 579,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 58,
+              "end": 61,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "jMNo6kize-",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 66,
+              "end": 69,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "dwsRC8KtSq",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:27:58.598557Z",
+        "updated_at": "2026-05-15T14:27:58.598557Z",
+        "draft_created_at": "2026-05-15T14:27:54.102211Z",
+        "lead_time": 12.254,
+        "prediction": {
+          "id": 323,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 192,
+                "end": 197,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 176,
+                "end": 181,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 221,
+                "end": 226,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 155,
+                "end": 160,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 78,
+                "end": 82,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 214,
+                "end": 218,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 58,
+                "end": 61,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 66,
+                "end": 69,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "4 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.175984Z",
+          "updated_at": "2026-05-15T14:23:26.175984Z",
+          "model": null,
+          "model_run": null,
+          "task": 474,
+          "project": 5
+        },
+        "result_count": 2,
+        "unique_id": "fa5cacbb-a898-40dd-91fa-627c959f04b3",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 474,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 323,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      323
+    ],
+    "data": {
+      "text": "Can someone smarter than I explain why what was done with GME and AMC was not just a roundabout way of diluting share count? Yes, it was dividends without value distributed as stock, with the exact same results of just a stock split.Help me understand please."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:27:58.637341Z",
+    "allow_skip": true,
+    "inner_id": 23,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 477,
+    "annotations": [
+      {
+        "id": 582,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 156,
+              "end": 160,
+              "text": "bbby",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "JbEHMSIn2x",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:28:12.017585Z",
+        "updated_at": "2026-05-15T14:28:12.017585Z",
+        "draft_created_at": null,
+        "lead_time": 5.244,
+        "prediction": {
+          "id": 326,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 107,
+                "end": 112,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 339,
+                "end": 343,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 88,
+                "end": 92,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 134,
+                "end": 137,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 156,
+                "end": 160,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "4 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.175984Z",
+          "updated_at": "2026-05-15T14:23:26.175984Z",
+          "model": null,
+          "model_run": null,
+          "task": 477,
+          "project": 5
+        },
+        "result_count": 1,
+        "unique_id": "07eb7e63-6b9a-4fd5-90b1-fbbc5f858f10",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 477,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 326,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      326
+    ],
+    "data": {
+      "text": "The people in this sub remind me of a bunch of rock headed redards smackin a giant dead tree waiting for a magic nut to fall from the sky. The last nut was bbby and guess what, most of you made nothing and lost your grandmas birthday money. You wouldn't stick your dick in a snake hole would you? So dont stick your cash in the market. Be safe out there. Be patient"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:28:12.054691Z",
+    "allow_skip": true,
+    "inner_id": 26,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 494,
+    "annotations": [
+      {
+        "id": 599,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 133,
+              "end": 137,
+              "text": "EDXC",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "4PoHBqBVaF",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:30:15.177223Z",
+        "updated_at": "2026-05-15T14:30:15.177223Z",
+        "draft_created_at": "2026-05-15T14:30:13.726732Z",
+        "lead_time": 7.271,
+        "prediction": {
+          "id": 343,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 491,
+                "end": 496,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 651,
+                "end": 656,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 825,
+                "end": 829,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 817,
+                "end": 821,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 550,
+                "end": 554,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 506,
+                "end": 510,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 560,
+                "end": 564,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 133,
+                "end": 137,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "6 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.176983Z",
+          "updated_at": "2026-05-15T14:23:26.176983Z",
+          "model": null,
+          "model_run": null,
+          "task": 494,
+          "project": 5
+        },
+        "result_count": 1,
+        "unique_id": "5cf9f867-0c44-4f57-954f-7eac5a02e0b7",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 494,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 343,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      343
+    ],
+    "data": {
+      "text": "Hello fellow idiots. I have stumbled upon something that has made me money. With said money I have bought a bunch of crap as well as EDXC. I got in to EDXC around April when it fell off a cliff. This thing has been going crazy over the last two weeks, doubling from .04 to .08. I could try to spout off a bunch of book learned bullcrap on why this could go up such as volume being insane already today, but let me instead use a movie to convince the smooth brained clan. This is a pink slip stock, like in wolf of wall street. Get in your underwear, rail some coke, start humming the Matthew Mcconaughey song/chest smack music and buy up some of this stock before it goes parabolic. Currently have 27,750 shares @ .06618 cost basis for anyone who gives a shit. Not a ton of money to anyone except me, about 85% of my Roth. I know it ain't much money, but for a broke idiot like me it is substantial."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.165469Z",
+    "updated_at": "2026-05-15T14:30:15.211288Z",
+    "allow_skip": true,
+    "inner_id": 43,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 514,
+    "annotations": [
+      {
+        "id": 619,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 243,
+              "end": 247,
+              "text": "$BIG",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "iG4mcz7Hes",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 236,
+              "end": 241,
+              "text": "stock",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "WiR_8UrVbO",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 0,
+              "end": 8,
+              "text": "Big Lots",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "S1SPMlp6Ay",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:31:56.949853Z",
+        "updated_at": "2026-05-15T14:31:56.949853Z",
+        "draft_created_at": "2026-05-15T14:31:52.762602Z",
+        "lead_time": 9.569,
+        "prediction": {
+          "id": 363,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 243,
+                "end": 247,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 262,
+                "end": 270,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 16,
+                "end": 23,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 197,
+                "end": 203,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 329,
+                "end": 334,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 24,
+                "end": 29,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 236,
+                "end": 241,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 642,
+                "end": 647,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 575,
+                "end": 579,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 559,
+                "end": 563,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 522,
+                "end": 526,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 157,
+                "end": 162,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 220,
+                "end": 225,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 0,
+                "end": 8,
+                "labels": [
+                  "company"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "8 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.177486Z",
+          "updated_at": "2026-05-15T14:23:26.177486Z",
+          "model": null,
+          "model_run": null,
+          "task": 514,
+          "project": 5
+        },
+        "result_count": 3,
+        "unique_id": "3deba4b6-0c5d-4da9-abcb-5a9ef594991e",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 514,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 363,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      363
+    ],
+    "data": {
+      "text": "Big Lots is the perfect stock for those who want to YOLO into a short term call short squeeze or a long term investment. Jan 2025 Calls are available to buy LEAPS for those looking for a long term option trade. I bought leaps & own the stock. $BIG offers a 6.5% dividend yield and has a PE ratio of 7. The underlying business is solid. They had a few missteps with excess inventory last quarter and fired their merchandising manager as a result. This cause a lot of write downs and a loss on the quarter. This was latched onto by the institutional shorts and here we are - a good company being shorted into the ground. Buy the calls! Buy the stock!"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:31:56.985733Z",
+    "allow_skip": true,
+    "inner_id": 63,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 517,
+    "annotations": [
+      {
+        "id": 622,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 37,
+              "end": 40,
+              "text": "VIX",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "D3rkz66Y4z",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:13.471333Z",
+        "updated_at": "2026-05-15T14:32:13.471333Z",
+        "draft_created_at": null,
+        "lead_time": 2.99,
+        "prediction": {
+          "id": 366,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 12,
+                "end": 16,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 89,
+                "end": 93,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 37,
+                "end": 40,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "8 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.177486Z",
+          "updated_at": "2026-05-15T14:23:26.177486Z",
+          "model": null,
+          "model_run": null,
+          "task": 517,
+          "project": 5
+        },
+        "result_count": 1,
+        "unique_id": "684cea74-cba6-4d3a-acca-6f088b024774",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 517,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 366,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      366
+    ],
+    "data": {
+      "text": "I might buy here if Im being honest. VIX over 9% means we should get a bounce within the next two days. Lets close at a new low and then all aboard."
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:13.511332Z",
+    "allow_skip": true,
+    "inner_id": 66,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 519,
+    "annotations": [
+      {
+        "id": 624,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 55,
+              "end": 60,
+              "text": "$BBBY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "lecyKzUZfD",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:32:21.036462Z",
+        "updated_at": "2026-05-15T14:32:21.036462Z",
+        "draft_created_at": null,
+        "lead_time": 4.053,
+        "prediction": {
+          "id": 368,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 55,
+                "end": 60,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 32,
+                "end": 37,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 27,
+                "end": 31,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 0,
+                "end": 4,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "8 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.177486Z",
+          "updated_at": "2026-05-15T14:23:26.177486Z",
+          "model": null,
+          "model_run": null,
+          "task": 519,
+          "project": 5
+        },
+        "result_count": 1,
+        "unique_id": "357028ff-5d63-4389-a922-bd3fb44c3222",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 519,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 368,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      368
+    ],
+    "data": {
+      "text": "Apes... Need a little K to post where I might like to. $BBBY PSA for you below. [Aug 22 P\\/L](https://preview.redd.it/w1jntjvreyh91.png?width=1500&format=png&auto=webp&s=f353949b68eb76aa3d45e61ec745a3c96809a59b)"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:32:21.073514Z",
+    "allow_skip": true,
+    "inner_id": 68,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 533,
+    "annotations": [
+      {
+        "id": 638,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 22,
+              "end": 26,
+              "text": "BBBY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "7SRYolbTdT",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:34:30.334164Z",
+        "updated_at": "2026-05-15T14:34:30.334164Z",
+        "draft_created_at": null,
+        "lead_time": 5.693,
+        "prediction": {
+          "id": 382,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 138,
+                "end": 142,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 0,
+                "end": 4,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 51,
+                "end": 55,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 22,
+                "end": 26,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 27,
+                "end": 29,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "11 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.177486Z",
+          "updated_at": "2026-05-15T14:23:26.177486Z",
+          "model": null,
+          "model_run": null,
+          "task": 533,
+          "project": 5
+        },
+        "result_count": 1,
+        "unique_id": "2ec72290-5d76-42df-a335-77c142f3341f",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 533,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 382,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      382
+    ],
+    "data": {
+      "text": "Just bought some more BBBY bc why not. I think its just a bump in the road but itll shoot back to $30 soon. If you sold, thats on you and cool if you did but Im holding and will continue to hold. (:"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:34:30.370694Z",
+    "allow_skip": true,
+    "inner_id": 82,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 549,
+    "annotations": [
+      {
+        "id": 654,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 369,
+              "end": 374,
+              "text": "$SIGA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "DUQT7JPCtN",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 418,
+              "end": 423,
+              "text": "$SIGA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "eVjIuzLdov",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 468,
+              "end": 473,
+              "text": "$SIGA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "_egNSzvtnS",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 504,
+              "end": 509,
+              "text": "$MRNA",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "GKIKh9KKLU",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 495,
+              "end": 502,
+              "text": "Moderna",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "6Lla5P2dEn",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 306,
+              "end": 310,
+              "text": "SIGA",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "BFZuFNuwKR",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 556,
+              "end": 560,
+              "text": "SIGA",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "_-LoxjZwm3",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 20,
+              "end": 37,
+              "text": "SIGA Technologies",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "6BcLmO-7gs",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-15T14:36:22.617774Z",
+        "updated_at": "2026-05-15T14:36:22.617774Z",
+        "draft_created_at": "2026-05-15T14:36:14.705878Z",
+        "lead_time": 15.24,
+        "prediction": {
+          "id": 398,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 369,
+                "end": 374,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 418,
+                "end": 423,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 468,
+                "end": 473,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 504,
+                "end": 509,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 495,
+                "end": 502,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 385,
+                "end": 391,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 434,
+                "end": 440,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 482,
+                "end": 488,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 20,
+                "end": 24,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 306,
+                "end": 310,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 556,
+                "end": 560,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 20,
+                "end": 37,
+                "labels": [
+                  "company"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-latest",
+          "created_ago": "12 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-15T14:23:26.341940Z",
+          "updated_at": "2026-05-15T14:23:26.341940Z",
+          "model": null,
+          "model_run": null,
+          "task": 549,
+          "project": 5
+        },
+        "result_count": 8,
+        "unique_id": "a8010df1-0e68-4664-931f-fbd822253e21",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 549,
+        "project": 5,
+        "updated_by": 1,
+        "parent_prediction": 398,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "8ad775f4-train_base_300.json",
+    "drafts": [],
+    "predictions": [
+      398
+    ],
+    "data": {
+      "text": "**Who is with me in SIGA Technologies?** **Monkeypox/MPVX** **\\~10% increase** PER DAY, the last 7 days.DOUBLES every 8 days...7 x doubles (2,5 months) and we reach **1 million cases.***\\*3,157 confirmed cases as of 6/21/22, an increase of 68% since last week.* **TOMORROW WHO EMERGENCY MEETING...** so... SIGA has 73 million outstanding shares.With a marketcap of 10B $SIGA: **136.85 DOLLAR.**With a marketcap of 50B $SIGA: **684.27 DOLLAR.**With a marketcap of 175B $SIGA: **2400 DOLLAR.** *\\*Moderna ($MRNA) reached 175B at it's peak Covid-19 cycle.* **SIGA is currently: $12** | 850 million marketcap"
+    },
+    "meta": {},
+    "created_at": "2026-05-15T14:23:26.169475Z",
+    "updated_at": "2026-05-15T14:36:22.652208Z",
+    "allow_skip": true,
+    "inner_id": 98,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 5,
+    "updated_by": 1,
+    "comment_authors": []
+  }
+]

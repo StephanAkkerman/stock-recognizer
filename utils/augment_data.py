@@ -13,7 +13,6 @@ from stock_recognizer.constants import (
     US_MAJOR_EXCHANGES,
 )
 
-
 LABEL_TYPES = ("ticker", "company")
 
 # How often to draw replacements from the broad financedatabase pool versus
@@ -35,9 +34,23 @@ CASHTAG_FORMAT_PROB = 0.30
 # word" company short-form. Reddit users write "Microsoft", not "Microsoft
 # Corporation" — matching that distribution matters more than completeness.
 _COMPANY_SUFFIX_TOKENS = {
-    "INC", "CORP", "CORPORATION", "LTD", "LIMITED", "PLC", "CO",
-    "COMPANY", "HOLDINGS", "GROUP", "AG", "SA", "NV", "LLC", "LP",
-    "THE", "&",
+    "INC",
+    "CORP",
+    "CORPORATION",
+    "LTD",
+    "LIMITED",
+    "PLC",
+    "CO",
+    "COMPANY",
+    "HOLDINGS",
+    "GROUP",
+    "AG",
+    "SA",
+    "NV",
+    "LLC",
+    "LP",
+    "THE",
+    "&",
 }
 
 
@@ -142,8 +155,12 @@ def _sample_replacement(label, labeled_pool, expanded_pool, original_bare):
     for this label, so a missing expanded pool never blocks augmentation.
     """
     prefer_expanded = random.random() < EXPANDED_POOL_WEIGHT
-    primary = expanded_pool.get(label, []) if prefer_expanded else labeled_pool.get(label, [])
-    secondary = labeled_pool.get(label, []) if prefer_expanded else expanded_pool.get(label, [])
+    primary = (
+        expanded_pool.get(label, []) if prefer_expanded else labeled_pool.get(label, [])
+    )
+    secondary = (
+        labeled_pool.get(label, []) if prefer_expanded else expanded_pool.get(label, [])
+    )
 
     source = primary or secondary
     if not source:
@@ -284,8 +301,7 @@ def augment_task(task, labeled_pool, expanded_pool=None):
     # the region and its text has been swapped.
     if dropped_ids:
         annotation["result"] = [
-            r for r in results
-            if r.get("type") != "labels" or id(r) not in dropped_ids
+            r for r in results if r.get("type") != "labels" or id(r) not in dropped_ids
         ]
 
     augmented_task["data"]["text"] = text
@@ -300,7 +316,7 @@ def augment_task(task, labeled_pool, expanded_pool=None):
 
 
 def run_augmentation(
-    source_folder, output_folder, multiplier=3, seed=None, use_expanded_pool=False
+    source_folder, output_folder, multiplier=5, seed=None, use_expanded_pool=False
 ):
     """Builds replacement pools from `source_folder` (plus financedatabase if
     `use_expanded_pool=True`) and writes synthetic variations into `output_folder`.
@@ -325,8 +341,10 @@ def run_augmentation(
         expanded_pool = build_financedatabase_pool()
         print(f"  Expanded tickers  : {len(expanded_pool['ticker'])}")
         print(f"  Expanded companies: {len(expanded_pool['company'])}")
-        print(f"  Mix weight: {EXPANDED_POOL_WEIGHT:.0%} expanded / "
-              f"{1 - EXPANDED_POOL_WEIGHT:.0%} labeled")
+        print(
+            f"  Mix weight: {EXPANDED_POOL_WEIGHT:.0%} expanded / "
+            f"{1 - EXPANDED_POOL_WEIGHT:.0%} labeled"
+        )
 
     if (len(labeled_pool["ticker"]) + len(expanded_pool.get("ticker", []))) < 2 or (
         len(labeled_pool["company"]) + len(expanded_pool.get("company", []))
@@ -356,7 +374,9 @@ def run_augmentation(
                 try:
                     aug_task = augment_task(task, labeled_pool, expanded_pool)
                 except Exception as exc:
-                    print(f"  ! skipped task {task.get('id')} in {file_filename}: {exc}")
+                    print(
+                        f"  ! skipped task {task.get('id')} in {file_filename}: {exc}"
+                    )
                     total_skipped += 1
                     continue
 
@@ -380,4 +400,4 @@ def run_augmentation(
 if __name__ == "__main__":
     labeled_folder = "data/labeled"
     augmented_folder = "data/augmented"
-    run_augmentation(labeled_folder, augmented_folder, multiplier=3)
+    run_augmentation(labeled_folder, augmented_folder, multiplier=5)

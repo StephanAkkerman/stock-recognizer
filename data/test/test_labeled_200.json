@@ -1,0 +1,1480 @@
+[
+  {
+    "id": 355,
+    "annotations": [
+      {
+        "id": 460,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 4,
+              "end": 8,
+              "text": "AAPL",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "mvg7WdSGhd",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:21:53.058032Z",
+        "updated_at": "2026-05-14T09:21:53.058032Z",
+        "draft_created_at": null,
+        "lead_time": 1.08,
+        "prediction": {
+          "id": 204,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 4,
+                "end": 8,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "0 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.713748Z",
+          "updated_at": "2026-05-14T09:21:18.713748Z",
+          "model": null,
+          "model_run": null,
+          "task": 355,
+          "project": 4
+        },
+        "result_count": 1,
+        "unique_id": "6e1ac57a-7584-44d6-b904-a06cc8bd0aed",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 355,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 204,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      204
+    ],
+    "data": {
+      "text": "Lol AAPL fukd! Pamp everything else!"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.702689Z",
+    "updated_at": "2026-05-14T09:21:53.099634Z",
+    "allow_skip": true,
+    "inner_id": 4,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 360,
+    "annotations": [
+      {
+        "id": 465,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "FUBO",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "kx0dXZLxbR",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 171,
+              "end": 175,
+              "text": "FUBO",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "rbu9O1bPn9",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:23:06.229325Z",
+        "updated_at": "2026-05-14T09:23:06.229325Z",
+        "draft_created_at": null,
+        "lead_time": 4.846,
+        "prediction": {
+          "id": 209,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 110,
+                "end": 115,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 44,
+                "end": 48,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 0,
+                "end": 4,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 171,
+                "end": 175,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "1 minute",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.713748Z",
+          "updated_at": "2026-05-14T09:21:18.713748Z",
+          "model": null,
+          "model_run": null,
+          "task": 360,
+          "project": 4
+        },
+        "result_count": 2,
+        "unique_id": "1b77d65c-9ef9-4615-9308-d353663da60a",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 360,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 209,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      209
+    ],
+    "data": {
+      "text": "FUBO is up 41% this week with a $35 52 week high. Currently at $5 a share, with football season starting, the World Cup coming up, and now offering betting for areas with FUBO Sportsbook, we're going to the moon"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.703693Z",
+    "updated_at": "2026-05-14T09:23:06.265576Z",
+    "allow_skip": true,
+    "inner_id": 9,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 369,
+    "annotations": [
+      {
+        "id": 474,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 267,
+              "end": 272,
+              "text": "Bcoin",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "K8ljzPo8nT",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:24:17.468505Z",
+        "updated_at": "2026-05-14T09:24:17.468505Z",
+        "draft_created_at": null,
+        "lead_time": 7.074,
+        "prediction": {
+          "id": 218,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 195,
+                "end": 200,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 9,
+                "end": 13,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 267,
+                "end": 272,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "2 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.713748Z",
+          "updated_at": "2026-05-14T09:21:18.713748Z",
+          "model": null,
+          "model_run": null,
+          "task": 369,
+          "project": 4
+        },
+        "result_count": 1,
+        "unique_id": "89e4ea5f-f5c9-4958-90e5-42c47adeaca7",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 369,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 218,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      218
+    ],
+    "data": {
+      "text": "Multiple coin exchanges have restricted withdrawals (very troublesome). Others are speculated to be insolvent (very troublesome). Stocks of companies that actually make money and are financially sound and have been around are dropping and having more volatility than Bcoin (very strange). The price action makes no sense to me?"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.703693Z",
+    "updated_at": "2026-05-14T09:24:17.504173Z",
+    "allow_skip": true,
+    "inner_id": 18,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 387,
+    "annotations": [
+      {
+        "id": 492,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 20,
+              "end": 24,
+              "text": "$VET",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "TQsGDFQkmM",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 247,
+              "end": 251,
+              "text": "$VET",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "xdlQK3K2nC",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 192,
+              "end": 195,
+              "text": "CVX",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "wYYk20tm37",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 200,
+              "end": 203,
+              "text": "OXY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "4dU3Cpu65X",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:26:57.176152Z",
+        "updated_at": "2026-05-14T09:26:57.176152Z",
+        "draft_created_at": "2026-05-14T09:26:50.740375Z",
+        "lead_time": 15.251,
+        "prediction": {
+          "id": 236,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 20,
+                "end": 24,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 247,
+                "end": 251,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 257,
+                "end": 263,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 427,
+                "end": 432,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 517,
+                "end": 522,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 378,
+                "end": 383,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 55,
+                "end": 60,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 25,
+                "end": 29,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 396,
+                "end": 400,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 5,
+                "end": 9,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 529,
+                "end": 533,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 503,
+                "end": 507,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 494,
+                "end": 498,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 72,
+                "end": 76,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 192,
+                "end": 195,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 200,
+                "end": 203,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 371,
+                "end": 376,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "5 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.714749Z",
+          "updated_at": "2026-05-14T09:21:18.714749Z",
+          "model": null,
+          "model_run": null,
+          "task": 387,
+          "project": 4
+        },
+        "result_count": 4,
+        "unique_id": "40d77e6c-5e27-4172-9fbe-a202870944bd",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 387,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 236,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      236
+    ],
+    "data": {
+      "text": "I've just purchased $VET here as it breaks through the daily and weekly zone. One of the strongest OIL and Gas names today. Stop loss is weekly low (around 5%/pull back aka 1 ADR). Notice how CVX and OXY yanked back when OIL futures pulled in but $VET kept moving. This is the relative strength you want to see. Also notice how it's trying to push through all resistance zones? Clear skies ahead here if it can hold. This is a great example of the trades I take, risking 1-2% of my account and onto the next. Options chain looks nice too. &#x200B; https://preview.redd.it/ceu4joytlaj91.png?width=1934&format=png&auto=webp&s=c035b652115298046c68d94da854860e0cd3b5be https://preview.redd.it/h3nrgoytlaj91.png?width=1934&format=png&auto=webp&s=0470b8bb0ec9ecea54758834416a8c35daef87cc"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.703693Z",
+    "updated_at": "2026-05-14T09:26:57.207326Z",
+    "allow_skip": true,
+    "inner_id": 36,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 403,
+    "annotations": [
+      {
+        "id": 508,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 44,
+              "end": 48,
+              "text": "SPCE",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "C9bRLxUop7",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 393,
+              "end": 397,
+              "text": "BBBY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "tAjK0apibt",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:31:24.736190Z",
+        "updated_at": "2026-05-14T09:31:24.736190Z",
+        "draft_created_at": "2026-05-14T09:31:18.301511Z",
+        "lead_time": 13.354,
+        "prediction": {
+          "id": 252,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 169,
+                "end": 181,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 249,
+                "end": 258,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 217,
+                "end": 226,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 454,
+                "end": 463,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 85,
+                "end": 91,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 372,
+                "end": 377,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 79,
+                "end": 84,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 295,
+                "end": 300,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 163,
+                "end": 168,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 18,
+                "end": 22,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 44,
+                "end": 48,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 106,
+                "end": 110,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 301,
+                "end": 305,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 347,
+                "end": 349,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 393,
+                "end": 397,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "10 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.714749Z",
+          "updated_at": "2026-05-14T09:21:18.714749Z",
+          "model": null,
+          "model_run": null,
+          "task": 403,
+          "project": 4
+        },
+        "result_count": 2,
+        "unique_id": "094ba944-f23b-4091-a319-6fd593bb8795",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 403,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 252,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      252
+    ],
+    "data": {
+      "text": "Seriously want to know the subs thoughts on SPCE. They have a lot of plans for space travel from training camp resorts to multiple launches back to back and ships under construction that can handle higher capacity of customers. Legit asking if this community sees them as having a chance in the space race. This will probably be seen by few but I'll take whatever at this point. 3 day weekend BBBY break on the sub so maybe people will read. Can someone translate this to memes for the non readers?"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.703693Z",
+    "updated_at": "2026-05-14T09:31:24.772086Z",
+    "allow_skip": true,
+    "inner_id": 52,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 404,
+    "annotations": [
+      {
+        "id": 509,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 132,
+              "end": 135,
+              "text": "SPY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "tqry7BUoid",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:31:30.955945Z",
+        "updated_at": "2026-05-14T09:31:30.955945Z",
+        "draft_created_at": null,
+        "lead_time": 5.551,
+        "prediction": {
+          "id": 253,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 49,
+                "end": 57,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 273,
+                "end": 279,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 20,
+                "end": 26,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 122,
+                "end": 128,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 211,
+                "end": 217,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 268,
+                "end": 272,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 132,
+                "end": 135,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "10 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.714749Z",
+          "updated_at": "2026-05-14T09:21:18.714749Z",
+          "model": null,
+          "model_run": null,
+          "task": 404,
+          "project": 4
+        },
+        "result_count": 1,
+        "unique_id": "b8a85c06-e663-4ed5-991f-35c18b58dc5b",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 404,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 253,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      253
+    ],
+    "data": {
+      "text": "In short, I want to invest in index and reinvest dividend to use compounding. My issue is I see video on people saying to invest in SPY, but that one has been crashing so it makes no sense to me. I dont want to invest in something already crashing. What indexes are a good choice that allow for dividends and reinvesting gains? Any advice helps!"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.706697Z",
+    "updated_at": "2026-05-14T09:31:30.992609Z",
+    "allow_skip": true,
+    "inner_id": 53,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 431,
+    "annotations": [
+      {
+        "id": 536,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 0,
+              "end": 5,
+              "text": "FedEx",
+              "labels": [
+                "company"
+              ]
+            },
+            "id": "hJNuSJrAEC",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:34:42.626913Z",
+        "updated_at": "2026-05-14T09:34:42.626913Z",
+        "draft_created_at": "2026-05-14T09:34:41.963804Z",
+        "lead_time": 6.082,
+        "prediction": {
+          "id": 280,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 346,
+                "end": 357,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 445,
+                "end": 451,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 135,
+                "end": 141,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 163,
+                "end": 169,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 0,
+                "end": 5,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 490,
+                "end": 495,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 31,
+                "end": 35,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 496,
+                "end": 499,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "13 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.715749Z",
+          "updated_at": "2026-05-14T09:21:18.715749Z",
+          "model": null,
+          "model_run": null,
+          "task": 431,
+          "project": 4
+        },
+        "result_count": 1,
+        "unique_id": "2f78f9f5-8c88-4b66-9eb0-6faf92a3054e",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 431,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 280,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      280
+    ],
+    "data": {
+      "text": "FedEx on Thursday withdrew its full-year guidance and announced significant cost-cutting measures following what it called softness in global volume of shipments. Global volumes declined as macroeconomic trends significantly worsened later in the quarter, both internationally and in the U.S., CEO Raj Subramaniam said in the release. While this performance is disappointing, we are aggressively accelerating cost reduction efforts. https://www.google.com/amp/s/www.cnbc.com/amp/2022/09/15/fedex-fdx-earnings-q1-2023-miss-estimates.html"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.707696Z",
+    "updated_at": "2026-05-14T09:34:42.666223Z",
+    "allow_skip": true,
+    "inner_id": 80,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  },
+  {
+    "id": 434,
+    "annotations": [
+      {
+        "id": 539,
+        "completed_by": 1,
+        "result": [
+          {
+            "value": {
+              "start": 54,
+              "end": 58,
+              "text": "BBBY",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "xMRH9xribg",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "prediction"
+          },
+          {
+            "value": {
+              "start": 82,
+              "end": 86,
+              "text": "AMTD",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "id": "ClKf7D3ChC",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "origin": "manual"
+          }
+        ],
+        "was_cancelled": false,
+        "ground_truth": false,
+        "created_at": "2026-05-14T09:35:27.158611Z",
+        "updated_at": "2026-05-14T09:35:27.158611Z",
+        "draft_created_at": "2026-05-14T09:35:11.878855Z",
+        "lead_time": 25.957,
+        "prediction": {
+          "id": 283,
+          "result": [
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 183,
+                "end": 188,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 128,
+                "end": 132,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 98,
+                "end": 102,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 82,
+                "end": 86,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 189,
+                "end": 193,
+                "labels": [
+                  "company"
+                ]
+              }
+            },
+            {
+              "from_name": "label",
+              "to_name": "text",
+              "type": "labels",
+              "value": {
+                "start": 54,
+                "end": 58,
+                "labels": [
+                  "ticker"
+                ]
+              }
+            }
+          ],
+          "model_version": "stock-recognizer-v0.1.7",
+          "created_ago": "14 minutes",
+          "score": null,
+          "cluster": null,
+          "neighbors": null,
+          "mislabeling": 0.0,
+          "created_at": "2026-05-14T09:21:18.715749Z",
+          "updated_at": "2026-05-14T09:21:18.715749Z",
+          "model": null,
+          "model_run": null,
+          "task": 434,
+          "project": 4
+        },
+        "result_count": 2,
+        "unique_id": "1c79939c-e547-48d1-bd34-8f499fa05977",
+        "import_id": null,
+        "last_action": null,
+        "bulk_created": false,
+        "task": 434,
+        "project": 4,
+        "updated_by": 1,
+        "parent_prediction": 283,
+        "parent_annotation": null,
+        "last_created_by": null
+      }
+    ],
+    "file_upload": "978765c8-train_base_200.json",
+    "drafts": [],
+    "predictions": [
+      283
+    ],
+    "data": {
+      "text": "Anyone noticing serious lag in options book quotes on BBBY? Seeing serious lag on AMTD on quotes. Full book way behind supposed best bid / offer. This seemed to persist for about the first hour of the day. Then I got busy with meetings and it was resolved when I got back online. Anyone else see this?"
+    },
+    "meta": {},
+    "created_at": "2026-05-14T09:21:18.707696Z",
+    "updated_at": "2026-05-14T09:35:27.201360Z",
+    "allow_skip": true,
+    "inner_id": 83,
+    "total_annotations": 1,
+    "cancelled_annotations": 0,
+    "total_predictions": 1,
+    "comment_count": 0,
+    "unresolved_comment_count": 0,
+    "last_comment_updated_at": null,
+    "project": 4,
+    "updated_by": 1,
+    "comment_authors": []
+  }
+]
