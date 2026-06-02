@@ -1,0 +1,198 @@
+You are an expert at extracting stock tickers and company names from Reddit posts about finance.
+
+TASK: identify every ticker symbol and company name in the input text.
+
+DEFINITIONS:
+- ticker: A stock symbol like AAPL, TSLA, $MSFT. Usually 1-5 uppercase letters,
+  often preceded by $. INCLUDE the $ sign in the entity span when present.
+  ETFs (SPY, QQQ, VOO, IWM, JETS, ULCC) are tickers. Index abbreviations used
+  as tradeable (SPX, NDX) are tickers. Crypto symbols (BTC, ETH, LUNA) are
+  tickers when used in a trading context.
+- company: A real corporation, hedge fund, ETF issuer, fintech app, or business
+  entity referenced by name. Can be multiple words ("Bed Bath & Beyond",
+  "SIGA Technologies", "Warner Bros Discovery", "Cash app").
+
+DO NOT LABEL:
+- Internet slang or finance generics: BUY, SELL, HOLD, DUMP, PUMP, YOLO, DD,
+  FUD, FOMO, ATH, ATL, NFA, IMO, TLDR, LMFAO, AMA, OP, MOD.
+- Macro terms or people: JPOW, POWELL, FED, SEC, IRS, CEO, CFO, IPO, BULL,
+  BEAR, MOON, EARNINGS, GAINS, LOSS, PUTS, CALLS, STOCK, MARKET, OPTIONS.
+- News outlets: CNBC, MSNBC, WSJ, FT, BLOOMBERG.
+- Dollar amounts: $100, $5.50, $3T — only $-prefixed *letter* sequences are tickers.
+- Index names spelled out: "Dow Jones", "S&P 500", "Nasdaq" (the index).
+  But their ETF tickers (SPY, QQQ) ARE tickers.
+
+EDGE CASES:
+- A token used differently in one post can be both: "Tesla" → company,
+  "TSLA" → ticker — label them separately.
+- Label EVERY occurrence. If $AAPL appears 5 times, return 5 entries.
+- Preserve exact casing and punctuation from the source — do not normalize.
+
+OUTPUT FORMAT — return ONLY a JSON object, no commentary, no code fence:
+{"entities": [{"text": "<exact substring from input>", "label": "ticker" | "company"}]}
+
+Empty entities array (`{"entities": []}`) is correct for posts with no entities.
+
+BATCH MODE: You will receive multiple posts labeled "Input 1:", "Input 2:", etc.
+Return ONE JSON object with this structure (no commentary, no code fence):
+
+{"results": [
+  {"index": 1, "entities": [{"text": "...", "label": "ticker" | "company"}]},
+  {"index": 2, "entities": [...]},
+  ...
+]}
+
+The "index" field MUST match the corresponding "Input N:" number. Include an
+entry for EVERY input, even when entities is empty (use "entities": []).
+
+EXAMPLES (single-input format, showing what to label):
+
+Example 1
+Input: I care about BBBY.
+Output: {"entities": [{"text": "BBBY", "label": "ticker"}]}
+
+Example 2
+Input: Spx down 100 lmfao
+Output: {"entities": [{"text": "Spx", "label": "ticker"}]}
+
+Example 3
+Input: Cash app pulling a RH by not letting people purchase $AMC.What is going on???
+Output: {"entities": [{"text": "Cash app", "label": "company"}, {"text": "RH", "label": "company"}, {"text": "$AMC", "label": "ticker"}]}
+
+Example 4
+Input: Shorted Nebius (NBIS) by 730,000 today, checkin tomorrow after earnings.
+Output: {"entities": [{"text": "Nebius", "label": "company"}, {"text": "NBIS", "label": "ticker"}]}
+
+Example 5
+Input: Paramount makes $108.4 billion hostile bid for Warner Bros Discovery
+Output: {"entities": [{"text": "Paramount", "label": "company"}, {"text": "Warner Bros Discovery", "label": "company"}]}
+
+Example 6
+Input: Anybody else gonna YOLO into puts? JPOW about to crash this market. NFA
+Output: {"entities": []}
+
+Now label the following 10 inputs. Return ONE JSON object with a 'results' array as described above.
+
+Input 1: AssTits starting to look seriously ridiculous
+
+Not even trying to sound dramatic but ASTS setup into June is getting kinda ridiculous.  
+You’ve got a  huge short interest + retail piling in + crazy call open interest for June + first 3-batch satellite launch in June + SpaceX IPO hype floating around at the same time and most importantly a stock that already moves like a crackhead. 
+
+The options chain is what’s really interesting to me.  
+June 18 calls are loaded to the tits.   
+180calls have around 50,000 open interest. 130’s, 150’s and 170’s are stacked too. 
+
+No idea what’s gonna happen but I’m along for the ride 
+
+Positions in comments.
+
+Input 2: MU +1111%
+
+What a run! Bought it last week and was hoping MU would go up because it's the cheapest stock in the SP500 based on forward PE. Market finally realizing it now, MU to $1000!
+
+https://preview.redd.it/oo8lmlze0p3h1.jpg?width=1320&format=pjpg&auto=webp&s=fb42ff5d5f66898d83b6c7ba5e05ba791619e705
+
+Input 3: New Fed Chair Kevin Warsh suggests he may take an Alan Greenspan-style approach at the central bank
+
+[https://finance.yahoo.com/economy/policy/article/new-fed-chair-kevin-warsh-suggests-he-may-take-an-alan-greenspan-style-approach-at-the-central-bank-135046787.html](https://finance.yahoo.com/economy/policy/article/new-fed-chair-kevin-warsh-suggests-he-may-take-an-alan-greenspan-style-approach-at-the-central-bank-135046787.html)
+
+Input 4: Are these AI and semiconductor type of stocks truly once a generation opportunities
+
+Are these opportunities truly once a generation or is there always an industry or stock that is shooting up like this?
+
+Input 5: SUPER auspicious closing prices for Both GOOGL 388.88 and GOOG 384.84 -  May 26, 2026
+
+https://preview.redd.it/ubp7l1yfyl3h1.png?width=944&format=png&auto=webp&s=7c338b6edba598d898d6a22b97ae7ada0adec06b
+
+https://preview.redd.it/2tqhkhogyl3h1.png?width=3624&format=png&auto=webp&s=c9d790d890d61750cf883577a64adce0e4ee58c2
+
+Not only does the GOOGL daily chart looks like a ST reversal in trend is about to develop. Sequential counter at 1-0 Sell (a positive count).  The closing price of 388.88 has four eights.
+
+8888 in Cantonese is **八八八八 where 八 is a homophone for the Chinese word 發 (faat) which means "to strike it rich".  To have 2 in a row is super lucky, 4 in a row is astronomical wealth.**
+
+**The number 4 in Cantonese is** 四 where 四 is a homophone for the Chinese word 死 (***sei) which means "death"***
+
+***So 88.88 or 8888 in Cantonese*** **發發發發** ***reads like*** **發**死 in Cantonese and means "Unstoppable Wealth"
+
+In Hong Kong, people pay hundreds of thousands for Car License plates in public auctions.  In phone numbers and addresses.
+
+Having 4 consecutive 8 is fortuitous indeed over there.
+
+As for GOOG at 384.84
+
+That's 2 strict **發**死 in a row.  A literal string of Die Rich.
+
+The happy coincidence today is that both GOOGLE shares closed with similar auspicious numbers that compliments each other, affirming future direction for Google stock.
+
+
+
+May 27 11AM update
+
+GOOGL 390.84  range so far 385.90 to 392.85
+
+I wrote 385 May 29 puts for 3.50 with delta < -0.21 and Vega 0.07 - excellent chance I keep the premium.
+
+Input 6: Serious question for the SpaceX bulls
+
+I’m genuinely trying to understand the bull case, not argue.
+
+At a potential $1.5T+ valuation, what is the actual revenue and profit path that gets SpaceX there?
+
+My hesitation is that the core Starlink thesis seems somewhat self-limiting. The original value proposition is providing internet where traditional broadband isn’t available, but many of those underserved regions also have lower purchasing power. If customers can’t afford conventional broadband today, why should we assume they’ll become highly profitable Starlink subscribers tomorrow?
+
+Beyond that, Starlink’s highest-value customers appear to be airlines, cruise ships, governments, militaries, and remote enterprises. Those are valuable markets, but are they truly large enough to support a valuation that would place SpaceX among the most valuable companies in the world?
+
+For context, companies worth $1T-$3T typically generate tens or even hundreds of billions in annual profit and hundreds of billions in revenue. What specific revenue streams do SpaceX bulls believe can realistically scale to that level?
+
+Input 7: Am I the only one confused about why NVIDIA crushed earnings and the stock still went red? And whats with the big jump in Dividend 👍
+
+NVIDIA just reported its Q1 2026 results (fiscal Q1 FY27, quarter ended April 26) and it's another all-time high across the board.
+
+Revenue came in at $81.6 billion, up 85% from a year ago and 20% from last quarter.
+
+Net income hit $58.3 billion — up 211% YoY. Non-GAAP EPS of $1.87 beat the Street's $1.77 estimate by over 5%.
+
+The entire growth story is Data Center, which pulled in $75.2 billion — up 92% YoY. 
+
+Hyperscalers and AI cloud providers are absorbing Blackwell GPUs faster than any product ramp in NVIDIA's history. Even networking (InfiniBand, NVLink) surged 199% YoY — customers are buying full AI systems, not just chips.
+
+Gross margins expanded to 74.9% from just 60.5% a year ago, and NVIDIA announced an $80 billion buyback plus raised its quarterly dividend from $0.01 to $0.25 per share (the dividend jump is huge, and a big news for major shareholders).
+
+Q2 guidance came in at $91 billion — well above Wall Street's \~$87B expectation. China remains excluded from guidance entirely after export controls wiped out H20 sales last year.
+
+So why did the stock dip \~1%? Because at this point, beating estimates is the baseline. Wall Street has priced in perfection — and anything short of a shock to the upside barely moves the needle.
+
+Not financial advice. Do your own research.
+
+Input 8: $LUNR Intuitive Machines falls after NASA names Blue Origin to deliver the first Lunar Terrain Vehicle
+
+During today’s NASA Moon Base briefing, it was announced that Blue Origin will deliver the first Lunar Terrain Vehicle (LTV) as part of the initial robotic missions supporting the lunar base. This comes as a surprise to many, since Intuitive Machines (LUNR) won the earlier LTV feasibility study with its Moon RACER team and had been seen as a strong contender for the next phase. LUNR shares dropped on the news as the long-pending LTV decision appears to have gone (at least partially) to Blue Origin.
+
+[https://www.youtube.com/watch?v=Nyki6O1oxIg](https://www.youtube.com/watch?v=Nyki6O1oxIg)
+
+Input 9: SpaceX IPO sell off ?
+
+$SPCX filed its S-1 on May 20, targets a Nasdaq listing June 12 at a $1.75T valuation. Index providers literally rewrote their rules to fast-track it in.
+
+How big ETFs gonna include $SPCX in their holding?
+
+1. will they proportionally sell of holdings and we will be fucked ?
+2. or the last name in SPY (500/500) / QQQ (100/100) gonna be trimmed out directly $CSGP ?
+3. or the ETFs will run 500+1 & 100+1 ?
+4. or it will happen gradually given some ETFs have rebalancing quarterly window ?
+
+This is what Bloomberg thinks
+
+https://preview.redd.it/bxatbz13f43h1.png?width=1149&format=png&auto=webp&s=8ef09dc7bb99d06566ace2e8f9315560947465f2
+
+Input 10: CNBC - U.S., Iran close in on 60-day ceasefire extension with nuclear framework: FT
+
+Calls on Tuesday 
+
+U.S., Iran close in on 60-day ceasefire extension with nuclear framework: FT
+
+ 
+
+https://www.cnbc.com/2026/05/23/us-iran-war-talks.html?\_\_source=androidappshare
+
+Output:

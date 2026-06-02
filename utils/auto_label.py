@@ -235,6 +235,30 @@ def _text_hash(text):
     return hashlib.sha1(norm.encode("utf-8")).hexdigest()
 
 
+# Auto-generated WSB daily threads ("What Are Your Moves Tomorrow", "Daily
+# Discussion Thread", etc.) have no body text — just this stub pointing at the
+# new Reddit UI. Dedup misses them because each carries a unique date/URL, but
+# they're identical noise: zero entities, zero training value.
+_OLD_REDDIT_STUB = "content not supported on old reddit"
+
+
+def _is_content_stub(body):
+    """True when `body` is just the "not supported on old Reddit" stub.
+
+    Strips markdown links and bare URLs first, then checks whether anything
+    beyond the boilerplate sentence remains. A post with real text *and* the
+    stub (none exist today, but to be safe) is kept.
+    """
+    if _OLD_REDDIT_STUB not in body.lower():
+        return False
+    stripped = re.sub(r"\[[^\]]*\]\([^)]*\)", "", body)  # markdown links
+    stripped = re.sub(r"https?://\S+", "", stripped)  # bare URLs
+    stripped = re.sub(
+        r"(?i)this post contains content not supported on old reddit\.?", "", stripped
+    )
+    return re.sub(r"\s+", " ", stripped).strip() == ""
+
+
 def _load_known_hashes(folders):
     hashes = set()
     for folder in folders:
@@ -266,6 +290,8 @@ def load_unlabeled_posts(csv_path, dedup_text_folders=None):
         body = str(row.get("text") or "").strip()
         title = str(row.get("title") or "").strip()
         if body in ("", "nan"):
+            continue
+        if _is_content_stub(body):
             continue
         combined = (title + "\n\n" + body).strip() if title and title != "nan" else body
         if _text_hash(combined) in known:
