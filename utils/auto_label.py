@@ -15,6 +15,13 @@ Workflow (manual mode — recommended for the first batch):
   with one entry per input. Re-running with the same --posts overwrites those
   task IDs rather than duplicating them.
 
+  Interactive mode (loop through everything without juggling files):
+    `python utils/auto_label.py --interactive [--batch-size 10]`
+    Each round writes the prompt to --prompt-file (default
+    data/auto_label/prompt.txt); copy it into your LLM, paste the JSON reply
+    back in the terminal, then type END on its own line (or `q` to quit).
+    Progress saves after every batch, so quitting mid-run keeps completed work.
+
 Once the prompt is dialled in (the LLM's outputs match what you'd label by hand
 on ~5-10 spot checks), this same module can be called from a thin API wrapper
 to scale up — `build_prompt()` and `parse_response_to_task()` are pure functions.
@@ -294,6 +301,47 @@ def parse_post_spec(spec):
     return sorted(ids)
 
 
+def read_until_sentinel(lines):
+    """Collect lines until an ``END`` line (case-insensitive) or EOF.
+
+    `lines` is any iterator of strings (e.g. ``sys.stdin``). Returns a
+    ``(kind, text)`` tuple. `kind` is ``"quit"`` when a sole ``q``/``quit`` is
+    entered before any content (JSON always starts with ``{``/``[``, so this is
+    unambiguous), otherwise ``"submit"`` with the newline-joined collected text.
+    """
+    collected = []
+    for line in lines:
+        stripped = line.rstrip("\n")
+        flat = stripped.strip()
+        if flat.upper() == "END":
+            break
+        if flat.lower() in ("q", "quit") and not any(c.strip() for c in collected):
+            return "quit", ""
+        collected.append(stripped)
+    return "submit", "\n".join(collected)
+
+
+def save_tasks(tasks, output):
+    """Append `tasks` to the JSON array at `output`, overwriting by task id.
+
+    Creates the parent directory if needed. Tasks sharing an id with an
+    existing entry replace it (so re-labeling a post overwrites rather than
+    duplicates), matching the one-shot ``--response-file`` behavior.
+    """
+    existing = []
+    if os.path.exists(output):
+        with open(output, "r", encoding="utf-8") as f:
+            existing = json.load(f)
+    new_ids = {t["id"] for t in tasks}
+    existing = [t for t in existing if t.get("id") not in new_ids]
+    existing.extend(tasks)
+    parent = os.path.dirname(output)
+    if parent:
+        os.makedirs(parent, exist_ok=True)
+    with open(output, "w", encoding="utf-8") as f:
+        json.dump(existing, f, indent=2, ensure_ascii=False)
+
+
 def parse_batch_response(texts, response_obj, task_id_offset, post_indices):
     """Convert a batch `{"results": [...]}` response into Label Studio tasks.
 
@@ -325,6 +373,101 @@ def parse_batch_response(texts, response_obj, task_id_offset, post_indices):
     return tasks, all_dropped, missing
 
 
+def _print_save_summary(tasks, all_dropped, missing, output):
+    """Report what was saved, plus any dropped/missing entities."""
+    n_ents = sum(len(t["annotations"][0]["result"]) for t in tasks)
+    console.print(
+        f"[green]Saved {len(tasks)} task(s) ({n_ents} entity spans total) "
+        f"to {output}[/green]"
+    )
+    if missing:
+        console.print(
+            f"[yellow]Missing results for input index(es): {missing} "
+            f"— LLM didn't return entries for these.[/yellow]"
+        )
+    if all_dropped:
+        console.print("[yellow]Dropped entities (not found in source text):[/yellow]")
+        for inp_i, dropped in all_dropped:
+            for txt, lab, reason in dropped:
+                console.print(f"  - input {inp_i}: {reason}: {txt!r} ({lab})")
+
+
+def _response_to_tasks(texts, response_obj, task_id_offset, post_indices):
+    """Dispatch to batch or single parsing based on input count."""
+    if len(texts) > 1:
+        return parse_batch_response(texts, response_obj, task_id_offset, post_indices)
+    task, dropped = parse_response_to_task(
+        texts[0], response_obj, task_id_offset + post_indices[0]
+    )
+    return [task], ([(1, dropped)] if dropped else []), []
+
+
+def run_interactive(posts, args, line_source=None):
+    """Loop over all `posts` in batches, prompting + reading replies in-terminal.
+
+    Each round writes the batch prompt to ``args.prompt_file`` (overwriting it),
+    then reads the pasted LLM JSON from `line_source` (default ``sys.stdin``)
+    until an ``END`` line / EOF, or ``q`` to quit. Saves after every batch so a
+    mid-session quit keeps completed work. Bad JSON re-prompts the same batch.
+    """
+    line_source = sys.stdin if line_source is None else line_source
+    batch = args.batch_size
+    total = len(posts)
+    n_batches = (total + batch - 1) // batch
+
+    start = 0
+    while start < total:
+        end = min(start + batch, total)
+        post_indices = list(range(start, end))
+        texts = [posts[i]["text"] for i in post_indices]
+
+        prompt = build_prompt(texts)
+        parent = os.path.dirname(args.prompt_file)
+        if parent:
+            os.makedirs(parent, exist_ok=True)
+        with open(args.prompt_file, "w", encoding="utf-8") as f:
+            f.write(prompt)
+
+        console.print(
+            f"\n[bold cyan]Batch {start // batch + 1}/{n_batches} — "
+            f"posts {start}-{end - 1} of {total - 1}[/bold cyan]"
+        )
+        console.print(
+            f"Prompt written to [bold]{args.prompt_file}[/bold] "
+            f"({len(prompt):,} chars). Copy it into your LLM."
+        )
+        console.print(
+            "[dim]Paste the JSON response below, then type END on its own line "
+            "(or q to quit):[/dim]"
+        )
+
+        kind, raw = read_until_sentinel(line_source)
+        if kind == "quit":
+            console.print("[yellow]Quit — progress saved.[/yellow]")
+            return
+        raw = _strip_code_fence(raw)
+        if not raw.strip():
+            console.print("[yellow]Empty response — stopping. Progress saved.[/yellow]")
+            return
+
+        try:
+            response_obj = json.loads(raw)
+        except json.JSONDecodeError as exc:
+            console.print(f"[red]Invalid JSON: {exc}[/red]")
+            console.print(f"[dim]First 200 chars: {raw[:200]}[/dim]")
+            console.print("[yellow]Re-paste the response for this batch.[/yellow]")
+            continue  # retry the same batch — start unchanged
+
+        tasks, all_dropped, missing = _response_to_tasks(
+            texts, response_obj, args.task_id_offset, post_indices
+        )
+        save_tasks(tasks, args.output)
+        _print_save_summary(tasks, all_dropped, missing, args.output)
+        start = end
+
+    console.print(f"\n[bold green]Done — all {total} posts processed.[/bold green]")
+
+
 def main():
     parser = argparse.ArgumentParser(
         description="Build / parse auto-label prompts for Reddit posts.",
@@ -346,12 +489,24 @@ def main():
                         help="Starting ID for auto-labeled tasks (avoids labeled.json collisions).")
     parser.add_argument("--output", default="data/preds/auto_labeled.json",
                         help="Where to append parsed Label Studio tasks.")
+    parser.add_argument("--interactive", action="store_true",
+                        help="Loop over all unlabeled posts: emit a prompt, paste the "
+                             "LLM reply, repeat. Ignores --posts/--post-index.")
+    parser.add_argument("--batch-size", type=int, default=10,
+                        help="Posts per prompt in --interactive mode (default: %(default)s).")
+    parser.add_argument("--prompt-file", default="data/auto_label/prompt.txt",
+                        help="Where --interactive writes each round's prompt "
+                             "(default: %(default)s).")
     args = parser.parse_args()
 
     posts = load_unlabeled_posts(args.csv)
     if not posts:
         console.print(f"[red]No unlabeled posts in {args.csv} after dedup.[/red]")
         sys.exit(1)
+
+    if args.interactive:
+        run_interactive(posts, args)
+        return
 
     # Resolve the post-index spec into a concrete list of CSV positions.
     if args.posts is not None:
@@ -382,44 +537,11 @@ def main():
             console.print(f"[dim]First 200 chars: {raw[:200]}[/dim]")
             sys.exit(1)
 
-        if is_batch:
-            tasks, all_dropped, missing = parse_batch_response(
-                texts, response_obj, args.task_id_offset, post_indices
-            )
-        else:
-            task, dropped = parse_response_to_task(
-                texts[0], response_obj, args.task_id_offset + post_indices[0]
-            )
-            tasks = [task]
-            all_dropped = [(1, dropped)] if dropped else []
-            missing = []
-
-        existing = []
-        if os.path.exists(args.output):
-            with open(args.output, "r", encoding="utf-8") as f:
-                existing = json.load(f)
-        new_ids = {t["id"] for t in tasks}
-        existing = [t for t in existing if t.get("id") not in new_ids]
-        existing.extend(tasks)
-        os.makedirs(os.path.dirname(args.output), exist_ok=True)
-        with open(args.output, "w", encoding="utf-8") as f:
-            json.dump(existing, f, indent=2, ensure_ascii=False)
-
-        n_ents = sum(len(t["annotations"][0]["result"]) for t in tasks)
-        console.print(
-            f"[green]Saved {len(tasks)} task(s) ({n_ents} entity spans total) "
-            f"to {args.output}[/green]"
+        tasks, all_dropped, missing = _response_to_tasks(
+            texts, response_obj, args.task_id_offset, post_indices
         )
-        if missing:
-            console.print(
-                f"[yellow]Missing results for input index(es): {missing} "
-                f"— LLM didn't return entries for these.[/yellow]"
-            )
-        if all_dropped:
-            console.print("[yellow]Dropped entities (not found in source text):[/yellow]")
-            for inp_i, dropped in all_dropped:
-                for txt, lab, reason in dropped:
-                    console.print(f"  - input {inp_i}: {reason}: {txt!r} ({lab})")
+        save_tasks(tasks, args.output)
+        _print_save_summary(tasks, all_dropped, missing, args.output)
         return
 
     prompt = build_prompt(texts)
