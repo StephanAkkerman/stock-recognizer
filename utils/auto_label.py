@@ -44,6 +44,7 @@ import os
 import re
 import sys
 import textwrap
+import uuid
 
 import pandas as pd
 from rich.console import Console
@@ -192,6 +193,16 @@ def build_prompt(texts, examples=None):
     return "\n".join(parts)
 
 
+def _region_id():
+    """Generate a short random region id.
+
+    Label Studio needs a stable per-region ``id`` (alongside ``from_name`` /
+    ``to_name``) to map a result span onto the labeling config — without it the
+    region is silently dropped and nothing renders on import.
+    """
+    return uuid.uuid4().hex[:10]
+
+
 def parse_response_to_task(text, response_obj, task_id):
     """Convert LLM JSON response to a Label Studio task, finding offsets in `text`.
 
@@ -200,6 +211,10 @@ def parse_response_to_task(text, response_obj, task_id):
     """
     annotation_results = []
     dropped = []
+    # The LLM is told to "label every occurrence", and re.finditer below ALSO
+    # expands to every occurrence — so a term the LLM lists twice would emit
+    # duplicate spans at the same offsets. Dedupe on (start, end, label).
+    seen = set()
     for ent in response_obj.get("entities", []):
         ent_text = (ent.get("text") or "").strip()
         ent_label = ent.get("label", "")
@@ -211,7 +226,14 @@ def parse_response_to_task(text, response_obj, task_id):
             dropped.append((ent_text, ent_label, "not_found"))
             continue
         for match in matches:
+            span_key = (match.start(), match.end(), ent_label)
+            if span_key in seen:
+                continue
+            seen.add(span_key)
             annotation_results.append({
+                "id": _region_id(),
+                "from_name": "label",
+                "to_name": "text",
                 "type": "labels",
                 "value": {
                     "start": match.start(),

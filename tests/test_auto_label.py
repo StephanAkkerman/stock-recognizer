@@ -138,6 +138,32 @@ def test_run_interactive_quit_keeps_prior_progress(tmp_path):
     assert sorted(t["id"] for t in data) == [1000, 1001]
 
 
+def test_parse_response_dedupes_repeated_entities():
+    # LLM lists "Paramount" twice; the source text contains it once. Without
+    # dedup, re.finditer would emit two identical spans at 0-9.
+    text = "Paramount bids for Warner Bros Discovery"
+    response = {
+        "entities": [
+            {"text": "Paramount", "label": "company"},
+            {"text": "Paramount", "label": "company"},
+            {"text": "Warner Bros Discovery", "label": "company"},
+        ]
+    }
+    task, dropped = auto_label.parse_response_to_task(text, response, 1)
+    results = task["annotations"][0]["result"]
+    spans = [(r["value"]["start"], r["value"]["end"]) for r in results]
+    assert spans == [(0, 9), (19, 40)]
+
+
+def test_parse_response_keeps_distinct_occurrences():
+    # A genuinely repeated ticker in the text yields one span per occurrence.
+    text = "AAPL up, AAPL down"
+    response = {"entities": [{"text": "AAPL", "label": "ticker"}]}
+    task, _ = auto_label.parse_response_to_task(text, response, 1)
+    spans = [(r["value"]["start"], r["value"]["end"]) for r in task["annotations"][0]["result"]]
+    assert spans == [(0, 4), (9, 13)]
+
+
 def test_run_interactive_retries_same_batch_on_bad_json(tmp_path):
     posts = [{"text": "AAPL"}]
     args = _args(tmp_path, batch_size=2)
