@@ -164,6 +164,44 @@ def test_parse_response_keeps_distinct_occurrences():
     assert spans == [(0, 4), (9, 13)]
 
 
+def test_parse_response_keeps_longest_of_overlapping_variants():
+    # "$ANPA" / "ANPA" overlap (cashtag + bare ticker); keep the wider "$ANPA".
+    text = "I bought $ANPA today"
+    response = {
+        "entities": [
+            {"text": "ANPA", "label": "ticker"},
+            {"text": "$ANPA", "label": "ticker"},
+        ]
+    }
+    task, _ = auto_label.parse_response_to_task(text, response, 1)
+    results = task["annotations"][0]["result"]
+    assert len(results) == 1
+    assert results[0]["value"]["text"] == "$ANPA"
+
+
+def test_parse_response_keeps_longest_company_variant():
+    # Nested company variants collapse to the single longest span.
+    text = "Rich Sparkle Limited, also called Rich Sparkle or just Rich, filed."
+    response = {
+        "entities": [
+            {"text": "Rich", "label": "company"},
+            {"text": "Rich Sparkle", "label": "company"},
+            {"text": "Rich Sparkle Limited", "label": "company"},
+        ]
+    }
+    task, _ = auto_label.parse_response_to_task(text, response, 1)
+    results = task["annotations"][0]["result"]
+    texts = sorted(r["value"]["text"] for r in results)
+    # The leading "Rich Sparkle Limited" subsumes the nested variants at offset
+    # 0; the standalone "Rich Sparkle" and "Rich" later in the text survive.
+    assert "Rich Sparkle Limited" in texts
+    starts = [r["value"]["start"] for r in results]
+    assert 0 in starts  # the long variant is kept
+    # No two kept spans overlap.
+    intervals = sorted((r["value"]["start"], r["value"]["end"]) for r in results)
+    assert all(intervals[i][1] <= intervals[i + 1][0] for i in range(len(intervals) - 1))
+
+
 def test_run_interactive_retries_same_batch_on_bad_json(tmp_path):
     posts = [{"text": "AAPL"}]
     args = _args(tmp_path, batch_size=2)

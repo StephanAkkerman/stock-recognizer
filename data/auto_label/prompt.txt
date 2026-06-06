@@ -71,128 +71,103 @@ Example 6
 Input: Anybody else gonna YOLO into puts? JPOW about to crash this market. NFA
 Output: {"entities": []}
 
-Now label the following 10 inputs. Return ONE JSON object with a 'results' array as described above.
+Now label the following 8 inputs. Return ONE JSON object with a 'results' array as described above.
 
-Input 1: AssTits starting to look seriously ridiculous
+Input 1: Beware those who are shilling other stocks claiming they're the next GME! They're just trying to get your attention, and they're succeeding! 🚨
 
-Not even trying to sound dramatic but ASTS setup into June is getting kinda ridiculous.  
-You’ve got a  huge short interest + retail piling in + crazy call open interest for June + first 3-batch satellite launch in June + SpaceX IPO hype floating around at the same time and most importantly a stock that already moves like a crackhead. 
+There is no next GME. As our beloved autist Michael Burry said, GME is a unique situation and a perfect storm. You won't find something like this again. They are just trying to move your attention away from GME and scatter us. From the discussion threads and the posts on the frontpage, it seems that they're succeeding.
 
-The options chain is what’s really interesting to me.  
-June 18 calls are loaded to the tits.   
-180calls have around 50,000 open interest. 130’s, 150’s and 170’s are stacked too. 
+[Michael Burry tweet on GME](https://twitter.com/michaeljburry/status/1355186794640236561?s=19)
 
-No idea what’s gonna happen but I’m along for the ride 
+Just look at the AMC thread up on the frontpage at the moment. Half the comments are from new accounts with just a handful of karma. AMC is not the next GME. The 'days to cover' on AMC is less than a day. After an initial uptick it will just fizzle out and you'll be left bagholding.
 
-Positions in comments.
+If you're still unsure, [here](https://www.nextmemestock.com/) you can find a highly advanced AI algorithm showing the next meme stock. (credits /u/adagiolifen)
 
-Input 2: MU +1111%
+Edit: I think we even need to the mods to make a post and sticky it. The shilling is really becoming bad now
 
-What a run! Bought it last week and was hoping MU would go up because it's the cheapest stock in the SP500 based on forward PE. Market finally realizing it now, MU to $1000!
+Buy whatever the fuck you want and whatever you like. All I'm saying is it's not the next GME.
 
-https://preview.redd.it/oo8lmlze0p3h1.jpg?width=1320&format=pjpg&auto=webp&s=fb42ff5d5f66898d83b6c7ba5e05ba791619e705
+Input 2: STOP POSTING AND COMMENTING ABOUT ORGANIZING
 
-Input 3: New Fed Chair Kevin Warsh suggests he may take an Alan Greenspan-style approach at the central bank
+Seriously. That’s how the sub will be taken down by the SEC. **This is not a joke anymore.** Things we say can and will have real consequences if you’re not all careful. 
 
-[https://finance.yahoo.com/economy/policy/article/new-fed-chair-kevin-warsh-suggests-he-may-take-an-alan-greenspan-style-approach-at-the-central-bank-135046787.html](https://finance.yahoo.com/economy/policy/article/new-fed-chair-kevin-warsh-suggests-he-may-take-an-alan-greenspan-style-approach-at-the-central-bank-135046787.html)
+I’ve seen this sub grow from 600,000 degenerates, all the way to the 6.7 million we’re at now. I really want to see it stick around, especially because we’ve seen a lot of great things come out of here over the last couple years. 
 
-Input 4: Are these AI and semiconductor type of stocks truly once a generation opportunities
+Hold your shares (*if you want*)
 
-Are these opportunities truly once a generation or is there always an industry or stock that is shooting up like this?
+Invest in whatever you want, because what do I know, I’m just a retard who likes video games.
 
-Input 5: SUPER auspicious closing prices for Both GOOGL 388.88 and GOOG 384.84 -  May 26, 2026
+**I do know that we cannot talk about organizing, because then shit gets bad.**
 
-https://preview.redd.it/ubp7l1yfyl3h1.png?width=944&format=png&auto=webp&s=7c338b6edba598d898d6a22b97ae7ada0adec06b
+I love all you fucking autists
 
-https://preview.redd.it/2tqhkhogyl3h1.png?width=3624&format=png&auto=webp&s=c9d790d890d61750cf883577a64adce0e4ee58c2
+And for those of you who can’t read💎👐🚀🚀
 
-Not only does the GOOGL daily chart looks like a ST reversal in trend is about to develop. Sequential counter at 1-0 Sell (a positive count).  The closing price of 388.88 has four eights.
+Input 3: To all 💎🙌 who are too low karma to post
 
-8888 in Cantonese is **八八八八 where 八 is a homophone for the Chinese word 發 (faat) which means "to strike it rich".  To have 2 in a row is super lucky, 4 in a row is astronomical wealth.**
+I’m sure this time is toughest for those of us who don’t fit the account requirements of this sub who are feeling alone and stressed out.
 
-**The number 4 in Cantonese is** 四 where 四 is a homophone for the Chinese word 死 (***sei) which means "death"***
+Someone PM’d me asking if I thought $GME would actually go back up to $400 (Duh of course it will) so I assumed he was a bot, but after checking his account I saw he was supporting $GME a week prior to the new karma requirements. Turns out he was just a stressed German bro who needed someone to talk to since he put all his savings in and has been holding since $289. I want you guys to know you ARE NOT ALONE and you’re in our 💛 & 🧠 too!! Just keep holding brethren, and BUY THE DIP! 🚀🚀💎🙌
 
-***So 88.88 or 8888 in Cantonese*** **發發發發** ***reads like*** **發**死 in Cantonese and means "Unstoppable Wealth"
+Edit: I love all of you guys/gals, sorry I can’t get to every PM but I’m trying my best!
 
-In Hong Kong, people pay hundreds of thousands for Car License plates in public auctions.  In phone numbers and addresses.
+Edit2: Stop giving me awards and use that $$ to buy the dip!🚀🚀🚀
 
-Having 4 consecutive 8 is fortuitous indeed over there.
+Input 4: I Will Invest $100,000 Into Whatever Is The Top Reply In A Week lol
 
-As for GOOG at 384.84
+Hi, I’m MrBeast and I’m bored, so I’m going to invest $100,000 into whatever you guys decide on Robinhood. If you don’t believe me check the proof. In 7 days I will look at what the top reply is and invest in it. 
 
-That's 2 strict **發**死 in a row.  A literal string of Die Rich.
+Edit, I want a super risky investment. Give me something so crazy that I have like a 2% chance of it working but if it does I make millions. Let’s have some fun nerds
 
-The happy coincidence today is that both GOOGLE shares closed with similar auspicious numbers that compliments each other, affirming future direction for Google stock.
+Edit Edit, if the top reply that I invest in makes me money, I’ll give 20% of the profits to the redditor that recommended it. 
 
+[proof](https://twitter.com/mrbeastyt/status/1283410776993169408?s=21)
 
+Input 5: Markets crash every time Oreo releases an even greater-stuffed cookie
 
-May 27 11AM update
+The increasingly-depraved debuts of Oreos with more stuffing indicate unstable amounts of greed and leverage in the system, serving as an immediate indicator of that the makings of a market crash are in place. Conversely, when the Oreo team reduces the amount of icing in their treats, markets tend to have great bull runs until once again society demands to push the boundaries of how much stuffing is possible.
 
-GOOGL 390.84  range so far 385.90 to 392.85
+https://en.wikipedia.org/wiki/List_of_Oreo_varieties https://en.wikipedia.org/wiki/List_of_stock_market_crashes_and_bear_markets
 
-I wrote 385 May 29 puts for 3.50 with delta < -0.21 and Vega 0.07 - excellent chance I keep the premium.
+1974: Double Stuf Oreo released. Dow Jones crashes 45%. FTSE drops 73%.
 
-Input 6: Serious question for the SpaceX bulls
+1987: Big Stuf Oreo released. Black Monday, a 20% single-day crash and a following bear market.
 
-I’m genuinely trying to understand the bull case, not argue.
+1991: Mini Oreo introduced. Smaller icing ratios coincide with the 1991 Japanese asset price bubble, confirming the correlation works both ways and a reduction of Oreo icing may be a potential solution to preventing a future crash.
 
-At a potential $1.5T+ valuation, what is the actual revenue and profit path that gets SpaceX there?
+2011: Triple Double Oreo introduced. S&P drops 21% in a 5-month bear market
 
-My hesitation is that the core Starlink thesis seems somewhat self-limiting. The original value proposition is providing internet where traditional broadband isn’t available, but many of those underserved regions also have lower purchasing power. If customers can’t afford conventional broadband today, why should we assume they’ll become highly profitable Starlink subscribers tomorrow?
+2015: Oreo Thins introduced. A complete lack of icing causes an unprecedented bull run in the S&P for years
 
-Beyond that, Starlink’s highest-value customers appear to be airlines, cruise ships, governments, militaries, and remote enterprises. Those are valuable markets, but are they truly large enough to support a valuation that would place SpaceX among the most valuable companies in the world?
+2019: The Most Stuf Oreo briefly introduced. Pulled off the shelf before any major market damage could occur.
 
-For context, companies worth $1T-$3T typically generate tens or even hundreds of billions in annual profit and hundreds of billions in revenue. What specific revenue streams do SpaceX bulls believe can realistically scale to that level?
+2021: The Most Stuf Oreo reintroduced. Market response: ???
 
-Input 7: Am I the only one confused about why NVIDIA crushed earnings and the stock still went red? And whats with the big jump in Dividend 👍
+Input 6: Is it insider trading if I bought Boeing puts while I am inside the wrecked airplane?
 
-NVIDIA just reported its Q1 2026 results (fiscal Q1 FY27, quarter ended April 26) and it's another all-time high across the board.
+Purely hypothetical of cause:  
+Imagine sitting in an airplane when suddenly the fucking door blows out.   
+Now, while everyone is screaming and grasping for air, you instead turn on your noise-cancelling head-phones to ignore that crying baby next to you, calmly open your robin-hood app (or whatever broker you prefer, idc), and load up on Boeing puts.   
+There is no way the market couldve already priced that in, it is literally just happening.  
+Would that be considered insider trading? I mean you are literally inside that wreck of an airplane...  
+On the other hand, one could argue that you are also outside the airplane, given that the door just blew off...
 
-Revenue came in at $81.6 billion, up 85% from a year ago and 20% from last quarter.
+Input 7: Ok, I definitely picked the wrong day to buy (intel 700k yolo update)
 
-Net income hit $58.3 billion — up 211% YoY. Non-GAAP EPS of $1.87 beat the Street's $1.77 estimate by over 5%.
+https://preview.redd.it/i13f44py9bgd1.png?width=1401&format=png&auto=webp&s=11f19009b89a89a412cdfd9f1af5f25da310e3be
 
-The entire growth story is Data Center, which pulled in $75.2 billion — up 92% YoY. 
+My plan going into this was to hold for a decade and my plan hasn't changed. It's going to be rough and I realize that. The past two days have been the scariest days of my life. My parents still don't know I've lost 1/3 of my inheritance. Every time I talk to them they can see how stressed I look and they keep asking me what's wrong and I don't know what to say. How can I possibly explain this to them? My only option is to hold for a decade. So that's what I'm going to do. I know people are going to shit on me, and you should. I recognize I made an unnecessarily regarded decision. I have received a lot of DMs and reddit notifications offering me mental help and Suicide hotline numbers. I appreciate your concern but I'm fine. I'm holding long term. I'm sorry if my decision made you upset and reflect on your financial situation, that was not my intention. I appreciate all of your support and constructive criticism. Some of you have been really mean but its ok, I know I deserve it. But im holding. Forever. Intel will succeed.
 
-Hyperscalers and AI cloud providers are absorbing Blackwell GPUs faster than any product ramp in NVIDIA's history. Even networking (InfiniBand, NVLink) surged 199% YoY — customers are buying full AI systems, not just chips.
+Input 8: Robinhood is toast....Fidelity massive transfer volume
 
-Gross margins expanded to 74.9% from just 60.5% a year ago, and NVIDIA announced an $80 billion buyback plus raised its quarterly dividend from $0.01 to $0.25 per share (the dividend jump is huge, and a big news for major shareholders).
+For what it's worth...
 
-Q2 guidance came in at $91 billion — well above Wall Street's \~$87B expectation. China remains excluded from guidance entirely after export controls wiped out H20 sales last year.
+This morning I called up Fidelity because I wanted to make sure my extended hours trading was enabled on my account...took 90 minutes on hold to get through.  Apparently, they are slammed over at Fidelity, I asked the gal on the phone what's it been like today...she said because of all this stuff with Robinhood, they're looking at +700% daily volume for transferring accounts, which is quite amazing.
 
-So why did the stock dip \~1%? Because at this point, beating estimates is the baseline. Wall Street has priced in perfection — and anything short of a shock to the upside barely moves the needle.
+Happy hunting! 
 
-Not financial advice. Do your own research.
+WE LIKE THE STOCK!
 
-Input 8: $LUNR Intuitive Machines falls after NASA names Blue Origin to deliver the first Lunar Terrain Vehicle
-
-During today’s NASA Moon Base briefing, it was announced that Blue Origin will deliver the first Lunar Terrain Vehicle (LTV) as part of the initial robotic missions supporting the lunar base. This comes as a surprise to many, since Intuitive Machines (LUNR) won the earlier LTV feasibility study with its Moon RACER team and had been seen as a strong contender for the next phase. LUNR shares dropped on the news as the long-pending LTV decision appears to have gone (at least partially) to Blue Origin.
-
-[https://www.youtube.com/watch?v=Nyki6O1oxIg](https://www.youtube.com/watch?v=Nyki6O1oxIg)
-
-Input 9: SpaceX IPO sell off ?
-
-$SPCX filed its S-1 on May 20, targets a Nasdaq listing June 12 at a $1.75T valuation. Index providers literally rewrote their rules to fast-track it in.
-
-How big ETFs gonna include $SPCX in their holding?
-
-1. will they proportionally sell of holdings and we will be fucked ?
-2. or the last name in SPY (500/500) / QQQ (100/100) gonna be trimmed out directly $CSGP ?
-3. or the ETFs will run 500+1 & 100+1 ?
-4. or it will happen gradually given some ETFs have rebalancing quarterly window ?
-
-This is what Bloomberg thinks
-
-https://preview.redd.it/bxatbz13f43h1.png?width=1149&format=png&auto=webp&s=8ef09dc7bb99d06566ace2e8f9315560947465f2
-
-Input 10: CNBC - U.S., Iran close in on 60-day ceasefire extension with nuclear framework: FT
-
-Calls on Tuesday 
-
-U.S., Iran close in on 60-day ceasefire extension with nuclear framework: FT
-
- 
-
-https://www.cnbc.com/2026/05/23/us-iran-war-talks.html?\_\_source=androidappshare
+STICK IT TO THE MAN!
 
 Output:

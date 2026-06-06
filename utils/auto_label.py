@@ -203,18 +203,41 @@ def _region_id():
     return uuid.uuid4().hex[:10]
 
 
+def _resolve_overlaps(spans):
+    """Keep the longest span among any that overlap; drop the shorter ones.
+
+    LLMs commonly emit nested variants of the same mention — ``ANPA`` and
+    ``$ANPA``, or ``Rich`` / ``Rich Sparkle`` / ``Rich Sparkle Limited`` — which
+    land at overlapping offsets and would otherwise render as several stacked
+    highlights. Greedy longest-first interval selection keeps the widest span
+    and discards anything intersecting it. Non-overlapping occurrences elsewhere
+    in the text are unaffected.
+
+    `spans` is a list of ``(start, end, text, label)`` tuples; returns the kept
+    subset sorted by start offset.
+    """
+    # Longest first (tiebreak: earlier start) so the widest variant wins.
+    ordered = sorted(spans, key=lambda s: (-(s[1] - s[0]), s[0]))
+    kept = []
+    for start, end, ent_text, ent_label in ordered:
+        if any(start < k_end and k_start < end for k_start, k_end, _, _ in kept):
+            continue
+        kept.append((start, end, ent_text, ent_label))
+    return sorted(kept, key=lambda s: s[0])
+
+
 def parse_response_to_task(text, response_obj, task_id):
     """Convert LLM JSON response to a Label Studio task, finding offsets in `text`.
 
     Drops entities whose `text` field can't be located in the source — better
     than emitting fabricated offsets.
     """
-    annotation_results = []
     dropped = []
     # The LLM is told to "label every occurrence", and re.finditer below ALSO
     # expands to every occurrence — so a term the LLM lists twice would emit
     # duplicate spans at the same offsets. Dedupe on (start, end, label).
     seen = set()
+    spans = []
     for ent in response_obj.get("entities", []):
         ent_text = (ent.get("text") or "").strip()
         ent_label = ent.get("label", "")
@@ -230,18 +253,23 @@ def parse_response_to_task(text, response_obj, task_id):
             if span_key in seen:
                 continue
             seen.add(span_key)
-            annotation_results.append({
-                "id": _region_id(),
-                "from_name": "label",
-                "to_name": "text",
-                "type": "labels",
-                "value": {
-                    "start": match.start(),
-                    "end": match.end(),
-                    "text": ent_text,
-                    "labels": [ent_label],
-                },
-            })
+            spans.append((match.start(), match.end(), ent_text, ent_label))
+
+    annotation_results = [
+        {
+            "id": _region_id(),
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+                "start": start,
+                "end": end,
+                "text": ent_text,
+                "labels": [ent_label],
+            },
+        }
+        for start, end, ent_text, ent_label in _resolve_overlaps(spans)
+    ]
     return {
         "id": task_id,
         "data": {"text": text},
