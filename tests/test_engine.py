@@ -403,3 +403,37 @@ def test_ethe_post(recognizer):
     results = recognizer.recognize_ai(text)
     assert "ETHE" in results
     assert len(results) == 1
+
+
+def test_ai_labels_uses_descriptions(monkeypatch):
+    import unittest.mock as mock
+    from stock_recognizer.engine import StockRecognizer
+
+    mock_extractor = mock.MagicMock()
+    monkeypatch.setattr("stock_recognizer.engine.GLiNER2.from_pretrained", lambda *a, **kw: mock_extractor)
+
+    r = StockRecognizer(use_ai=True)
+    assert isinstance(r.ai_labels, dict)
+    assert len(r.ai_labels["ticker"]) > 20
+    assert len(r.ai_labels["company"]) > 20
+    assert "all-uppercase" in r.ai_labels["ticker"]
+    assert "mixed or natural case" in r.ai_labels["company"]
+
+
+def test_recognize_ai_passes_dict_labels(monkeypatch):
+    import unittest.mock as mock
+    from stock_recognizer.engine import StockRecognizer
+
+    mock_extractor = mock.MagicMock()
+    mock_extractor.extract_entities.return_value = {"entities": {}}
+    monkeypatch.setattr("stock_recognizer.engine.GLiNER2.from_pretrained", lambda *a, **kw: mock_extractor)
+
+    r = StockRecognizer(use_ai=True)
+    r.recognize_ai("$AAPL is up today")
+
+    call_args = mock_extractor.extract_entities.call_args
+    labels_arg = call_args[0][1] if len(call_args[0]) > 1 else call_args[1].get("labels")
+    # labels_arg may be None if passed as keyword — check both
+    if labels_arg is None:
+        labels_arg = call_args[0][1] if len(call_args[0]) > 1 else None
+    assert isinstance(labels_arg, dict), f"expected dict, got {type(labels_arg)}: {labels_arg}"

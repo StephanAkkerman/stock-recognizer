@@ -78,14 +78,26 @@ class StockRecognizer:
             if adapter_path and os.path.exists(adapter_path):
                 self.extractor.load_adapter(adapter_path)
 
-            if os.path.exists(adapter_path):
+            if adapter_path and os.path.exists(adapter_path):
                 self.logger.info(f"Loading LoRA adapter from {adapter_path}...")
                 self.extractor.load_adapter(adapter_path)
 
-            # 3. Store the successful descriptions
+            # 3. Store the label descriptions — must match ENTITY_DESCRIPTIONS in train.py
             self.ai_labels = {
-                "ticker": "A stock market ticker symbol, usually 1-5 uppercase letters...",
-                "company": "The name of a corporation, brand, or business entity...",
+                "ticker": (
+                    "An all-uppercase abbreviation (1–6 letters, with or without a leading $) "
+                    "that refers to a tradeable security. Examples: $AAPL, TSLA, GME, META, GOOGL, SPY. "
+                    "Label as ticker even when the abbreviation also names the company — GME, COST, "
+                    "META, GOOGL are tickers, not companies, even in earnings or thesis contexts. "
+                    "MUST NOT be option strikes (e.g. 140c), dollar amounts, index names spelled out, "
+                    "or internet slang (e.g. NFA, YOLO, JPOW)."
+                ),
+                "company": (
+                    "The full or informal name of a company written in mixed or natural case — "
+                    "e.g. 'Apple', 'GameStop', 'Rocket Lab', 'Bed Bath & Beyond', 'upstart'. "
+                    "MUST NOT be an all-uppercase abbreviation — those are tickers. "
+                    "MUST NOT be a generic finance term, index name, or person's name."
+                ),
             }
 
     def get_ai_entities(self, text):
@@ -156,16 +168,25 @@ class StockRecognizer:
         found = set(self.recognize(text))
 
         try:
-            # We treat 'company' and 'ticker' labels as "potential entities"
-            result = self.extractor.extract_entities(text, ["company", "ticker"])
+            # Pass label description dicts so inference prompt matches training
+            result = self.extractor.extract_entities(text, self.ai_labels)
         except Exception:
             self.logger.warning("Failed to extract entities with AI model.")
             return list(found)
 
         entities = result.get("entities", result) if isinstance(result, dict) else {}
 
-        # Flatten all AI entities into one list to resolve
-        all_ai_mentions = entities.get("company", []) + entities.get("ticker", [])
+        # Relabeling guard: all-caps tokens in company results that are valid tickers
+        # should be treated as tickers (model occasionally misclassifies ticker-shaped
+        # tokens as company when context is ambiguous).
+        _all_caps_re = re.compile(r"^[A-Z][A-Z0-9]{0,5}$")
+        promoted = [
+            m for m in entities.get("company", [])
+            if _all_caps_re.match(str(m)) and str(m).upper().replace("$", "") in self.valid_tickers
+        ]
+        company_entities = [m for m in entities.get("company", []) if m not in promoted]
+        ticker_entities = list(entities.get("ticker", [])) + promoted
+        all_ai_mentions = company_entities + ticker_entities
 
         for mention in all_ai_mentions:
             # 1. Clean the mention
