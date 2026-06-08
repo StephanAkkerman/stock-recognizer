@@ -39,20 +39,8 @@ except ImportError:
 
 DEFAULT_TEST_FOLDER = "data/test"
 DEFAULT_LABELS = {
-    "ticker": (
-        "An all-uppercase abbreviation (1–6 letters, with or without a leading $) "
-        "that refers to a tradeable security. Examples: $AAPL, TSLA, GME, META, GOOGL, SPY. "
-        "Label as ticker even when the abbreviation also names the company — GME, COST, "
-        "META, GOOGL are tickers, not companies, even in earnings or thesis contexts. "
-        "MUST NOT be option strikes (e.g. 140c), dollar amounts, index names spelled out, "
-        "or internet slang (e.g. NFA, YOLO, JPOW)."
-    ),
-    "company": (
-        "The full or informal name of a company written in mixed or natural case — "
-        "e.g. 'Apple', 'GameStop', 'Rocket Lab', 'Bed Bath & Beyond', 'upstart'. "
-        "MUST NOT be an all-uppercase abbreviation — those are tickers. "
-        "MUST NOT be a generic finance term, index name, or person's name."
-    ),
+    "ticker": "A stock market ticker symbol, usually 1-5 letters, often preceded by a dollar sign (e.g., $AAPL, TSLA). MUST NOT be option strikes, prices, index names, or internet slang acronyms.",
+    "company": "The name of a corporation, hedge fund, or business entity. MUST NOT be an uppercase ticker symbol, an index, or generic finance terms.",
 }
 
 console = Console()
@@ -596,31 +584,6 @@ if __name__ == "__main__":
 
     if not dataset:
         console.print("[red]No valid data to evaluate.[/red]")
-    elif args.engine:
-        available_adapters = get_all_adapters()
-        if NUM_VERSIONS_TO_TEST and len(available_adapters) > NUM_VERSIONS_TO_TEST:
-            available_adapters = available_adapters[-NUM_VERSIONS_TO_TEST:]
-
-        console.print("[cyan]Engine-mode evaluation (StockRecognizer.recognize_ai)...[/cyan]")
-
-        eng_table = Table(title="Engine Benchmark (StockRecognizer.recognize_ai)", show_lines=False)
-        eng_table.add_column("Adapter", style="cyan", width=35)
-        eng_table.add_column("Precision", justify="right")
-        eng_table.add_column("Recall", justify="right")
-        eng_table.add_column("F1", style="bold magenta", justify="right")
-
-        for adapter in available_adapters:
-            console.print(f"  Evaluating [bold]{adapter['name']}[/bold]...")
-            metrics = engine_evaluate_model(adapter["path"], dataset, model_name=adapter["name"])
-            m = metrics["overall"]
-            eng_table.add_row(
-                adapter["name"],
-                f"{m['p']:.2%}",
-                f"{m['r']:.2%}",
-                f"{m['f1']:.2%}",
-            )
-
-        console.print(eng_table)
     else:
         test_hash = compute_test_set_hash(dataset)
         console.print(
@@ -736,3 +699,26 @@ if __name__ == "__main__":
         rows.sort(key=lambda r: order.index(r["name"]))
         console.print(_render_table(rows))
         console.print(_render_params(rows))
+
+        if args.engine:
+            console.print("\n[cyan]Engine evaluation (StockRecognizer.recognize_ai + regex)...[/cyan]")
+            eng_table = Table(title="Engine Benchmark (production F1)", show_lines=False)
+            eng_table.add_column("Adapter", style="cyan", width=35)
+            eng_table.add_column("Precision", justify="right")
+            eng_table.add_column("Recall", justify="right")
+            eng_table.add_column("F1", style="bold magenta", justify="right")
+
+            for adapter in available_adapters:
+                console.print(f"  [dim]Loading engine for {adapter['name']}...[/dim]")
+                eng_metrics = engine_evaluate_model(
+                    adapter["path"], dataset, model_name=adapter["name"]
+                )
+                m = eng_metrics["overall"]
+                eng_table.add_row(
+                    adapter["name"],
+                    f"{m['p']:.2%}",
+                    f"{m['r']:.2%}",
+                    f"{m['f1']:.2%}",
+                )
+
+            console.print(eng_table)

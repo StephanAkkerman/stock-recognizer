@@ -416,8 +416,8 @@ def test_ai_labels_uses_descriptions(monkeypatch):
     assert isinstance(r.ai_labels, dict)
     assert len(r.ai_labels["ticker"]) > 20
     assert len(r.ai_labels["company"]) > 20
-    assert "all-uppercase" in r.ai_labels["ticker"]
-    assert "mixed or natural case" in r.ai_labels["company"]
+    assert "ticker symbol" in r.ai_labels["ticker"]
+    assert "corporation" in r.ai_labels["company"]
 
 
 def test_recognize_ai_passes_dict_labels(monkeypatch):

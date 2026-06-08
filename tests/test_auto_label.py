@@ -202,17 +202,6 @@ def test_parse_response_keeps_longest_company_variant():
     assert all(intervals[i][1] <= intervals[i + 1][0] for i in range(len(intervals) - 1))
 
 
-def test_prompt_contains_allcaps_ticker_example():
-    """New GME few-shot example (all-caps ticker without $) appears in the prompt."""
-    prompt = auto_label.build_prompt("test input")
-    assert "GME" in prompt
-
-
-def test_prompt_contains_lowercase_company_example():
-    """New upstart few-shot example (lowercase company name) appears in the prompt."""
-    prompt = auto_label.build_prompt("test input")
-    assert "upstart" in prompt
-
 
 def test_run_interactive_retries_same_batch_on_bad_json(tmp_path):
     posts = [{"text": "AAPL"}]
