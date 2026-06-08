@@ -617,6 +617,11 @@ if __name__ == "__main__":
                     params = (
                         dict(derive_adapter_params(adapter_path)) if adapter_path else {}
                     )
+                    # Same metadata merge as benchmark_adapter() — keeps the
+                    # standalone-benchmark code path in sync with the post-train one.
+                    metadata = _load_training_metadata(adapter_path) if adapter_path else None
+                    if metadata:
+                        params.update(_flatten_metadata_into_params(metadata))
                     put_result(store, name, test_hash, metrics, params=params)
                     rows.append(
                         {
