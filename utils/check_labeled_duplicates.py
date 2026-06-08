@@ -9,11 +9,10 @@ The script normalizes whitespace when comparing texts. If you pass --files,
 the script will highlight duplicates between those files and the rest of the
 directory (useful for checking a new batch against existing labels).
 """
-from __future__ import annotations
 
 import argparse
-import json
 import csv
+import json
 from pathlib import Path
 from typing import Dict, List, Tuple
 
@@ -30,8 +29,7 @@ def norm_text(text: str) -> str:
 
 
 def scan_dir(dirpath: Path) -> Dict[str, List[Tuple[Path, int, int]]]:
-    """Return mapping normalized_text -> list of (file, index, task_id).
-    """
+    """Return mapping normalized_text -> list of (file, index, task_id)."""
     mapping: Dict[str, List[Tuple[Path, int, int]]] = {}
     for p in sorted(dirpath.glob("*.json")):
         try:
@@ -47,7 +45,9 @@ def scan_dir(dirpath: Path) -> Dict[str, List[Tuple[Path, int, int]]]:
     return mapping
 
 
-def report_duplicates(mapping: Dict[str, List[Tuple[Path, int, int]]], new_files: List[Path] | None = None) -> List[Tuple[str, List[Tuple[Path, int, int]]]]:
+def report_duplicates(
+    mapping: Dict[str, List[Tuple[Path, int, int]]], new_files: List[Path] | None = None
+) -> List[Tuple[str, List[Tuple[Path, int, int]]]]:
     """Return list of (text, occurrences) for duplicates.
 
     If new_files is provided, mark duplicates that involve at least one path in new_files.
@@ -67,10 +67,16 @@ def report_duplicates(mapping: Dict[str, List[Tuple[Path, int, int]]], new_files
 
 def main() -> None:
     ap = argparse.ArgumentParser()
-    ap.add_argument("--dir", default="data/labeled", help="directory with labeled json files")
-    ap.add_argument("--files", nargs="*", help="specific files to treat as 'new' (relative to cwd)")
+    ap.add_argument(
+        "--dir", default="data/labeled", help="directory with labeled json files"
+    )
+    ap.add_argument(
+        "--files", nargs="*", help="specific files to treat as 'new' (relative to cwd)"
+    )
     ap.add_argument("--report", help="CSV path to write duplicate report")
-    ap.add_argument("--show-sample", type=int, default=5, help="how many duplicate examples to show")
+    ap.add_argument(
+        "--show-sample", type=int, default=5, help="how many duplicate examples to show"
+    )
     args = ap.parse_args()
 
     base = Path(args.dir)
@@ -86,7 +92,9 @@ def main() -> None:
     duplicates = report_duplicates(mapping, new_files)
 
     total_dupes = sum(len(occ) for _, occ in duplicates)
-    print(f"found {len(duplicates)} distinct duplicate texts, {total_dupes} total occurrences")
+    print(
+        f"found {len(duplicates)} distinct duplicate texts, {total_dupes} total occurrences"
+    )
 
     if args.report:
         with open(args.report, "w", newline="", encoding="utf-8") as fh:
