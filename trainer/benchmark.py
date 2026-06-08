@@ -708,11 +708,21 @@ if __name__ == "__main__":
             eng_table.add_column("Recall", justify="right")
             eng_table.add_column("F1", style="bold magenta", justify="right")
 
+            store_dirty = False
             for adapter in available_adapters:
-                console.print(f"  [dim]Loading engine for {adapter['name']}...[/dim]")
-                eng_metrics = engine_evaluate_model(
-                    adapter["path"], dataset, model_name=adapter["name"]
-                )
+                entry = store["results"].get(adapter["name"], {}).get(test_hash)
+                if entry and entry.get("engine_metrics"):
+                    eng_metrics = entry["engine_metrics"]
+                    console.print(f"  [dim]{adapter['name']}: using cached engine metrics[/dim]")
+                else:
+                    console.print(f"  [dim]Loading engine for {adapter['name']}...[/dim]")
+                    eng_metrics = engine_evaluate_model(
+                        adapter["path"], dataset, model_name=adapter["name"]
+                    )
+                    if entry:
+                        entry["engine_metrics"] = eng_metrics
+                        store_dirty = True
+
                 m = eng_metrics["overall"]
                 eng_table.add_row(
                     adapter["name"],
@@ -721,4 +731,6 @@ if __name__ == "__main__":
                     f"{m['f1']:.2%}",
                 )
 
+            if store_dirty:
+                save_store(store)
             console.print(eng_table)
