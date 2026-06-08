@@ -102,6 +102,14 @@ FEW_SHOT_EXAMPLES = [
         "input": "Anybody else gonna YOLO into puts? JPOW about to crash this market. NFA",
         "output": {"entities": []},
     },
+    {
+        "input": "GME is pumping again, grab calls before the squeeze",
+        "output": {"entities": [{"text": "GME", "label": "ticker"}]},
+    },
+    {
+        "input": "upstart has a decade lead in AI credit scoring over traditional lenders",
+        "output": {"entities": [{"text": "upstart", "label": "company"}]},
+    },
 ]
 
 
@@ -126,14 +134,16 @@ SYSTEM_INSTRUCTIONS = textwrap.dedent("""\
     TASK: identify every ticker symbol and company name in the input text.
 
     DEFINITIONS:
-    - ticker: A stock symbol like AAPL, TSLA, $MSFT. Usually 1-5 uppercase letters,
-      often preceded by $. INCLUDE the $ sign in the entity span when present.
-      ETFs (SPY, QQQ, VOO, IWM, JETS, ULCC) are tickers. Index abbreviations used
-      as tradeable (SPX, NDX) are tickers. Crypto symbols (BTC, ETH, LUNA) are
-      tickers when used in a trading context.
-    - company: A real corporation, hedge fund, ETF issuer, fintech app, or business
-      entity referenced by name. Can be multiple words ("Bed Bath & Beyond",
-      "SIGA Technologies", "Warner Bros Discovery", "Cash app").
+    - ticker: An all-uppercase abbreviation (1–6 letters, with or without $) for a
+      tradeable security. INCLUDE the $ sign in the entity span when present.
+      Label as ticker even when the abbreviation also names the company — e.g.
+      GME, COST, META, GOOGL are tickers, not companies, even in earnings context.
+      ETFs (SPY, QQQ, VOO, IWM), crypto (BTC, ETH), and index abbreviations used
+      as tradeable (SPX, NDX) are tickers when used in a trading context.
+    - company: The full or informal name of a company written in mixed or natural
+      case. Can be multiple words ("Bed Bath & Beyond", "Rocket Lab", "Cash app").
+      Lowercase names are still companies: "upstart", "reddit", "robinhood".
+      MUST NOT be an all-uppercase abbreviation — those are tickers.
 
     DO NOT LABEL:
     - Internet slang or finance generics: BUY, SELL, HOLD, DUMP, PUMP, YOLO, DD,
@@ -148,6 +158,9 @@ SYSTEM_INSTRUCTIONS = textwrap.dedent("""\
     EDGE CASES:
     - A token used differently in one post can be both: "Tesla" → company,
       "TSLA" → ticker — label them separately.
+    - All-caps abbreviations without $ are tickers: "GME is pumping" → GME=ticker.
+      Mixed-case is company: "GameStop rallied" → GameStop=company.
+    - Lowercase company names are companies: "upstart grew 40% yoy" → upstart=company.
     - Label EVERY occurrence. If $AAPL appears 5 times, return 5 entries.
     - Preserve exact casing and punctuation from the source — do not normalize.
 
