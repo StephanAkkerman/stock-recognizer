@@ -21,8 +21,20 @@ EPOCHS = 10
 VAL_FRACTION = 0.15
 
 ENTITY_DESCRIPTIONS = {
-    "ticker": "A stock market ticker symbol, usually 1-5 letters, often preceded by a dollar sign (e.g., $AAPL, TSLA). MUST NOT be option strikes, prices, index names, or internet slang acronyms.",
-    "company": "The name of a corporation, hedge fund, or business entity. MUST NOT be an uppercase ticker symbol, an index, or generic finance terms.",
+    "ticker": (
+        "An all-uppercase abbreviation (1–6 letters, with or without a leading $) "
+        "that refers to a tradeable security. Examples: $AAPL, TSLA, GME, META, GOOGL, SPY. "
+        "Label as ticker even when the abbreviation also names the company — GME, COST, "
+        "META, GOOGL are tickers, not companies, even in earnings or thesis contexts. "
+        "MUST NOT be option strikes (e.g. 140c), dollar amounts, index names spelled out, "
+        "or internet slang (e.g. NFA, YOLO, JPOW)."
+    ),
+    "company": (
+        "The full or informal name of a company written in mixed or natural case — "
+        "e.g. 'Apple', 'GameStop', 'Rocket Lab', 'Bed Bath & Beyond', 'upstart'. "
+        "MUST NOT be an all-uppercase abbreviation — those are tickers. "
+        "MUST NOT be a generic finance term, index name, or person's name."
+    ),
 }
 
 
