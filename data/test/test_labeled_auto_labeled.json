@@ -1,0 +1,625 @@
+[
+  {
+    "id": 8000005,
+    "data": {
+      "text": "US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough\n\n🚀🚀🚀\n\n[https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/](https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "3c9cdd907b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 47,
+              "end": 53,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000011,
+    "data": {
+      "text": "MU +1111%\n\nWhat a run! Bought it last week and was hoping MU would go up because it's the cheapest stock in the SP500 based on forward PE. Market finally realizing it now, MU to $1000!\n\nhttps://preview.redd.it/oo8lmlze0p3h1.jpg?width=1320&format=pjpg&auto=webp&s=fb42ff5d5f66898d83b6c7ba5e05ba791619e705"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "db9cb60a20",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 2,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "37ea12e979",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 58,
+              "end": 60,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "9381086b73",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 172,
+              "end": 174,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000028,
+    "data": {
+      "text": "The positions I'm adding as a regarded broke 21 yo this summer\n\nFeel in the mood to talk about the stocks I'm gonna buy. Should you listen? Probably not, but fuck it we ball. I'll add a little reasoning next to each share explaining why. \n\n1. (BRK.B) Berkshire Hathaway - Well the regards have done it again. Every dumb motherfucker and their brother has convinced themselves that they're smarter than literally the undisputable best traders in the history of the US. I'll take it at a discount fo sho.\n2. (RDDT) Reddit - 70% you growth, 198.4 million domestic mau (estimated - 50 million dau), growing use overseas, and AI licensing. All very yummy.\n3. (NOW) Servicenow - a bunch of regarded middle aged wall street guys who have no clue how AI works have decided that AI will replace servicenow. The bear case is literally some cliche \"AIpocalypse\" nonsense that's not even coherent. They'll continue to make money hand over fist.\n4. (IOT) Samsara - IOT is the overlooked basis for all of tech infrastructure. Samsara has strong financials, revenue growth, revenue growth plans, and pricing.\n5. (AMZN) Amazon - Really good financials and pricing. Amazon leo is an underlooked growth play.\n6. (SOFI) SOFI - 40% yoy growth, 5.14 over sales, all while becoming a core player in US banking infrastructure. This is no longer a \"loan\" play anymore, it's an online bank with agressive customer acquisition and expansion.\n\nLet me know if you think I'm regarded or genius please."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "af5f141608",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 244,
+              "end": 249,
+              "text": "BRK.B",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "5278488b66",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 251,
+              "end": 269,
+              "text": "Berkshire Hathaway",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "dba638e373",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 507,
+              "end": 511,
+              "text": "RDDT",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "b22501a76a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 513,
+              "end": 519,
+              "text": "Reddit",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "f0eca7420f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 655,
+              "end": 658,
+              "text": "NOW",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "c3cc881a9b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 660,
+              "end": 670,
+              "text": "Servicenow",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "c9de47fec6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 786,
+              "end": 796,
+              "text": "servicenow",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "8dcbf410fe",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 937,
+              "end": 940,
+              "text": "IOT",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "a849f921cd",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 942,
+              "end": 949,
+              "text": "Samsara",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "f6d0764b26",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 952,
+              "end": 955,
+              "text": "IOT",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "4b3077a491",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1012,
+              "end": 1019,
+              "text": "Samsara",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "29c9c29683",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1098,
+              "end": 1102,
+              "text": "AMZN",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "c5687209bf",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1104,
+              "end": 1110,
+              "text": "Amazon",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "fcbaa103af",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1149,
+              "end": 1155,
+              "text": "Amazon",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "aef696c8bf",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1195,
+              "end": 1199,
+              "text": "SOFI",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "038499593c",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1201,
+              "end": 1205,
+              "text": "SOFI",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000030,
+    "data": {
+      "text": "SNDK stock split announcement any time soon?\n\nThere's been chatter about this for sometime now, but with SNXX and SNDU stock splits slated for June 3 and June 8 respectively, do you degens think that SNDK stock split will follow any time soon?\n\nhttps://preview.redd.it/ei3b5m5l3c3h1.png?width=901&format=png&auto=webp&s=4a0f764fc061c4168f7d25630540dded381c1eba"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "a1352b81a8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "SNDK",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "dd1672d1c4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 105,
+              "end": 109,
+              "text": "SNXX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "54962ef41a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 114,
+              "end": 118,
+              "text": "SNDU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "b587208d05",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 200,
+              "end": 204,
+              "text": "SNDK",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000055,
+    "data": {
+      "text": "Market looks strong but is it basically just NVDA and friends carrying everything?\n\nSerious question.\n\nIndex keeps grinding up, AI narrative everywhere, but when you actually look under the surface, a few mega caps doing all the heavy lifting, everything else either chops or fades.\n\nThis doesn’t feel like past cycles where leadership rotated and you had multiple ways to win.\n\nRight now it’s more like, AI runs = capital piles in = everything else lags = repeat Mid caps? inconsistent.\n\nSmall caps? mostly noise unless you catch a clean move early.\n\nSo yeah, market looks strong but it’s narrow.\n\nI was messing around with GetAgent earlier just to break down sector contribution and scenario outcomes, and it basically reinforced the same thing, if the top names stall, the whole “strength” story starts looking fragile pretty fast.\n\nNot calling a top or anything, just feels like we’re way more dependent on a few names than people want to admit.\n\nSo what’s the play here, ride the leaders and ignore everything else or start looking for rotation that hasn’t shown up yet?"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "b7da8622ce",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 45,
+              "end": 49,
+              "text": "NVDA",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "f40d899326",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 625,
+              "end": 633,
+              "text": "GetAgent",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000060,
+    "data": {
+      "text": "Beware those who are shilling other stocks claiming they're the next GME! They're just trying to get your attention, and they're succeeding! 🚨\n\nThere is no next GME. As our beloved autist Michael Burry said, GME is a unique situation and a perfect storm. You won't find something like this again. They are just trying to move your attention away from GME and scatter us. From the discussion threads and the posts on the frontpage, it seems that they're succeeding.\n\n[Michael Burry tweet on GME](https://twitter.com/michaeljburry/status/1355186794640236561?s=19)\n\nJust look at the AMC thread up on the frontpage at the moment. Half the comments are from new accounts with just a handful of karma. AMC is not the next GME. The 'days to cover' on AMC is less than a day. After an initial uptick it will just fizzle out and you'll be left bagholding.\n\nIf you're still unsure, [here](https://www.nextmemestock.com/) you can find a highly advanced AI algorithm showing the next meme stock. (credits /u/adagiolifen)\n\nEdit: I think we even need to the mods to make a post and sticky it. The shilling is really becoming bad now\n\nBuy whatever the fuck you want and whatever you like. All I'm saying is it's not the next GME."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "5230184caa",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 69,
+              "end": 72,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "c9c0a6a656",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 161,
+              "end": 164,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "834abd7bc4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 208,
+              "end": 211,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "11c656f965",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 351,
+              "end": 354,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "415b3b13a7",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 490,
+              "end": 493,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "15a5559eba",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 580,
+              "end": 583,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "987073a45f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 696,
+              "end": 699,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "ccc2c41057",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 716,
+              "end": 719,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "9c71eb2a4a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 744,
+              "end": 747,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "26193a417d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1210,
+              "end": 1213,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000062,
+    "data": {
+      "text": "To all 💎🙌 who are too low karma to post\n\nI’m sure this time is toughest for those of us who don’t fit the account requirements of this sub who are feeling alone and stressed out.\n\nSomeone PM’d me asking if I thought $GME would actually go back up to $400 (Duh of course it will) so I assumed he was a bot, but after checking his account I saw he was supporting $GME a week prior to the new karma requirements. Turns out he was just a stressed German bro who needed someone to talk to since he put all his savings in and has been holding since $289. I want you guys to know you ARE NOT ALONE and you’re in our 💛 & 🧠 too!! Just keep holding brethren, and BUY THE DIP! 🚀🚀💎🙌\n\nEdit: I love all of you guys/gals, sorry I can’t get to every PM but I’m trying my best!\n\nEdit2: Stop giving me awards and use that $$ to buy the dip!🚀🚀🚀"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "e5c9d07ea3",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 216,
+              "end": 220,
+              "text": "$GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "3969656d93",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 361,
+              "end": 365,
+              "text": "$GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

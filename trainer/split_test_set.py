@@ -131,40 +131,25 @@ def stratified_split(labeled_folder, test_folder, test_fraction, seed):
         with open(out_path, "w", encoding="utf-8") as f:
             json.dump(test_tasks, f, indent=2, ensure_ascii=False)
 
-        summary.append({
-            "file": name,
-            "total_tasks": len(valid),
-            "test_tasks": len(test_tasks),
-            "test_entities": sum(_count_entities(t) for t in test_tasks),
-            "test_cashtags": sum(_count_cashtags(t) for t in test_tasks),
-        })
+        summary.append(
+            {
+                "file": name,
+                "total_tasks": len(valid),
+                "test_tasks": len(test_tasks),
+                "test_entities": sum(_count_entities(t) for t in test_tasks),
+                "test_cashtags": sum(_count_cashtags(t) for t in test_tasks),
+            }
+        )
     return summary
 
 
-def main():
-    parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument("--seed", type=int, default=42)
-    parser.add_argument("--test-fraction", type=float, default=0.15)
-    parser.add_argument(
-        "--labeled-folder", default=LABELED_FOLDER, help="Source folder for labeled tasks."
-    )
-    parser.add_argument(
-        "--test-folder", default=TEST_FOLDER, help="Output folder for stratified test files."
-    )
-    args = parser.parse_args()
+DEFAULT_SEED = 42
+DEFAULT_TEST_FRACTION = 0.15
 
-    restore_legacy_test_files(args.labeled_folder, args.test_folder)
-    clear_existing_test_files(args.test_folder)
-    summary = stratified_split(
-        args.labeled_folder, args.test_folder, args.test_fraction, args.seed
-    )
 
-    if not summary:
-        console.print("[red]No labeled files found to split.[/red]")
-        raise SystemExit(1)
-
+def _render_summary(summary, seed, test_fraction):
     table = Table(
-        title=f"Stratified test split — {args.test_fraction:.0%} per file, seed={args.seed}"
+        title=f"Stratified test split — {test_fraction:.0%} per file, seed={seed}"
     )
     table.add_column("file")
     table.add_column("source tasks", justify="right")
@@ -203,9 +188,60 @@ def main():
         f"[bold]{overall_cash_pct:.1f}%[/bold]",
     )
     console.print(table)
+
+
+def run(
+    seed=DEFAULT_SEED,
+    test_fraction=DEFAULT_TEST_FRACTION,
+    labeled_folder=LABELED_FOLDER,
+    test_folder=TEST_FOLDER,
+    quiet=False,
+):
+    """Programmatic entry point. Same seed → same split, every time.
+
+    Intended to be called from `train.py` at startup so the held-out test
+    set always reflects the current labeled data state.
+    """
+    restore_legacy_test_files(labeled_folder, test_folder)
+    clear_existing_test_files(test_folder)
+    summary = stratified_split(labeled_folder, test_folder, test_fraction, seed)
+    if not summary:
+        raise RuntimeError(f"No labeled files found to split in {labeled_folder}.")
+    if not quiet:
+        _render_summary(summary, seed, test_fraction)
+    return summary
+
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--seed", type=int, default=DEFAULT_SEED)
+    parser.add_argument("--test-fraction", type=float, default=DEFAULT_TEST_FRACTION)
+    parser.add_argument(
+        "--labeled-folder",
+        default=LABELED_FOLDER,
+        help="Source folder for labeled tasks.",
+    )
+    parser.add_argument(
+        "--test-folder",
+        default=TEST_FOLDER,
+        help="Output folder for stratified test files.",
+    )
+    args = parser.parse_args()
+
+    try:
+        run(
+            seed=args.seed,
+            test_fraction=args.test_fraction,
+            labeled_folder=args.labeled_folder,
+            test_folder=args.test_folder,
+        )
+    except RuntimeError as exc:
+        console.print(f"[red]{exc}[/red]")
+        raise SystemExit(1)
+
     console.print(
-        f"\n[green]Next:[/green] run `python trainer/benchmark.py` to rescore all "
-        f"adapters against the new test set."
+        "\n[green]Next:[/green] run `python trainer/benchmark.py` to rescore all "
+        "adapters against the new test set."
     )
 
 

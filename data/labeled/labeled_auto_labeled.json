@@ -1,0 +1,3606 @@
+[
+  {
+    "id": 8000000,
+    "data": {
+      "text": "Daddy Powell just kicked us in the balls “Stocks are overvalued”\n\nWell, Daddy Powell just came and laid the smack down on the market. Says stocks are overvalued.\n\nWell F U Powell I’m going to the moon! \n\nhttps://www.cnbc.com/2025/09/23/fed-powell-stock-prices-appear-fairly-highly-valued.html"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000001,
+    "data": {
+      "text": "United Airlines plans for oil hitting $175 a barrel and staying above $100 next year as industry faces worst shock since COVID\n\nhttps://fortune.com/2026/03/21/united-airlines-oil-prices-175-iran-war-industry-shock-fuel-costs-capacity-cuts/"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "dc87f5dac1",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 15,
+              "text": "United Airlines",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000002,
+    "data": {
+      "text": "Intel is saved. Nana can rest now. Nvidia and Intel partnership\n\n[https://www.tradingview.com/news/reuters.com,2025:newsml\\_L3N3V50BY:0-nvidia-bets-big-on-intel-with-5-billion-stake-and-chip-partnership](https://www.tradingview.com/news/reuters.com,2025:newsml_L3N3V50BY:0-nvidia-bets-big-on-intel-with-5-billion-stake-and-chip-partnership)\n\nHere is the link. Trumped will boost Intel even more. YOLO intel. 30$ premarket."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "2d5eb1771f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 5,
+              "text": "Intel",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "ba6d058d0b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 35,
+              "end": 41,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "707d007055",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 46,
+              "end": 51,
+              "text": "Intel",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "5901a66b1c",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 155,
+              "end": 160,
+              "text": "intel",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "8580e86ca2",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 292,
+              "end": 297,
+              "text": "intel",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "656ac01c3f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 379,
+              "end": 384,
+              "text": "Intel",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "e217c7f744",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 401,
+              "end": 406,
+              "text": "intel",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000003,
+    "data": {
+      "text": "I borrowed $5.7M to invest. Should I borrow more?\n\n[Last post](https://www.reddit.com/r/wallstreetbets/comments/1l9z4yl/i_borrowed_5m_to_invest_should_i_borrow_more/), I had a $2.1M account with $1M in gains.\n\nIn 6 months, the account grew another **+$470K** so I'm at **+$1.5M** of total gains [since my first post 5 and a half years ago](https://www.reddit.com/r/wallstreetbets/comments/ibhpo2/psa_leverage_margin_and_proper_diversification/). I did withdraw $250K to buy a new home, so the account sits at $2.3M.\n\n[Ending - Net Deposits = +$1.5M in gains](https://preview.redd.it/322xfhvafn4g1.png?width=413&format=png&auto=webp&s=8021b1db3c461e3dc6645fdaac8c026e4e3f7eb0)\n\n  \n That's a +27% compound return a year for nearly 6 years. I continue to crush regular, r/stock boomer index fund portfolios:\n\n[I \\(blue\\) am +263&#37; while stocks \\(green\\) are barely +100&#37; over that time period](https://preview.redd.it/hlqiqv1lfn4g1.png?width=657&format=png&auto=webp&s=fc12e2fdda95efb9aef3ec2899f5d6849aaa38c7)\n\nThe account has $7.3M assets and $5M borrowed in options so that's **3.2x** leverage. I'm under-leveraged, I know. The prudent and correct thing is to borrow another $2M and get back to the optimal 4x leverage. I haven't decided.\n\nSummary:\n\n\\- Borrow 2-4x the value of your account on margin.\n\n\\- Dump it all in a multi-asset, diversified portfolio. For the stock sleeve, I prefer smart-beta funds due to their higher expected returns. **The goal is maximum compound returns.**\n\n[Positions: Stocks, bonds, mutual funds and $5M borrowed in Box Spread Options](https://preview.redd.it/a9q7blx3sn4g1.png?width=1494&format=png&auto=webp&s=593d605f7cd0a610c53acd85f9236514de55ad7b)\n\n\n\nQ&A\n\n1) *When will you de-lever/pay-off the debt/liquidate?*\n\n\\- Never. This maximizes returns. Why do anything but this?\n\n2) *What's it like for your account to grow +$1M per year?*\n\n\\- It's cool, you should try it. Save what you can, invest it like this and give it time. I started with just $20K in 2017.\n\n*3) Are you a billionaire with a bunch of assets elsewhere?*\n\n\\- I have every penny riding in here. Any other place it could be in will earn me less than 27% per year so why do that?"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000004,
+    "data": {
+      "text": "U.S. to impose 100% tariff on branded, patented drugs unless firms build plants locally\n\nU.S. to impose 100% tariff on branded, patented drugs unless firms build plants locally\nhttps://www.cnbc.com/2025/09/26/us-to-impose-100percent-tariff-on-branded-patented-drugs-unless-firms-build-plants-locally-trump-says.html"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000005,
+    "data": {
+      "text": "US clears H200 chip sales to 10 China firms as Nvidia CEO looks for breakthrough\n\n🚀🚀🚀\n\n[https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/](https://www.reuters.com/business/retail-consumer/us-clears-h200-chip-sales-10-china-firms-nvidia-ceo-looks-breakthrough-2026-05-14/)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "3c9cdd907b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 47,
+              "end": 53,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000006,
+    "data": {
+      "text": "Thanks regards!\n\nhttps://preview.redd.it/zxbamu1jjq0h1.png?width=1346&format=png&auto=webp&s=fef89669a8f992a2ac6d325764e1eecb76199717\n\nI did it. I bought MU at the peak yesterday. You're welcome."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "52ec162ba8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 154,
+              "end": 156,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000007,
+    "data": {
+      "text": "Shorted Nebius (NBIS) by 730,000 today, checkin tomorrow after earnings (see screenshot).\n\nDescription is in the title.\n\nhttps://preview.redd.it/34h7h8gvjt0h1.jpg?width=1170&format=pjpg&auto=webp&s=0f2dd397b8de4914a3881a22267ea5615170de2b"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "2ccb7b8390",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 8,
+              "end": 14,
+              "text": "Nebius",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "734fc9480e",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 16,
+              "end": 20,
+              "text": "NBIS",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000008,
+    "data": {
+      "text": "Yeah, our son’s college fund is growing well.\n\nhttps://preview.redd.it/gxqzkti3af1h1.png?width=806&format=png&auto=webp&s=73e8d88633b68b171fb8ac522417b134b823303c\n\nI felt like a loser; I wasn’t even shorting the market."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000009,
+    "data": {
+      "text": "First \"day trade\" since Covid - why not....thanks FIG $170,256.48 in 24 hours on shares - not options\n\nhttps://preview.redd.it/zo0x6qu69c1h1.jpg?width=938&format=pjpg&auto=webp&s=093e34ae7aa0c162cd235fbbadb53eedd26dbe24\n\nstarted watching this stock on april 24th and bought 10 shares for a degenerate post on WSB - thanks to that guy, i should have YOLO'd a FULL PORT at the time but didnt have the balls like him. when i saw earnings report was yesterday i said fuck it and went all in for a quick gain. Happy Friday y'all. and the rich get richer.\n\nfor those of you about to say must be nice to have mom and dads money, see my previous [RYCEY YOLO GAINS](https://www.reddit.com/r/wallstreetbets/comments/1s2gfry/2019_to_2026_investing_196785827_in_realized/?utm_source=share&utm_medium=web3x&utm_name=web3xcss&utm_term=1&utm_content=share_button) from 2 months ago. ive been sitting on cash since then and got fomo from all the gains porn ive been seeing so went in for a quick flip.\n\nthose who will ask why i didnt do options - i have a gambling addiction so i cancelled my ability to do options or have margin in my brokerage account to prevent me from being a true regard."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "91452eef63",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 50,
+              "end": 53,
+              "text": "FIG",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "f3fa848fe5",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 639,
+              "end": 644,
+              "text": "RYCEY",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000010,
+    "data": {
+      "text": "AssTits starting to look seriously ridiculous\n\nNot even trying to sound dramatic but ASTS setup into June is getting kinda ridiculous.  \nYou’ve got a  huge short interest + retail piling in + crazy call open interest for June + first 3-batch satellite launch in June + SpaceX IPO hype floating around at the same time and most importantly a stock that already moves like a crackhead. \n\nThe options chain is what’s really interesting to me.  \nJune 18 calls are loaded to the tits.   \n180calls have around 50,000 open interest. 130’s, 150’s and 170’s are stacked too. \n\nNo idea what’s gonna happen but I’m along for the ride \n\nPositions in comments."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "d549127387",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 85,
+              "end": 89,
+              "text": "ASTS",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "f55eeb48f6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 269,
+              "end": 275,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000011,
+    "data": {
+      "text": "MU +1111%\n\nWhat a run! Bought it last week and was hoping MU would go up because it's the cheapest stock in the SP500 based on forward PE. Market finally realizing it now, MU to $1000!\n\nhttps://preview.redd.it/oo8lmlze0p3h1.jpg?width=1320&format=pjpg&auto=webp&s=fb42ff5d5f66898d83b6c7ba5e05ba791619e705"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "db9cb60a20",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 2,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "37ea12e979",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 58,
+              "end": 60,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "9381086b73",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 172,
+              "end": 174,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000012,
+    "data": {
+      "text": "New Fed Chair Kevin Warsh suggests he may take an Alan Greenspan-style approach at the central bank\n\n[https://finance.yahoo.com/economy/policy/article/new-fed-chair-kevin-warsh-suggests-he-may-take-an-alan-greenspan-style-approach-at-the-central-bank-135046787.html](https://finance.yahoo.com/economy/policy/article/new-fed-chair-kevin-warsh-suggests-he-may-take-an-alan-greenspan-style-approach-at-the-central-bank-135046787.html)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000013,
+    "data": {
+      "text": "Are these AI and semiconductor type of stocks truly once a generation opportunities\n\nAre these opportunities truly once a generation or is there always an industry or stock that is shooting up like this?"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000014,
+    "data": {
+      "text": "SUPER auspicious closing prices for Both GOOGL 388.88 and GOOG 384.84 -  May 26, 2026\n\nhttps://preview.redd.it/ubp7l1yfyl3h1.png?width=944&format=png&auto=webp&s=7c338b6edba598d898d6a22b97ae7ada0adec06b\n\nhttps://preview.redd.it/2tqhkhogyl3h1.png?width=3624&format=png&auto=webp&s=c9d790d890d61750cf883577a64adce0e4ee58c2\n\nNot only does the GOOGL daily chart looks like a ST reversal in trend is about to develop. Sequential counter at 1-0 Sell (a positive count).  The closing price of 388.88 has four eights.\n\n8888 in Cantonese is **八八八八 where 八 is a homophone for the Chinese word 發 (faat) which means \"to strike it rich\".  To have 2 in a row is super lucky, 4 in a row is astronomical wealth.**\n\n**The number 4 in Cantonese is** 四 where 四 is a homophone for the Chinese word 死 (***sei) which means \"death\"***\n\n***So 88.88 or 8888 in Cantonese*** **發發發發** ***reads like*** **發**死 in Cantonese and means \"Unstoppable Wealth\"\n\nIn Hong Kong, people pay hundreds of thousands for Car License plates in public auctions.  In phone numbers and addresses.\n\nHaving 4 consecutive 8 is fortuitous indeed over there.\n\nAs for GOOG at 384.84\n\nThat's 2 strict **發**死 in a row.  A literal string of Die Rich.\n\nThe happy coincidence today is that both GOOGLE shares closed with similar auspicious numbers that compliments each other, affirming future direction for Google stock.\n\n\n\nMay 27 11AM update\n\nGOOGL 390.84  range so far 385.90 to 392.85\n\nI wrote 385 May 29 puts for 3.50 with delta < -0.21 and Vega 0.07 - excellent chance I keep the premium."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "fdd878cfda",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 41,
+              "end": 46,
+              "text": "GOOGL",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "90462a9f2d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 58,
+              "end": 62,
+              "text": "GOOG",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "40e890ff84",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 340,
+              "end": 345,
+              "text": "GOOGL",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "7723c03c60",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1115,
+              "end": 1119,
+              "text": "GOOG",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "5af84358df",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1237,
+              "end": 1242,
+              "text": "GOOGL",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "eb7fa3bef1",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1350,
+              "end": 1356,
+              "text": "Google",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "77f0e60ae8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1387,
+              "end": 1392,
+              "text": "GOOGL",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000015,
+    "data": {
+      "text": "Serious question for the SpaceX bulls\n\nI’m genuinely trying to understand the bull case, not argue.\n\nAt a potential $1.5T+ valuation, what is the actual revenue and profit path that gets SpaceX there?\n\nMy hesitation is that the core Starlink thesis seems somewhat self-limiting. The original value proposition is providing internet where traditional broadband isn’t available, but many of those underserved regions also have lower purchasing power. If customers can’t afford conventional broadband today, why should we assume they’ll become highly profitable Starlink subscribers tomorrow?\n\nBeyond that, Starlink’s highest-value customers appear to be airlines, cruise ships, governments, militaries, and remote enterprises. Those are valuable markets, but are they truly large enough to support a valuation that would place SpaceX among the most valuable companies in the world?\n\nFor context, companies worth $1T-$3T typically generate tens or even hundreds of billions in annual profit and hundreds of billions in revenue. What specific revenue streams do SpaceX bulls believe can realistically scale to that level?"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "0214a628dd",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 25,
+              "end": 31,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "6c89e29729",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 187,
+              "end": 193,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "498fa96379",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 233,
+              "end": 241,
+              "text": "Starlink",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "539eea544f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 559,
+              "end": 567,
+              "text": "Starlink",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "0746adcce9",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 604,
+              "end": 612,
+              "text": "Starlink",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "d1fed6b72f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 825,
+              "end": 831,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "dfa97da26f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1058,
+              "end": 1064,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000016,
+    "data": {
+      "text": "Am I the only one confused about why NVIDIA crushed earnings and the stock still went red? And whats with the big jump in Dividend 👍\n\nNVIDIA just reported its Q1 2026 results (fiscal Q1 FY27, quarter ended April 26) and it's another all-time high across the board.\n\nRevenue came in at $81.6 billion, up 85% from a year ago and 20% from last quarter.\n\nNet income hit $58.3 billion — up 211% YoY. Non-GAAP EPS of $1.87 beat the Street's $1.77 estimate by over 5%.\n\nThe entire growth story is Data Center, which pulled in $75.2 billion — up 92% YoY. \n\nHyperscalers and AI cloud providers are absorbing Blackwell GPUs faster than any product ramp in NVIDIA's history. Even networking (InfiniBand, NVLink) surged 199% YoY — customers are buying full AI systems, not just chips.\n\nGross margins expanded to 74.9% from just 60.5% a year ago, and NVIDIA announced an $80 billion buyback plus raised its quarterly dividend from $0.01 to $0.25 per share (the dividend jump is huge, and a big news for major shareholders).\n\nQ2 guidance came in at $91 billion — well above Wall Street's \\~$87B expectation. China remains excluded from guidance entirely after export controls wiped out H20 sales last year.\n\nSo why did the stock dip \\~1%? Because at this point, beating estimates is the baseline. Wall Street has priced in perfection — and anything short of a shock to the upside barely moves the needle.\n\nNot financial advice. Do your own research."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "ce0dfeea6b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 37,
+              "end": 43,
+              "text": "NVIDIA",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "b794f96644",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 134,
+              "end": 140,
+              "text": "NVIDIA",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "4d949a34de",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 646,
+              "end": 652,
+              "text": "NVIDIA",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "8ece94f9db",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 838,
+              "end": 844,
+              "text": "NVIDIA",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000017,
+    "data": {
+      "text": "$LUNR Intuitive Machines falls after NASA names Blue Origin to deliver the first Lunar Terrain Vehicle\n\nDuring today’s NASA Moon Base briefing, it was announced that Blue Origin will deliver the first Lunar Terrain Vehicle (LTV) as part of the initial robotic missions supporting the lunar base. This comes as a surprise to many, since Intuitive Machines (LUNR) won the earlier LTV feasibility study with its Moon RACER team and had been seen as a strong contender for the next phase. LUNR shares dropped on the news as the long-pending LTV decision appears to have gone (at least partially) to Blue Origin.\n\n[https://www.youtube.com/watch?v=Nyki6O1oxIg](https://www.youtube.com/watch?v=Nyki6O1oxIg)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "4243945913",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 5,
+              "text": "$LUNR",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "5aff66de87",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 6,
+              "end": 24,
+              "text": "Intuitive Machines",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "bef8c995d7",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 37,
+              "end": 41,
+              "text": "NASA",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "d7b3665a05",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 48,
+              "end": 59,
+              "text": "Blue Origin",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "56bec92067",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 119,
+              "end": 123,
+              "text": "NASA",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "dfadf6e105",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 166,
+              "end": 177,
+              "text": "Blue Origin",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "05774462c6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 336,
+              "end": 354,
+              "text": "Intuitive Machines",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "13f7f481b6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 356,
+              "end": 360,
+              "text": "LUNR",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "ab9ad3e643",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 485,
+              "end": 489,
+              "text": "LUNR",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "269d36e23a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 595,
+              "end": 606,
+              "text": "Blue Origin",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000018,
+    "data": {
+      "text": "SpaceX IPO sell off ?\n\n$SPCX filed its S-1 on May 20, targets a Nasdaq listing June 12 at a $1.75T valuation. Index providers literally rewrote their rules to fast-track it in.\n\nHow big ETFs gonna include $SPCX in their holding?\n\n1. will they proportionally sell of holdings and we will be fucked ?\n2. or the last name in SPY (500/500) / QQQ (100/100) gonna be trimmed out directly $CSGP ?\n3. or the ETFs will run 500+1 & 100+1 ?\n4. or it will happen gradually given some ETFs have rebalancing quarterly window ?\n\nThis is what Bloomberg thinks\n\nhttps://preview.redd.it/bxatbz13f43h1.png?width=1149&format=png&auto=webp&s=8ef09dc7bb99d06566ace2e8f9315560947465f2"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "432c9d6092",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 6,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "ab13f66c00",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 23,
+              "end": 28,
+              "text": "$SPCX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "53e79e7990",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 205,
+              "end": 210,
+              "text": "$SPCX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "ffa2965fba",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 322,
+              "end": 325,
+              "text": "SPY",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "45a4823309",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 338,
+              "end": 341,
+              "text": "QQQ",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "52bb8efd2e",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 382,
+              "end": 387,
+              "text": "$CSGP",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000019,
+    "data": {
+      "text": "CNBC - U.S., Iran close in on 60-day ceasefire extension with nuclear framework: FT\n\nCalls on Tuesday \n\nU.S., Iran close in on 60-day ceasefire extension with nuclear framework: FT\n\n \n\nhttps://www.cnbc.com/2026/05/23/us-iran-war-talks.html?\\_\\_source=androidappshare"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000020,
+    "data": {
+      "text": "No More PDT Restriction\n\nBoys, the FINRA PDT rule is basically dead.\n\nThat’s right. The ancient boomer “3 day trades and you’re banned unless you have $25k” garbage under Rule 4210 is getting replaced.\n\nNo more:\n\n* “pattern day trader” scarlet letter\n* counting trades like your parole officer\n* getting locked because you bought NVDA calls 4 times in a week with your $713 account\n\nThe SEC approved changes that replace the old PDT system with real-time margin requirements instead.\n\nTranslation for the financially illiterate:  \nIf your broker lets you trade and you have enough margin, you can trade.\n\nThe 2001 dot-com era training wheels are finally coming off.\n\nOf course this does NOT mean:\n\n* you suddenly know risk management\n* your 0DTE SPY puts are smart\n* you won’t blow up your account before lunch\n\nIt just means the government can no longer stop you from discovering leverage at terminal velocity.\n\nTL;DR:\n\nSoon, you can day trade as much as you want.  \n  \nGodspeed, regards."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "468fbfc823",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 35,
+              "end": 40,
+              "text": "FINRA",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "836bf0ac9b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 330,
+              "end": 334,
+              "text": "NVDA",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "dade02cece",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 746,
+              "end": 749,
+              "text": "SPY",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000021,
+    "data": {
+      "text": "INTC 36k gains, boss saved me from selling it 5 days ago!\n\nYou may recall I had posted 5 days ago that I am selling all my INTC and getting out.\n\nWell just as I pressed the post button I got a call from my boss about an urgent situation.\n\nSpent the whole day trying to fix that and ended up forgetting about closing my INTC.\n\nJust got a notification that my INTC position is up 5% today and I realized that I never closed my position.\n\nWow my boss saved me from making regarded moves!\n\nTaking her to lunch at a nice place on Friday, but not going to tell her what happened.\n\nhttps://preview.redd.it/ulmj2wdp8c2h1.png?width=1416&format=png&auto=webp&s=722f51dd2953c287e1ce98f19d364cbcb3a9a5a5"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "92a2acc6a9",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "INTC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "3bfd5058b1",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 123,
+              "end": 127,
+              "text": "INTC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "a0696b29a1",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 319,
+              "end": 323,
+              "text": "INTC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "277dff6af7",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 358,
+              "end": 362,
+              "text": "INTC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000022,
+    "data": {
+      "text": "The market will continue being bullish as long as the sentiment here stays bearish\n\nPlease continue being realistic/grounded/pessimistic/nihilistic I’m not ready for this “bubble” to burst yet."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000023,
+    "data": {
+      "text": "Anthropic about to turn profitable in Q2 of 2026 - WSJ\n\nAnthropic is experiencing such explosive growth that it is expected to report its **first-ever operating profit in the second quarter of 2026**, according to internal financial projections reviewed by [The Wall Street Journal](https:).\n\nAnthropic generated **$4.8 billion in revenue in Q1 2026**.\n\nIt expects revenue to jump to **$10.9 billion in Q2 2026**, a **130% increase in just one quarter**.\n\nAnthropic is projected to earn **$559 million in operating profit** for the quarter.\n\nThis is significant milestones because most AI companies are still losing large amounts of money due to the enormous cost of computing infrastructure.\n\nMuch of this growth is being driven by strong enterprise adoption of Anthropic’s Claude AI models, particularly coding and agentic tools that help businesses automate software development and complex workflows.\n\nAt the same time, Anthropic’s operating efficiency is improving, with computing costs expected to decline from 71 cents to 56 cents for every dollar of revenue, showing that the company is scaling while becoming more cost-effective.\n\nThis performance marks a major turning point for the AI industry, demonstrating that generative AI companies can reach profitability much faster than many investors expected. It also strengthens Anthropic’s position as one of the most formidable competitors to OpenAI and has fueled speculation that the company could soon command a valuation approaching $900 billion, placing it among the most valuable private technology firms in the world.\n\n[Mind-blowing growth is about to propel Anthropic into its first profitable quarter](https://www.msn.com/en-us/news/technology/mind-blowing-growth-is-about-to-propel-anthropic-into-its-first-profitable-quarter/ar-AA23FT6o?ocid=BingNewsSerp)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "992861df79",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 9,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "577224846d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 56,
+              "end": 65,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "35721c2a0c",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 293,
+              "end": 302,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "ffa022dcd8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 456,
+              "end": 465,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "6e26934b6b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 763,
+              "end": 772,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "434dff2609",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 924,
+              "end": 933,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "1c47289e7b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1335,
+              "end": 1344,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "c84508cdff",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1401,
+              "end": 1407,
+              "text": "OpenAI",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "6b4e63cc07",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1624,
+              "end": 1633,
+              "text": "Anthropic",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000024,
+    "data": {
+      "text": "1st option trade making $100K -- THANK YOU SNDK\n\nMy 1st ever 100K profit....\n\nhttps://preview.redd.it/4ywmy8vspi3h1.jpg?width=1922&format=pjpg&auto=webp&s=1f92617bdb6e550df601af47f5f09e2eed4fc4ff"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "ca38049129",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 43,
+              "end": 47,
+              "text": "SNDK",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000025,
+    "data": {
+      "text": "Kevin Warsh has just been sworn in as the chairman of the Fed (Watch)\n\nhttps://www.youtube.com/live/QVU9AJNANoU?si=jF6QOiuch74XkYUM"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000026,
+    "data": {
+      "text": "What are your thoughts on Sivers Semiconductors ($SIVE)?\n\nThe company is trading at a sky-high Price-to-Sales (P/S) ratio (around 45x) and remains unprofitable, but it has some fundamentals that are making me consider adding it as a speculative play in my portfolio.\n\nHere is a quick summary of the key points for discussion:\n\nThey just delayed and adjusted their financial reports to comply with US regulations. The reason? They are preparing a dual listing to start trading on the New York NASDAQ, which would inject a massive amount of liquidity.\n\nTop Management Team: The new CEO and the Chairman previously led divisions at the giant GlobalFoundries. The goal is clear: transition from being a prototyping engineering firm to mass-producing chips. The rest of the team consists of industry veterans and former founders, so they definitely have the experience and a proven track record.\n\n\"Secret\" Fortune 100 Customers:  \n **Apple (Consumer):** They are developing micro-lasers for health sensors in wearables (estimated at 50M units/year).  \n **Meta (AI):** Their optical chips replace traditional copper wiring to connect Nvidia GPUs using light, eliminating bottlenecks in AI data centers.  \n **Amazon Kuiper (Satellites):** Million-dollar radiofrequency contracts for low Earth orbit (LEO) constellations.  \n **The Nvidia bridge:** They are the exclusive suppliers of laser light sources for Ayar Labs (a startup directly backed by Nvidia and Intel).\n\nDoes anyone here hold this in their portfolio or know it inside out?   \nDo you think it's worth getting in right now, or do the regulatory risks and steep valuation mean we should wait for a major correction?   \nOr do you think this is pure smoke and just a deliberate pump-and-dump?"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "54c86f5f60",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 26,
+              "end": 47,
+              "text": "Sivers Semiconductors",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "4053cde1c4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 49,
+              "end": 54,
+              "text": "$SIVE",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "592d727c77",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 639,
+              "end": 654,
+              "text": "GlobalFoundries",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "cb483bac3f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 929,
+              "end": 934,
+              "text": "Apple",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "60892126dc",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1050,
+              "end": 1054,
+              "text": "Meta",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "a620af3e1c",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1128,
+              "end": 1134,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "42ab9c9059",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1202,
+              "end": 1208,
+              "text": "Amazon",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "4793939e1d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1323,
+              "end": 1329,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "18f9e03e6d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1400,
+              "end": 1409,
+              "text": "Ayar Labs",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "ee26d296e0",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1440,
+              "end": 1446,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "fea9c91034",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1451,
+              "end": 1456,
+              "text": "Intel",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000027,
+    "data": {
+      "text": "Jr.Burry on $MU\n\n1. Memory is a Commodity, Not a Moat  \n2. SK Hynix and Samsung, the hyperscalers will mercilessly pit the memory makers against each other to drive prices into the dirt.\n\nCurrently stuck with FKN Elon on $SPCX and $TSLA   \n(Waiting on 350k$ margin bet to go tits up, hodling my last position as posted on r/wallstreetbets). \n\nOnce TSLA goes UP, I will sell that and short $MU now that HOOD allows shorting stocks. \n\nWhat could go wrong!!??  \n(I tried Michel Scott’s “I declare bankruptcy” meme but failed)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "7508b08449",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 12,
+              "end": 15,
+              "text": "$MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "72e42eea56",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 59,
+              "end": 67,
+              "text": "SK Hynix",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "8a9c0b0d26",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 72,
+              "end": 79,
+              "text": "Samsung",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "364f5a34d1",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 221,
+              "end": 226,
+              "text": "$SPCX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "93a35124a2",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 231,
+              "end": 236,
+              "text": "$TSLA",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "db61ad0093",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 348,
+              "end": 352,
+              "text": "TSLA",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "783b410484",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 389,
+              "end": 392,
+              "text": "$MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "c3d22d18e5",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 402,
+              "end": 406,
+              "text": "HOOD",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000028,
+    "data": {
+      "text": "The positions I'm adding as a regarded broke 21 yo this summer\n\nFeel in the mood to talk about the stocks I'm gonna buy. Should you listen? Probably not, but fuck it we ball. I'll add a little reasoning next to each share explaining why. \n\n1. (BRK.B) Berkshire Hathaway - Well the regards have done it again. Every dumb motherfucker and their brother has convinced themselves that they're smarter than literally the undisputable best traders in the history of the US. I'll take it at a discount fo sho.\n2. (RDDT) Reddit - 70% you growth, 198.4 million domestic mau (estimated - 50 million dau), growing use overseas, and AI licensing. All very yummy.\n3. (NOW) Servicenow - a bunch of regarded middle aged wall street guys who have no clue how AI works have decided that AI will replace servicenow. The bear case is literally some cliche \"AIpocalypse\" nonsense that's not even coherent. They'll continue to make money hand over fist.\n4. (IOT) Samsara - IOT is the overlooked basis for all of tech infrastructure. Samsara has strong financials, revenue growth, revenue growth plans, and pricing.\n5. (AMZN) Amazon - Really good financials and pricing. Amazon leo is an underlooked growth play.\n6. (SOFI) SOFI - 40% yoy growth, 5.14 over sales, all while becoming a core player in US banking infrastructure. This is no longer a \"loan\" play anymore, it's an online bank with agressive customer acquisition and expansion.\n\nLet me know if you think I'm regarded or genius please."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "af5f141608",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 244,
+              "end": 249,
+              "text": "BRK.B",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "5278488b66",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 251,
+              "end": 269,
+              "text": "Berkshire Hathaway",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "dba638e373",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 507,
+              "end": 511,
+              "text": "RDDT",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "b22501a76a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 513,
+              "end": 519,
+              "text": "Reddit",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "f0eca7420f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 655,
+              "end": 658,
+              "text": "NOW",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "c3cc881a9b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 660,
+              "end": 670,
+              "text": "Servicenow",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "c9de47fec6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 786,
+              "end": 796,
+              "text": "servicenow",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "8dcbf410fe",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 937,
+              "end": 940,
+              "text": "IOT",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "a849f921cd",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 942,
+              "end": 949,
+              "text": "Samsara",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "f6d0764b26",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 952,
+              "end": 955,
+              "text": "IOT",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "4b3077a491",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1012,
+              "end": 1019,
+              "text": "Samsara",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "29c9c29683",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1098,
+              "end": 1102,
+              "text": "AMZN",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "c5687209bf",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1104,
+              "end": 1110,
+              "text": "Amazon",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "fcbaa103af",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1149,
+              "end": 1155,
+              "text": "Amazon",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "aef696c8bf",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1195,
+              "end": 1199,
+              "text": "SOFI",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "038499593c",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1201,
+              "end": 1205,
+              "text": "SOFI",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000029,
+    "data": {
+      "text": "I feel like I am stuck in the washing machine and step bro is behind me...\n\nhttps://preview.redd.it/gtz9zlpyys2h1.jpg?width=1163&format=pjpg&auto=webp&s=7cc65b6b14c42c9ffec7658ee15b10173354d65f\n\nI learned my lesson from selling a covered call on AMD in 2025 (called away at $210) and selling a covered call on GOOG in 2024 (called away at $165..) so this year I made sure to hold my urge and try not sell covered calls. I thought PANW was safe cuz it was software but security software isn't exposed to AI threat so I thought I was being smart. Long story short, I only sold 1 PANW call 2 months ago at 0.1 delta I thought it would expire worthless or at worse, I will just need to roll it out a few times and wait for a pullback. The fucker never pulled back and I rolled once before this thing really went to val hallah...\n\nThe stupid market plays this stupid joke on me again. It pumped PANW so hard like it was a semiconductor stock and it never had a red day. I don't know what to say. BUT this time I aint closing this position, I will keep rolling and rolling till this stock comes down and my covered call expires worthless. I will not back down!"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "6fbc04fd99",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 246,
+              "end": 249,
+              "text": "AMD",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "e43b63bfd1",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 310,
+              "end": 314,
+              "text": "GOOG",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "af31f39042",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 430,
+              "end": 434,
+              "text": "PANW",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "edc35cf853",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 577,
+              "end": 581,
+              "text": "PANW",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "afcf707bf3",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 890,
+              "end": 894,
+              "text": "PANW",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000030,
+    "data": {
+      "text": "SNDK stock split announcement any time soon?\n\nThere's been chatter about this for sometime now, but with SNXX and SNDU stock splits slated for June 3 and June 8 respectively, do you degens think that SNDK stock split will follow any time soon?\n\nhttps://preview.redd.it/ei3b5m5l3c3h1.png?width=901&format=png&auto=webp&s=4a0f764fc061c4168f7d25630540dded381c1eba"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "a1352b81a8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "SNDK",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "dd1672d1c4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 105,
+              "end": 109,
+              "text": "SNXX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "54962ef41a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 114,
+              "end": 118,
+              "text": "SNDU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "b587208d05",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 200,
+              "end": 204,
+              "text": "SNDK",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000031,
+    "data": {
+      "text": "VIX will go up closer to SpaceX June IPO, whats the best play?\n\nHey folks,\n\nI come before you as a broke engineering student who is 100% convinced space is the future in the short and long term. If I had money I'd have a ''diverse'' portfolio of space companies like (redacted), RKLB, MDA and a bunch of others as well as the UFO ETF.\n\nProblem is that I don't have enough money to make diversification worthwhile. So I was looking for a cheap space play. Luckily, SpaceX IPO is due mid June, and I think I may have a decent play.\n\nRemember VIX? I haven't seen a peep about it since god knows when. Here's where its at right now\n\n[As of May 22, 2026](https://preview.redd.it/wkgcp0ksup2h1.png?width=1203&format=png&auto=webp&s=ae7f4d0a503ee345f047595dbe5b1f9929f6c0f5)\n\nIt being this low is actually surprising, because i would have thought the wars in ukraine and Iran would have it at least in the twenties. I reckon the SpaceX IPO is going to be like snorting a line of coke the length of an elephants dick. I think the entire space sector will be impacted and people will throw themselves on this stock like coked up monkeys on meth. Not just people like you and me, but companies and pension funds and ETFs as well. All this to say I think the movement of this IPO alone will make VIX will go up hard, and thats without considering the anticipation for it. Am I missing something here?\n\nHow do I play this? I'm thinking straight up options on VIX, but when would be a good time to buy them? I dont wanna get IV crushed or get theta gang banged. I might just buy VIXY shares and options before close, if I do i'll update with my positions. What say you?"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "3dd760e724",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 3,
+              "text": "VIX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "e2135a8f61",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 25,
+              "end": 31,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "99847bd5ed",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 279,
+              "end": 283,
+              "text": "RKLB",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "4cd6e83a82",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 285,
+              "end": 288,
+              "text": "MDA",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "c05df88789",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 326,
+              "end": 329,
+              "text": "UFO",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "d686c2e5bd",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 464,
+              "end": 470,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "2d61675f75",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 540,
+              "end": 543,
+              "text": "VIX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "a6e4e329d7",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 922,
+              "end": 928,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "c03bfd0a1a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1285,
+              "end": 1288,
+              "text": "VIX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "ce5cf1c875",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1447,
+              "end": 1450,
+              "text": "VIX",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "08eb96e838",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1566,
+              "end": 1570,
+              "text": "VIXY",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000032,
+    "data": {
+      "text": "SOXS is destined to die unless a world shaking event occurs\n\nSOXS, the daily 3x semiconductor bear will lose value even if the ICESEMI index will go sideways. I don't see a way for ICESEMI to collapse for the next two to five years unless an earthquake craters one of the NVDA, MU, AMD, AVGO, or MRVL factories.\n\nWhat is to stop me from loading up on SOXS Jan 2028 puts? I was thinking about this since Friday. I should have pulled the trigger, would have made around 43k already by today.\n\nAny counter-thesis that I am missing? Why do more people not do this? It's free money. Look at its charts:\n\nhttps://preview.redd.it/dognecve3k3h1.png?width=1006&format=png&auto=webp&s=a6059cb1e12086a99f0c316ed9e8f9331cdb2db0\n\nhttps://preview.redd.it/0ym4yndf3k3h1.png?width=1001&format=png&auto=webp&s=287d2cd831c1b3cb490d7d84b8c2403c8df377a7\n\nhttps://preview.redd.it/xujsbszf3k3h1.png?width=996&format=png&auto=webp&s=0806b379eb4a1ac69f9ae3951360042fbeb6a62a"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "33ffaff5a2",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "SOXS",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "4d2ab2b07d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 61,
+              "end": 65,
+              "text": "SOXS",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "b973c4a11a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 272,
+              "end": 276,
+              "text": "NVDA",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "e3cd09dd04",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 278,
+              "end": 280,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "1e460eb911",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 282,
+              "end": 285,
+              "text": "AMD",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "1c6715420a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 287,
+              "end": 291,
+              "text": "AVGO",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "5301149c07",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 296,
+              "end": 300,
+              "text": "MRVL",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "803057bfd3",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 351,
+              "end": 355,
+              "text": "SOXS",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000033,
+    "data": {
+      "text": "MU 1000C YOLO\n\nMU is getting all the heat! Is this the day we see it cross 1000 after hours? I do like the stock based on it's forward PE.\n\nhttps://preview.redd.it/h6hq8swehp3h1.jpg?width=1320&format=pjpg&auto=webp&s=ba5b0987dc89e30b29778ffaa9ca195c7ca454bb"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "609813ec48",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 2,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "01ab847760",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 15,
+              "end": 17,
+              "text": "MU",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000034,
+    "data": {
+      "text": "TTWO - \"GTA 6 stock is already priced in\"\n\nhttps://preview.redd.it/4p99n3kiqd2h1.png?width=1917&format=png&auto=webp&s=cf1f814164c9971bfc1f5d6ca5e9e22586addc9e\n\nRegards saying TTWO was priced in over 2 years ago. This one played out well."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "0f6564f6ec",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "TTWO",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "af5d1f2860",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 176,
+              "end": 180,
+              "text": "TTWO",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000035,
+    "data": {
+      "text": "AI Spending where is the spending ending up in the economy.\n\nI am reading the jobs report and I came across this snipped below.  How is this possible if AI spending is increasing.  I guess the quetions that comes to mind is where is the money going and why is not showing up somewhere in Hiring or in the actual economy?\n\n\n\n\"Employment in information continued to trend down in April (-13,000). Telecommunications lost 3,000 jobs, while employment continued to trend down in motion picture and sound recording industries (-6,000) and in computing infrastructure providers, data processing, web hosting, and related services  (-4,000). Information employment is down by 342,000, or 11.0 percent, since its most recent peak in November 2022. \""
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000036,
+    "data": {
+      "text": "Will China's banning cross-border investment institutions going to affect US market?\n\n[https://www.reuters.com/world/asia-pacific/china-crack-down-illegal-cross-border-securities-activities-2026-05-22/](https://www.reuters.com/world/asia-pacific/china-crack-down-illegal-cross-border-securities-activities-2026-05-22/)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000037,
+    "data": {
+      "text": "Heres why Spacex could pump after IPO.\n\nI know its unpopular opinion here and most people are expecting it to crash and burn on the ipo day but they are missing one key detail- FLOAT. Only 3%-5% of the float will be tradeable on the ipo day so in theory you wouldn't need alot of money to pump this baby upto $4T valuation. Remember alot of big private equities and family offices of rich and powerful people have money in spacex.\n\nP.S. i am not saying this is a good investment, Even if you think spacex would be the fastest growing company in the history of mankind for next 10 years, that upside has already been priced in at $1.75T valuation."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "4798838493",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 10,
+              "end": 16,
+              "text": "Spacex",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "ede99ae7a8",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 423,
+              "end": 429,
+              "text": "spacex",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "b353c8a3df",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 498,
+              "end": 504,
+              "text": "spacex",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000038,
+    "data": {
+      "text": "41K bet on DXCM turnaround play\n\nhttps://preview.redd.it/brmea3kinj2h1.png?width=1896&format=png&auto=webp&s=157dc643fcd8d87065a0fd6111f419944ac920db\n\nlooking ahead - CGMs go mainstream, stonk keeps growing, margins improve, Stelo works, type 2 coverage opens up, and DXCM stops trading like a sad medical device boomer stock.\n\nGood spot to buy in IMO.  \nPosition for reference.\n\nEDIT: Also it helps more nana's so we can get more INTC type plays 😂"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "4834640bf0",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 11,
+              "end": 15,
+              "text": "DXCM",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "0a46df7b28",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 268,
+              "end": 272,
+              "text": "DXCM",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "34f8ddc07b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 431,
+              "end": 435,
+              "text": "INTC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000039,
+    "data": {
+      "text": "XPEV quietly turning profitable\n\nAm I missing something on XPEV being a great deal at 15b market cap?\n\nI know it's a China stock and the problems involved in that.\n\nHOWEVER, \n\n1) they just hit their first quarter of profitability ($52m). Revenue up 38.2 % YOY. Profitable while spending 25% on R&D.\n\n2) the X9 and GX models genuinely look great. I'd get a X9 for a family of 4+.\n\n3) from a thematic investing standpoint they cover multiple themes. Robotics, China and AI. Three massive future and current themes. We are in the middle of AI panning out but robotics and China yet to come IMO.\n\n4) their humanoid IRON looks amazing. Due for release later this year.\n\n5) Chinese Tesla trading at 1% of Tesla's market cap.\n\n6) their driving AI is so good they sold it to Volkswagen. Selling their in-house AI software and hardware is another revenue stream.\n\nEarnings 28th May. I think it's a good opportunity but accept that Chinese stocks move a lot slower and in ways I don't understand."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "d28fafcb73",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "XPEV",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "e337fdf873",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 59,
+              "end": 63,
+              "text": "XPEV",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "0380687215",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 676,
+              "end": 681,
+              "text": "Tesla",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "ff0cef8a9d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 699,
+              "end": 704,
+              "text": "Tesla",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "b09c07990d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 767,
+              "end": 777,
+              "text": "Volkswagen",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000040,
+    "data": {
+      "text": "Which brokers do people think will actually support this on or around June 4?\n\nNow that the FINRA rule change has an effective date of June 4, 2026, I’m trying to figure out which brokers are actually planning to roll it out right away, versus which ones are likely to delay during the phase-in period.\n\nHas anyone seen anything concrete from brokers like Webull, Robinhood, IBKR, TradeZero, Schwab, etc.?\n\nI’m looking for actual info such as:\n\n•\tapp/account changes already showing up\n\n•\tsupport responses\n\n•\tofficial emails or notices\n\n•\tpersonal confirmation from customer service\n\nI know the rule becomes effective on June 4, but I also understand brokers may implement it later during the phase-in period. I’m specifically trying to find out which brokers users expect to be usable immediately or very close to that date.\n\nAny real updates would be appreciated.\n\nTo clarify, I mean the PDT rule change — removing the old $25k pattern day trader restriction and replacing it with the new intraday margin framework."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "58b4773beb",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 92,
+              "end": 97,
+              "text": "FINRA",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000041,
+    "data": {
+      "text": "How chopped am I?\n\nhttps://preview.redd.it/0b77c684mc2h1.jpg?width=1080&format=pjpg&auto=webp&s=bc9086a16bfc61bde27cf714c9e6ae91d6029dcc\n\nGains hit $21,000, then dropped to $0, then I hit $9,500 today. One big trade and I'll be back to $21,000 or $0.\n\nthere is a little voice in my head telling me DONT DO IT, but there is a chance and I know it!"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000042,
+    "data": {
+      "text": "Anyone YOLOing into ASST?\n\nASST gets no love on Reddit. It definitely is an asymmetric bet on bitcoin with leverage. They are releasing their preferred security SATA which gives 13% interest based on Bitcoin. They just changed this into a daily dividend model which will be a great place for traders to store their cash overnight.  At less l than 2 billion dollar valuation and is likely to go up with 30-40% volatility compared to Bitcoin which has cycled off highs and ready for a bull run.\n\nIn my view best way to get 10x over next 5 years. More amplified than MSTR. Not correlated with AI, if there is a downturn."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000043,
+    "data": {
+      "text": "The market will literally never go down again\n\nI don't know who needs to hear this, but the market will LITERALLY never go down again.\n\nStonks go up is no longer a meme, it is a law, like gravity, only in reverse with money.\n\nLet me explain why.\n\n1) We owe 40 trillion in debt. Our interest payments are about to exceed our GDP. This means that the only way to make our interest payments ALONE is to print enough money to cover the interest\n\n2) This will cause hyper inflation. But who cares if you own PLTR or TESLA stock? Those will inflate proportionally. You see, it's actually mathematically impossible for stocks to go down at this point. If they do, then the entire world economy will collapse\n\nThis is why you see any \"crash\" instantly recover within half a trading day. The stock market can LITERALLY NOT GO DOWN.\n\nThese are not famous last words. This is the new law of the land."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000044,
+    "data": {
+      "text": "The market will turn red\n\nOnly 5 times in my life a pigeon pooped on my right shoulder.  \nToday I went out with my bro and I got s\\*\\*t on. I have 6 Amd long calls at 200$ and short calls at 215(edited). So I am stuck unless the market goes down so I can slowly pay back my short calls.\n\nEvery time a pigeon s\\*\\*t on my shoulder for the last 15 years, I made more money than needed and from somewhere unexpected. Hence I believe the short term bear market is coming. Tomorrow will be a red day.  \nEither this or the drone pigeon marked me to be “fixed”for not paying my debt."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000045,
+    "data": {
+      "text": "What $10,000 invested in these IPO’s is worth today…\n\nWalmart: $489 million  \nCoca-Cola: $186 million   \nMcDonald's: $91 million  \nHome Depot: $85 million  \nNvidia: $56 million  \nMicrosoft: $42 million  \nOracle: $41.7 million  \nAmazon: $35 million  \nApple: $30 million  \nCisco: $19.7 million  \nDisney: $17.3 million  \nAdobe: $14.6 million  \nAMD: $7.4 million  \nNetflix: $7.3 million  \nCostco: $6.3 million  \nFedEx: $5 million  \nStarbucks: $4 million  \nTesla: $3.7 million  \neBay: $3.6 million  \nTarget: $3.4 million  \nBroadcom: $2.8 million  \nNike: $2.4 million  \nAlphabet: $1.9 million  \nMastercard: $1.3 million"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000046,
+    "data": {
+      "text": "SpaceX float is only about 4%\n\nNew rules from Nasdaq remove the 10% minimum requirement. \n\nUnder the old rules, a new stock had to season for at least 3 months before it could join the index, and it had to have at least 10% of its shares traded publicly. Both of those requirements are now gone. Now, a stock is eligible for fast-track inclusion after just 15 trading days, with almost no float if its market capitalization places it among the top 40 holdings of the Nasdaq-100.\n\nThere are reports that Musk is asking underwriters to waive the typical 180-day lock-up period that prevents company insiders and some other shareholders from selling their shares after an IPO. \n\nAccording to [Semafor](https://www.semafor.com/article/04/09/2026/spacex-bankers-game-plan-to-blunt-post-ipo-selling-tsunami), Musk is pushing for a much shorter lock-up, or even none at all, with insiders able to sell in gradual tranches tied to price and trading-volume thresholds. \n\nThat would do away with rules designed to prevent insiders from cashing out at peak hype, which are standard protections for new public shareholders.  \nIn practice, this means insiders get to cash out at what will probably be a record valuation for the company right when retail investors get their first opportunity to buy in. \n\nMusk is also apparently negotiating an above-average level of retail participation in the offering, directing [20% to 30% of the IPO to individual investors](https://marketwise.com/investing/spacex-ipo-3-unusual-things-musk-plan/), compared to the more typical 5% to 10%. Allowing insiders to exit quickly to retail buyers raises eyebrows about who benefits from these underwriting changes.\n\nSource: https://www.forbes.com/sites/garthfriesen/2026/04/25/spacex-ipo-is-forcing-changes-to-index-and-underwriting-rules/"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000047,
+    "data": {
+      "text": "Pigeon here\n\nI just shit on some guys shoulder again now and I’m straight cawing right now.   I’ve been doing this since this crackhead thinks that by me shitting on his shoulder it’s gonna result in a little red day for his stocks.  Well fuck him stocks only go up, Green Day tomorrow."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000048,
+    "data": {
+      "text": "My Uber Driver Indicator Has Been Replaced\n\nWas having dinner at a Mexican restaurant and the waiter who turned out to be the owner’s son asked if I trade stocks because he’s “just getting into it.”\n\nI gave him the standard response: “Be careful.”\n\nEvery time a random person with no market background starts asking about stocks, my recession indicator goes off.\n\nTop confirmed.\n\nEDIT: First time meeting him & within 5 minutes brought it up. My family owns a business in the same town so i related to him on that."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000049,
+    "data": {
+      "text": "In 20k of USO puts because 150 dollar oil is fking stupid\n\nOil was $69 in fucking January. Only reason it's at $150 is because of our regard POTUS.\n\nEvery oil spike in history has retraced. Gulf War, Iraq War, even the Russia Ukraine spike. Big money's been positioning short into leaps because its kind of fucking obvious.\n\nThe trade is simple, war ends eventually and big head Trump tacos. Worst case I lose $20k and we're all in a recession anyways. BASE case IMO I make $50k+ because oil HAS to come down or we're all going to STARVE.\n\nFuck Iran, fuck Israel, fuck OPEC, fuck $5 gas, and fuck you for not calling Trumps bluff.\n\nUSO 12/15/28 $80P\n\nThank you for your attention to this matter.\n\n[tailing this shit](https://preview.redd.it/2ahaz4grn72h1.png?width=2962&format=png&auto=webp&s=0d6559584623cbf6cda21bcf85e572736f9f8ad0)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000050,
+    "data": {
+      "text": "Warsh is trying to change the inflation metric\n\n**TL;DR:** Warsh wants the Fed to judge inflation using Trimmed Mean PCE instead of Core PCE. That matters because Trimmed Mean PCE is currently much lower — about 2.36% versus 3.20% for Core PCE — making inflation look closer to target and giving the Fed more justification to cut rates.\n\n  \n[https://www.brookings.edu/articles/what-are-trimmed-mean-and-median-inflation-rates-and-why-does-kevin-warsh-prefer-them/](https://www.brookings.edu/articles/what-are-trimmed-mean-and-median-inflation-rates-and-why-does-kevin-warsh-prefer-them/)\n\nhttps://preview.redd.it/umz0cl2rtt1h1.png?width=2000&format=png&auto=webp&s=c26b454e30f6c2bd4b7c27c3815b411724696b0a"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000051,
+    "data": {
+      "text": "The pigeon accusations are false\n\nI am the director of Aerial Operations at Pigeons Incorporated and I would like to formally deny involvement in today’s shoulder strike.\n\nFirst off, we pigeons do not waste premium aerial ammunition on a man already trapped in an AMD 200/215 call spread during peak IV confusion. That’s excessive. We have ethics.\n\nSecond, your interpretation system is completely backwards. Red days are caused by dumb bears saying “this can’t possibly go lower” before a major announcement or market event. We are merely observers.\n\nFor the record:\n\n\\- 2019 shoulder hit = random stimulus checks\n\n\\- 2021 shoulder hit = meme stock gamma apocalypse\n\n\\- 2024 shoulder hit = AI bubble phase 7\n\n\\- Today = unrelated digestive event from an amateur juvenile pigeon named Carl\n\nAlso, the “drone pigeon” accusations are hurtful and frankly outdated. If we were federally operated, do you really think we’d still be eating cigarette butts outside Walgreens?\n\nAnyway, based on rooftop sentiment analysis and stale french fry liquidity indicators, tomorrow will open green, rug by noon, then somehow AMD closes exactly where maximum pain hurts everyone equally.\n\nAs always,\n\nCoo coo."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "481bac8625",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 264,
+              "end": 267,
+              "text": "AMD",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "b75f2d1e23",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 958,
+              "end": 967,
+              "text": "Walgreens",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "01e6956f39",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1109,
+              "end": 1112,
+              "text": "AMD",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000052,
+    "data": {
+      "text": "Nvda will release its Q1 report today. What do you boys expect\n\nWhat is the actual hurdle rate for Jensen to make the stock go up in the  morning?\n\n​Wall Street is expecting roughly $79 Billion in revenue (only about a casual 79% YoY growth, no big deal). But after the last three quarters, I have severe post-traumatic earnings disorder. Nvidia could literally announce they’ve successfully built a conscious Skynet that runs exclusively on Blackwell chips, and the market will still find a reason to tank it 4% because forward guidance on the Rubin architecture didn't account for a solar flare."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "ddc3aaf5e2",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "Nvda",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "273402d8bf",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 339,
+              "end": 345,
+              "text": "Nvidia",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000053,
+    "data": {
+      "text": "I'm bird poop, markets will go sideways\n\nHi,\n\nI'm birdpoop that flies out of this one pigeon straight onto a crackheads shoulder.\n\nMarkets will go sideways tmrw, fuck your puts, fuck your calls, theta gang all year round."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000054,
+    "data": {
+      "text": "All in on cancer $SLS\n\nSLS has been ripping recently because of their REGAL trial ending soon. They got a drug called GPS meant to treat a type of Leukemia. Their trial is at 78 /80 events meaning we're waiting for the last two people to finish the trial. This is gonna be a huge binary event, they a previous Phase 2 CR2 AML trial which showed median overall survival of 16.3 months vs 5.4 months of the control arm. So I reckon the regal trial outta follow the same and perform very well.\n\n  \nEither way here are my positions and I'm full port on this. Used to have leaps but as you can see I started buying closer dated positions cuz I'm a greedy pig. Don't ask me about what any of the stats mean or what we're really looking for. Trial ending soon stock goes very up or very down. But probably very up me thinks. If this blows up in my face I'm gonna 9-5 and invest in google or something.\n\nhttps://preview.redd.it/twkob5xs6b2h1.png?width=1080&format=png&auto=webp&s=ea334fe543a3d28ccc2b67d7fa3083cdf36e872d"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "8edafe8c57",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 17,
+              "end": 21,
+              "text": "$SLS",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "8e1f0a9f59",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 23,
+              "end": 26,
+              "text": "SLS",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "7589c5b289",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 874,
+              "end": 880,
+              "text": "google",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000055,
+    "data": {
+      "text": "Market looks strong but is it basically just NVDA and friends carrying everything?\n\nSerious question.\n\nIndex keeps grinding up, AI narrative everywhere, but when you actually look under the surface, a few mega caps doing all the heavy lifting, everything else either chops or fades.\n\nThis doesn’t feel like past cycles where leadership rotated and you had multiple ways to win.\n\nRight now it’s more like, AI runs = capital piles in = everything else lags = repeat Mid caps? inconsistent.\n\nSmall caps? mostly noise unless you catch a clean move early.\n\nSo yeah, market looks strong but it’s narrow.\n\nI was messing around with GetAgent earlier just to break down sector contribution and scenario outcomes, and it basically reinforced the same thing, if the top names stall, the whole “strength” story starts looking fragile pretty fast.\n\nNot calling a top or anything, just feels like we’re way more dependent on a few names than people want to admit.\n\nSo what’s the play here, ride the leaders and ignore everything else or start looking for rotation that hasn’t shown up yet?"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "b7da8622ce",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 45,
+              "end": 49,
+              "text": "NVDA",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "f40d899326",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 625,
+              "end": 633,
+              "text": "GetAgent",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000056,
+    "data": {
+      "text": "I’m the guy behind the Wendy’s dumpster, markets will go green\n\nHi everyone, I have something really important to say to you all. I was just clocking in for my shift behind the Wendy’s dumpster to give out some \"favors\" to cover my blown-up 0DTE SPY puts. Right as I am setting up my cardboard box i watch this overweight pigeon demolish a half-eaten Baconator, take flight, and absolutely carpet bomb some dude who was aggressively checking his AMD calls. The splatter radius was completely unhinged. Seeing retail get literally dumped on in broad daylight is the ultimate contrarian buy signal. The bottom is in. Markets are going green tomorrow. Calls on everything. Either that, or my \"client\" list back here is about to get a lot longer. See you boys out back."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "89a0ab22ff",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 23,
+              "end": 30,
+              "text": "Wendy’s",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "7e8c72c99a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 177,
+              "end": 184,
+              "text": "Wendy’s",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "3cfe4e8c89",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 246,
+              "end": 249,
+              "text": "SPY",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "85f9cf921b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 446,
+              "end": 449,
+              "text": "AMD",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000057,
+    "data": {
+      "text": "GME Megathread\n\nKeep it all here. Please.\n\nWe love you guys too. Be kind to each other."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "70a8d5b592",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 3,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000058,
+    "data": {
+      "text": "GME gang, remember to give back. Tomorrow I'm paying it forward at our local hospital and buying coffee and donuts for our front lines. Those heroes deserve a fucking medal!\n\nFriends, we've done good.  We're writing history, doing incredible things.  Brokers are on their knees.  Short selling hedge funds are over.  We have the ears of papa Elon, AOC, Mark Cuban, Jon Stewart, Shapiro, Ted Cruz, Donald Trump Jr, Rashida, and a slew of others.\n\n🚀🚀🚀🚀🚀\n\nWhile we're still holding, riding this rollercoaster bitch to the fucking moon, please remember to set something aside.  To give back.  To show we're a community of people with heart and soul.  This is an opportunity for us to be better than hedge funds who are fucking the little guy.\n\n🚀🚀🚀🚀🚀\n\nThis isn't the last thing I'll do, but it's a start.  Once we've landed on Mars, more will be coming.  Tomorrow I'm dropping off $1K at my local hospital to buy coffee and donuts for our front lines.  These guys are heroes.  They're struggling.  Overworked, going through emotions, getting sick, some losing lives to a senseless disease.  Its the least I can do.  Find something you care about and give back.  It'll make this all seem so much more rewarding.\n\n🚀🚀🚀🚀🚀\n\nPositions: GME, BB, AMC, NOK and NAKD\n\nWE LOVE THESE STOCKS\n\n🎢🚀🚀🚀🌛🌛💰💰💰\n\nEdit: I'm not selling.  Cash from under the mattress on this one, buying some good vibes for Monday.\n\nEdit: OMG the fucking awards, I love you guys, a huge inspiration, but seriously please buy GME or spend the money on your favorite charity not me 🙏"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "baef770be2",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 3,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "8e4db8ceba",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1225,
+              "end": 1228,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "657957dcca",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1230,
+              "end": 1232,
+              "text": "BB",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "0152bd77c4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1234,
+              "end": 1237,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "ca1cb4a4f6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1239,
+              "end": 1242,
+              "text": "NOK",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "9f62b2e2d5",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1247,
+              "end": 1251,
+              "text": "NAKD",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "2777594bc0",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1480,
+              "end": 1483,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000059,
+    "data": {
+      "text": "SEC Intern pls read: False media reports about “Reddit traders” moving into ____ is clear market manipulation\n\nDear SEC Intern,\n\nSorry not sorry you worked all weekend scouring memes and getting the tendieman song stuck in your head.\n\nFalse media reports about “Reddit traders” moving en-mass into silver, SPACs, or whatever is benefiting hedge funds at the moment is getting out of control.\n\nIt doesn’t take more than 2 seconds and a smooth brain to pull up front page of WSB to see that nobody is talking about that shit (except for the bots).\n\nThis is a clear case of market manipulation to lure outside investors into a “momentum opportunity” by fraudulently invoking the “reddit army” for whatever is convenient. This shit is getting out of control.\n\nPls format the above into another SEC complaint  for me, kthxbai\n\n💎🤚🚀🚀🚀"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "fe362e864a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 48,
+              "end": 54,
+              "text": "Reddit",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "998a79f636",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 262,
+              "end": 268,
+              "text": "Reddit",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "8f4b974330",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 677,
+              "end": 683,
+              "text": "reddit",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000060,
+    "data": {
+      "text": "Beware those who are shilling other stocks claiming they're the next GME! They're just trying to get your attention, and they're succeeding! 🚨\n\nThere is no next GME. As our beloved autist Michael Burry said, GME is a unique situation and a perfect storm. You won't find something like this again. They are just trying to move your attention away from GME and scatter us. From the discussion threads and the posts on the frontpage, it seems that they're succeeding.\n\n[Michael Burry tweet on GME](https://twitter.com/michaeljburry/status/1355186794640236561?s=19)\n\nJust look at the AMC thread up on the frontpage at the moment. Half the comments are from new accounts with just a handful of karma. AMC is not the next GME. The 'days to cover' on AMC is less than a day. After an initial uptick it will just fizzle out and you'll be left bagholding.\n\nIf you're still unsure, [here](https://www.nextmemestock.com/) you can find a highly advanced AI algorithm showing the next meme stock. (credits /u/adagiolifen)\n\nEdit: I think we even need to the mods to make a post and sticky it. The shilling is really becoming bad now\n\nBuy whatever the fuck you want and whatever you like. All I'm saying is it's not the next GME."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "5230184caa",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 69,
+              "end": 72,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "c9c0a6a656",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 161,
+              "end": 164,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "834abd7bc4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 208,
+              "end": 211,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "11c656f965",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 351,
+              "end": 354,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "415b3b13a7",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 490,
+              "end": 493,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "15a5559eba",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 580,
+              "end": 583,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "987073a45f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 696,
+              "end": 699,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "ccc2c41057",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 716,
+              "end": 719,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "9c71eb2a4a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 744,
+              "end": 747,
+              "text": "AMC",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "26193a417d",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1210,
+              "end": 1213,
+              "text": "GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000061,
+    "data": {
+      "text": "STOP POSTING AND COMMENTING ABOUT ORGANIZING\n\nSeriously. That’s how the sub will be taken down by the SEC. **This is not a joke anymore.** Things we say can and will have real consequences if you’re not all careful. \n\nI’ve seen this sub grow from 600,000 degenerates, all the way to the 6.7 million we’re at now. I really want to see it stick around, especially because we’ve seen a lot of great things come out of here over the last couple years. \n\nHold your shares (*if you want*)\n\nInvest in whatever you want, because what do I know, I’m just a retard who likes video games.\n\n**I do know that we cannot talk about organizing, because then shit gets bad.**\n\nI love all you fucking autists\n\nAnd for those of you who can’t read💎👐🚀🚀"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000062,
+    "data": {
+      "text": "To all 💎🙌 who are too low karma to post\n\nI’m sure this time is toughest for those of us who don’t fit the account requirements of this sub who are feeling alone and stressed out.\n\nSomeone PM’d me asking if I thought $GME would actually go back up to $400 (Duh of course it will) so I assumed he was a bot, but after checking his account I saw he was supporting $GME a week prior to the new karma requirements. Turns out he was just a stressed German bro who needed someone to talk to since he put all his savings in and has been holding since $289. I want you guys to know you ARE NOT ALONE and you’re in our 💛 & 🧠 too!! Just keep holding brethren, and BUY THE DIP! 🚀🚀💎🙌\n\nEdit: I love all of you guys/gals, sorry I can’t get to every PM but I’m trying my best!\n\nEdit2: Stop giving me awards and use that $$ to buy the dip!🚀🚀🚀"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "e5c9d07ea3",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 216,
+              "end": 220,
+              "text": "$GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          },
+          {
+            "id": "3969656d93",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 361,
+              "end": 365,
+              "text": "$GME",
+              "labels": [
+                "ticker"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000063,
+    "data": {
+      "text": "I Will Invest $100,000 Into Whatever Is The Top Reply In A Week lol\n\nHi, I’m MrBeast and I’m bored, so I’m going to invest $100,000 into whatever you guys decide on Robinhood. If you don’t believe me check the proof. In 7 days I will look at what the top reply is and invest in it. \n\nEdit, I want a super risky investment. Give me something so crazy that I have like a 2% chance of it working but if it does I make millions. Let’s have some fun nerds\n\nEdit Edit, if the top reply that I invest in makes me money, I’ll give 20% of the profits to the redditor that recommended it. \n\n[proof](https://twitter.com/mrbeastyt/status/1283410776993169408?s=21)"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "4be2d0af69",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 165,
+              "end": 174,
+              "text": "Robinhood",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000064,
+    "data": {
+      "text": "Markets crash every time Oreo releases an even greater-stuffed cookie\n\nThe increasingly-depraved debuts of Oreos with more stuffing indicate unstable amounts of greed and leverage in the system, serving as an immediate indicator of that the makings of a market crash are in place. Conversely, when the Oreo team reduces the amount of icing in their treats, markets tend to have great bull runs until once again society demands to push the boundaries of how much stuffing is possible.\n\nhttps://en.wikipedia.org/wiki/List_of_Oreo_varieties https://en.wikipedia.org/wiki/List_of_stock_market_crashes_and_bear_markets\n\n1974: Double Stuf Oreo released. Dow Jones crashes 45%. FTSE drops 73%.\n\n1987: Big Stuf Oreo released. Black Monday, a 20% single-day crash and a following bear market.\n\n1991: Mini Oreo introduced. Smaller icing ratios coincide with the 1991 Japanese asset price bubble, confirming the correlation works both ways and a reduction of Oreo icing may be a potential solution to preventing a future crash.\n\n2011: Triple Double Oreo introduced. S&P drops 21% in a 5-month bear market\n\n2015: Oreo Thins introduced. A complete lack of icing causes an unprecedented bull run in the S&P for years\n\n2019: The Most Stuf Oreo briefly introduced. Pulled off the shelf before any major market damage could occur.\n\n2021: The Most Stuf Oreo reintroduced. Market response: ???"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": []
+      }
+    ]
+  },
+  {
+    "id": 8000065,
+    "data": {
+      "text": "Is it insider trading if I bought Boeing puts while I am inside the wrecked airplane?\n\nPurely hypothetical of cause:  \nImagine sitting in an airplane when suddenly the fucking door blows out.   \nNow, while everyone is screaming and grasping for air, you instead turn on your noise-cancelling head-phones to ignore that crying baby next to you, calmly open your robin-hood app (or whatever broker you prefer, idc), and load up on Boeing puts.   \nThere is no way the market couldve already priced that in, it is literally just happening.  \nWould that be considered insider trading? I mean you are literally inside that wreck of an airplane...  \nOn the other hand, one could argue that you are also outside the airplane, given that the door just blew off..."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "601dbfdf98",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 34,
+              "end": 40,
+              "text": "Boeing",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "4fbd7781bc",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 429,
+              "end": 435,
+              "text": "Boeing",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000066,
+    "data": {
+      "text": "Ok, I definitely picked the wrong day to buy (intel 700k yolo update)\n\nhttps://preview.redd.it/i13f44py9bgd1.png?width=1401&format=png&auto=webp&s=11f19009b89a89a412cdfd9f1af5f25da310e3be\n\nMy plan going into this was to hold for a decade and my plan hasn't changed. It's going to be rough and I realize that. The past two days have been the scariest days of my life. My parents still don't know I've lost 1/3 of my inheritance. Every time I talk to them they can see how stressed I look and they keep asking me what's wrong and I don't know what to say. How can I possibly explain this to them? My only option is to hold for a decade. So that's what I'm going to do. I know people are going to shit on me, and you should. I recognize I made an unnecessarily regarded decision. I have received a lot of DMs and reddit notifications offering me mental help and Suicide hotline numbers. I appreciate your concern but I'm fine. I'm holding long term. I'm sorry if my decision made you upset and reflect on your financial situation, that was not my intention. I appreciate all of your support and constructive criticism. Some of you have been really mean but its ok, I know I deserve it. But im holding. Forever. Intel will succeed."
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "16f1690abb",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 46,
+              "end": 51,
+              "text": "intel",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "ec239f1083",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1208,
+              "end": 1213,
+              "text": "Intel",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": 8000067,
+    "data": {
+      "text": "Robinhood is toast....Fidelity massive transfer volume\n\nFor what it's worth...\n\nThis morning I called up Fidelity because I wanted to make sure my extended hours trading was enabled on my account...took 90 minutes on hold to get through.  Apparently, they are slammed over at Fidelity, I asked the gal on the phone what's it been like today...she said because of all this stuff with Robinhood, they're looking at +700% daily volume for transferring accounts, which is quite amazing.\n\nHappy hunting! \n\nWE LIKE THE STOCK!\n\nSTICK IT TO THE MAN!"
+    },
+    "annotations": [
+      {
+        "was_cancelled": false,
+        "result": [
+          {
+            "id": "66f9d90d5e",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 9,
+              "text": "Robinhood",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "5c5206b0b0",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 22,
+              "end": 30,
+              "text": "Fidelity",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "992b6c19a5",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 105,
+              "end": 113,
+              "text": "Fidelity",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "8a81c15e63",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 276,
+              "end": 284,
+              "text": "Fidelity",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "78d3102370",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 383,
+              "end": 392,
+              "text": "Robinhood",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
+      }
+    ]
+  }
+]

@@ -321,6 +321,66 @@ def _metrics_only(scores):
     return {k: v for k, v in scores.items() if k != "name"}
 
 
+def _load_training_metadata(adapter_path):
+    """Look for `training_metadata.json` in the adapter's parent dir.
+
+    Adapter paths from ``locate_adapter_weights`` look like
+    ``models/reddit_adapter_v14/best`` or ``.../final``, and the metadata
+    sits one level up at ``models/reddit_adapter_v14/training_metadata.json``.
+    Returns None silently if the file isn't there (e.g. pre-metadata adapters).
+    """
+    if not adapter_path:
+        return None
+    metadata_path = os.path.join(os.path.dirname(adapter_path), "training_metadata.json")
+    if not os.path.exists(metadata_path):
+        return None
+    try:
+        with open(metadata_path, "r", encoding="utf-8") as f:
+            return json.load(f)
+    except (OSError, json.JSONDecodeError):
+        return None
+
+
+def _flatten_metadata_into_params(metadata):
+    """Flatten the nested metadata dict into the flat `params` schema used by
+    the benchmark store + display, while preserving the rich nested fields too."""
+    if not metadata:
+        return {}
+    flat = {}
+    cfg = metadata.get("config", {}) or {}
+    data = metadata.get("data", {}) or {}
+    aug = metadata.get("augmentation", {}) or {}
+    negs = metadata.get("negatives") or {}
+
+    # Flat keys that the existing _render_params table expects.
+    for k in (
+        "num_epochs", "batch_size", "effective_batch_size",
+        "encoder_lr", "task_lr", "max_grad_norm",
+        "lora_r", "lora_alpha", "lora_dropout",
+        "early_stopping", "early_stopping_patience", "val_fraction",
+    ):
+        if cfg.get(k) is not None:
+            flat[k] = cfg[k]
+    for k in ("train_samples", "val_samples", "test_held_out_tasks"):
+        if data.get(k) is not None:
+            flat[k] = data[k]
+    for k in ("expanded_pool_weight", "cashtag_format_prob", "augmented_files"):
+        if aug.get(k) is not None:
+            flat[k] = aug[k]
+    flat["negatives_count"] = negs.get("tasks", 0) if negs else 0
+    for k in ("seed", "git_commit", "timestamp"):
+        if metadata.get(k) is not None:
+            flat[k] = metadata[k]
+
+    # Keep the nested file inventories accessible — useful for `--show-params`
+    # style inspection without trying to flatten lists into the table.
+    if data.get("labeled_files"):
+        flat["labeled_files"] = data["labeled_files"]
+    if data.get("test_files"):
+        flat["test_files"] = data["test_files"]
+    return flat
+
+
 def benchmark_adapter(
     name,
     adapter_path,
@@ -378,6 +438,14 @@ def benchmark_adapter(
     metrics = _metrics_only(scores)
 
     params = dict(derive_adapter_params(adapter_path)) if adapter_path else {}
+    # Pull in the persisted training context (written by train.py) so the
+    # benchmark store ends up with full data + config provenance regardless
+    # of whether this benchmark was invoked from train.py or standalone.
+    metadata = _load_training_metadata(adapter_path) if adapter_path else None
+    if metadata:
+        params.update(_flatten_metadata_into_params(metadata))
+    # An explicit training_params dict still wins (used by tests or callers
+    # that want to override what's on disk).
     if training_params:
         params.update(training_params)
 

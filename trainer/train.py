@@ -1,8 +1,11 @@
 import glob
+import hashlib
 import json
 import os
 import random
 import re
+import subprocess
+from datetime import datetime, timezone
 
 import numpy as np
 import torch
@@ -186,8 +189,145 @@ def parse_all_labeled_data(
     return train_samples, val_samples
 
 
+def _git_commit():
+    """Best-effort: return current git HEAD, or None if not in a git repo."""
+    try:
+        out = subprocess.check_output(
+            ["git", "rev-parse", "HEAD"], stderr=subprocess.DEVNULL, timeout=5
+        )
+        return out.decode().strip()
+    except Exception:
+        return None
+
+
+def _summarise_labeled_file(fp):
+    """Read a Label Studio export, return tasks/entities/sha1 summary."""
+    with open(fp, "rb") as f:
+        raw = f.read()
+    sha1 = hashlib.sha1(raw).hexdigest()[:12]
+    try:
+        data = json.loads(raw)
+    except json.JSONDecodeError:
+        return None
+    n_tasks = 0
+    n_ents = 0
+    for t in data if isinstance(data, list) else []:
+        if not t.get("annotations"):
+            continue
+        if t["annotations"][0].get("was_cancelled"):
+            continue
+        n_tasks += 1
+        n_ents += sum(
+            1 for r in t["annotations"][0].get("result", []) if r.get("type") == "labels"
+        )
+    return {"name": os.path.basename(fp), "tasks": n_tasks, "entities": n_ents, "sha1": sha1}
+
+
+def gather_training_metadata(
+    config,
+    train_count,
+    val_count,
+    effective_batch_size,
+    labeled_folder,
+    test_folder,
+    augmented_folder,
+):
+    """Snapshot everything needed to reproduce this training run.
+
+    Written next to the adapter as `training_metadata.json` so benchmark.py
+    can later merge it into the per-adapter params it persists — keeping
+    full training context attached to each version even when re-benchmarked
+    months later.
+    """
+    labeled_files = []
+    for fp in sorted(glob.glob(os.path.join(labeled_folder, "*.json"))):
+        name = os.path.basename(fp)
+        if name.endswith(".bak"):
+            continue
+        if "negatives" in name:
+            continue
+        info = _summarise_labeled_file(fp)
+        if info:
+            labeled_files.append(info)
+
+    test_files = []
+    test_held_out = 0
+    if os.path.isdir(test_folder):
+        for fp in sorted(glob.glob(os.path.join(test_folder, "*.json"))):
+            info = _summarise_labeled_file(fp)
+            if info:
+                test_files.append(info)
+                test_held_out += info["tasks"]
+
+    # Pull augmentation knobs at training time. These are module-level
+    # constants in utils.augment_data; if the user mutated them between
+    # `python utils/augment_data.py` and `python trainer/train.py`, the
+    # captured values reflect the latter — best-effort, not authoritative.
+    aug = {}
+    try:
+        from utils.augment_data import CASHTAG_FORMAT_PROB, EXPANDED_POOL_WEIGHT
+
+        aug["expanded_pool_weight"] = EXPANDED_POOL_WEIGHT
+        aug["cashtag_format_prob"] = CASHTAG_FORMAT_PROB
+    except ImportError:
+        pass
+    aug["augmented_files"] = (
+        len(glob.glob(os.path.join(augmented_folder, "*.json")))
+        if augmented_folder and os.path.isdir(augmented_folder)
+        else 0
+    )
+
+    negatives = None
+    for fp in sorted(glob.glob(os.path.join(labeled_folder, "negatives*.json"))):
+        info = _summarise_labeled_file(fp)
+        if info:
+            negatives = info
+            break
+
+    return {
+        "timestamp": datetime.now(timezone.utc).isoformat(),
+        "git_commit": _git_commit(),
+        "seed": SEED,
+        "config": {
+            "num_epochs": config.num_epochs,
+            "batch_size": config.batch_size,
+            "effective_batch_size": effective_batch_size,
+            "encoder_lr": config.encoder_lr,
+            "task_lr": config.task_lr,
+            "max_grad_norm": config.max_grad_norm,
+            "lora_r": config.lora_r,
+            "lora_alpha": config.lora_alpha,
+            "lora_dropout": config.lora_dropout,
+            "early_stopping": config.early_stopping,
+            "early_stopping_patience": getattr(config, "early_stopping_patience", None),
+            "val_fraction": VAL_FRACTION,
+        },
+        "data": {
+            "labeled_files": labeled_files,
+            "test_files": test_files,
+            "test_held_out_tasks": test_held_out,
+            "train_samples": train_count,
+            "val_samples": val_count,
+        },
+        "augmentation": aug,
+        "negatives": negatives,
+    }
+
+
 if __name__ == "__main__":
     set_seed(SEED)
+
+    # Refresh the held-out test split before loading training data so any
+    # newly added labeled_*.json gets its ~15% stratified slice held out
+    # automatically. Deterministic via the same SEED, so the split is
+    # reproducible across runs as long as the source files don't change.
+    try:
+        from trainer.split_test_set import run as refresh_test_split
+    except ImportError:
+        from split_test_set import run as refresh_test_split
+
+    console.print("[bold cyan]Refreshing stratified test split...[/bold cyan]")
+    refresh_test_split(seed=SEED)
 
     next_version = get_next_version()
     adapter_name = f"reddit_adapter_v{next_version}"
@@ -250,6 +390,22 @@ if __name__ == "__main__":
         f"[bold green]v{next_version} Adapter trained and saved to {output_dir}/final/[/bold green]"
     )
 
+    # Snapshot the full training context next to the adapter so re-benchmark
+    # runs months later still know which data + config produced this version.
+    metadata = gather_training_metadata(
+        config,
+        train_count=len(train_data),
+        val_count=len(val_data),
+        effective_batch_size=EFFECTIVE_BATCH_SIZE,
+        labeled_folder=labeled_folder,
+        test_folder=test_folder,
+        augmented_folder=augmented_folder,
+    )
+    metadata_path = os.path.join(output_dir, "training_metadata.json")
+    with open(metadata_path, "w", encoding="utf-8") as f:
+        json.dump(metadata, f, indent=2)
+    console.print(f"[cyan]Wrote training metadata to {metadata_path}[/cyan]")
+
     # Benchmark the freshly trained adapter and persist the result so the
     # next ``python trainer/benchmark.py`` run can short-circuit this version.
     try:
@@ -265,24 +421,8 @@ if __name__ == "__main__":
         )
         raise SystemExit(0)
     adapter_label = f"GLiNER2 Large + Adapter v{next_version}"
-    training_params = {
-        "num_epochs": config.num_epochs,
-        "batch_size": config.batch_size,
-        "effective_batch_size": EFFECTIVE_BATCH_SIZE,
-        "encoder_lr": config.encoder_lr,
-        "task_lr": config.task_lr,
-        "max_grad_norm": config.max_grad_norm,
-        "early_stopping": config.early_stopping,
-        "early_stopping_patience": config.early_stopping_patience,
-        "seed": SEED,
-        "val_fraction": VAL_FRACTION,
-        "train_samples": len(train_data),
-        "val_samples": len(val_data),
-    }
     console.print(f"[cyan]Benchmarking {adapter_label}...[/cyan]")
-    metrics, test_hash = benchmark_adapter(
-        adapter_label, adapter_final, training_params=training_params
-    )
+    metrics, test_hash = benchmark_adapter(adapter_label, adapter_final)
     overall = metrics["overall"]
     console.print(
         f"[bold]{adapter_label}[/bold] vs test set [yellow]{test_hash}[/yellow]: "
