@@ -286,6 +286,49 @@ def evaluate_model(
     return final_scores
 
 
+def _resolve_gold_tickers(engine, entry):
+    """Convert gold annotation spans to the ticker symbols the engine would emit."""
+    gold = set()
+    text = entry["text"]
+    for ann in entry["entities"]:
+        span_text = text[ann["start"]:ann["end"]]
+        cleaned = engine._clean_token(span_text)
+        if not cleaned:
+            continue
+        if cleaned in engine.valid_tickers:
+            gold.add(cleaned)
+        else:
+            base = cleaned.split()[0]
+            resolved = engine.company_to_ticker.get(cleaned) or engine.company_to_ticker.get(base)
+            if resolved:
+                gold.add(resolved)
+    return frozenset(gold)
+
+
+def engine_evaluate_model(adapter_path, dataset, model_name="Model"):
+    """Evaluate production F1 by routing through StockRecognizer.recognize_ai().
+
+    Gold is represented as the set of ticker symbols returned by the engine's
+    own resolution pipeline on the gold spans, so the comparison is fair:
+    both gold and pred are sets of ticker strings, not character offsets.
+    """
+    from stock_recognizer.engine import StockRecognizer
+
+    engine = StockRecognizer(use_ai=True, adapter_path=adapter_path)
+
+    tp = fp = fn = 0
+    for entry in dataset:
+        gold_set = _resolve_gold_tickers(engine, entry)
+        pred_list = engine.recognize_ai(entry["text"])
+        pred_set = frozenset(pred_list)
+
+        tp += len(pred_set & gold_set)
+        fp += len(pred_set - gold_set)
+        fn += len(gold_set - pred_set)
+
+    return {"overall": calculate_metrics(tp, fp, fn)}
+
+
 def prepare_eval_inputs(dataset, label_keys):
     """Build the per-chunk and per-document structures used by ``evaluate_model``.
 
@@ -536,6 +579,16 @@ def _render_params(rows):
 
 
 if __name__ == "__main__":
+    import argparse
+
+    parser = argparse.ArgumentParser()
+    parser.add_argument(
+        "--engine",
+        action="store_true",
+        help="Evaluate via StockRecognizer.recognize_ai() instead of raw model",
+    )
+    args = parser.parse_args()
+
     NUM_VERSIONS_TO_TEST = None  # None = test all adapters
     BATCH_SIZE = 32
 
@@ -543,6 +596,31 @@ if __name__ == "__main__":
 
     if not dataset:
         console.print("[red]No valid data to evaluate.[/red]")
+    elif args.engine:
+        available_adapters = get_all_adapters()
+        if NUM_VERSIONS_TO_TEST and len(available_adapters) > NUM_VERSIONS_TO_TEST:
+            available_adapters = available_adapters[-NUM_VERSIONS_TO_TEST:]
+
+        console.print("[cyan]Engine-mode evaluation (StockRecognizer.recognize_ai)...[/cyan]")
+
+        eng_table = Table(title="Engine Benchmark (StockRecognizer.recognize_ai)", show_lines=False)
+        eng_table.add_column("Adapter", style="cyan", width=35)
+        eng_table.add_column("Precision", justify="right")
+        eng_table.add_column("Recall", justify="right")
+        eng_table.add_column("F1", style="bold magenta", justify="right")
+
+        for adapter in available_adapters:
+            console.print(f"  Evaluating [bold]{adapter['name']}[/bold]...")
+            metrics = engine_evaluate_model(adapter["path"], dataset, model_name=adapter["name"])
+            m = metrics["overall"]
+            eng_table.add_row(
+                adapter["name"],
+                f"{m['p']:.2%}",
+                f"{m['r']:.2%}",
+                f"{m['f1']:.2%}",
+            )
+
+        console.print(eng_table)
     else:
         test_hash = compute_test_set_hash(dataset)
         console.print(
