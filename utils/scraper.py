@@ -37,12 +37,42 @@ def load_known_post_ids(csv_paths):
     for path in csv_paths:
         if not os.path.exists(path):
             continue
+
         try:
             df = pd.read_csv(path, usecols=["id"])
             known.update(str(i) for i in df["id"].dropna())
-        except (ValueError, KeyError, pd.errors.EmptyDataError):
+            break
+        except (ValueError, KeyError):
             continue
     return known
+
+
+def load_known_text_hashes_from_csvs(csv_paths, row_limit: int = 100_000):
+    """Text-prefix hashes from CSV files that have a ``text`` column.
+
+    Skips files with more than ``row_limit`` rows to avoid slow hashing of
+    multi-million-row datasets (use ID-based dedup for those instead).
+    """
+    hashes = set()
+    for path in csv_paths:
+        if not os.path.exists(path):
+            continue
+        try:
+            row_count = sum(1 for _ in open(path, encoding="utf-8")) - 1
+            if row_count > row_limit:
+                console.print(
+                    f"[dim]Skipping text-hash dedup for {path} "
+                    f"({row_count:,} rows > limit {row_limit:,})[/dim]"
+                )
+                continue
+            df = pd.read_csv(path, usecols=["text"])
+            for text in df["text"].dropna():
+                h = _text_dedup_hash(str(text))
+                if h:
+                    hashes.add(h)
+        except (ValueError, KeyError, pd.errors.EmptyDataError, OSError):
+            continue
+    return hashes
 
 
 def load_known_text_hashes(label_folders):
@@ -62,7 +92,9 @@ def load_known_text_hashes(label_folders):
             if not isinstance(data, list):
                 continue
             for task in data:
-                text = task.get("data", {}).get("text") if isinstance(task, dict) else None
+                text = (
+                    task.get("data", {}).get("text") if isinstance(task, dict) else None
+                )
                 h = _text_dedup_hash(text)
                 if h:
                     hashes.add(h)
@@ -116,9 +148,10 @@ class RedditScraper:
 
         known_ids = load_known_post_ids(dedup_csvs)
         known_text_hashes = load_known_text_hashes(dedup_text_folders)
+        known_text_hashes |= load_known_text_hashes_from_csvs(dedup_csvs)
         console.print(
             f"[cyan]Dedup universe: {len(known_ids)} prior Reddit IDs, "
-            f"{len(known_text_hashes)} labeled-text hashes[/cyan]"
+            f"{len(known_text_hashes)} text hashes[/cyan]"
         )
 
         posts = []
@@ -137,7 +170,9 @@ class RedditScraper:
                     break
 
                 pbar.set_postfix(filter=time_filter)
-                async for submission in subreddit.top(time_filter=time_filter, limit=None):
+                async for submission in subreddit.top(
+                    time_filter=time_filter, limit=None
+                ):
                     if submission.id in seen_ids:
                         skipped_dup_id += 1
                         continue
@@ -236,9 +271,7 @@ class RedditScraper:
             if os.path.exists(output_file):
                 try:
                     n_rows = len(pd.read_csv(output_file))
-                    console.print(
-                        f"  CSV: {output_file} ({n_rows} total rows on disk)"
-                    )
+                    console.print(f"  CSV: {output_file} ({n_rows} total rows on disk)")
                 except Exception as exc:
                     console.print(f"[red]  CSV read-back failed: {exc}[/red]")
             else:
@@ -251,12 +284,19 @@ class RedditScraper:
 
 if __name__ == "__main__":
     OUTPUT = "data/wallstreetbets_posts.csv"
+    # All prior CSV sources — used for both ID dedup and (where small enough)
+    # text-hash dedup so we never re-scrape posts already in the dataset.
+    ALL_CSVS = [
+        OUTPUT,
+        "data/wsb.csv",
+    ]
     scraper = RedditScraper()
     posts = asyncio.run(
         scraper.fetch_posts(
             "wallstreetbets",
             target=500,
             output_file=OUTPUT,
+            dedup_csvs=ALL_CSVS,
         )
     )
     asyncio.run(scraper.close())
