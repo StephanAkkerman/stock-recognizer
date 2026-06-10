@@ -88,6 +88,20 @@ def test_submission_text_link_title_too_short():
     assert reason == "too_short"
 
 
+def test_submission_text_unsupported_content_dropped():
+    # Reddit's placeholder for new-Reddit-only posts is long enough to pass the
+    # length floor, but carries no trainable signal — it must be dropped.
+    body = (
+        "This post contains content not supported on old Reddit. "
+        "[Click here to view the full post](https://sh.reddit.com/r/x/comments/y)"
+    )
+    text, reason = scraper.submission_text(
+        _sub("a", selftext=body), min_chars=50, max_chars=2000
+    )
+    assert text is None
+    assert reason == "unsupported"
+
+
 # --- build_search_queries ------------------------------------------------
 
 

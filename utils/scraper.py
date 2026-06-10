@@ -30,6 +30,12 @@ MAX_CHARS_DEFAULT = 10_000
 # explicitly enabled, titles get this lower length floor instead of `min_chars`.
 MIN_TITLE_CHARS_DEFAULT = 12
 
+# Reddit injects this boilerplate as the ``selftext`` of posts that use
+# new-Reddit-only content (polls, rich media, image galleries) which the API /
+# old Reddit cannot render. The body is then just this notice plus a "click
+# here" link — zero trainable signal — so we drop any post whose text matches it.
+UNSUPPORTED_CONTENT_MARKER = "content not supported on old reddit"
+
 # Keyword queries fed to reddit search. Each returns a result set independent
 # of the ~1000-item top/hot/new listing cap, so searching many terms is the
 # primary way to pull *more* submissions from a subreddit we've already drained.
@@ -95,8 +101,8 @@ def submission_text(
     -------
     tuple[str | None, str | None]
         ``(text, None)`` when the submission is kept, otherwise ``(None,
-        reason)`` where ``reason`` is one of ``"too_short"``, ``"too_long"`` or
-        ``"link_post"``.
+        reason)`` where ``reason`` is one of ``"too_short"``, ``"too_long"``,
+        ``"link_post"`` or ``"unsupported"``.
     """
     is_self = getattr(submission, "is_self", True)
     if is_self:
@@ -108,6 +114,8 @@ def submission_text(
         text = getattr(submission, "title", "") or ""
         floor = min_title_chars
 
+    if UNSUPPORTED_CONTENT_MARKER in text.lower():
+        return None, "unsupported"
     if len(text) < floor:
         return None, "too_short"
     if max_chars is not None and len(text) > max_chars:
@@ -250,6 +258,7 @@ class _ScrapeState:
             "too_short": 0,
             "too_long": 0,
             "link_post": 0,
+            "unsupported": 0,
         }
 
     def add(self, submission):
@@ -569,6 +578,7 @@ class RedditScraper:
             f"too_short={skip_counts['too_short']} "
             f"too_long={skip_counts['too_long']} "
             f"link_post={skip_counts['link_post']} "
+            f"unsupported={skip_counts['unsupported']} "
             f"(total {total_skipped})"
         )
 
