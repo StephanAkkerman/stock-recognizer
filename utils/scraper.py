@@ -23,9 +23,11 @@ console = Console()
 # ``max_chars=None`` to disable the cap entirely.
 MIN_CHARS_DEFAULT = 50
 MAX_CHARS_DEFAULT = 10_000
-# Link/image posts have no selftext; their *title* is the ticker-dense payload
-# ("YOLO 100k $GME calls"). Titles are short, so they get their own, lower
-# length floor instead of the selftext `min_chars`.
+# Link/image posts have no selftext. Their *title* can be the ticker-dense
+# payload ("YOLO 100k $GME calls"), but using it produces rows whose text just
+# duplicates the title (e.g. gains-screenshot posts), which is low-signal noise.
+# So link-title capture is OFF by default (``include_link_titles=False``); when
+# explicitly enabled, titles get this lower length floor instead of `min_chars`.
 MIN_TITLE_CHARS_DEFAULT = 12
 
 # Keyword queries fed to reddit search. Each returns a result set independent
@@ -80,7 +82,7 @@ def submission_text(
     submission,
     min_chars=MIN_CHARS_DEFAULT,
     max_chars=MAX_CHARS_DEFAULT,
-    include_link_titles=True,
+    include_link_titles=False,
     min_title_chars=MIN_TITLE_CHARS_DEFAULT,
 ):
     """Pick the trainable text out of a submission and length-filter it.
@@ -228,7 +230,7 @@ class _ScrapeState:
         save_every=50,
         min_chars=MIN_CHARS_DEFAULT,
         max_chars=MAX_CHARS_DEFAULT,
-        include_link_titles=True,
+        include_link_titles=False,
         min_title_chars=MIN_TITLE_CHARS_DEFAULT,
     ):
         self.posts = []
@@ -439,7 +441,7 @@ class RedditScraper:
         save_every: int = 50,
         dedup_csvs: list[str] = None,
         dedup_text_folders: list[str] = None,
-        include_link_titles: bool = True,
+        include_link_titles: bool = False,
         time_filters: list[str] = None,
     ) -> list[dict]:
         """Scrape submissions from every listing endpoint of a subreddit."""
@@ -473,7 +475,7 @@ class RedditScraper:
         save_every: int = 50,
         dedup_csvs: list[str] = None,
         dedup_text_folders: list[str] = None,
-        include_link_titles: bool = True,
+        include_link_titles: bool = False,
         sorts: list[tuple] = None,
     ) -> list[dict]:
         """Scrape submissions via reddit full-text search.
@@ -514,7 +516,7 @@ class RedditScraper:
         save_every: int = 50,
         dedup_csvs: list[str] = None,
         dedup_text_folders: list[str] = None,
-        include_link_titles: bool = True,
+        include_link_titles: bool = False,
         time_filters: list[str] = None,
         sorts: list[tuple] = None,
     ) -> list[dict]:

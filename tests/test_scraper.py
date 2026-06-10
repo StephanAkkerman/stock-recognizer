@@ -52,11 +52,12 @@ def test_submission_text_no_max_cap():
 
 
 def test_submission_text_link_skipped_by_default():
+    # Default is include_link_titles=False: bodyless link/image posts (whose only
+    # text would be the title) are dropped rather than duplicated into `text`.
     text, reason = scraper.submission_text(
         _sub("a", is_self=False, title="YOLO 100k $GME calls to the moon baby"),
         min_chars=50,
         max_chars=2000,
-        include_link_titles=False,
     )
     assert text is None
     assert reason == "link_post"
