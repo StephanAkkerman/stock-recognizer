@@ -17,10 +17,13 @@ Workflow (manual mode — recommended for the first batch):
 
   Interactive mode (loop through everything without juggling files):
     `python utils/auto_label.py --interactive [--batch-size 10]`
+    `python utils/auto_label.py --interactive --batch-chars 8000`
     Each round writes the prompt to --prompt-file (default
     data/auto_label/prompt.txt); copy it into your LLM, paste the JSON reply
     back in the terminal, then type END on its own line (or `q` to quit).
     Progress saves after every batch, so quitting mid-run keeps completed work.
+    --batch-chars groups posts by total character count instead of post count,
+    so a batch of short posts and a batch of long posts consume similar context.
 
 Once the prompt is dialled in (the LLM's outputs match what you'd label by hand
 on ~5-10 spot checks), this same module can be called from a thin API wrapper
@@ -478,6 +481,28 @@ def _response_to_tasks(texts, response_obj, task_id_offset, post_indices):
     return [task], ([(1, dropped)] if dropped else []), []
 
 
+def _build_char_batches(posts, max_chars):
+    """Group posts into contiguous (start, end) slices where total text ≤ max_chars.
+
+    A single post that exceeds max_chars is emitted as its own one-post batch
+    rather than being silently skipped.
+    """
+    batches = []
+    start = 0
+    while start < len(posts):
+        total = 0
+        end = start
+        while end < len(posts):
+            n = len(posts[end]["text"])
+            if end > start and total + n > max_chars:
+                break
+            total += n
+            end += 1
+        batches.append((start, end))
+        start = end
+    return batches
+
+
 def run_interactive(posts, args, line_source=None):
     """Loop over all `posts` in batches, prompting + reading replies in-terminal.
 
@@ -487,15 +512,22 @@ def run_interactive(posts, args, line_source=None):
     mid-session quit keeps completed work. Bad JSON re-prompts the same batch.
     """
     line_source = sys.stdin if line_source is None else line_source
-    batch = args.batch_size
     total = len(posts)
-    n_batches = (total + batch - 1) // batch
 
-    start = 0
-    while start < total:
-        end = min(start + batch, total)
+    batch_chars = getattr(args, "batch_chars", None)
+    if batch_chars:
+        batch_slices = _build_char_batches(posts, batch_chars)
+    else:
+        b = args.batch_size
+        batch_slices = [(i, min(i + b, total)) for i in range(0, total, b)]
+    n_batches = len(batch_slices)
+
+    batch_idx = 0
+    while batch_idx < n_batches:
+        start, end = batch_slices[batch_idx]
         post_indices = list(range(start, end))
         texts = [posts[i]["text"] for i in post_indices]
+        char_count = sum(len(t) for t in texts)
 
         prompt = build_prompt(texts)
         parent = os.path.dirname(args.prompt_file)
@@ -505,8 +537,8 @@ def run_interactive(posts, args, line_source=None):
             f.write(prompt)
 
         console.print(
-            f"\n[bold cyan]Batch {start // batch + 1}/{n_batches} — "
-            f"posts {start}-{end - 1} of {total - 1}[/bold cyan]"
+            f"\n[bold cyan]Batch {batch_idx + 1}/{n_batches} — "
+            f"posts {start}–{end - 1} ({len(texts)} posts, {char_count:,} chars)[/bold cyan]"
         )
         console.print(
             f"Prompt written to [bold]{args.prompt_file}[/bold] "
@@ -532,14 +564,14 @@ def run_interactive(posts, args, line_source=None):
             console.print(f"[red]Invalid JSON: {exc}[/red]")
             console.print(f"[dim]First 200 chars: {raw[:200]}[/dim]")
             console.print("[yellow]Re-paste the response for this batch.[/yellow]")
-            continue  # retry the same batch — start unchanged
+            continue  # retry the same batch — batch_idx unchanged
 
         tasks, all_dropped, missing = _response_to_tasks(
             texts, response_obj, args.task_id_offset, post_indices
         )
         save_tasks(tasks, args.output)
         _print_save_summary(tasks, all_dropped, missing, args.output)
-        start = end
+        batch_idx += 1
 
     console.print(f"\n[bold green]Done — all {total} posts processed.[/bold green]")
 
@@ -569,7 +601,12 @@ def main():
                         help="Loop over all unlabeled posts: emit a prompt, paste the "
                              "LLM reply, repeat. Ignores --posts/--post-index.")
     parser.add_argument("--batch-size", type=int, default=10,
-                        help="Posts per prompt in --interactive mode (default: %(default)s).")
+                        help="Posts per prompt in --interactive mode (default: %(default)s). "
+                             "Ignored when --batch-chars is set.")
+    parser.add_argument("--batch-chars", type=int, default=None,
+                        help="Max total post characters per --interactive batch. "
+                             "Overrides --batch-size. Posts are grouped until adding "
+                             "the next post would exceed this limit.")
     parser.add_argument("--prompt-file", default="data/auto_label/prompt.txt",
                         help="Where --interactive writes each round's prompt "
                              "(default: %(default)s).")
