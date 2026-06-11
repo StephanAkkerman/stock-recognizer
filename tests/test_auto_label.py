@@ -203,6 +203,88 @@ def test_parse_response_keeps_longest_company_variant():
 
 
 
+# --- _fuzzy_find ---------------------------------------------------------
+
+
+def test_fuzzy_find_matches_normalised_company_name():
+    # "Nvidia" (canonical) vs "Nvdias" (informal possessive without apostrophe)
+    text = "Foxconns facility for Nvdias GB200 is in Guadalajara."
+    results = auto_label._fuzzy_find("Nvidia", text)
+    assert len(results) == 1
+    start, end, matched = results[0]
+    assert matched == "Nvdias"
+    assert text[start:end] == "Nvdias"
+
+
+def test_fuzzy_find_matches_possessive_company_name():
+    # "Foxconn" vs "Foxconns" (s appended without apostrophe)
+    text = "Foxconns facility for Nvdias GB200 is in Guadalajara."
+    results = auto_label._fuzzy_find("Foxconn", text)
+    assert len(results) == 1
+    _, _, matched = results[0]
+    assert matched == "Foxconns"
+
+
+def test_fuzzy_find_returns_empty_for_unrelated_word():
+    text = "The market rallied strongly today."
+    results = auto_label._fuzzy_find("Nvidia", text)
+    assert results == []
+
+
+def test_fuzzy_find_skips_short_entities():
+    # Entities shorter than 4 chars are excluded to avoid false positives.
+    text = "AMD is a chipmaker."
+    results = auto_label._fuzzy_find("AMX", text)
+    assert results == []
+
+
+# --- parse_response_to_task fuzzy fallback -------------------------------
+
+
+def test_parse_response_fuzzy_nvdias_nvidia():
+    # Reproduces the reported bug: LLM returns "Nvidia" but text has "Nvdias".
+    text = (
+        "I wish I knew where to ask...\n\n"
+        "Foxconns facility for Nvdias GB200 is in Guadalajara."
+    )
+    response = {"entities": [{"text": "Nvidia", "label": "company"}]}
+    task, dropped = auto_label.parse_response_to_task(text, response, 99)
+    assert dropped == [], f"Entity was unexpectedly dropped: {dropped}"
+    result = task["annotations"][0]["result"]
+    assert len(result) == 1
+    assert result[0]["value"]["text"] == "Nvdias"
+
+
+def test_parse_response_fuzzy_foxconn_in_foxconns():
+    # "Foxconn" is a literal substring of "Foxconns", so exact match succeeds
+    # (offset 0-7) and no fuzzy lookup is needed.  Entity must not be dropped.
+    text = "Foxconns facility for Nvdias GB200 is in Guadalajara."
+    response = {"entities": [{"text": "Foxconn", "label": "company"}]}
+    task, dropped = auto_label.parse_response_to_task(text, response, 1)
+    assert dropped == []
+    result = task["annotations"][0]["result"]
+    assert len(result) == 1
+    assert result[0]["value"]["text"] == "Foxconn"
+
+
+def test_fuzzy_find_matches_word_with_extra_chars():
+    # "Foxconn" is NOT an exact match for "Foxconns" when testing _fuzzy_find
+    # directly (without the exact-match pre-check), so fuzzy should find it.
+    text = "Foxconns facility in Guadalajara."
+    results = auto_label._fuzzy_find("Foxconn", text)
+    assert len(results) == 1
+    _, _, matched = results[0]
+    assert matched == "Foxconns"
+
+
+def test_parse_response_fuzzy_does_not_match_unrelated():
+    text = "The market rallied strongly today."
+    response = {"entities": [{"text": "Nvidia", "label": "company"}]}
+    task, dropped = auto_label.parse_response_to_task(text, response, 1)
+    assert len(dropped) == 1
+    assert dropped[0][2] == "not_found"
+
+
 def test_run_interactive_retries_same_batch_on_bad_json(tmp_path):
     posts = [{"text": "AAPL"}]
     args = _args(tmp_path, batch_size=2)

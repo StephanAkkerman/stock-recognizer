@@ -40,6 +40,7 @@ Design choices worth knowing:
 """
 
 import argparse
+import difflib
 import glob
 import hashlib
 import json
@@ -229,6 +230,39 @@ def _resolve_overlaps(spans):
     return sorted(kept, key=lambda s: s[0])
 
 
+def _fuzzy_find(ent_text, text, threshold=0.8):
+    """Find close token-window matches for `ent_text` in `text`.
+
+    Used as a fallback when exact matching fails — e.g. when the LLM normalises
+    "Nvdias" (as it appears in the post) to the canonical "Nvidia".  Only called
+    for entities of 4+ characters to avoid false positives on short strings.
+
+    Slides a window of N whitespace-delimited tokens across `text` (where N is
+    the word count of `ent_text`) and computes a case-insensitive
+    SequenceMatcher ratio.  Windows whose ratio exceeds `threshold` are returned
+    as ``(start, end, matched_text)`` tuples.
+    """
+    if len(ent_text) < 4:
+        return []
+    ent_words = ent_text.split()
+    n_words = len(ent_words)
+    tokens = list(re.finditer(r"\S+", text))
+    if len(tokens) < n_words:
+        return []
+    results = []
+    for i in range(len(tokens) - n_words + 1):
+        window = tokens[i : i + n_words]
+        start = window[0].start()
+        end = window[-1].end()
+        window_text = text[start:end]
+        ratio = difflib.SequenceMatcher(
+            None, ent_text.lower(), window_text.lower()
+        ).ratio()
+        if ratio >= threshold:
+            results.append((start, end, window_text))
+    return results
+
+
 def parse_response_to_task(text, response_obj, task_id):
     """Convert LLM JSON response to a Label Studio task, finding offsets in `text`.
 
@@ -249,7 +283,17 @@ def parse_response_to_task(text, response_obj, task_id):
             continue
         matches = list(re.finditer(re.escape(ent_text), text))
         if not matches:
-            dropped.append((ent_text, ent_label, "not_found"))
+            # Fuzzy fallback: handles LLM normalisations like "Nvdias" → "Nvidia"
+            fuzzy = _fuzzy_find(ent_text, text)
+            if not fuzzy:
+                dropped.append((ent_text, ent_label, "not_found"))
+                continue
+            for start, end, matched_text in fuzzy:
+                span_key = (start, end, ent_label)
+                if span_key in seen:
+                    continue
+                seen.add(span_key)
+                spans.append((start, end, matched_text, ent_label))
             continue
         for match in matches:
             span_key = (match.start(), match.end(), ent_label)

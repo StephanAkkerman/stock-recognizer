@@ -71,103 +71,525 @@ Example 6
 Input: Anybody else gonna YOLO into puts? JPOW about to crash this market. NFA
 Output: {"entities": []}
 
-Now label the following 8 inputs. Return ONE JSON object with a 'results' array as described above.
+Now label the following 15 inputs. Return ONE JSON object with a 'results' array as described above.
 
-Input 1: Beware those who are shilling other stocks claiming they're the next GME! They're just trying to get your attention, and they're succeeding! 🚨
+Input 1: The AI Market: A Gradual Rotation
 
-There is no next GME. As our beloved autist Michael Burry said, GME is a unique situation and a perfect storm. You won't find something like this again. They are just trying to move your attention away from GME and scatter us. From the discussion threads and the posts on the frontpage, it seems that they're succeeding.
+I want to share some analysis I’ve been thinking about. I hold AMD stock and am pulling the trigger on NVIDIA puts. This is for discussion and research purposes only.
 
-[Michael Burry tweet on GME](https://twitter.com/michaeljburry/status/1355186794640236561?s=19)
+# 1. Burry’s Thesis
 
-Just look at the AMC thread up on the frontpage at the moment. Half the comments are from new accounts with just a handful of karma. AMC is not the next GME. The 'days to cover' on AMC is less than a day. After an initial uptick it will just fizzle out and you'll be left bagholding.
+Michael Burry’s argument is that AI hardware depreciation is being understated. Companies are putting 5 to 6 year useful lives on GPUs that may actually become obsolete in 2 to 3 years ([en.bloomingbit.io](https://en.bloomingbit.io/en/feed/news/100580?utm_source=chatgpt.com)). This could make reported earnings appear stronger than reality. Burry estimates this mismatch could total $176 billion across the industry between 2026 and 2028 ([investing.com](https://www.investing.com/news/stock-market-news/michael-burry-warns-of-176-billion-depreciation-understatement-by-tech-giants-4346876?utm_source=chatgpt.com)).
 
-If you're still unsure, [here](https://www.nextmemestock.com/) you can find a highly advanced AI algorithm showing the next meme stock. (credits /u/adagiolifen)
+He compares NVIDIA to Cisco in the dot-com era ([sahmcapital.com](https://www.sahmcapital.com/news/content/todays-market-focus-the-big-short-returns-to-battle-the-ai-king-nvidia-2025-11-25?utm_source=chatgpt.com)) and is using long-dated puts expiring in 2027 (reddit).
 
-Edit: I think we even need to the mods to make a post and sticky it. The shilling is really becoming bad now
+The mismatch between accounting and economic reality is real. But Burry may underestimate AMD’s strategic position.
 
-Buy whatever the fuck you want and whatever you like. All I'm saying is it's not the next GME.
+# 2. How NVIDIA Stumbled Into AI
 
-Input 2: STOP POSTING AND COMMENTING ABOUT ORGANIZING
+NVIDIA’s AI dominance was not planned from day one. CUDA started as a way to make GPUs useful for general-purpose computing, not AI. Ian Buck, a Stanford CS PhD, experimented with GPUs for non-graphics workloads. His project, Brook, became the foundation for CUDA ([en.wikipedia.org](https://en.wikipedia.org/wiki/CUDA?utm_source=chatgpt.com)).
 
-Seriously. That’s how the sub will be taken down by the SEC. **This is not a joke anymore.** Things we say can and will have real consequences if you’re not all careful. 
+The AI breakthrough came from independent researchers. Alex Krizhevsky, Ilya Sutskever, and Geoffrey Hinton at the University of Toronto trained AlexNet on NVIDIA GPUs, showing that deep neural networks could outperform CPU solutions by orders of magnitude ([en.wikipedia.org](https://en.wikipedia.org/wiki/AlexNet?utm_source=chatgpt.com)).
 
-I’ve seen this sub grow from 600,000 degenerates, all the way to the 6.7 million we’re at now. I really want to see it stick around, especially because we’ve seen a lot of great things come out of here over the last couple years. 
+Key takeaway: NVIDIA adapted to a discovery made outside the company. That “stumble” created their early dominance, but nothing guarantees the next discovery will not favor AMD.
 
-Hold your shares (*if you want*)
+# 3. AMD’s Hardware Readiness
 
-Invest in whatever you want, because what do I know, I’m just a retard who likes video games.
+MI300X launched with [192GB HBM3 memory and 5.3 TB/s bandwidth](https://www.amd.com/en/products/accelerators/instinct/mi300/mi300x.html), giving it a [36% memory advantage over NVIDIA's H200](https://www.hpcwire.com/2023/12/07/amds-horsepower-packed-mi300x-gpu-beats-nvidias-upcoming-h200/) (141GB HBM3e @ 4.8 TB/s). Cost is approximately $10-14k per MI300X versus $40-44k for H200 - roughly one quarter of NVIDIA's price.
 
-**I do know that we cannot talk about organizing, because then shit gets bad.**
+[Microsoft, Meta, Oracle, and TensorWave deployed 327,000 MI300X units in 2024](https://www.theregister.com/2024/12/23/nvidia_ai_hardware_competition/), with Microsoft using MI300X to power Azure OpenAI services. This demonstrates enterprise adoption at scale, not experimental deployments.
 
-I love all you fucking autists
+The main constraint is ROCm software maturity. Historical precedent suggests this is temporary - CUDA itself took years to achieve ecosystem dominance. If ROCm adoption accelerates as enterprises validate cost savings, AMD's hardware advantage could scale rapidly.
 
-And for those of you who can’t read💎👐🚀🚀
+# 4. EPYC Playbook Applied to GPUs
 
-Input 3: To all 💎🙌 who are too low karma to post
+AMD has a track record of methodical, generation-over-generation growth in server CPUs:
 
-I’m sure this time is toughest for those of us who don’t fit the account requirements of this sub who are feeling alone and stressed out.
+|Phase|CPU Generation|Result|
+|:-|:-|:-|
+|1|Naples|Re-entry into data centers|
+|2|Rome|Competitive performance and cost gains attention|
+|3|Milan|Default choice for workloads|
+|4|Genoa/Turin|Dominant market share|
 
-Someone PM’d me asking if I thought $GME would actually go back up to $400 (Duh of course it will) so I assumed he was a bot, but after checking his account I saw he was supporting $GME a week prior to the new karma requirements. Turns out he was just a stressed German bro who needed someone to talk to since he put all his savings in and has been holding since $289. I want you guys to know you ARE NOT ALONE and you’re in our 💛 & 🧠 too!! Just keep holding brethren, and BUY THE DIP! 🚀🚀💎🙌
+This shows AMD can take share slowly and structurally. The same pattern could apply to MI400 against NVIDIA GPUs.
 
-Edit: I love all of you guys/gals, sorry I can’t get to every PM but I’m trying my best!
+# 5. The AI Market as a Gradual Rotation
 
-Edit2: Stop giving me awards and use that $$ to buy the dip!🚀🚀🚀
+The AI bubble is not bursting. That implies sudden collapse. What I see is a gradual rotation.
 
-Input 4: I Will Invest $100,000 Into Whatever Is The Top Reply In A Week lol
+* NVIDIA could slowly lose margin and market share as AMD scales
+* Enterprises may adopt ROCm at a measured pace
+* Refresh cycles could stretch
+* Capital may rotate from NVIDIA to AMD over time
 
-Hi, I’m MrBeast and I’m bored, so I’m going to invest $100,000 into whatever you guys decide on Robinhood. If you don’t believe me check the proof. In 7 days I will look at what the top reply is and invest in it. 
+There is no expectation of panic selling. Prices may adjust gradually as these trends unfold. Burry’s long-dated puts reflect structural pressure rather than an overnight crash.
 
-Edit, I want a super risky investment. Give me something so crazy that I have like a 2% chance of it working but if it does I make millions. Let’s have some fun nerds
+# 6. Signals to Watch
 
-Edit Edit, if the top reply that I invest in makes me money, I’ll give 20% of the profits to the redditor that recommended it. 
+* MI400 benchmark comparisons versus B300
+* Cloud providers adopting AMD GPUs at scale
+* ROCm developer adoption and enterprise integration
+* NVIDIA guidance versus actual procurement decisions
 
-[proof](https://twitter.com/mrbeastyt/status/1283410776993169408?s=21)
+Tracking these indicators could highlight when capital rotation accelerates.
 
-Input 5: Markets crash every time Oreo releases an even greater-stuffed cookie
+# 7. Bottom Line
 
-The increasingly-depraved debuts of Oreos with more stuffing indicate unstable amounts of greed and leverage in the system, serving as an immediate indicator of that the makings of a market crash are in place. Conversely, when the Oreo team reduces the amount of icing in their treats, markets tend to have great bull runs until once again society demands to push the boundaries of how much stuffing is possible.
+* NVIDIA benefited from a discovery made outside the company. AMD could be next.
+* Burry is right about depreciation and earnings mismatch, but he underestimates AMD's potential impact.
+* The AI shift is gradual and structural.
+* If ROCm adoption scales like CUDA did, MI400 could reshape the AI hardware landscape.
 
-https://en.wikipedia.org/wiki/List_of_Oreo_varieties https://en.wikipedia.org/wiki/List_of_stock_market_crashes_and_bear_markets
+This analysis is based on research and historical patterns. History is repeating itself, and I am bullish on AMD beating NVIDIA *just like they did with Intel.*
 
-1974: Double Stuf Oreo released. Dow Jones crashes 45%. FTSE drops 73%.
+Input 2: It's BABA time!
 
-1987: Big Stuf Oreo released. Black Monday, a 20% single-day crash and a following bear market.
+https://preview.redd.it/3iwhzxpqebnf1.jpg?width=923&format=pjpg&auto=webp&s=b5be452a8e6ffde6dd58402334b654aa78e0c45a
 
-1991: Mini Oreo introduced. Smaller icing ratios coincide with the 1991 Japanese asset price bubble, confirming the correlation works both ways and a reduction of Oreo icing may be a potential solution to preventing a future crash.
+I’ve been in and out of the BABA train, pocketing a few hundred K each time.
 
-2011: Triple Double Oreo introduced. S&P drops 21% in a 5-month bear market
+Reboarded the BABA express.
 
-2015: Oreo Thins introduced. A complete lack of icing causes an unprecedented bull run in the S&P for years
+I don't subscribe to western propaganda. I know what's up.
 
-2019: The Most Stuf Oreo briefly introduced. Pulled off the shelf before any major market damage could occur.
+Input 3: It's time for YOLO in JOBY
 
-2021: The Most Stuf Oreo reintroduced. Market response: ???
+https://preview.redd.it/w4jz3a9y9nbf1.jpg?width=1080&format=pjpg&auto=webp&s=369cf27b2c5b9623f5a372a739a1776db4857c17
 
-Input 6: Is it insider trading if I bought Boeing puts while I am inside the wrecked airplane?
+https://preview.redd.it/l2mk8hpy9nbf1.jpg?width=1080&format=pjpg&auto=webp&s=cea69101a3578d1126ca8f9edeed68bb55a020bf
 
-Purely hypothetical of cause:  
-Imagine sitting in an airplane when suddenly the fucking door blows out.   
-Now, while everyone is screaming and grasping for air, you instead turn on your noise-cancelling head-phones to ignore that crying baby next to you, calmly open your robin-hood app (or whatever broker you prefer, idc), and load up on Boeing puts.   
-There is no way the market couldve already priced that in, it is literally just happening.  
-Would that be considered insider trading? I mean you are literally inside that wreck of an airplane...  
-On the other hand, one could argue that you are also outside the airplane, given that the door just blew off...
+https://preview.redd.it/3alanefz9nbf1.jpg?width=1080&format=pjpg&auto=webp&s=e91e831d233edc62c5e27e2649c1358f1e74d419
 
-Input 7: Ok, I definitely picked the wrong day to buy (intel 700k yolo update)
+https://preview.redd.it/xmpdu3oz9nbf1.jpg?width=1080&format=pjpg&auto=webp&s=377bda28fed1ba1e58ef71a356df0468cd344dbe
 
-https://preview.redd.it/i13f44py9bgd1.png?width=1401&format=png&auto=webp&s=11f19009b89a89a412cdfd9f1af5f25da310e3be
+JOBY is a leader in eVTOL. Buy the best and YOLO.
 
-My plan going into this was to hold for a decade and my plan hasn't changed. It's going to be rough and I realize that. The past two days have been the scariest days of my life. My parents still don't know I've lost 1/3 of my inheritance. Every time I talk to them they can see how stressed I look and they keep asking me what's wrong and I don't know what to say. How can I possibly explain this to them? My only option is to hold for a decade. So that's what I'm going to do. I know people are going to shit on me, and you should. I recognize I made an unnecessarily regarded decision. I have received a lot of DMs and reddit notifications offering me mental help and Suicide hotline numbers. I appreciate your concern but I'm fine. I'm holding long term. I'm sorry if my decision made you upset and reflect on your financial situation, that was not my intention. I appreciate all of your support and constructive criticism. Some of you have been really mean but its ok, I know I deserve it. But im holding. Forever. Intel will succeed.
+Input 4: Timing the market.
 
-Input 8: Robinhood is toast....Fidelity massive transfer volume
+I've realized that the saying that gets thrown around a lot is true. I successfully timed the market in 2020 pulling out in the end of 2019 and going all in making a good amount of money. I lost a lot of money selling low and buying at the worse times in 2021. I got scared and thought there'd be a recession. And for the last several years I have been waiting for a recession because I've been scared of losing all the money I worked hard to save. 
 
-For what it's worth...
+I was so afraid of losing the money I was saving to buy a house for my family that I now realize not doing anything but saving money and not investing has lost me so much money. 
 
-This morning I called up Fidelity because I wanted to make sure my extended hours trading was enabled on my account...took 90 minutes on hold to get through.  Apparently, they are slammed over at Fidelity, I asked the gal on the phone what's it been like today...she said because of all this stuff with Robinhood, they're looking at +700% daily volume for transferring accounts, which is quite amazing.
+Im at 400k past 25 years old. I finally feel ready to go all in on the market. Just been so long I don't know where to start basically been living under a rock and I ain't too smart.  I've heard GPUs are in demand so maybe all in on tech?
 
-Happy hunting! 
+Input 5: Enough with the opinions. Here is the actual math and analysis on Reddit’s Fair Value. Reasonable Fair Value: $183.
 
-WE LIKE THE STOCK!
+# FAIR VALUE PRICE TARGETS
 
-STICK IT TO THE MAN!
+There are a lot of noises surrounding Reddit’s fair value. Many people have offered their bullish and bearish opinions but very few are rooting their claims in quantifiable facts. I am delving into the numbers in detail in order to truly verify the fair value of Reddit.
+
+To cut through the noise, I am getting the fair value by projecting out to 2030, estimating the revenue of each geographical segment. Based on the estimation below, I categorise Reddit’s fair value into 4 possible outcomes:l
+
+# FAIR VALUE PRICE TARGETS
+
+* **Ultra Bull Case (Max Limit, Very Very Unlikely): $638.22**
+* **Very Optimistic Reasonable Case (Unlikely): $294.95**
+* **Reasonable Case: $183.88**
+* **Bear Case: $96.09**
+
+Feel free to go through the step by step analysis below and provide feedbacks.
+
+# FAIR VALUE CALCULATION (DECEMBER 2030 Projections)
+
+Below represents the detailed breakdown of US, EU, and ROW (Rest of World) metrics for each scenario, discounted back to January 2026.
+
+|Metric|Bear Case|Reasonable Case|Very Optimistic|Ultra Bull|
+|:-|:-|:-|:-|:-|
+||
+|**--- US SEGMENT ---**|||||
+|US DAU|60M|60M|60M|60M|
+|US ARPU|$62|$102|$156|$312|
+|US Revenue|$3.70B|$6.12B|$9.36B|$18.72B|
+||||||
+|**--- EU SEGMENT ---**|||||
+|EU DAU|30M|30M|30M|30M|
+|EU ARPU|$25|$40|$62|$124|
+|EU Revenue|$0.74B|$1.20B|$1.86B|$3.72B|
+||||||
+|**--- ROW SEGMENT ---**|||||
+|ROW DAU|70M|70M|70M|70M|
+|ROW ARPU|$5|$8|$12|$25|
+|ROW Revenue|$0.35B|$0.56B|$0.87B|$1.75B|
+||||||
+|**--- VALUATION ---**|||||
+|Total Revenue as of 2030|$4.83B|$7.88B|$12.00B|$24.19B|
+|5 year CAGR Growth (2025 - 2030)|17.0%|29.0%|40.4%|61.5%|
+|Net Margins|30%|30%|30%|30%|
+|Total Profit as as of 2030|$1.45B|$2.36B|$3.60B|$7.20B|
+|PE Ratio|18x|23x|25x|28x|
+|2030 Market Cap|$26.1B|$54.28B|$90.0B|$201.0B|
+|**Jan 2026 Mkt Cap (PV)**|**$17.76B**|**$36.94B**|**$61.25B**|**$136.80B**|
+|**PV of Cumulative FCF + Net Cash**|**$4.11B**|**$4.91B**|**$5.88B**|**$8.46B**|
+|**Fair Value per Share**|**$96.09**|**$183.88**|**$294.95**|**$638.22**|
+
+# ASSUMPTIONS
+
+**Outstanding shares**  
+Based on fully diluted outstanding shares of 206.1 million (as of 2025) multiplied by a share dilution rate of 2% a year until 2030 (Management guided between 1% to 3%), which gives us 227.6 million outstanding shares by 2030.
+
+**ARPU (Average Revenue Per User)**  
+ARPU is based on Ceiling ARPU. Ceiling ARPU is the theoretical maximum ARPU Reddit can reach. It is based on META’s estimated 2025 ARPU. The rationale for this is that Reddit is very unlikely to exceed META’s ARPU, given META’s unrivalled ad tech stack.
+
+Since META stop disclosing geographical ARPU after 2023, we simply multiply 2023 ARPU by 1.2x, as META has grown revenue since, to get META 2025 ARPU.
+
+***Reddit’s ARPU assumption per scenario:***
+
+* **Ultra Bull Case ARPU** = META Full 2025 ARPU. This is very very unlikely as Reddit can never replicate META’s ad tech stack within a short 5 years, and may never will.
+* Very optimistic Reasonable Case = 50% \* META 2025 ARPU. Twitter’s ARPU back in 2022 was half that of META’s. BUT it was an even higher percentage before 2022, but it stagnated and META continued to grow. Because ARPU is not guaranteed to keep growing without a really good ad tech stack, I consider this scenario to be very optimistic, and unlikely.
+* **Reasonable Case** = 33% \* META 2025 ARPU. I consider a third of META’s ARPU to be reasonable. So far, Reddit manages to achieve strong ARPU growth but this is also due to a low base effect. Twitter or Snapchat also recorded rapid ARPU growth in their early stage but saturated and stagnated after a period of time. This tells us that without a proven ad tech stack, we wont really know if Reddit can achieve continuous ARPU growth like the Tier 1 players, Google and META. I m also listing down reasons why I think Reddit ARPU will remain below that of META.
+* **Bear Case** = 20% x META 2025 ARPU. Reddit can no longer improve its ad conversion performance.
+
+***Reasons why I think Reddit ARPU will remain below that of META:***  
+The negative reasons:
+
+1. Reddit is text based scrolling, which is not that good for ads.
+2. Reddit users has lower engagement duration compared to META users.
+3. Reddit is anonymous, and has inherently inferior ad targeting capabilities.
+4. Reddit users in ROW is fragmented, with multiple tiny local communities in each country, this makes it hard for ROW local advertisers to justify buying Reddit ads. I live in a Non-Western country with one of the biggest non-Western Reddit community, I have never seen a local AD. Whereas META and Google have tonnes of it.
+5. Reddit users are anti Ads, takes a lot of experiment to get it right, dissuading advertisers.
+
+The positive reasons:
+
+1. Reddit allows niche targeting and interest-based targeting according the subs theme.
+2. Reddit has a sizable user base that do not overlap with other social media platforms (30% to 70%, spending on which platform). To target these people, advertisers must advertise on Reddit.
+
+**DAU**  
+End-2025 DAU:  
+**US:** 52.5 million  
+**EU** (estimated): 24.3 million  
+**ROW:** 44.6 million  
+Total DAU: 121.4 million
+
+Reddit does not disclose EU DAU. The DAU is estimated from the 2024 data by WorldPopulationReview who collated data from Statista and Semrush. The data shows around 25% are from EU. However, I m just assuming 20% as ROW is growing faster than EU and US in 2025.
+
+**DAU growth**  
+The reason I m not changing forecasted DAU for each scenario is because the DAU growth potential is pretty much fixed. The most important number is US DAU, EU and ROW DAU will not move the needle much. We know that US DAU is stagnating as Reddit appeals to a much smaller base of customers.
+
+**Price to Earnings (PE)**  
+I consider the PE assigned to the stock to be highly intertwined with ARPU performance, which is in turn highly intertwined with Ad Conversion Performance. If Reddit can’t keep improving its ad conversion performance, it can’t grow ARPU fast, and it does not deserve a high valuation.
+
+META’s PE has average at around 25 since 2017, despite consistently growing earnings by 25%+ a year, reflecting a PEG ratio of 1, meaning PE 25 is indeed the fair value for META. As such, the future growth rate will determine the acceptable PE.
+
+* **Ultra Bull Case**
+   * Historical 5 years CAGR: 61.5%
+   * Future 5 years CAGR: 30%
+   * Assigned PE: 28
+* **Very Optimistic Bull Case**
+   * Historical 5 years CAGR: 40.3%
+   * Future 5 years CAGR: 25%
+   * Assigned PE: 25
+* **Reasonable Case**
+   * Historical 5 years CAGR: 29%
+   * Future 5 years CAGR: 18%
+   * Assigned PE: 23 (Note: PE should be higher than growth because Reddit is a high ROIC business; 20 is too low for a capital light business that is growing at more than 15% a year).
+* **Bear Case**
+   * Historical 5 years CAGR: 17%
+   * Future 5 years CAGR: 10%
+   * Assigned PE: 18 (Note: 15 is too low for a capital light business that is growing at more than 8% a year).
+
+**Present Value Discount Rate**  
+We use 8% as the discount rate.
+
+**Present Value of Cumulative FCF**  
+We assume a reinvestment rate of 50% from 2026 to 2030. That leaves the other 50% of FCF that can potentially goes into share buybacks, which amounts to the cumulative FCF in the table.
+
+**Net Margins**  
+We should assume industry average net margins, \~30%. While Reddit has shown it can deliver higher margins, it also has a strong affinity for share based compensation and I believe it is only healthy to spend on things like R&D and marketing expenses. Additionally, Q42025 net profit margin excludes income tax because it is benefitting from carry forward tax benefits. US tax is 21%.
+
+# FACTORS LEFT OUT OF THE FAIR VALUE CALCULATION FOR SIMPLICITY SAKE
+
+Factors leading to underestimation (upside risk)
+
+1. **Growth in Ceiling ARPU.** This analysis assumes the ceiling ARPU stays stagnant from 2026 to 2030, despite the continued growth of online ad market. We could have underestimated the ceiling ARPU by 2030.
+2. **Additional levers of DAU growth.** I am projecting stagnant US DAU because Reddit has already saturated the US market. However, Reddit can overcome saturation with two more levers of DAU growth: First, converting logged out users to logged in users, Second, converting MAU to DAU.
+3. **Outstanding shares based on 2030.** I have calculated 2025 Fair Value per share by dividing discounted market cap by outstanding shares expected as of 2030. The reason for this is it is difficult to factor in the exact impact of the dilution in our current valuation framework.
+
+Factors leading to overestimation (downside risk)
+
+1. **Share dilution risk.** I think this is a big risk. I really do not understand what’s the management’s intention on this. They mentioned keep dilution rate per year at 1% to 3%. But that could mean a lot of things. Example, they can dilute the share base by 5% and then buy back 2% using FCF, resulting in 3% dilution. They also have a very big multi year share compensation package in 2024, this concerns me a lot as it may repeat in the future.
+2. **Limited English Speakers outside US, Europe and India.** This means Reddit has a lower Total Addressable Market. I also note that most countries have their own internet forums that are entrenched in their respective societies.
+3. **There is no certainty that Reddit can keep improving its ad conversion performance.** If Reddit fails to do that, stock will significantly rerate downwards.
+4. **Net profit margin too optimistic.** I think this is a big risk. Q42025 net profit margin is 35%. However, on a normalized tax basis, meaning without the carryforward tax loss benefits, its Q42025 net profit margins is actually 28%. Additionally, it is hard to achieve significant growth without really high R&D expenses. But I m too lazy to deal with it, so I m putting profit margin at 30%. I believe Redditors will also strongly disagree that I put it any lower. Personally, I would assume a lower net profit margin.
+
+Input 6: Think I mess up on this yolo, Think I need Mango to help out?
+
+https://preview.redd.it/ttvbqqrzanrg1.png?width=1711&format=png&auto=webp&s=98f43f835cedb74692207997cbdffaafeb49c2a0
+
+Opened position at Open for $0.18, was not expecting to fall below under $39. What's your guys experience for this? Assigned, and liquated by broker pre hour, or market open? Come on, I need Mango to pump since it's Friday after market.
+
+Input 7: Pypl is so undervalued
+
+I had paypal in my watchlist for years now and I have watched closely. This company’s current valuation is not based on the financials but sentiment and emotions. I was told that I should not trade with emotions and look at the financials of a company. Pypl has a net income higher than tsla and a pe ratio of 9. Revenue is growing year over year and they are buying back stock aggresively, meaning that they know their stock price is severly undervalued.
+
+What this company needs is a little boost in confidence and it will rise significantly to at least its fair value.
+
+I asked chatgpt to asses and analyze the company and provide me with an estimated fair value based solely on its current financials and it told me it was about $80 or about 80% up from today’s stock price.
+
+Long story short, pypl stock is oversold and underpriced. Stock will most likely go up soon substancially if not exponentially.
+
+Positions: 47c exp friday and 55c exp june
+
+Input 8: DD: McDonald's MCD - Burger Joint Is About to Print Money
+
+**TLDR**: McDonald's isn't a fast-food company. It's a real estate juggernaut and tech company that happens to sell burgers. With 185 million loyalty users, an AI-powered digital transformation, a plan to add 10,000 restaurants by 2027, and 82% operating margins on franchise income, this "boring boomer stock" is about to break out. Stock is trading at $316 near all-time highs and analysts have a $335 target. I think $400+ is in play by end of 2026.
+
+"We Are Not in the Food Business"
+Listen up, you degenerate casino patrons. I know what you're thinking - "MCD? Really? My grandma owns that stock." Well guess what? Your grandma is smarter than you, and she's been collecting 2.24% dividends while you've been bag-holding whatever garbage stock some Discord "guru" told you to buy.
+But here's what most people don't understand about McDonald's. Former CFO Harry Sonneborn literally said: "We are not technically in the food business. We are in the real estate business. The only reason we sell fifteen-cent hamburgers is because they are the greatest producer of revenue from which our tenants can pay us rent."
+That's right. McDonald's is essentially a $42 BILLION real estate company that uses hamburgers as a rent collection mechanism. The Golden Arches are basically a REIT with extra steps.
+
+The Numbers That Should Make You Hard
+Let me break down why this stock is criminally undervalued:
+The Real Estate Empire
+
+McDonald's owns ~45% of the land and ~70% of the buildings where its 43,000+ restaurants operate
+$42 billion in real estate assets on the balance sheet
+93% of restaurants are franchised - meaning McDonald's just collects rent and royalties
+Franchisees pay 4% royalties PLUS 8-15% of sales in rent
+Operating margin on franchise revenue: 82% (compared to ~16% on company-operated stores)
+
+Let that sink in. When you buy a Big Mac, most of that profit doesn't come from the beef patty - it comes from the franchisee paying rent to corporate McDonald's. They've turned fast food into a landlord simulator.
+2024-2025 Financials
+
+Q3 2025 revenue: $7.078 billion (+3% YoY)
+Global comparable sales: +3.6%
+Systemwide sales: $131 billion across 43,000+ locations in 115 markets
+Market cap: ~$226 billion
+P/E ratio: 27
+Dividend yield: 2.24% (they just raised it 6% in Q3 2024)
+Free cash flow machine - they literally print money
+
+
+The Catalyst Nobody Is Talking About: "Digitizing the Arches"
+Here's where it gets spicy. McDonald's isn't just sitting on their laurels counting rent checks. They're in the middle of a "once-in-a-generation" digital transformation that is absolutely bonkers:
+AI and Technology Deployment
+McDonald's partnered with Google Cloud and is rolling out:
+
+Restaurant Platform Edge - Cloud computing inside restaurants enabling real-time AI and IoT. Already live in hundreds of U.S. locations.
+AI-Powered Accuracy Scales - Weighing outgoing orders and flagging missing items BEFORE they leave. Deployed in thousands of restaurants across 12 markets.
+Virtual AI Manager - Introduced January 2025. This thing schedules crews, audits food safety, handles predictive maintenance, and basically runs the restaurant.
+Drive-Thru AI - Early pilots show 27 seconds faster service time, 10% more car throughput, and $65,000 additional annual revenue per store.
+
+Do the math: If they roll this out to even 20,000 locations, that's $1.3 BILLION in additional annual revenue just from faster drive-thrus.
+The Loyalty Program is Insane
+
+185 million 90-day active users (as of Q2 2025)
+Target: 250 million by 2027
+U.S. members visit 26 times per year after joining vs. 10.5 times before
+That's a 147% increase in visits.
+
+They're not just selling burgers - they're building a consumer data platform that rivals tech companies. And they just started letting users redeem points for things like Snapchat+ subscriptions. This isn't your grandfather's fast food chain.
+
+The Expansion Play: 50,000 Restaurants by 2027
+McDonald's is about to experience the fastest unit growth in company history:
+
+Opening ~2,200 new restaurants in 2025
+Target: 50,000 total restaurants by end of 2027 (up from 43,000 today)
+1,000 new stores in China alone in 2025
+That's adding roughly the entire Chipotle footprint every 2 years
+
+Each new restaurant = more rent, more royalties, more data for the AI systems.
+
+Why "Boring" = Tendies
+
+MCD has a beta of 0.52. That means when the market crashes, this thing barely moves. When your options portfolio is down 80%, McDonald's will be sitting there like a rock, paying dividends.
+Institutional ownership sits around 70-75% of shares DCFmodeling.com
+
+Input 9: Loss porn, I just want to breakeven and never again :(  what are my chances?
+
+https://preview.redd.it/pevidj0sm6qf1.png?width=936&format=png&auto=webp&s=c512424d319bd669bb1a0260b70896ba526bc860
+
+what are my chances?
+
+Input 10: What if Google bought Snapchat?
+
+What would be the benefits to $GOOG and to $SNAP?
+
+Ad Powerhouse: Google’s ad tech could supercharge Snapchat’s ads, targeting its Gen Z/Millennial audience for bigger profits.
+
+Tech Boost: Snapchat’s AR (like Lenses) could merge with Google’s AI and cloud, creating next-level features and smoother performance.
+
+User Wins: Snapchat’s Stories and filters could integrate with Google apps (e.g., YouTube, Search), making content easier to find and use.
+
+Social Media Edge: Google could finally compete with Instagram and TikTok by owning Snapchat’s youth-focused platform.
+
+Growth Opportunities: Snapchat could tap Google’s global reach for expansion, plus add e-commerce or creator tools tied to Google’s ecosystem.
+
+Thoughts?
+
+Input 11: I wish I knew where to ask...
+
+I'm a boring ass value dude who has spent years being entertained by you all. I have a big brain question... Let's see what 1mm apes with keyboards do...
+
+  
+So, Mexico took out the leader of Jalisco Cartel. Mexicos tech hub is in Jalisco. In fact, Foxconns facility for Nvdias GB200 is in Guadalajara. There will be unrest due to a reorganization of the cartels in the area,  a lot of terrible things are going to happen. a lot of business will be disrupted. Orders won't be filled... How do I use info like this to make money outside of predicting the easy stuff like these companies have a bad quarter due to unfilled orders?
+
+Input 12: Meta – DD From a Senior Finance Manager
+
+My favorite earnings play this quarter is one of the bigger companies, Meta (Q3 earnings 10/29/25 after market closes). I strongly believe Meta will beat earnings this upcoming quarter due to the following:
+
+1. EPS Historical trends – Meta has **beat** the last 8 earnings cycles. From a management perspective, compensation is almost always tied to beating earnings and it’s up to senior management to push back on sand bagged forecasts. When a company beats earnings for 8 cycles in a row, it’s likely upper management are not pushing back too hard on goal setting forecasts, which makes it more likely that they will also beat earnings this cycle.
+
+https://preview.redd.it/4carlwaqthwf1.png?width=784&format=png&auto=webp&s=610b5c9521adcf4c8d4f8734a61d90336b26023e
+
+2. CapEx Spend – **Meta is planning on increasing capex spend from $39.2b in 2024 to $66b+ in 2025 to targeting $100b in 2026**. In the first half of 2025 alone, capex spend was already $30.7b, largely around investment in AI infrastructure. From a Corporate Finance perspective, there are usually capex reviews on a monthly-quarterly basis. By October 2025, I’d expect the 2026 plan to be completed and possibly the plan up to 2030 to be completed. Capex approval is usually closely related to future revenue. If the team is projecting that revenue will be flat, capex will usually also need to be flat. Given that there is an approval for significant increase in capex spend, revenue projections should be out the roof. Whether or not actual revenue comes in at those projections will be next years problem as the stock bump will come in when they announce the upward revised rev projections.
+
+3. AI Industry Bullish – In the past year, the AI industry has been extremely bullish. Bigger players like Nvidia and AMD have gone up 30 – 90% while smaller players around the AI industry, like quantum computing companies IONQ (46% YTD) and RGTI (132% YTD) or nuclear energy companies like UUUU (270%) and OKLO (648%) have gone up in greater magnitudes. It seems like whenever a big deal gets done involving AI, the company involved sees a big stock bump. Each of these AI companies are up well over 50% since June. Meanwhile, **Meta has been flat since June** and up 20% on the year. This indicates that Meta still has a lot of potential to run up as an AI play.
+
+For those that argue that Meta isn’t an AI play, Meta has just announced in October a $1.5b investment to build AI-focused datacenters in Texas, $14b agreement with AI cloud provider CoreWeave, and financing a $30b datacenter complex in Louisiana. **Given these recent Q3 investments, I believe a large focus of the Q3 earnings to be around how Meta will be a massive AI play (through providing AI-focused datacenters/infrastructure).**
+
+ 
+
+**Potential Issues**
+
+With any play, there will be concerns for the play moving in the opposite direction. These are what I see to be the biggest areas of concern for Wallstreet.
+
+1. Large Capex spend – Wallstreet usually doesn’t like significant increases in spending. Note that this is actually also my second point for beating earnings. I believe it’ll be unlikely that Meta simply just says they are doubling capex without any support. In my mind, management will either show significant revenue increases or some other way to justify the increase in capex.
+
+2. Ad Market Concerns – If Meta indicates weak ad demand for the upcoming quarter/year, then that can cause the stock to go down. However, I read recently that AI-powered recommendation models boosted conversions by upwards of 3-5%. Management could definitely use this justification as to why they are supporting AI. Given the magnitude of the capex increase from 2024-2026 though, I just don’t really see them communicating weak ad market demand. It just doesn’t really make sense to communicate a weakening market while simultaneously communicating massive spending increases.
+
+3. User engagement risk – As a social media platform, investors look at Meta’s daily active users as an indication of Meta’s earning potential. Just last month, Zuckerberg announced a record high over 3b daily active users. There has been no real indication that user engagement is at risk.
+
+**The Play**
+
+**My play here is to hold a mix of Meta stocks and call options**. I have calls expiring 10/31 and 11/07 around the current price simply to capture my expected earnings boost, while my shares are there for long-term holding. One note: my personal opinion is that we are in an AI-bubble and at some point the bubble will likely burst. If that happens before Meta earnings comes out, our portfolios are probably already cooked anyways. Below are my positions:
+
+https://preview.redd.it/gyx11p4cthwf1.png?width=975&format=png&auto=webp&s=5914d0c907b930e0f1ee2031493e4172c891c17e
+
+ Disclaimer: This is not financial advice. As always, please supplement with your own research as well. 
+
+Edit 1: Found out after the fact that **BofA Research just released an article reaffirming Buy on Meta with a target of $900**. It is a 20 page article with WAY more information than I have above. Would recommend anyone interested to take a look. Requires access to BofA's equity research library (comes with a Merrill Investment account) and is titled "3Q preview: Looking for revenue beat to support AI investment returns; Buy".
+
+Input 13: Looksmaxxing with $INMD [DD]
+
+https://preview.redd.it/63u35eneroog1.png?width=1365&format=png&auto=webp&s=3034426531c5b7f63b3abc507063931327231c26
+
+Hey Chuds,
+
+Looksmaxxing is the new secular trend. Cool guys are pinning chinese peptides, geting leg surgery, and smoking meth. Blackpill is now mainstream. Even GLP-1s have diabetics looksmaxxing.
+
+How do you profit from this?
+
+Nobody wants to undergo surgery to look hot. They want the easiest method possible. Even injecting reta isn't easy enough, they want it in a pill. Any non-invasive method of looksmaxing is ripe for growth.
+
+Enter $INMD.    
+  
+InMode is a leading provider of radiofrequency (RF) based minimally invasive medical technologies. Their leading products are Morpheus and FaceTite. By utilizing radiofrequency, these devices are used for fat reduction and skin contraction.   
+  
+Used by celebs like Kim K, it's a perfect fit for the serious looksmaxxing demographic. It's what gives those A list celebrities that unbelivably tight and sheer skin. Results look natural and recovery is minimal, unlike surgery.
+
+Historically, the medical aesthetics market was overwhelmingly female-centric. However, looksmaxxing has catalyzed a significant increase in male participation. The male aesthetic market is projected to reach approximately $11.17 billion by 2032, driven by a desire for "skin architecture" and structural refinement.
+
+And, think about the current trend of weightloss with looksmaxxing. Everyone knows when you lose weight too quickly, you get loose skin. Peptides, GLP-1, etc. make you lose weight incredibly quickly which causes loose skin. $INMD is a clear winner from minimally invasive skin tightening procedures. The GLP-1 plays might look amazing today, but give it 2-3 years for the loose skin to build up, and I suspect $INMD to see a lot more revenue from this customer group.
+
+$INMD is a **very** cheap way to play this secular thesis. Almost illegally cheap.
+
+For an 800M market cap company, the balance sheet is ridiculous.
+
+
+
+|$INMD Balance Sheet|$ USD|
+|:-|:-|
+|Total Assets|766.4M|
+|Non-Tangible Assets|53M|
+|Total Liabilities|83.2M|
+|Net Tangible Book Value|630M|
+
+  
+The company is 630M of net tangible book value for 800M. 605M of that is cash and receivables.  
+  
+At 800M market cap and \~600M net cash, the value of the operating business is around $200M. Let's take a look at $INMD's operations. 
+
+|$INMD FY2025|$ USD|
+|:-|:-|
+|Revenue|370.5M (-8% YoY)|
+|Gross Profit|291M|
+|Operating Income|85.4M|
+|Net Income|93.8M|
+
+  
+They have a fantastic 78% gross margin and 23% operating margin. They generated 85M of operating income on a valuation of 200M for the operating business, with no debt. That's 2X P/E.
+
+Despite massive margins and cash flows, revenues declined year over year since 2023. This is primarily due to medical devices being a lumpy industry - once you've sold the device, customers won't need a new one for a few years. I expect revenue to rebound in trend.
+
+So what's wrong with the stock?
+
+InMode is headquartered in Israel. Which means two things. One, Israel is currently under attack from Iran. The market has sold off some Israel stocks in relataion to this. I don't think INMD is significantly impacted. They don't sell their product in Israel much at all. It's primarily sold in the US, the vast majority of the employees are outside of Israel.
+
+Second, InMode is an Israeli founded company, meaning the management is ███████ . There's been some very skeptical activity from management in allowing the stock price to get this low while the business is performing just fine. Last year,[ hedge funds were writing open letters to the CEO blasting him for not returning enough capital to shareholders](https://www.prnewswire.com/news-releases/doma-perpetual-sends-letter-urging-board-of-directors-of-inmode-ltd-to-return-capital-to-the-shareholders-302550020.html). Just a month ago, [a private equity firm threatened to take over the company at a big premium](https://www.businesswire.com/news/home/20260128682883/en/Steel-Partners-Holdings-L.P.-Announces-It-Has-Presented-%2418.00-Per-Share-Offer-for-51-of-InMode-Ltd.-to-Board-of-Directors) ($18/sh, +50% from today).
+
+The company has returned plenty of capital though. These funds are impatient. They executed over $500M in buybacks over the last 3 years, which is nearly the entire market cap today. Shares outstanding are on track to drop by 50% since 2024. They have an active buyback program for another 7M shares.
+
+$INMD is a clear buy at $12.75, with a full position until at least the private equity offer of $18/share.
+
+https://preview.redd.it/yx7sset0zoog1.png?width=1045&format=png&auto=webp&s=f75ba3631a76e5b6c617d38a02a5a5bc4f0ecba7
+
+TL;DR:
+
+1. Looksmaxxing is a secular trend
+2. INMD makes medical devices for minimally invasive cosmetic procedures, particularly skin tightening, which will see a rise in use related to looksmaxxing.
+3. They haven't seen the revenue yet because the skin isn't loose enough yet
+4. 800M Market cap, 600M net cash
+5. 2x P/E
+6. Stock is at $12.75 today, but private equity offered $18 a month ago to take it private
+
+Input 14: SMA 8 Cross above SMA 21
+
+SMA 8 crossing over SMA 21 is a popular strategy.
+
+These are the stocks that has their SMA 8 crossing over their SMA 21 on Friday for SP500 stocks.
+
+|Ticker|Company|Price|Change|Change %|SMA 21|SMA 8|
+|:-|:-|:-|:-|:-|:-|:-|
+|MCO|Moody's Corporation|477.59|\-1.88|\-0.39|456.85|457.25|
+|IDXX|Idexx Laboratories Inc|656.73|\-3.98|\-0.60|643.18|643.56|
+|MTD|Mettler-Toledo International|1366.69|\-10.53|\-0.76|1378.10|1378.30|
+|NFLX|NetFlix Inc|96.24|11.65|13.77|80.80|81.41|
+|PYPL|PayPal Holdings, Inc. Common Stock|46.21|0.68|1.49|43.78|44.37|
+|DPZ|Domino's Pizza Inc.|402.51|3.22|0.81|394.64|396.63|
+|PFG|Principal Financial Group, Inc.|95.42|\-2.08|\-2.13|94.32|94.44|
+|MDLZ|Mondelez International, Inc. Class A|61.58|1.64|2.74|60.07|60.08|
+|VRSK|Verisk Analytics, Inc. Common Stock|207.57|4.93|2.43|189.63|191.16|
+|PSKY|Paramount Skydance Corporation Class B Common Stock|13.51|2.33|20.84|10.89|11.07|
+|PGR|Progressive Corporation|213.66|1.93|0.91|205.47|206.10|
+|COIN|Coinbase Global, Inc. Class A Common Stock|175.85|\-5.21|\-2.88|169.53|170.56|
+
+Ran a backtest for each of these stocks to enter on sma 8 crossover sma 21 and exit on sma 21 cross above sma 8, from 2015 to last Friday. (Some stocks were listed post 2015, so not every stock here are around since 2015)
+
+These are the results
+
+|Rank|sma|Ticker|Total Profit|Growth %|Win Rate|Max Drawdown|Total Trades|Execution Time|
+|:-|:-|:-|:-|:-|:-|:-|:-|:-|
+|1|8|NFLX|373800.48|373.80%|46.8%|\-32.79%|62.00|0.04s|
+|2|8|MTD|338008.92|338.01%|55.7%|\-17.20%|70.00|0.04s|
+|3|8|MCO|168968.91|168.97%|43.2%|\-24.78%|74.00|0.03s|
+|4|8|IDXX|165729.61|165.73%|40.0%|\-41.71%|75.00|0.04s|
+|5|8|PGR|145370.86|145.37%|39.2%|\-27.81%|74.00|0.04s|
+|6|8|VRSK|136435.26|136.44%|40.3%|\-14.48%|62.00|0.03s|
+|7|8|DPZ|91322.94|91.32%|37.1%|\-30.48%|70.00|0.04s|
+|8|8|PFG|20304.82|20.30%|43.8%|\-42.68%|73.00|0.03s|
+|9|8|COIN|14735.93|14.74%|35.3%|\-69.44%|34.00|0.02s|
+|10|8|PYPL|8196.10|8.20%|36.4%|\-59.02%|66.00|0.04s|
+|11|8|PSKY|\-4240.10|\-4.24%|0.0%|0.00%|1.00|0.01s|
+|12|8|MDLZ|\-4710.92|\-4.71%|40.8%|\-43.80%|76.00|0.04s|
+
+Same strategy, performs wildly different on different tickers. Do you guys trade any crossovers on stocks? happy to test them if you do.
+
+Thanks.
+
+Input 15: Why Super Micro computer is the obvious play
+
+Super Micro Computer (SMCI) remains a high-conviction play in the AI infrastructure space, leveraging its rack-scale server expertise and tight Nvidia partnerships to capture explosive demand. Despite a post-earnings dip to ~$42 (down ~10% on Nov 5), the stock trades at an undemanding valuation, setting up asymmetric upside as deferred revenues unlock in Q2. With a massive >$14B order backlog and expanding manufacturing capacity, SMCI is positioned for multi-year growth in the AI data center buildout—think hyperscalers upgrading to Blackwell GPUs at scale.
+
+Q1 FY26 Results & Updated Q2 Guidance: Q1 revenue came in at $5.02B (miss vs. $6.09B est., -18% QoQ), with EPS at $0.35 (vs. $0.41 est.), pressured by ~$1.8B in deferred rack shipments tied to customer validations and supply chain timing. Margins held steady at ~14.5%, reflecting cost controls amid volume ramps. However, the real story is the new Q2 guidance, upgraded in the earnings call to reflect full deferred recognition: official range of $5.9B–$6.2B, but management explicitly signaled “double-digit potential” (10B+), driven by Q1 deferrals + accelerated Blackwell system deployments. Analysts (e.g., Rosenblatt, Barclays) model $9–11B for Q2—a ~100% QoQ surge—aligning with FY26 full-year outlook now raised to ≥$36B. This isn’t organic weakness; it’s a classic timing shift, with no lost orders.
+
+Current Valuation: At $42, SMCI trades at a rock-bottom ~0.7x FY26 P/S (on $36B rev guidance), vs. peers like Dell (1.2x) and HPE (1.0x)—and that’s before baking in the Q2 upside to 40–44B annualized run-rate. Forward P/E ~15x on expected $2.80+ EPS, with ROIC accelerating on AI margins. The dip embeds bearish fears of volatility, but ignores the backlog’s strength and capex tailwinds (Malaysia/USA factories at full tilt).
+
+Historical Pattern & Catalysts: SMCI’s playbook is consistent: Q1/Q2 “misses” on deferrals (3/3 since 2024), followed by Q3/Q4 beats (avg. +10% vs. est., +50–180% stock gains over 3–12 months). Q2 here mirrors Q1’24’s setup but with 2x the backlog and Nvidia’s GPU guarantees. Key catalysts: Blackwell validation completions (Dec), hyperscaler wins (5+ in queue), and no major bottlenecks.
+
+Thoughts?
+
+I own shares, not financial advice, do your own dd.
 
 Output:
