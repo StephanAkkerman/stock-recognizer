@@ -2379,6 +2379,20 @@
                 "ticker"
               ]
             }
+          },
+          {
+            "id": "85f4d0c34a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1145,
+              "end": 1152,
+              "text": "Wendy's",
+              "labels": [
+                "company"
+              ]
+            }
           }
         ]
       }
@@ -8708,6 +8722,20 @@
               "start": 2230,
               "end": 2237,
               "text": "Revolut",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "a3c5853487",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 116,
+              "end": 122,
+              "text": "SpaceX",
               "labels": [
                 "company"
               ]
@@ -15191,6 +15219,20 @@
                 "company"
               ]
             }
+          },
+          {
+            "id": "f608cfcb72",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 4944,
+              "end": 4949,
+              "text": "Metas",
+              "labels": [
+                "company"
+              ]
+            }
           }
         ]
       }
@@ -20029,6 +20071,48 @@
                 "ticker"
               ]
             }
+          },
+          {
+            "id": "0b7581e2fd",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 6,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "f66f63100a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 118,
+              "end": 124,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "cd95a5b15b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 224,
+              "end": 230,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
           }
         ]
       }
@@ -22928,6 +23012,20 @@
                 "company"
               ]
             }
+          },
+          {
+            "id": "89d4c9963e",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 2322,
+              "end": 2328,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
           }
         ]
       }
@@ -23023,6 +23121,20 @@
               "text": "XSP",
               "labels": [
                 "ticker"
+              ]
+            }
+          },
+          {
+            "id": "4cc64cb263",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 867,
+              "end": 874,
+              "text": "Wendy’s",
+              "labels": [
+                "company"
               ]
             }
           }
@@ -24055,6 +24167,34 @@
               "text": "$FLY",
               "labels": [
                 "ticker"
+              ]
+            }
+          },
+          {
+            "id": "e54374ca3f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 450,
+              "end": 456,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "4066c74c9c",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 5881,
+              "end": 5887,
+              "text": "SpaceX",
+              "labels": [
+                "company"
               ]
             }
           }
@@ -26299,6 +26439,20 @@
                 "ticker"
               ]
             }
+          },
+          {
+            "id": "755b6336a2",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 226,
+              "end": 232,
+              "text": "OpenAI",
+              "labels": [
+                "company"
+              ]
+            }
           }
         ]
       }
@@ -27808,6 +27962,34 @@
               "text": "QNC",
               "labels": [
                 "ticker"
+              ]
+            }
+          },
+          {
+            "id": "8564369e2f",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 237,
+              "end": 243,
+              "text": "Wendys",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "664464eae0",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 4781,
+              "end": 4787,
+              "text": "Wendys",
+              "labels": [
+                "company"
               ]
             }
           }
@@ -31686,6 +31868,20 @@
               "start": 280,
               "end": 287,
               "text": "Foxconn",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "9805f21a82",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 302,
+              "end": 308,
+              "text": "Nvdias",
               "labels": [
                 "company"
               ]

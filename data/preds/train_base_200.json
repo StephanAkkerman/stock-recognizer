@@ -8224,6 +8224,18 @@
                 "company"
               ]
             }
+          },
+          {
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 315,
+              "end": 321,
+              "labels": [
+                "company"
+              ]
+            }
           }
         ]
       }

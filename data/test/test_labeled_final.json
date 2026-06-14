@@ -2598,6 +2598,20 @@
             "to_name": "text",
             "type": "labels",
             "origin": "prediction"
+          },
+          {
+            "id": "3917f6819e",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 219,
+              "end": 225,
+              "text": "OpenAI",
+              "labels": [
+                "company"
+              ]
+            }
           }
         ],
         "was_cancelled": false,
@@ -7776,6 +7790,90 @@
             "to_name": "text",
             "type": "labels",
             "origin": "manual"
+          },
+          {
+            "id": "c95a34ac5a",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 3644,
+              "end": 3651,
+              "text": "SpaceX?",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "2ae755ece4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 3814,
+              "end": 3820,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "83a65379f3",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 5194,
+              "end": 5200,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "84f5028f7b",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 5510,
+              "end": 5517,
+              "text": "SpaceX.",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "297ed48424",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 5692,
+              "end": 5700,
+              "text": "SpaceX).",
+              "labels": [
+                "company"
+              ]
+            }
+          },
+          {
+            "id": "a9d75054af",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 5937,
+              "end": 5943,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
           }
         ],
         "was_cancelled": false,

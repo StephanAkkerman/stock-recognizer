@@ -2663,7 +2663,22 @@
     "annotations": [
       {
         "was_cancelled": false,
-        "result": []
+        "result": [
+          {
+            "id": "99a8dc12e4",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 78,
+              "end": 88,
+              "text": "Coca-Cola:",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
       }
     ]
   },
@@ -2675,7 +2690,22 @@
     "annotations": [
       {
         "was_cancelled": false,
-        "result": []
+        "result": [
+          {
+            "id": "bbc985f1d6",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 6,
+              "text": "SpaceX",
+              "labels": [
+                "company"
+              ]
+            }
+          }
+        ]
       }
     ]
   },
