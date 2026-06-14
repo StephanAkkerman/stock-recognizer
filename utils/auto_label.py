@@ -17,7 +17,7 @@ Workflow (manual mode — recommended for the first batch):
 
   Interactive mode (loop through everything without juggling files):
     `python utils/auto_label.py --interactive [--batch-size 10]`
-    `python utils/auto_label.py --interactive --batch-chars 8000`
+    `python utils/auto_label.py --interactive --batch-chars 40000`
     Each round writes the prompt to --prompt-file (default
     data/auto_label/prompt.txt); copy it into your LLM, paste the JSON reply
     back in the terminal, then type END on its own line (or `q` to quit).
@@ -320,10 +320,12 @@ def parse_response_to_task(text, response_obj, task_id):
     return {
         "id": task_id,
         "data": {"text": text},
-        "annotations": [{
-            "was_cancelled": False,
-            "result": annotation_results,
-        }],
+        "annotations": [
+            {
+                "was_cancelled": False,
+                "result": annotation_results,
+            }
+        ],
     }, dropped
 
 
@@ -370,7 +372,9 @@ def _load_known_hashes(folders):
             if not isinstance(data, list):
                 continue
             for task in data:
-                text = task.get("data", {}).get("text") if isinstance(task, dict) else None
+                text = (
+                    task.get("data", {}).get("text") if isinstance(task, dict) else None
+                )
                 if text:
                     hashes.add(_text_hash(text))
     return hashes
@@ -380,7 +384,9 @@ def load_unlabeled_posts(csv_path, dedup_text_folders=None):
     """Read CSV, combine title+text, dedupe against labeled+test+output corpus."""
     df = pd.read_csv(csv_path)
 
-    known = _load_known_hashes(dedup_text_folders or ["data/labeled", "data/test", "data/preds"])
+    known = _load_known_hashes(
+        dedup_text_folders or ["data/labeled", "data/test", "data/preds"]
+    )
 
     posts = []
     for _, row in df.iterrows():
@@ -393,10 +399,12 @@ def load_unlabeled_posts(csv_path, dedup_text_folders=None):
         combined = (title + "\n\n" + body).strip() if title and title != "nan" else body
         if _text_hash(combined) in known:
             continue
-        posts.append({
-            "reddit_id": str(row.get("id")),
-            "text": combined,
-        })
+        posts.append(
+            {
+                "reddit_id": str(row.get("id")),
+                "text": combined,
+            }
+        )
     return posts
 
 
@@ -626,34 +634,67 @@ def main():
         formatter_class=argparse.RawDescriptionHelpFormatter,
         epilog=__doc__,
     )
-    parser.add_argument("--csv", default="data/wallstreetbets_posts.csv",
-                        help="Scraped posts CSV (default: %(default)s)")
-    parser.add_argument("--post-index", type=int,
-                        help="Single-post shortcut, equivalent to --posts N.")
-    parser.add_argument("--posts", default=None,
-                        help="Posts to label. '0-9' for a range, '0,3,5' for a list, "
-                             "or a single index. Defaults to '0'.")
-    parser.add_argument("--print-prompt", action="store_true",
-                        help="Write the full prompt to stdout (suitable for pasting into an LLM).")
-    parser.add_argument("--response-file",
-                        help="Path to an LLM JSON response. Parses + appends to --output.")
-    parser.add_argument("--task-id-offset", type=int, default=8_000_000,
-                        help="Starting ID for auto-labeled tasks (avoids labeled.json collisions).")
-    parser.add_argument("--output", default="data/preds/auto_labeled.json",
-                        help="Where to append parsed Label Studio tasks.")
-    parser.add_argument("--interactive", action="store_true",
-                        help="Loop over all unlabeled posts: emit a prompt, paste the "
-                             "LLM reply, repeat. Ignores --posts/--post-index.")
-    parser.add_argument("--batch-size", type=int, default=10,
-                        help="Posts per prompt in --interactive mode (default: %(default)s). "
-                             "Ignored when --batch-chars is set.")
-    parser.add_argument("--batch-chars", type=int, default=None,
-                        help="Max total post characters per --interactive batch. "
-                             "Overrides --batch-size. Posts are grouped until adding "
-                             "the next post would exceed this limit.")
-    parser.add_argument("--prompt-file", default="data/auto_label/prompt.txt",
-                        help="Where --interactive writes each round's prompt "
-                             "(default: %(default)s).")
+    parser.add_argument(
+        "--csv",
+        default="data/wallstreetbets_posts.csv",
+        help="Scraped posts CSV (default: %(default)s)",
+    )
+    parser.add_argument(
+        "--post-index", type=int, help="Single-post shortcut, equivalent to --posts N."
+    )
+    parser.add_argument(
+        "--posts",
+        default=None,
+        help="Posts to label. '0-9' for a range, '0,3,5' for a list, "
+        "or a single index. Defaults to '0'.",
+    )
+    parser.add_argument(
+        "--print-prompt",
+        action="store_true",
+        help="Write the full prompt to stdout (suitable for pasting into an LLM).",
+    )
+    parser.add_argument(
+        "--response-file",
+        help="Path to an LLM JSON response. Parses + appends to --output.",
+    )
+    parser.add_argument(
+        "--task-id-offset",
+        type=int,
+        default=8_000_000,
+        help="Starting ID for auto-labeled tasks (avoids labeled.json collisions).",
+    )
+    parser.add_argument(
+        "--output",
+        default="data/preds/auto_labeled.json",
+        help="Where to append parsed Label Studio tasks.",
+    )
+    parser.add_argument(
+        "--interactive",
+        action="store_true",
+        help="Loop over all unlabeled posts: emit a prompt, paste the "
+        "LLM reply, repeat. Ignores --posts/--post-index.",
+    )
+    parser.add_argument(
+        "--batch-size",
+        type=int,
+        default=10,
+        help="Posts per prompt in --interactive mode (default: %(default)s). "
+        "Ignored when --batch-chars is set.",
+    )
+    parser.add_argument(
+        "--batch-chars",
+        type=int,
+        default=None,
+        help="Max total post characters per --interactive batch. "
+        "Overrides --batch-size. Posts are grouped until adding "
+        "the next post would exceed this limit.",
+    )
+    parser.add_argument(
+        "--prompt-file",
+        default="data/auto_label/prompt.txt",
+        help="Where --interactive writes each round's prompt "
+        "(default: %(default)s).",
+    )
     args = parser.parse_args()
 
     posts = load_unlabeled_posts(args.csv)
@@ -710,7 +751,8 @@ def main():
 
     range_desc = (
         f"posts {post_indices[0]}-{post_indices[-1]} ({len(targets)} total)"
-        if is_batch else f"post {post_indices[0]}"
+        if is_batch
+        else f"post {post_indices[0]}"
     )
     console.print(
         f"\n[bold cyan]{range_desc}[/bold cyan] "
