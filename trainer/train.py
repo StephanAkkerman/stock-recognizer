@@ -29,7 +29,7 @@ ENTITY_DESCRIPTIONS = {
     ),
     "company": (
         "The name of a corporation, hedge fund, or business entity. MUST NOT be an uppercase "
-        "ticker symbol, an index, generic finance terms, or a financial media outlet (Bloomberg, CNBC)."
+        "ticker symbol, an index, or generic finance terms."
     ),
 }
 
