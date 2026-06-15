@@ -58,6 +58,8 @@ SEED_FPS = {
     "ATH", "ATL", "NFA", "IMO", "TLDR", "LMAO", "AMA",
     "OP", "MOD", "USA", "UK", "CEO", "CFO", "IPO",
     "BULL", "BEAR", "MOON", "GAINS", "LOSS", "EARNINGS",
+    # Financial bodies / media that produce FPs (v15 error analysis)
+    "FINRA", "DTC", "RSA", "CSRC", "BLOOMBERG",
 }
 
 CASHTAG_RE = re.compile(r"\$[A-Za-z]{1,6}\b")

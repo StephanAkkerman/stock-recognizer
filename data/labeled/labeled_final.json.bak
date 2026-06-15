@@ -44066,8 +44066,8 @@
           {
             "value": {
               "start": 69,
-              "end": 94,
-              "text": "Papa John's International",
+              "end": 96,
+              "text": "Papa John's International's",
               "labels": [
                 "company"
               ]
@@ -73137,8 +73137,8 @@
             "type": "labels",
             "value": {
               "start": 721,
-              "end": 730,
-              "text": "Anthropic",
+              "end": 732,
+              "text": "Anthropic’s",
               "labels": [
                 "company"
               ]
@@ -73235,8 +73235,8 @@
             "type": "labels",
             "value": {
               "start": 3620,
-              "end": 3629,
-              "text": "Anthropic",
+              "end": 3631,
+              "text": "Anthropic’s",
               "labels": [
                 "company"
               ]
@@ -85088,7 +85088,7 @@
               "end": 388,
               "text": "AMC",
               "labels": [
-                "ticker"
+                "company"
               ]
             },
             "id": "4Og1NPbSpx",

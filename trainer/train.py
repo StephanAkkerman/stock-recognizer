@@ -21,8 +21,16 @@ EPOCHS = 10
 VAL_FRACTION = 0.15
 
 ENTITY_DESCRIPTIONS = {
-    "ticker": "A stock market ticker symbol, usually 1-5 letters, often preceded by a dollar sign (e.g., $AAPL, TSLA). MUST NOT be option strikes, prices, index names, or internet slang acronyms.",
-    "company": "The name of a corporation, hedge fund, or business entity. MUST NOT be an uppercase ticker symbol, an index, or generic finance terms.",
+    "ticker": (
+        "A stock market ticker symbol, usually 1-5 letters, often preceded by a dollar sign "
+        "(e.g., $AAPL, TSLA). MUST NOT be option expiry months (JAN, FEB, MAR, APR, MAY, JUN, "
+        "JUL, AUG, SEP, OCT, NOV, DEC), Reddit slang acronyms (DYOR, NFA, DD, YOLO, FOMO, "
+        "TLDR, IMO, AMA, NGL, AH), or financial regulatory bodies (SEC, FINRA, DTC, CSRC, RSA)."
+    ),
+    "company": (
+        "The name of a corporation, hedge fund, or business entity. MUST NOT be an uppercase "
+        "ticker symbol, an index, generic finance terms, or a financial media outlet (Bloomberg, CNBC)."
+    ),
 }
 
 

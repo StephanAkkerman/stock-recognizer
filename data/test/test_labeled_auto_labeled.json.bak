@@ -196,8 +196,8 @@
             "type": "labels",
             "value": {
               "start": 771,
-              "end": 780,
-              "text": "Anthropic",
+              "end": 782,
+              "text": "Anthropic's",
               "labels": [
                 "company"
               ]
@@ -322,8 +322,8 @@
             "type": "labels",
             "value": {
               "start": 1940,
-              "end": 1949,
-              "text": "Anthropic",
+              "end": 1951,
+              "text": "Anthropic's",
               "labels": [
                 "company"
               ]
@@ -336,8 +336,8 @@
             "type": "labels",
             "value": {
               "start": 2218,
-              "end": 2222,
-              "text": "Uber",
+              "end": 2224,
+              "text": "Uber's",
               "labels": [
                 "company"
               ]
@@ -1102,8 +1102,8 @@
             "type": "labels",
             "value": {
               "start": 1752,
-              "end": 1761,
-              "text": "Robinhood",
+              "end": 1763,
+              "text": "Robinhood’s",
               "labels": [
                 "company"
               ]
@@ -1200,8 +1200,8 @@
             "type": "labels",
             "value": {
               "start": 2832,
-              "end": 2841,
-              "text": "Robinhood",
+              "end": 2843,
+              "text": "Robinhood’s",
               "labels": [
                 "company"
               ]
@@ -1270,8 +1270,8 @@
             "type": "labels",
             "value": {
               "start": 3956,
-              "end": 3965,
-              "text": "Robinhood",
+              "end": 3967,
+              "text": "Robinhood’s",
               "labels": [
                 "company"
               ]
@@ -4655,8 +4655,8 @@
             "type": "labels",
             "value": {
               "start": 968,
-              "end": 974,
-              "text": "UiPath",
+              "end": 976,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]
@@ -4669,8 +4669,8 @@
             "type": "labels",
             "value": {
               "start": 1204,
-              "end": 1210,
-              "text": "UiPath",
+              "end": 1212,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]
@@ -4753,8 +4753,8 @@
             "type": "labels",
             "value": {
               "start": 2696,
-              "end": 2702,
-              "text": "UiPath",
+              "end": 2704,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]
@@ -4823,8 +4823,8 @@
             "type": "labels",
             "value": {
               "start": 3322,
-              "end": 3328,
-              "text": "UiPath",
+              "end": 3330,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]

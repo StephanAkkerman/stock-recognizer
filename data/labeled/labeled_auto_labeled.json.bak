@@ -377,8 +377,8 @@
             "type": "labels",
             "value": {
               "start": 1611,
-              "end": 1617,
-              "text": "Arista",
+              "end": 1619,
+              "text": "Arista's",
               "labels": [
                 "company"
               ]
@@ -391,8 +391,8 @@
             "type": "labels",
             "value": {
               "start": 1821,
-              "end": 1826,
-              "text": "Nokia",
+              "end": 1828,
+              "text": "Nokia's",
               "labels": [
                 "company"
               ]
@@ -699,8 +699,8 @@
             "type": "labels",
             "value": {
               "start": 7638,
-              "end": 7641,
-              "text": "AMD",
+              "end": 7643,
+              "text": "AMD's",
               "labels": [
                 "ticker"
               ]
@@ -1088,8 +1088,8 @@
             "type": "labels",
             "value": {
               "start": 771,
-              "end": 780,
-              "text": "Anthropic",
+              "end": 782,
+              "text": "Anthropic's",
               "labels": [
                 "company"
               ]
@@ -1214,8 +1214,8 @@
             "type": "labels",
             "value": {
               "start": 1940,
-              "end": 1949,
-              "text": "Anthropic",
+              "end": 1951,
+              "text": "Anthropic's",
               "labels": [
                 "company"
               ]
@@ -1228,8 +1228,8 @@
             "type": "labels",
             "value": {
               "start": 2218,
-              "end": 2222,
-              "text": "Uber",
+              "end": 2224,
+              "text": "Uber's",
               "labels": [
                 "company"
               ]
@@ -2006,8 +2006,8 @@
             "type": "labels",
             "value": {
               "start": 724,
-              "end": 730,
-              "text": "Micron",
+              "end": 732,
+              "text": "Micron’s",
               "labels": [
                 "company"
               ]
@@ -2468,8 +2468,8 @@
             "type": "labels",
             "value": {
               "start": 1910,
-              "end": 1916,
-              "text": "Micron",
+              "end": 1918,
+              "text": "Micron’s",
               "labels": [
                 "company"
               ]
@@ -3682,8 +3682,8 @@
             "type": "labels",
             "value": {
               "start": 1485,
-              "end": 1489,
-              "text": "Dell",
+              "end": 1491,
+              "text": "Dell’s",
               "labels": [
                 "company"
               ]
@@ -3724,8 +3724,8 @@
             "type": "labels",
             "value": {
               "start": 1953,
-              "end": 1957,
-              "text": "Dell",
+              "end": 1959,
+              "text": "Dell’s",
               "labels": [
                 "company"
               ]
@@ -3794,8 +3794,8 @@
             "type": "labels",
             "value": {
               "start": 2978,
-              "end": 2982,
-              "text": "Dell",
+              "end": 2984,
+              "text": "Dell’s",
               "labels": [
                 "company"
               ]
@@ -4072,8 +4072,8 @@
             "type": "labels",
             "value": {
               "start": 389,
-              "end": 392,
-              "text": "TSM",
+              "end": 394,
+              "text": "TSM’s",
               "labels": [
                 "ticker"
               ]
@@ -4114,8 +4114,8 @@
             "type": "labels",
             "value": {
               "start": 698,
-              "end": 701,
-              "text": "TSM",
+              "end": 703,
+              "text": "TSM’s",
               "labels": [
                 "ticker"
               ]
@@ -4128,8 +4128,8 @@
             "type": "labels",
             "value": {
               "start": 835,
-              "end": 838,
-              "text": "TSM",
+              "end": 840,
+              "text": "TSM’s",
               "labels": [
                 "ticker"
               ]
@@ -4156,8 +4156,8 @@
             "type": "labels",
             "value": {
               "start": 984,
-              "end": 987,
-              "text": "TSM",
+              "end": 989,
+              "text": "TSM’s",
               "labels": [
                 "ticker"
               ]
@@ -4338,8 +4338,8 @@
             "type": "labels",
             "value": {
               "start": 1994,
-              "end": 1997,
-              "text": "TSM",
+              "end": 1999,
+              "text": "TSM’s",
               "labels": [
                 "ticker"
               ]
@@ -4380,8 +4380,8 @@
             "type": "labels",
             "value": {
               "start": 2142,
-              "end": 2147,
-              "text": "Apple",
+              "end": 2149,
+              "text": "Apple’s",
               "labels": [
                 "company"
               ]
@@ -4562,8 +4562,8 @@
             "type": "labels",
             "value": {
               "start": 3141,
-              "end": 3144,
-              "text": "TSM",
+              "end": 3146,
+              "text": "TSM's",
               "labels": [
                 "ticker"
               ]
@@ -4688,8 +4688,8 @@
             "type": "labels",
             "value": {
               "start": 4312,
-              "end": 4315,
-              "text": "TSM",
+              "end": 4317,
+              "text": "TSM's",
               "labels": [
                 "ticker"
               ]
@@ -5383,8 +5383,8 @@
             "type": "labels",
             "value": {
               "start": 1752,
-              "end": 1761,
-              "text": "Robinhood",
+              "end": 1763,
+              "text": "Robinhood’s",
               "labels": [
                 "company"
               ]
@@ -5481,8 +5481,8 @@
             "type": "labels",
             "value": {
               "start": 2832,
-              "end": 2841,
-              "text": "Robinhood",
+              "end": 2843,
+              "text": "Robinhood’s",
               "labels": [
                 "company"
               ]
@@ -5551,8 +5551,8 @@
             "type": "labels",
             "value": {
               "start": 3956,
-              "end": 3965,
-              "text": "Robinhood",
+              "end": 3967,
+              "text": "Robinhood’s",
               "labels": [
                 "company"
               ]
@@ -5745,8 +5745,8 @@
             "type": "labels",
             "value": {
               "start": 645,
-              "end": 654,
-              "text": "Microsoft",
+              "end": 656,
+              "text": "Microsoft's",
               "labels": [
                 "company"
               ]
@@ -5773,8 +5773,8 @@
             "type": "labels",
             "value": {
               "start": 1336,
-              "end": 1345,
-              "text": "Microsoft",
+              "end": 1347,
+              "text": "Microsoft's",
               "labels": [
                 "company"
               ]
@@ -5801,8 +5801,8 @@
             "type": "labels",
             "value": {
               "start": 1997,
-              "end": 2006,
-              "text": "Microsoft",
+              "end": 2008,
+              "text": "Microsoft's",
               "labels": [
                 "company"
               ]
@@ -6288,8 +6288,8 @@
             "type": "labels",
             "value": {
               "start": 1796,
-              "end": 1802,
-              "text": "Nvidia",
+              "end": 1804,
+              "text": "Nvidia's",
               "labels": [
                 "company"
               ]
@@ -6386,8 +6386,8 @@
             "type": "labels",
             "value": {
               "start": 1929,
-              "end": 1934,
-              "text": "Nokia",
+              "end": 1936,
+              "text": "Nokia's",
               "labels": [
                 "company"
               ]
@@ -6596,8 +6596,8 @@
             "type": "labels",
             "value": {
               "start": 4844,
-              "end": 4848,
-              "text": "AT&T",
+              "end": 4850,
+              "text": "AT&T’s",
               "labels": [
                 "company"
               ]
@@ -7030,8 +7030,8 @@
             "type": "labels",
             "value": {
               "start": 8232,
-              "end": 8237,
-              "text": "Nokia",
+              "end": 8239,
+              "text": "Nokia's",
               "labels": [
                 "company"
               ]
@@ -7072,8 +7072,8 @@
             "type": "labels",
             "value": {
               "start": 8782,
-              "end": 8788,
-              "text": "OpenAI",
+              "end": 8790,
+              "text": "OpenAI's",
               "labels": [
                 "company"
               ]
@@ -7713,8 +7713,8 @@
             "type": "labels",
             "value": {
               "start": 990,
-              "end": 994,
-              "text": "Meta",
+              "end": 996,
+              "text": "Meta’s",
               "labels": [
                 "company"
               ]
@@ -7909,8 +7909,8 @@
             "type": "labels",
             "value": {
               "start": 3757,
-              "end": 3761,
-              "text": "NTAP",
+              "end": 3763,
+              "text": "NTAP’s",
               "labels": [
                 "ticker"
               ]
@@ -7978,8 +7978,8 @@
             "type": "labels",
             "value": {
               "start": 198,
-              "end": 202,
-              "text": "SEGG",
+              "end": 204,
+              "text": "SEGG’s",
               "labels": [
                 "ticker"
               ]
@@ -8034,8 +8034,8 @@
             "type": "labels",
             "value": {
               "start": 641,
-              "end": 651,
-              "text": "Polymarket",
+              "end": 653,
+              "text": "Polymarket’s",
               "labels": [
                 "company"
               ]
@@ -8048,8 +8048,8 @@
             "type": "labels",
             "value": {
               "start": 1340,
-              "end": 1350,
-              "text": "Polymarket",
+              "end": 1352,
+              "text": "Polymarket’s",
               "labels": [
                 "company"
               ]
@@ -9045,8 +9045,8 @@
             "type": "labels",
             "value": {
               "start": 662,
-              "end": 668,
-              "text": "Nvidia",
+              "end": 670,
+              "text": "Nvidia's",
               "labels": [
                 "company"
               ]
@@ -9059,8 +9059,8 @@
             "type": "labels",
             "value": {
               "start": 755,
-              "end": 758,
-              "text": "AMD",
+              "end": 760,
+              "text": "AMD's",
               "labels": [
                 "ticker"
               ]
@@ -9101,8 +9101,8 @@
             "type": "labels",
             "value": {
               "start": 939,
-              "end": 942,
-              "text": "AMD",
+              "end": 944,
+              "text": "AMD's",
               "labels": [
                 "ticker"
               ]
@@ -10088,8 +10088,8 @@
             "type": "labels",
             "value": {
               "start": 1107,
-              "end": 1113,
-              "text": "Nvidia",
+              "end": 1115,
+              "text": "Nvidia’s",
               "labels": [
                 "company"
               ]
@@ -12059,8 +12059,8 @@
             "type": "labels",
             "value": {
               "start": 760,
-              "end": 767,
-              "text": "Firefly",
+              "end": 769,
+              "text": "Firefly’s",
               "labels": [
                 "company"
               ]
@@ -12073,8 +12073,8 @@
             "type": "labels",
             "value": {
               "start": 1135,
-              "end": 1142,
-              "text": "Firefly",
+              "end": 1144,
+              "text": "Firefly’s",
               "labels": [
                 "company"
               ]
@@ -12087,8 +12087,8 @@
             "type": "labels",
             "value": {
               "start": 1250,
-              "end": 1257,
-              "text": "Firefly",
+              "end": 1259,
+              "text": "Firefly’s",
               "labels": [
                 "company"
               ]
@@ -12101,8 +12101,8 @@
             "type": "labels",
             "value": {
               "start": 1736,
-              "end": 1743,
-              "text": "Firefly",
+              "end": 1745,
+              "text": "Firefly’s",
               "labels": [
                 "company"
               ]
@@ -12171,8 +12171,8 @@
             "type": "labels",
             "value": {
               "start": 2155,
-              "end": 2162,
-              "text": "Firefly",
+              "end": 2164,
+              "text": "Firefly’s",
               "labels": [
                 "company"
               ]
@@ -12199,8 +12199,8 @@
             "type": "labels",
             "value": {
               "start": 2317,
-              "end": 2336,
-              "text": "Firefly’s Aerospace",
+              "end": 2338,
+              "text": "Firefly’s Aerospace’s",
               "labels": [
                 "company"
               ]
@@ -12423,8 +12423,8 @@
             "type": "labels",
             "value": {
               "start": 5131,
-              "end": 5138,
-              "text": "Firefly",
+              "end": 5140,
+              "text": "Firefly's",
               "labels": [
                 "company"
               ]
@@ -23621,8 +23621,8 @@
             "type": "labels",
             "value": {
               "start": 302,
-              "end": 310,
-              "text": "WhatsApp",
+              "end": 312,
+              "text": "WhatsApp's",
               "labels": [
                 "company"
               ]
@@ -23663,8 +23663,8 @@
             "type": "labels",
             "value": {
               "start": 766,
-              "end": 770,
-              "text": "META",
+              "end": 772,
+              "text": "META'S",
               "labels": [
                 "company"
               ]
@@ -27065,8 +27065,8 @@
             "type": "labels",
             "value": {
               "start": 380,
-              "end": 386,
-              "text": "nvidia",
+              "end": 388,
+              "text": "nvidia's",
               "labels": [
                 "company"
               ]
@@ -27834,8 +27834,8 @@
             "type": "labels",
             "value": {
               "start": 640,
-              "end": 645,
-              "text": "Tesla",
+              "end": 647,
+              "text": "Tesla’s",
               "labels": [
                 "company"
               ]
@@ -27875,8 +27875,8 @@
             "type": "labels",
             "value": {
               "start": 0,
-              "end": 4,
-              "text": "AMZN",
+              "end": 6,
+              "text": "AMZN's",
               "labels": [
                 "company"
               ]
@@ -27917,8 +27917,8 @@
             "type": "labels",
             "value": {
               "start": 211,
-              "end": 215,
-              "text": "AMZN",
+              "end": 217,
+              "text": "AMZN's",
               "labels": [
                 "company"
               ]
@@ -28029,8 +28029,8 @@
             "type": "labels",
             "value": {
               "start": 1230,
-              "end": 1236,
-              "text": "Amazon",
+              "end": 1238,
+              "text": "Amazon's",
               "labels": [
                 "company"
               ]
@@ -28043,8 +28043,8 @@
             "type": "labels",
             "value": {
               "start": 1292,
-              "end": 1298,
-              "text": "Amazon",
+              "end": 1300,
+              "text": "Amazon's",
               "labels": [
                 "company"
               ]
@@ -28099,8 +28099,8 @@
             "type": "labels",
             "value": {
               "start": 1535,
-              "end": 1543,
-              "text": "Starlink",
+              "end": 1545,
+              "text": "Starlink's",
               "labels": [
                 "company"
               ]
@@ -28113,8 +28113,8 @@
             "type": "labels",
             "value": {
               "start": 1588,
-              "end": 1594,
-              "text": "Kuiper",
+              "end": 1596,
+              "text": "Kuiper's",
               "labels": [
                 "company"
               ]
@@ -28267,8 +28267,8 @@
             "type": "labels",
             "value": {
               "start": 2358,
-              "end": 2366,
-              "text": "Starlink",
+              "end": 2368,
+              "text": "Starlink's",
               "labels": [
                 "company"
               ]
@@ -28323,8 +28323,8 @@
             "type": "labels",
             "value": {
               "start": 2890,
-              "end": 2896,
-              "text": "Kuiper",
+              "end": 2898,
+              "text": "Kuiper's",
               "labels": [
                 "company"
               ]
@@ -29002,8 +29002,8 @@
             "type": "labels",
             "value": {
               "start": 968,
-              "end": 974,
-              "text": "UiPath",
+              "end": 976,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]
@@ -29016,8 +29016,8 @@
             "type": "labels",
             "value": {
               "start": 1204,
-              "end": 1210,
-              "text": "UiPath",
+              "end": 1212,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]
@@ -29100,8 +29100,8 @@
             "type": "labels",
             "value": {
               "start": 2696,
-              "end": 2702,
-              "text": "UiPath",
+              "end": 2704,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]
@@ -29170,8 +29170,8 @@
             "type": "labels",
             "value": {
               "start": 3322,
-              "end": 3328,
-              "text": "UiPath",
+              "end": 3330,
+              "text": "UiPath's",
               "labels": [
                 "company"
               ]
@@ -29323,8 +29323,8 @@
             "type": "labels",
             "value": {
               "start": 2694,
-              "end": 2699,
-              "text": "Lumen",
+              "end": 2701,
+              "text": "Lumen's",
               "labels": [
                 "company"
               ]
@@ -29393,8 +29393,8 @@
             "type": "labels",
             "value": {
               "start": 3283,
-              "end": 3292,
-              "text": "Universal",
+              "end": 3294,
+              "text": "Universal's",
               "labels": [
                 "company"
               ]
@@ -30172,8 +30172,8 @@
             "type": "labels",
             "value": {
               "start": 754,
-              "end": 757,
-              "text": "Gap",
+              "end": 759,
+              "text": "Gap’s",
               "labels": [
                 "company"
               ]
@@ -30200,8 +30200,8 @@
             "type": "labels",
             "value": {
               "start": 1100,
-              "end": 1103,
-              "text": "Gap",
+              "end": 1105,
+              "text": "Gap’s",
               "labels": [
                 "company"
               ]
@@ -30214,8 +30214,8 @@
             "type": "labels",
             "value": {
               "start": 1248,
-              "end": 1252,
-              "text": "$AEO",
+              "end": 1254,
+              "text": "$AEO’s",
               "labels": [
                 "ticker"
               ]

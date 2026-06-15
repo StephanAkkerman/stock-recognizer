@@ -142,6 +142,11 @@ AMBIGUOUS_WORDS = {
     "COM",
     # Slang / Finance
     "DD",
+    "DYOR",
+    "NFA",
+    "GMV",
+    "DTC",
+    "FINRA",
     "HUGE",
     "FOUR",
     "RE",
