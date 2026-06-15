@@ -226,9 +226,16 @@ def _summarise_labeled_file(fp):
             continue
         n_tasks += 1
         n_ents += sum(
-            1 for r in t["annotations"][0].get("result", []) if r.get("type") == "labels"
+            1
+            for r in t["annotations"][0].get("result", [])
+            if r.get("type") == "labels"
         )
-    return {"name": os.path.basename(fp), "tasks": n_tasks, "entities": n_ents, "sha1": sha1}
+    return {
+        "name": os.path.basename(fp),
+        "tasks": n_tasks,
+        "entities": n_ents,
+        "sha1": sha1,
+    }
 
 
 def gather_training_metadata(
@@ -361,20 +368,21 @@ if __name__ == "__main__":
     BATCH_SIZE = 4
     EFFECTIVE_BATCH_SIZE = 8
     GRADIENT_ACCUMULATION_STEPS = EFFECTIVE_BATCH_SIZE // BATCH_SIZE
+    LORA_RANK = 32
 
     config = TrainingConfig(
         output_dir=output_dir,
         experiment_name=f"fintwit_lora_v{next_version}",
         num_epochs=EPOCHS,
         batch_size=BATCH_SIZE,
-        max_len=256,
+        max_len=256,  # could try 384 to prevent truncation
         gradient_accumulation_steps=GRADIENT_ACCUMULATION_STEPS,
         encoder_lr=2e-5,
         task_lr=5e-4,
         max_grad_norm=1.0,
         use_lora=True,
-        lora_r=16,
-        lora_alpha=32.0,
+        lora_r=LORA_RANK,
+        lora_alpha=LORA_RANK * 2,
         lora_dropout=0.1,
         lora_target_modules=["encoder"],
         save_adapter_only=True,
@@ -388,7 +396,7 @@ if __name__ == "__main__":
         # Patience=3 stops on the noisy val signal, but stopping early is
         # better than collapse.
         early_stopping=EARLY_STOPPING,
-        early_stopping_patience=3,
+        early_stopping_patience=5,
     )
 
     trainer = GLiNER2Trainer(model=model, config=config)
