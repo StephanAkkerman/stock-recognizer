@@ -799,21 +799,6 @@
           },
           {
             "value": {
-              "start": 1418,
-              "end": 1422,
-              "text": "DRAM",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "PGL3sr0p_c",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 1687,
               "end": 1691,
               "text": "upro",
@@ -1800,7 +1785,7 @@
               "end": 388,
               "text": "ASML",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "5_WjG-T8qp",
@@ -7186,7 +7171,7 @@
               "end": 433,
               "text": "meta",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "yB5vnRzniv",

@@ -116,7 +116,7 @@
               "end": 535,
               "text": "ZOOM",
               "labels": [
-                "ticker"
+                "company"
               ]
             }
           }
@@ -1953,7 +1953,7 @@
               "end": 46,
               "text": "UBS",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -1995,7 +1995,7 @@
               "end": 494,
               "text": "UBS",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -2023,7 +2023,7 @@
               "end": 758,
               "text": "UBS",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -2121,7 +2121,7 @@
               "end": 1140,
               "text": "UBS",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -2149,7 +2149,7 @@
               "end": 1386,
               "text": "UBS",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -3112,7 +3112,7 @@
               "end": 2027,
               "text": "meta",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -3154,7 +3154,7 @@
               "end": 2994,
               "text": "snap",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -3210,7 +3210,7 @@
               "end": 3229,
               "text": "snap",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -3224,7 +3224,7 @@
               "end": 3276,
               "text": "snap",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -3518,7 +3518,7 @@
               "end": 8759,
               "text": "meta",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -3880,7 +3880,7 @@
               "end": 315,
               "text": "ARM",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -4411,7 +4411,7 @@
               "end": 2288,
               "text": "APPLE",
               "labels": [
-                "ticker"
+                "company"
               ]
             }
           },
@@ -4509,7 +4509,7 @@
               "end": 2795,
               "text": "dell",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -8458,20 +8458,6 @@
             }
           },
           {
-            "id": "a889e78a32",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 277,
-              "end": 281,
-              "text": "CSRC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "408d2b8b3b",
             "from_name": "label",
             "to_name": "text",
@@ -8486,20 +8472,6 @@
             }
           },
           {
-            "id": "00c3baf08b",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 462,
-              "end": 466,
-              "text": "CSRC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "d7fb039915",
             "from_name": "label",
             "to_name": "text",
@@ -8510,20 +8482,6 @@
               "text": "$FUTU",
               "labels": [
                 "ticker"
-              ]
-            }
-          },
-          {
-            "id": "259536174e",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 529,
-              "end": 533,
-              "text": "CSRC",
-              "labels": [
-                "company"
               ]
             }
           },
@@ -8640,20 +8598,6 @@
             }
           },
           {
-            "id": "618c346a10",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1764,
-              "end": 1768,
-              "text": "CSRC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "13968640ab",
             "from_name": "label",
             "to_name": "text",
@@ -8678,20 +8622,6 @@
               "text": "$FUTU",
               "labels": [
                 "ticker"
-              ]
-            }
-          },
-          {
-            "id": "037cca4883",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1836,
-              "end": 1840,
-              "text": "CSRC",
-              "labels": [
-                "company"
               ]
             }
           },
@@ -8788,20 +8718,6 @@
               "start": 2816,
               "end": 2829,
               "text": "Ant Financial",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
-            "id": "120a3b5f35",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 2980,
-              "end": 2984,
-              "text": "CSRC",
               "labels": [
                 "company"
               ]
@@ -11366,7 +11282,7 @@
               "end": 2003,
               "text": "SPX",
               "labels": [
-                "ticker"
+                "company"
               ]
             }
           },
@@ -12831,7 +12747,7 @@
               "end": 2258,
               "text": "ABB",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -12915,7 +12831,7 @@
               "end": 2693,
               "text": "ABB",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -12971,7 +12887,7 @@
               "end": 2762,
               "text": "ABB",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13585,7 +13501,7 @@
               "end": 3,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13599,7 +13515,7 @@
               "end": 86,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13613,7 +13529,7 @@
               "end": 498,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13725,7 +13641,7 @@
               "end": 1049,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13753,7 +13669,7 @@
               "end": 1115,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13795,7 +13711,7 @@
               "end": 1419,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13809,7 +13725,7 @@
               "end": 1561,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13837,7 +13753,7 @@
               "end": 1722,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13893,7 +13809,7 @@
               "end": 1848,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -13921,7 +13837,7 @@
               "end": 2140,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -14071,20 +13987,6 @@
               "text": "RDW",
               "labels": [
                 "ticker"
-              ]
-            }
-          },
-          {
-            "id": "d21e62b581",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1805,
-              "end": 1809,
-              "text": "NASA",
-              "labels": [
-                "company"
               ]
             }
           },
@@ -23666,7 +23568,7 @@
               "end": 770,
               "text": "META",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -24480,7 +24382,7 @@
               "end": 376,
               "text": "SAP",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -24926,7 +24828,7 @@
               "end": 434,
               "text": "IBKR",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           }
@@ -24953,7 +24855,7 @@
               "end": 39,
               "text": "SPX",
               "labels": [
-                "ticker"
+                "company"
               ]
             }
           },
@@ -24967,7 +24869,7 @@
               "end": 135,
               "text": "SPX",
               "labels": [
-                "ticker"
+                "company"
               ]
             }
           }
@@ -26683,7 +26585,7 @@
               "end": 3,
               "text": "IBM",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -26711,7 +26613,7 @@
               "end": 187,
               "text": "IBM",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           }
@@ -27878,7 +27780,7 @@
               "end": 4,
               "text": "AMZN",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -27892,7 +27794,7 @@
               "end": 47,
               "text": "AMZN",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -27906,7 +27808,7 @@
               "end": 118,
               "text": "AMZN",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -27920,7 +27822,7 @@
               "end": 215,
               "text": "AMZN",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -28382,7 +28284,7 @@
               "end": 3572,
               "text": "AMZN",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -28396,7 +28298,7 @@
               "end": 3636,
               "text": "AMZN",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -28410,7 +28312,7 @@
               "end": 3800,
               "text": "AMZN",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           }
@@ -29122,20 +29024,6 @@
             }
           },
           {
-            "id": "2731728060",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 3226,
-              "end": 3230,
-              "text": "NASA",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "a79a1d3a15",
             "from_name": "label",
             "to_name": "text",
@@ -29455,34 +29343,6 @@
                 "company"
               ]
             }
-          },
-          {
-            "id": "ffc05a64b5",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 4526,
-              "end": 4530,
-              "text": "CNBC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
-            "id": "ac628cd70e",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 4532,
-              "end": 4537,
-              "text": "MSNBC",
-              "labels": [
-                "company"
-              ]
-            }
           }
         ]
       }
@@ -29521,7 +29381,7 @@
               "end": 1595,
               "text": "SPX",
               "labels": [
-                "ticker"
+                "company"
               ]
             }
           }
@@ -30547,20 +30407,6 @@
               "start": 16,
               "end": 18,
               "text": "MU",
-              "labels": [
-                "ticker"
-              ]
-            }
-          },
-          {
-            "id": "45374a9277",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 32,
-              "end": 36,
-              "text": "DRAM",
               "labels": [
                 "ticker"
               ]
@@ -31841,7 +31687,7 @@
               "end": 211,
               "text": "PMI",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -31995,7 +31841,7 @@
               "end": 2140,
               "text": "PMI",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },
@@ -34581,7 +34427,7 @@
               "end": 1716,
               "text": "WB",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },

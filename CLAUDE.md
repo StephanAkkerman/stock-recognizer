@@ -72,6 +72,36 @@ Labels: `ticker` and `company` (defined in `data/label_studio.xml`).
 
 Augmented files in `data/augmented/` have stale `prediction` blocks deliberately cleared (offsets no longer match the swapped text).
 
+## Labeling Policy: ticker vs company
+
+The two labels serve distinct roles in the engine's resolution pipeline, so they must be applied consistently. Use this decision tree in order:
+
+**1. Label as `ticker`** if the span text — uppercased and with `$` stripped — exactly matches a symbol in `valid_tickers`. This covers cashtags, all-caps symbols, and informally lowercased ticker references:
+
+| Text in post | Label | Why |
+|---|---|---|
+| `$AMC`, `$amc` | ticker | cashtag |
+| `AMC`, `META`, `NVDA` | ticker | exact ticker symbol |
+| `gme`, `amc`, `tsla` | ticker | informal lowercase, resolves to ticker |
+
+**2. Label as `company`** if the span is a company name that resolves via `company_to_ticker` but is not itself a `valid_tickers` symbol:
+
+| Text in post | Label | Why |
+|---|---|---|
+| `Meta`, `Microsoft`, `Nvidia` | company | written name, ticker is META/MSFT/NVDA |
+| `AMC Theatres`, `Goldman Sachs` | company | multi-word name |
+| `NVIDIA`, `TSMC`, `APPLE` | company | all-caps abbreviation, ticker differs (NVDA/TSM/AAPL) |
+
+**3. Do not label** government agencies, regulatory bodies, financial metrics, or media outlets — they cannot resolve to a ticker:
+
+- Government/regulatory: `CSRC`, `NASA`, `SEC`, `FINRA`, `NDAA`
+- Financial acronyms: `PDT`, `EV` (enterprise value), `SG&A`, `RSUs`, `PT` (price target)
+- Media/private: `CNBC`, `Bloomberg`, `The Verge`
+
+**Key rule for AMC-like entities** where the company abbreviation equals its ticker: always use the form in the text. `AMC` → ticker. `AMC Theatres` → company. The engine handles both paths to the same resolved output, so consistency matters more than semantic intent.
+
+Run `python trainer/fix_label_policy.py` to find and fix policy violations in `data/labeled/` and `data/test/`. After fixing labeled data, regenerate augmented data.
+
 ## Benchmarking
 
 ```bash

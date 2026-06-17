@@ -1388,7 +1388,7 @@
               "end": 310,
               "text": "SIGA",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "BFZuFNuwKR",
@@ -1403,7 +1403,7 @@
               "end": 560,
               "text": "SIGA",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "_-LoxjZwm3",

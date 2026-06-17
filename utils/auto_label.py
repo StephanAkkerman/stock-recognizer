@@ -57,12 +57,13 @@ console = Console()
 
 
 # Hand-picked from data/labeled — chosen to cover the patterns v4-v12 stumbled on:
-#   1) bare-ticker short post
-#   2) bare ticker amid slang (anti-pattern: "lmfao" stays unlabeled)
-#   3) cashtag + multi-word company + 2-letter company collision (RH)
+#   1) bare ALL-CAPS ticker → ticker
+#   2) lowercase informal shorthand (gme) → ticker; slang stays unlabeled
+#   3) cashtag + multi-word company + all-caps ticker (RH: IS the ticker symbol)
 #   4) company name with its ticker in parens — both labeled as separate entities
-#   5) multi-word company headline + $price-NOT-a-ticker
-#   6) all-negative post — slang/finance terms that look entity-shaped but aren't
+#   5) ALL-CAPS abbreviation where ticker differs (NVIDIA → NVDA) → company
+#   6) multi-word company headline + $price-NOT-a-ticker
+#   7) all-negative post — slang/finance terms that look entity-shaped but aren't
 #
 # Edit / extend this list if the LLM starts missing a specific pattern in practice.
 FEW_SHOT_EXAMPLES = [
@@ -71,15 +72,15 @@ FEW_SHOT_EXAMPLES = [
         "output": {"entities": [{"text": "BBBY", "label": "ticker"}]},
     },
     {
-        "input": "Spx down 100 lmfao",
-        "output": {"entities": [{"text": "Spx", "label": "ticker"}]},
+        "input": "just loaded up on gme again lmfao",
+        "output": {"entities": [{"text": "gme", "label": "ticker"}]},
     },
     {
         "input": "Cash app pulling a RH by not letting people purchase $AMC.What is going on???",
         "output": {
             "entities": [
                 {"text": "Cash app", "label": "company"},
-                {"text": "RH", "label": "company"},
+                {"text": "RH", "label": "ticker"},
                 {"text": "$AMC", "label": "ticker"},
             ]
         },
@@ -90,6 +91,15 @@ FEW_SHOT_EXAMPLES = [
             "entities": [
                 {"text": "Nebius", "label": "company"},
                 {"text": "NBIS", "label": "ticker"},
+            ]
+        },
+    },
+    {
+        "input": "NVIDIA just crushed earnings again, NVDA up 8% after hours.",
+        "output": {
+            "entities": [
+                {"text": "NVIDIA", "label": "company"},
+                {"text": "NVDA", "label": "ticker"},
             ]
         },
     },
@@ -129,29 +139,44 @@ SYSTEM_INSTRUCTIONS = textwrap.dedent("""\
 
     TASK: identify every ticker symbol and company name in the input text.
 
-    DEFINITIONS:
-    - ticker: A stock symbol like AAPL, TSLA, $MSFT. Usually 1-5 uppercase letters,
-      often preceded by $. INCLUDE the $ sign in the entity span when present.
-      ETFs (SPY, QQQ, VOO, IWM, JETS, ULCC) are tickers. Index abbreviations used
-      as tradeable (SPX, NDX) are tickers. Crypto symbols (BTC, ETH, LUNA) are
-      tickers when used in a trading context.
-    - company: A real corporation, hedge fund, ETF issuer, fintech app, or business
-      entity referenced by name. Can be multiple words ("Bed Bath & Beyond",
-      "SIGA Technologies", "Warner Bros Discovery", "Cash app").
+    LABELING RULE — the form of the text in the post determines the label, not the
+    author's intent. Apply these rules in order:
 
-    DO NOT LABEL:
-    - Internet slang or finance generics: BUY, SELL, HOLD, DUMP, PUMP, YOLO, DD,
+    1. CASHTAG ($ prefix) → always "ticker", no exceptions.
+       $AMC, $TSLA, $gme, $EUV, $DRAM → ticker even if the word is also a
+       technology term or written in lowercase.
+
+    2. ALL-CAPS and the text IS the actual ticker symbol → "ticker".
+       AMC, META, SOFI, SNAP, NVDA, SPY, QQQ → ticker.
+       ETFs (SPY, QQQ, VOO, IWM) and crypto (BTC, ETH) follow the same rule.
+
+    3. ALL-CAPS but the ticker symbol differs → "company".
+       NVIDIA (ticker is NVDA), TSMC (ticker is TSM), APPLE (ticker is AAPL) → company.
+       The all-caps abbreviation is the company name, not the tradeable symbol.
+
+    4. Written / mixed-case name → "company".
+       Meta, Nvidia, Micron, AMC Theatres, Goldman Sachs, Warner Bros Discovery → company.
+
+    5. Informal lowercase ticker (Reddit shorthand) → "ticker".
+       gme, amc, tsla, spy — lowercase versions of ticker symbols → ticker.
+
+    DO NOT LABEL any of the following — they cannot be traded and must be skipped:
+    - Internet slang / generics: BUY, SELL, HOLD, DUMP, PUMP, YOLO, DD,
       FUD, FOMO, ATH, ATL, NFA, IMO, TLDR, LMFAO, AMA, OP, MOD.
-    - Macro terms or people: JPOW, POWELL, FED, SEC, IRS, CEO, CFO, IPO, BULL,
-      BEAR, MOON, EARNINGS, GAINS, LOSS, PUTS, CALLS, STOCK, MARKET, OPTIONS.
-    - News outlets: CNBC, MSNBC, WSJ, FT, BLOOMBERG.
+    - People and macro: JPOW, POWELL, FED, IRS, CEO, CFO, BULL, BEAR,
+      MOON, EARNINGS, GAINS, LOSS, PUTS, CALLS, STOCK, MARKET, OPTIONS.
+    - Government / regulatory bodies: SEC, CSRC, NASA, FINRA, NDAA, MEXT, METI.
+    - Financial metric acronyms: PDT (pattern day trader), EV (enterprise value),
+      SGA, RSU, RSUS, PT (price target), ATM, IV, IPO, EBITDA, FCF, NAV.
+    - Memory / chip technology terms (without $ prefix): DRAM, HBM, EUV, NAND, GPU.
+    - News outlets and private companies with no public stock:
+      CNBC, MSNBC, WSJ, FT, BLOOMBERG, HBO.
     - Dollar amounts: $100, $5.50, $3T — only $-prefixed *letter* sequences are tickers.
-    - Index names spelled out: "Dow Jones", "S&P 500", "Nasdaq" (the index).
-      But their ETF tickers (SPY, QQQ) ARE tickers.
+    - Index names spelled out: "Dow Jones", "S&P 500", "Nasdaq" (the index itself).
 
     EDGE CASES:
-    - A token used differently in one post can be both: "Tesla" → company,
-      "TSLA" → ticker — label them separately.
+    - The same company can appear twice with different labels in one post:
+      "Meta" → company AND "META" → ticker if both are present.
     - Label EVERY occurrence. If $AAPL appears 5 times, return 5 entries.
     - Preserve exact casing and punctuation from the source — do not normalize.
 

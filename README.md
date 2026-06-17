@@ -22,6 +22,7 @@ A lightweight, hybrid Python library for extracting stock tickers and company na
 - [Key Features](#key-features)
 - [Installation](#installation)
 - [Usage](#usage)
+- [Label Guidelines](#label-guidelines)
 - [Citation](#citation)
 - [Contributing](#contributing)
 - [License](#license)
@@ -58,6 +59,80 @@ recognizer_ai = StockRecognizer(use_ai=True)
 tickers_ai = recognizer_ai.recognize_ai(text)
 print(tickers_ai) # ['PLAB', 'TSM']
 ```
+
+## Label Guidelines 🏷️
+
+When annotating training data in Label Studio, use exactly two labels: `ticker` and `company`. The distinction is based on the **form of the text**, not the author's intent — this makes annotation consistent and removes judgment calls.
+
+### Decision tree
+
+**1. Cashtag (`$` prefix) → always `ticker`**
+```
+$AMC  $TSLA  $gme  $EUV  $DRAM
+```
+The `$` signals explicit stock intent. Label as `ticker` unconditionally regardless of whether the symbol exists in any index.
+
+**2. ALL-CAPS, 1–5 characters, resolves to a known ticker → `ticker`**
+```
+AMC   META   NVDA   SOFI   BP
+```
+If the all-caps form is a real ticker symbol, use `ticker` even if the author is talking about the company.
+
+**3. ALL-CAPS, but the ticker symbol differs → `company`**
+```
+NVIDIA  (ticker is NVDA)
+TSMC    (ticker is TSM)
+APPLE   (ticker is AAPL)
+```
+When the all-caps abbreviation is a company name and not the actual ticker symbol, use `company`.
+
+**4. Written / mixed-case name → `company`**
+```
+Meta   Nvidia   Micron   AMC Theatres   Goldman Sachs
+```
+Human-readable names in any non-all-caps form are company references. The engine resolves them to tickers via its company-name mapping.
+
+**5. Informal lowercase ticker (Reddit shorthand) → `ticker`**
+```
+gme   amc   tsla   spy
+```
+Lowercase versions of ticker symbols used as shorthand (common on Reddit) should be labeled `ticker`, not `company`.
+
+### What not to label
+
+Skip these — they cannot resolve to a tradeable ticker:
+
+| Category | Examples |
+|---|---|
+| Government / regulatory bodies | `CSRC`, `SEC`, `NASA`, `FINRA`, `NDAA` |
+| Financial metric acronyms | `PDT`, `EV` (enterprise value), `SG&A`, `RSUs`, `PT` (price target), `ATM`, `IV` |
+| Memory / chip technology terms | `DRAM`, `HBM`, `EUV`, `NAND` (without `$` prefix) |
+| Media outlets with no public stock | `CNBC`, `Bloomberg`, `HBO`, `MSNBC` |
+
+### Quick reference
+
+| Text in post | Label | Reason |
+|---|---|---|
+| `$AMC`, `$gme`, `$EUV` | `ticker` | Cashtag — unconditional |
+| `AMC`, `SNAP`, `SOFI` | `ticker` | All-caps ticker symbol |
+| `gme`, `amc`, `tsla` | `ticker` | Informal lowercase shorthand |
+| `NVIDIA`, `TSMC`, `APPLE` | `company` | All-caps name, ticker differs |
+| `Meta`, `Nvidia`, `Micron` | `company` | Written name form |
+| `AMC Theatres`, `Goldman Sachs` | `company` | Multi-word name |
+| `CSRC`, `PDT`, `EV`, `DRAM` | *(skip)* | Non-tradeable entity |
+
+### Keeping data consistent
+
+Run the policy fixer after annotating to catch labeling errors automatically:
+
+```bash
+python trainer/fix_label_policy.py          # preview changes
+python trainer/fix_label_policy.py --apply  # apply fixes
+```
+
+After fixing `data/labeled/`, regenerate `data/augmented/` before retraining.
+
+---
 
 ## Citation ✍️
 <!-- Be sure to adjust everything here so it matches your name and repo -->

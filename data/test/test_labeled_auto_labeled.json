@@ -1417,20 +1417,6 @@
             }
           },
           {
-            "id": "a889e78a32",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 277,
-              "end": 281,
-              "text": "CSRC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "408d2b8b3b",
             "from_name": "label",
             "to_name": "text",
@@ -1445,20 +1431,6 @@
             }
           },
           {
-            "id": "00c3baf08b",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 462,
-              "end": 466,
-              "text": "CSRC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "d7fb039915",
             "from_name": "label",
             "to_name": "text",
@@ -1469,20 +1441,6 @@
               "text": "$FUTU",
               "labels": [
                 "ticker"
-              ]
-            }
-          },
-          {
-            "id": "259536174e",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 529,
-              "end": 533,
-              "text": "CSRC",
-              "labels": [
-                "company"
               ]
             }
           },
@@ -1599,20 +1557,6 @@
             }
           },
           {
-            "id": "618c346a10",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1764,
-              "end": 1768,
-              "text": "CSRC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "13968640ab",
             "from_name": "label",
             "to_name": "text",
@@ -1637,20 +1581,6 @@
               "text": "$FUTU",
               "labels": [
                 "ticker"
-              ]
-            }
-          },
-          {
-            "id": "037cca4883",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1836,
-              "end": 1840,
-              "text": "CSRC",
-              "labels": [
-                "company"
               ]
             }
           },
@@ -1753,20 +1683,6 @@
             }
           },
           {
-            "id": "120a3b5f35",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 2980,
-              "end": 2984,
-              "text": "CSRC",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "cc8898d848",
             "from_name": "label",
             "to_name": "text",
@@ -1803,7 +1719,7 @@
               "end": 2003,
               "text": "SPX",
               "labels": [
-                "ticker"
+                "company"
               ]
             }
           },
@@ -3364,7 +3280,7 @@
               "end": 434,
               "text": "IBKR",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           }
@@ -4805,20 +4721,6 @@
             }
           },
           {
-            "id": "2731728060",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 3226,
-              "end": 3230,
-              "text": "NASA",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "a79a1d3a15",
             "from_name": "label",
             "to_name": "text",
@@ -5750,7 +5652,7 @@
               "end": 1716,
               "text": "WB",
               "labels": [
-                "company"
+                "ticker"
               ]
             }
           },

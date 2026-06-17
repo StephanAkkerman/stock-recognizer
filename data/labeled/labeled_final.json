@@ -3667,7 +3667,7 @@
               "end": 5991,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "BZydUa0gsc",
@@ -3682,7 +3682,7 @@
               "end": 6335,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "yJ-WGIGjit",
@@ -3697,7 +3697,7 @@
               "end": 6926,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "qTcNHq6tDc",
@@ -3712,7 +3712,7 @@
               "end": 7751,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "EZlZ120EV1",
@@ -15617,21 +15617,6 @@
           },
           {
             "value": {
-              "start": 264,
-              "end": 267,
-              "text": "HBO",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "Dx5SKhDKg1",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "manual"
-          },
-          {
-            "value": {
               "start": 210,
               "end": 221,
               "text": "Warner Bros",
@@ -21942,21 +21927,6 @@
           },
           {
             "value": {
-              "start": 418,
-              "end": 421,
-              "text": "HBM",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "UDzhLfSOB8",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 442,
               "end": 446,
               "text": "NVDA",
@@ -21972,21 +21942,6 @@
           },
           {
             "value": {
-              "start": 512,
-              "end": 515,
-              "text": "HBM",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "kzTsTYNVzk",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 590,
               "end": 592,
               "text": "MU",
@@ -21995,21 +21950,6 @@
               ]
             },
             "id": "wGaV_QGmo_",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 616,
-              "end": 619,
-              "text": "HBM",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "b5pvbk2A1g",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
@@ -22115,36 +22055,6 @@
               ]
             },
             "id": "mDCCR8C0o8",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 1582,
-              "end": 1585,
-              "text": "HBM",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "JEtkv69ge-",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 1657,
-              "end": 1660,
-              "text": "HBM",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "BpJPraBunZ",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
@@ -30197,7 +30107,7 @@
               "end": 1301,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "i5xVMFmlYp",
@@ -31402,7 +31312,7 @@
               "end": 126,
               "text": "ASML",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "_FPue34pgn",
@@ -32584,21 +32494,6 @@
               ]
             },
             "id": "DLk17aiNq7",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 1418,
-              "end": 1422,
-              "text": "DRAM",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "PGL3sr0p_c",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
@@ -40588,7 +40483,7 @@
               "end": 568,
               "text": "HIVE",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "PeN_B8mwoa",
@@ -40603,7 +40498,7 @@
               "end": 978,
               "text": "HIVE",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "aqjrTLZg2b",
@@ -40618,7 +40513,7 @@
               "end": 1438,
               "text": "HIVE",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "rMplc3-iKD",
@@ -40633,7 +40528,7 @@
               "end": 1800,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "8CK-rXbG5B",
@@ -40648,7 +40543,7 @@
               "end": 2399,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "RjJdYLJofN",
@@ -40663,7 +40558,7 @@
               "end": 2755,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "hilODv6rbD",
@@ -40678,7 +40573,7 @@
               "end": 3937,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "HkmiCSP5hn",
@@ -40723,7 +40618,7 @@
               "end": 3379,
               "text": "",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "FSlJsz1wyT",
@@ -40768,7 +40663,7 @@
               "end": 721,
               "text": "BUZZ",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "bSeCN-yolp",
@@ -40873,7 +40768,7 @@
               "end": 3077,
               "text": "BUZZ",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "bv2xE-fFBP",
@@ -40888,7 +40783,7 @@
               "end": 3345,
               "text": "BUZZ",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "SY7Ui755VQ",
@@ -40903,7 +40798,7 @@
               "end": 3639,
               "text": "BUZZ",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "6H6R8bVG0L",
@@ -40918,7 +40813,7 @@
               "end": 3834,
               "text": "BUZZ",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "6_nFD_fFsY",
@@ -43307,7 +43202,7 @@
               "end": 388,
               "text": "ASML",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "5_WjG-T8qp",
@@ -43485,7 +43380,7 @@
               "end": 4,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "ZT6sRypEpk",
@@ -43530,7 +43425,7 @@
               "end": 126,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "hnPuA3-Cua",
@@ -43545,7 +43440,7 @@
               "end": 340,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "mla4ynfhRp",
@@ -43560,7 +43455,7 @@
               "end": 598,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "cCtO2A63K2",
@@ -43575,7 +43470,7 @@
               "end": 669,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "ZiQ6P6KYSI",
@@ -45826,7 +45721,7 @@
               "end": 11,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "nXDbUHXpUI",
@@ -45841,7 +45736,7 @@
               "end": 167,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "akw2BkZNAy",
@@ -56854,7 +56749,7 @@
               "end": 202,
               "text": "AMD",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "aIyDRCc06X",
@@ -56869,7 +56764,7 @@
               "end": 249,
               "text": "AMD",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "GmAs3Jhcdf",
@@ -56884,7 +56779,7 @@
               "end": 287,
               "text": "AMD",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "IhjxH6fjCP",
@@ -56899,7 +56794,7 @@
               "end": 319,
               "text": "AMD",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "3h1Ioj-rnT",
@@ -56914,7 +56809,7 @@
               "end": 371,
               "text": "AMD",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "APz9ZJwQau",
@@ -56929,7 +56824,7 @@
               "end": 439,
               "text": "AMD",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "WYPoKIV9S6",
@@ -58494,7 +58389,7 @@
               "end": 433,
               "text": "meta",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "yB5vnRzniv",
@@ -61451,7 +61346,7 @@
               "end": 4,
               "text": "POET",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "A2cYC_pK0g",
@@ -61466,7 +61361,7 @@
               "end": 175,
               "text": "POET",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "wezwGO40RW",
@@ -61481,7 +61376,7 @@
               "end": 200,
               "text": "POET",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "lYX6KJ7M-v",
@@ -77344,7 +77239,7 @@
               "end": 4,
               "text": "SOFI",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "bD_fLOjUpK",
@@ -78587,7 +78482,7 @@
               "end": 489,
               "text": "rose",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "CyVa-QV1zK",
@@ -82477,7 +82372,7 @@
               "end": 3247,
               "text": "IBM",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "PHobVhTcGa",
@@ -82541,21 +82436,6 @@
               ]
             },
             "id": "i_XRnIVBI9",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 34,
-              "end": 38,
-              "text": "CNBC",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "G39WroDgTQ",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
@@ -85536,7 +85416,7 @@
               "end": 903,
               "text": "RH",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "bVHPFSvZ1a",
@@ -85551,7 +85431,7 @@
               "end": 1069,
               "text": "RH",
               "labels": [
-                "company"
+                "ticker"
               ]
             },
             "id": "Z7npyJOL5T",
