@@ -80,6 +80,8 @@ REMOVE_SET = {
     "LPBF",
     "AI",
     "ML",
+    # Month abbreviations — used in options notation ("AUG 19 calls", "OCT 21 puts")
+    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
     # Media outlets with no public ticker
     "CNBC",
     "MSNBC",
@@ -113,7 +115,8 @@ def expected_label(text: str, engine) -> str | None:
     if len(upper) <= 1:
         return "unknown"
 
-    is_cashtag = text.startswith("$")
+    # A real cashtag has $ immediately followed by a letter — "$ AUG" (space) is not one.
+    is_cashtag = text.startswith("$") and len(text) > 1 and not text[1].isspace()
 
     # --- Cashtag ($AAPL, $DRAM, $EUV): trusted unconditionally, matches pipeline ---
     # Must come BEFORE the remove set — a $ prefix overrides word-level blocklists.

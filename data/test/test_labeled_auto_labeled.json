@@ -2141,6 +2141,21 @@
                 "company"
               ]
             }
+          },
+          {
+            "id": "patch_5371_5377",
+            "type": "labels",
+            "value": {
+              "start": 5371,
+              "end": 5377,
+              "text": "reddit",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ]
       }
@@ -3131,6 +3146,21 @@
                 "company"
               ]
             }
+          },
+          {
+            "id": "patch_1103_1109",
+            "type": "labels",
+            "value": {
+              "start": 1103,
+              "end": 1109,
+              "text": "reddit",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ]
       }
@@ -5753,6 +5783,21 @@
                 "ticker"
               ]
             }
+          },
+          {
+            "id": "patch_3289_3295",
+            "type": "labels",
+            "value": {
+              "start": 3289,
+              "end": 3295,
+              "text": "Reddit",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ]
       }

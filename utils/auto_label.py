@@ -142,9 +142,10 @@ SYSTEM_INSTRUCTIONS = textwrap.dedent("""\
     LABELING RULE — the form of the text in the post determines the label, not the
     author's intent. Apply these rules in order:
 
-    1. CASHTAG ($ prefix) → always "ticker", no exceptions.
+    1. CASHTAG ($ directly attached, no space) → always "ticker", no exceptions.
        $AMC, $TSLA, $gme, $EUV, $DRAM → ticker even if the word is also a
        technology term or written in lowercase.
+       "$ AUG" (space between $ and word) is NOT a cashtag — do not label it.
 
     2. ALL-CAPS and the text IS the actual ticker symbol → "ticker".
        AMC, META, SOFI, SNAP, NVDA, SPY, QQQ → ticker.
@@ -169,6 +170,9 @@ SYSTEM_INSTRUCTIONS = textwrap.dedent("""\
     - Financial metric acronyms: PDT (pattern day trader), EV (enterprise value),
       SGA, RSU, RSUS, PT (price target), ATM, IV, IPO, EBITDA, FCF, NAV.
     - Memory / chip technology terms (without $ prefix): DRAM, HBM, EUV, NAND, GPU.
+    - Month abbreviations used in options notation: JAN, FEB, MAR, APR, MAY, JUN,
+      JUL, AUG, SEP, OCT, NOV, DEC — e.g. "AUG 19 calls" or "$ AUG 19" means
+      August expiry, not a ticker. (With $ directly attached, $AUG would be a ticker.)
     - News outlets and private companies with no public stock:
       CNBC, MSNBC, WSJ, FT, BLOOMBERG, HBO.
     - Dollar amounts: $100, $5.50, $3T — only $-prefixed *letter* sequences are tickers.

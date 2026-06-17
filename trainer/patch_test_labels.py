@@ -66,6 +66,9 @@ FINANCIAL_ABBREV_BLOCKLIST = {
     "EUV", "DRAM", "NAND", "GPU", "CPU", "HBM", "LPBF",
     # Japanese ministry acronyms
     "MEXT", "METI",
+    # Month abbreviations — used in options notation ("AUG 19 calls", "OCT 21 puts").
+    # Block these even when written as "$ AUG" with a stray space before the letters.
+    "JAN", "FEB", "MAR", "APR", "MAY", "JUN", "JUL", "AUG", "SEP", "OCT", "NOV", "DEC",
     # Misc
     "CA", "HQ", "US", "UK", "EU",
 }
@@ -89,7 +92,7 @@ COMPANY_BLOCKLIST = {
     "burry",        # person (Michael Burry), not a publicly traded company
     "chatgpt",      # product, not a company
     "the verge",    # media outlet; no stock
-    "reddit",       # ambiguous — RDDT *is* a ticker, handled separately below
+    # "reddit" is intentionally NOT blocked — Reddit (RDDT) is a public company
     "sahmcapital.com",
     "lumenai",      # unverifiable private startup
     "controversialclub",
