@@ -11476,21 +11476,6 @@
           },
           {
             "value": {
-              "start": 217,
-              "end": 220,
-              "text": "air",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "VsCHXGTgn_",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 69,
               "end": 76,
               "text": "Citadel",

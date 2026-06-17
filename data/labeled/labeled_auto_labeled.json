@@ -20789,20 +20789,6 @@
             }
           },
           {
-            "id": "72cbe6e546",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 377,
-              "end": 380,
-              "text": "MTD",
-              "labels": [
-                "ticker"
-              ]
-            }
-          },
-          {
             "id": "ad9ca49f06",
             "from_name": "label",
             "to_name": "text",
@@ -21077,20 +21063,6 @@
               "start": 1447,
               "end": 1451,
               "text": "NFLX",
-              "labels": [
-                "ticker"
-              ]
-            }
-          },
-          {
-            "id": "73b6069daa",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1503,
-              "end": 1506,
-              "text": "MTD",
               "labels": [
                 "ticker"
               ]
@@ -28079,20 +28051,6 @@
             }
           },
           {
-            "id": "033a168228",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1933,
-              "end": 1938,
-              "text": "Prime",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "6c6dc111d5",
             "from_name": "label",
             "to_name": "text",
@@ -28185,20 +28143,6 @@
               "start": 2508,
               "end": 2514,
               "text": "Amazon",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
-            "id": "10d6603a04",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 2571,
-              "end": 2576,
-              "text": "Prime",
               "labels": [
                 "company"
               ]
@@ -29608,20 +29552,6 @@
             }
           },
           {
-            "id": "4f5615cce0",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 457,
-              "end": 464,
-              "text": "ChatGPT",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "94c7a731ff",
             "from_name": "label",
             "to_name": "text",
@@ -29630,20 +29560,6 @@
               "start": 712,
               "end": 718,
               "text": "Google",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
-            "id": "7284294a17",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 737,
-              "end": 744,
-              "text": "ChatGPT",
               "labels": [
                 "company"
               ]
@@ -29692,20 +29608,6 @@
             }
           },
           {
-            "id": "d37c02cf21",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 932,
-              "end": 939,
-              "text": "chatGPT",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
             "id": "d89135fcaa",
             "from_name": "label",
             "to_name": "text",
@@ -29714,20 +29616,6 @@
               "start": 1213,
               "end": 1219,
               "text": "google",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
-            "id": "b214407a1d",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 1220,
-              "end": 1227,
-              "text": "chatGPT",
               "labels": [
                 "company"
               ]
@@ -30338,20 +30226,6 @@
               "start": 8313,
               "end": 8319,
               "text": "Claude",
-              "labels": [
-                "company"
-              ]
-            }
-          },
-          {
-            "id": "2a22c04210",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 8322,
-              "end": 8329,
-              "text": "Chatgpt",
               "labels": [
                 "company"
               ]
@@ -32874,20 +32748,6 @@
               "text": "GME",
               "labels": [
                 "ticker"
-              ]
-            }
-          },
-          {
-            "id": "f328fefad0",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "value": {
-              "start": 220,
-              "end": 229,
-              "text": "Bloomberg",
-              "labels": [
-                "company"
               ]
             }
           },

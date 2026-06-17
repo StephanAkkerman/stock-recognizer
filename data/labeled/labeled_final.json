@@ -3588,21 +3588,6 @@
           },
           {
             "value": {
-              "start": 7413,
-              "end": 7420,
-              "text": "l",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "l6CnTOaQJq",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 7524,
               "end": 7531,
               "text": "",
@@ -6350,21 +6335,6 @@
           },
           {
             "value": {
-              "start": 1772,
-              "end": 1792,
-              "text": "c",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "NYE1T5IRaA",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 1808,
               "end": 1819,
               "text": "",
@@ -6493,21 +6463,6 @@
               ]
             },
             "id": "wyIytvSZSM",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 2435,
-              "end": 2445,
-              "text": "k",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "tfK4Hax3mU",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
@@ -30160,21 +30115,6 @@
             "to_name": "text",
             "type": "labels",
             "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 594,
-              "end": 598,
-              "text": "CAGR",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "2CKhPZxNvV",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
           }
         ],
         "was_cancelled": false,
@@ -40464,21 +40404,6 @@
           },
           {
             "value": {
-              "start": 2783,
-              "end": 2789,
-              "text": "a",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "Mq0vjOIqoU",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 564,
               "end": 568,
               "text": "HIVE",
@@ -42064,23 +41989,7 @@
       {
         "id": 730,
         "completed_by": 1,
-        "result": [
-          {
-            "value": {
-              "start": 0,
-              "end": 6,
-              "text": "Circle",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "pSZ9flZYve",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          }
-        ],
+        "result": [],
         "was_cancelled": false,
         "ground_truth": false,
         "created_at": "2026-05-17T13:50:35.000597Z",
@@ -50276,21 +50185,6 @@
               ]
             },
             "id": "lubi-fOdQ8",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 4296,
-              "end": 4311,
-              "text": "a",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "Myqpgs31pM",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",
@@ -65414,21 +65308,6 @@
           },
           {
             "value": {
-              "start": 10181,
-              "end": 10196,
-              "text": "r",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "gcgWX2zdZl",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 6922,
               "end": 6932,
               "text": "",
@@ -77198,21 +77077,6 @@
               ]
             },
             "id": "gn0ea4PZtD",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 2991,
-              "end": 2997,
-              "text": "u",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "8RXHfwgGhT",
             "from_name": "label",
             "to_name": "text",
             "type": "labels",

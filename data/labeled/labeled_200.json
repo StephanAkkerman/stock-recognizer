@@ -16687,21 +16687,6 @@
             "to_name": "text",
             "type": "labels",
             "origin": "prediction"
-          },
-          {
-            "value": {
-              "start": 58,
-              "end": 61,
-              "text": "DTC",
-              "labels": [
-                "ticker"
-              ]
-            },
-            "id": "2gdvnty042",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
           }
         ],
         "was_cancelled": false,
