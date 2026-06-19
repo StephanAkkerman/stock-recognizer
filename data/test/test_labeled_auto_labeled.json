@@ -1806,21 +1806,6 @@
                 "company"
               ]
             }
-          },
-          {
-            "id": "patch_617_623",
-            "type": "labels",
-            "value": {
-              "start": 617,
-              "end": 623,
-              "text": "Micron",
-              "labels": [
-                "company"
-              ]
-            },
-            "from_name": "label",
-            "to_name": "text",
-            "origin": "manual"
           }
         ]
       }
@@ -2141,21 +2126,6 @@
                 "company"
               ]
             }
-          },
-          {
-            "id": "patch_5371_5377",
-            "type": "labels",
-            "value": {
-              "start": 5371,
-              "end": 5377,
-              "text": "reddit",
-              "labels": [
-                "company"
-              ]
-            },
-            "from_name": "label",
-            "to_name": "text",
-            "origin": "manual"
           }
         ]
       }
@@ -3146,21 +3116,6 @@
                 "company"
               ]
             }
-          },
-          {
-            "id": "patch_1103_1109",
-            "type": "labels",
-            "value": {
-              "start": 1103,
-              "end": 1109,
-              "text": "reddit",
-              "labels": [
-                "company"
-              ]
-            },
-            "from_name": "label",
-            "to_name": "text",
-            "origin": "manual"
           }
         ]
       }
@@ -4791,36 +4746,6 @@
                 "company"
               ]
             }
-          },
-          {
-            "id": "patch_1700_1711",
-            "type": "labels",
-            "value": {
-              "start": 1700,
-              "end": 1711,
-              "text": "Morningstar",
-              "labels": [
-                "company"
-              ]
-            },
-            "from_name": "label",
-            "to_name": "text",
-            "origin": "manual"
-          },
-          {
-            "id": "patch_1340_1347",
-            "type": "labels",
-            "value": {
-              "start": 1340,
-              "end": 1347,
-              "text": "Twitter",
-              "labels": [
-                "company"
-              ]
-            },
-            "from_name": "label",
-            "to_name": "text",
-            "origin": "manual"
           }
         ]
       }
@@ -5308,21 +5233,6 @@
                 "ticker"
               ]
             }
-          },
-          {
-            "id": "patch_3378_3385",
-            "type": "labels",
-            "value": {
-              "start": 3378,
-              "end": 3385,
-              "text": "Twitter",
-              "labels": [
-                "company"
-              ]
-            },
-            "from_name": "label",
-            "to_name": "text",
-            "origin": "manual"
           }
         ]
       }
@@ -5783,21 +5693,6 @@
                 "ticker"
               ]
             }
-          },
-          {
-            "id": "patch_3289_3295",
-            "type": "labels",
-            "value": {
-              "start": 3289,
-              "end": 3295,
-              "text": "Reddit",
-              "labels": [
-                "company"
-              ]
-            },
-            "from_name": "label",
-            "to_name": "text",
-            "origin": "manual"
           }
         ]
       }

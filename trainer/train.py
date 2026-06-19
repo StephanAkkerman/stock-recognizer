@@ -366,7 +366,7 @@ if __name__ == "__main__":
     model = torch.compile(base_model)
 
     BATCH_SIZE = 4
-    EFFECTIVE_BATCH_SIZE = 8
+    EFFECTIVE_BATCH_SIZE = BATCH_SIZE * 2
     GRADIENT_ACCUMULATION_STEPS = EFFECTIVE_BATCH_SIZE // BATCH_SIZE
     LORA_RANK = 32
 

@@ -1,0 +1,2768 @@
+{
+  "adapter": "GLiNER2 Large + Adapter v18",
+  "threshold": 0.75,
+  "test_folder": "data/test",
+  "summary": {
+    "tp": 356,
+    "fp": 86,
+    "fn": 294,
+    "p": 0.8054298642533937,
+    "r": 0.5476923076923077,
+    "f1": 0.652014652014652
+  },
+  "categories": {
+    "pure_fp": [
+      {
+        "doc_idx": 3,
+        "text": "spreadbet",
+        "label": "company",
+        "context": "...l shares!!!! Not options, not CFDs, not [spreadbet]. Hodl those shares with diamond hands. ..."
+      },
+      {
+        "doc_idx": 5,
+        "text": "TSLA",
+        "label": "company",
+        "context": "...Once the US 10yr hits 4.20% the play is [TSLA] 400c 3 months out. You heard it here fi..."
+      },
+      {
+        "doc_idx": 6,
+        "text": "$ AUG",
+        "label": "ticker",
+        "context": "... the new chain is out. Currently hold 45[$ AUG] 19 call options. Holding until tomorrow..."
+      },
+      {
+        "doc_idx": 7,
+        "text": "Fed",
+        "label": "company",
+        "context": "...JPow announces what rate hike he wants. [Fed] will pivot my fucking ass, if they do, ..."
+      },
+      {
+        "doc_idx": 13,
+        "text": "here",
+        "label": "company",
+        "context": "...all resistance zones? Clear skies ahead [here] if it can hold. This is a great example..."
+      },
+      {
+        "doc_idx": 21,
+        "text": "chest",
+        "label": "ticker",
+        "context": "...rt humming the Matthew Mcconaughey song/[chest] smack music and buy up some of this sto..."
+      },
+      {
+        "doc_idx": 21,
+        "text": "EDXC",
+        "label": "ticker",
+        "context": "...ch of crap as well as EDXC. I got in to [EDXC] around April when it fell off a cliff. ..."
+      },
+      {
+        "doc_idx": 23,
+        "text": "here",
+        "label": "company",
+        "context": "I might buy [here] if Im being honest. VIX over 9% means w..."
+      },
+      {
+        "doc_idx": 26,
+        "text": "Monkeypox",
+        "label": "company",
+        "context": "...ho is with me in SIGA Technologies?** **[Monkeypox]/MPVX** **\\~10% increase** PER DAY, the ..."
+      },
+      {
+        "doc_idx": 26,
+        "text": "MPVX",
+        "label": "ticker",
+        "context": "... me in SIGA Technologies?** **Monkeypox/[MPVX]** **\\~10% increase** PER DAY, the last ..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "starlink",
+        "label": "company",
+        "context": "...f that space X has the super profitable [starlink] making up most of its business...  Rklb..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "pltr",
+        "label": "ticker",
+        "context": "... comfortably over 100x p/s lmao. That's [pltr] territory and at least that shit is tur..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "FUTU",
+        "label": "company",
+        "context": "...ue growth is outside mainland China as $[FUTU] was banned back in 2023 in mainland Chi..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "CSRC",
+        "label": "ticker",
+        "context": "...ecurities_regulatory_commission_will/)  [CSRC] is fining $FUTU for allowing existing (..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "fundamentals",
+        "label": "company",
+        "context": "...gical.  Well here's the thing. $FUTU by [fundamentals] is an amazing company.  |Financials|Fut..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "CSRC",
+        "label": "ticker",
+        "context": "... anything, this whole thing is bullish. [CSRC] is following known clear rules. Gives w..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "CSRC",
+        "label": "ticker",
+        "context": "... 2022 with a warning but $FUTU ignored. [CSRC] is not going after $FUTU to remove the ..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "CHYNA",
+        "label": "ticker",
+        "context": "...ks. It's completely rational take.  But [CHYNA]! Well, you guys remember the fraud of L..."
+      },
+      {
+        "doc_idx": 35,
+        "text": "SPX",
+        "label": "ticker",
+        "context": "...ld most of my shorts (took profit on my [SPX] puts last friday and added back 1 XSP P..."
+      },
+      {
+        "doc_idx": 35,
+        "text": "Micron",
+        "label": "company",
+        "context": "... I think today is when the market came. [Micron] blasted 20% in one no-news day and hit ..."
+      },
+      {
+        "doc_idx": 37,
+        "text": "Quantum eMotion Corp.",
+        "label": "company",
+        "context": "...u have! I am present you with 2 stocks, [Quantum eMotion Corp.] (QNC.V)  and Energy Plug Technologies C..."
+      },
+      {
+        "doc_idx": 37,
+        "text": "reddit",
+        "label": "company",
+        "context": "... financial advice. But when I delete my [reddit] account because I'm too busy blowing li..."
+      },
+      {
+        "doc_idx": 38,
+        "text": "capital",
+        "label": "company",
+        "context": "...ikes because of Middle East escalation, [capital] rotates fast.  The sectors that histori..."
+      },
+      {
+        "doc_idx": 40,
+        "text": "EOY",
+        "label": "ticker",
+        "context": ".... I’m loading up for the ride to $8+ by [EOY]. What’s your take – in or out? 🚀   DYOR..."
+      },
+      {
+        "doc_idx": 40,
+        "text": "DYOR",
+        "label": "ticker",
+        "context": "... EOY. What’s your take – in or out? 🚀   [DYOR], NFA – but if you miss this, blame your..."
+      },
+      {
+        "doc_idx": 40,
+        "text": "Southeast Asia",
+        "label": "company",
+        "context": "...and GMV, which grew 20% YoY in Q4 2024. [Southeast Asia]’s GDP growth (~5% annually) and Grab’s ..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "EPYC",
+        "label": "company",
+        "context": "...re advantage could scale rapidly.  # 4. [EPYC] Playbook Applied to GPUs  AMD has a tra..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "Burry",
+        "label": "company",
+        "context": "...nting and economic reality is real. But [Burry] may underestimate AMD’s strategic posit..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "Capital",
+        "label": "company",
+        "context": "...d pace * Refresh cycles could stretch * [Capital] may rotate from NVIDIA to AMD over time..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "reddit",
+        "label": "company",
+        "context": "...using long-dated puts expiring in 2027 ([reddit]).  The mismatch between accounting and ..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Big Pharma Links",
+        "label": "company",
+        "context": "...e (300-400%) Autoimmune CAR-T Play with [Big Pharma Links]  IPO’d in Feb 2023 at $30/share. Curren..."
+      },
+      {
+        "doc_idx": 47,
+        "text": "LumenAI",
+        "label": "company",
+        "context": "...r business solutions. They rolled out **[LumenAI]** to personalize employee benefits, aut..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "United Waste",
+        "label": "company",
+        "context": "... large-scale industrial platforms:  * **[United Waste]:** sold for \\~$2.5B * **United Rentals ..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "CAGR",
+        "label": "ticker",
+        "context": "...t's $25B today, projected $65B by 2030 ([CAGR] 20%+). But agentic AI? That's the $100B..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "Twitter",
+        "label": "company",
+        "context": "...ark—expect AI pipeline updates to light [Twitter] on fire.  Sentiment's flipping too. X c..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "RPA",
+        "label": "ticker",
+        "context": "..., 50%+ to $25.  **Quick Company Primer: [RPA]'s OG Going Full AI Beast Mode**  UiPath..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "Morningstar",
+        "label": "company",
+        "context": "...$13.71 (Hold rating), high of $17. WTF? [Morningstar] bumped fair value to $13.71 recently, b..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "DTC",
+        "label": "ticker",
+        "context": "...k the hedge funds, clearing houses, and [DTC] executed a coordinated effort to put Ga..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "DTC",
+        "label": "ticker",
+        "context": "...uch counterfeit GME stock out there and [DTC], the clearing houses, and the hedge fun..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "strategic",
+        "label": "company",
+        "context": "...go short. There is even a term for it, \"[strategic] fails–to–deliver.\" Counterfeiting share..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "financial",
+        "label": "company",
+        "context": "... to first learn how to read a company's [financial] documents and value businesses and only..."
+      },
+      {
+        "doc_idx": 53,
+        "text": "here",
+        "label": "company",
+        "context": "...diculous 500% IV) . So I do have a bias [here]. My target on AMC is $20-$24 area. I'm ..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "Tenet",
+        "label": "company",
+        "context": "... sitting on blockbusters after watching [Tenet] and WW1984 eat shit on streaming:  http..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "Reddit",
+        "label": "company",
+        "context": "...ersial posts of the last hour on all of [Reddit]! If you do not wish to join our communi..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "ControversialClub",
+        "label": "company",
+        "context": "... lol  > Hi!  > You have been added to r/[ControversialClub] because this post of yours from r/walls..."
+      },
+      {
+        "doc_idx": 56,
+        "text": "Nana",
+        "label": "company",
+        "context": "Intel is saved. [Nana] can rest now. Nvidia and Intel partners..."
+      },
+      {
+        "doc_idx": 57,
+        "text": "Analysis",
+        "label": "company",
+        "context": "...bout 3 percent of total US electricity. [Analysis] and AI companies project this to climb ..."
+      },
+      {
+        "doc_idx": 57,
+        "text": "DRAM",
+        "label": "company",
+        "context": "... in soxl, 20k out of the money calls on [DRAM], Nebius, and Vertiv. I also have about ..."
+      },
+      {
+        "doc_idx": 57,
+        "text": "DRAM",
+        "label": "ticker",
+        "context": "... in soxl, 20k out of the money calls on [DRAM], Nebius, and Vertiv. I also have about ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "stock",
+        "label": "company",
+        "context": "...g terminal. I’ve been accumulating this [stock] for awhile now with cost basis between ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Rapid Production Solutions",
+        "label": "company",
+        "context": "... (lumpy, inconsistent revenue) to its **[Rapid Production Solutions] (RPS)** model:  * **Recurring Revenue:*..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "nufacturers",
+        "label": "company",
+        "context": "...g network with qualified contract ma  v [nufacturers] running their Sapphire Printers across ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "significant capital",
+        "label": "company",
+        "context": "... Trust in the \"new\" Velo3D is backed by [significant capital] moves:  * **CEO Debt-to-Equity Swap:** ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Arun",
+        "label": "ticker",
+        "context": "... we are fresh off a double beat ripper, [Arun] may very well turn on the money printer..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Fremont",
+        "label": "company",
+        "context": "...in their Optimus robots (of which their [Fremont] production lines alone are planning to ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "RPS",
+        "label": "ticker",
+        "context": "...RPS)** model:  * **Recurring Revenue:** [RPS] focuses on \"parts-as-a-service,\" where ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Murica",
+        "label": "company",
+        "context": "...\"covered nations\" (China and Russia). – [Murica] First baby. * **Sole Provider Status:**..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "defense & aerospace",
+        "label": "company",
+        "context": "...kely takes a cut out of.    *     * For [defense & aerospace] customers managing surge contracts, thi..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "LPBF",
+        "label": "ticker",
+        "context": "...IG-certified** Laser Powder Bed Fusion ([LPBF]) manufacturer. Foreign competitors (lik..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "CA HQ",
+        "label": "ticker",
+        "context": "... direct confirmation, Velo3D’s Fremont, [CA HQ] is roughly 2.5 miles from Tesla’s large..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Laser Powder Bed Fusion",
+        "label": "company",
+        "context": "...R-compliant, and **DoD STIG-certified** [Laser Powder Bed Fusion] (LPBF) manufacturer. Foreign competitor..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "IDIQ",
+        "label": "company",
+        "context": "...e in the defense supply chain:  * **DLA [IDIQ] Contract ($9.8 Million):** Awarded in M..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "NDAA",
+        "label": "ticker",
+        "context": "...026 National Defense Authorization Act ([NDAA])** banned the Department of War from pr..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Andretti Global",
+        "label": "company",
+        "context": "...Beyond defense, Velo3D partnered with **[Andretti Global]** for the 2026 IMSA Michelin Pilot Chal..."
+      },
+      {
+        "doc_idx": 63,
+        "text": "Now",
+        "label": "ticker",
+        "context": "...th to just 3-5%, down from 13% in FY26. [Now] down \\~60% YTD and \\~77% from the 52-we..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "fico",
+        "label": "company",
+        "context": "...separation with 43% more approvals than [fico]. Banks are increasingly relying upon up..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "ValueInvesting",
+        "label": "company",
+        "context": "...I last made an AMD post 3 months ago on [ValueInvesting] before AMD went parabolic, highlighting..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "CAD",
+        "label": "ticker",
+        "context": "...sources purchased the Dixie project for [CAD]$210,000. After successfully discovering..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "RHs",
+        "label": "ticker",
+        "context": "... just out of frustration and memes over [RHs] bullshit corruption; I am not a laywer ..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "reddit",
+        "label": "company",
+        "context": "... for people to gather around so that my [reddit] won't crash under the sheer force of au..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "Shitron",
+        "label": "company",
+        "context": "... golden plates and washing it down with [Shitron] tears as we wipe our asses with Melvin ..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "financial",
+        "label": "company",
+        "context": "...wonders for the community and started a [financial] revolution fueled by memes and autism. ..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "RobinHood",
+        "label": "company",
+        "context": "...ou say \"CLASS ACTION LAWSUIT\". Fuck you [RobinHood]  Edit 6: I created r/ClassActionRobinHo..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "Melvin",
+        "label": "company",
+        "context": "...Shitron tears as we wipe our asses with [Melvin] bucks by end of next week.  Edit 4: I c..."
+      },
+      {
+        "doc_idx": 73,
+        "text": "zjz",
+        "label": "ticker",
+        "context": "...its destiny. It is in good hands with u/[zjz] aka u/SwineFluPandemic  Edit: He is spr..."
+      }
+    ],
+    "pure_fn": [
+      {
+        "doc_idx": 1,
+        "text": "DOW",
+        "label": "ticker",
+        "context": "... other prominent stock indices like the [DOW]. Most people work hard and try to grow ..."
+      },
+      {
+        "doc_idx": 2,
+        "text": "Google",
+        "label": "company",
+        "context": "...ers a little bit wealthier and rice the [Google] stock value to at least $110. Google is..."
+      },
+      {
+        "doc_idx": 2,
+        "text": "Google",
+        "label": "company",
+        "context": "... excellent investment at current price. [Google] has oceans of money and it is one of th..."
+      },
+      {
+        "doc_idx": 2,
+        "text": "Google",
+        "label": "company",
+        "context": "...y back over 15 Billion dollars worth of [Google] stocks. This will make every shareholde..."
+      },
+      {
+        "doc_idx": 2,
+        "text": "Google",
+        "label": "company",
+        "context": "...he Google stock value to at least $110. [Google] is an excellent investment at current p..."
+      },
+      {
+        "doc_idx": 3,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...with diamond hands. Force the price up. [GME] that money!"
+      },
+      {
+        "doc_idx": 4,
+        "text": "TYDE",
+        "label": "ticker",
+        "context": "... can still buy in today to get the free [TYDE] shares. Get in now before it moons!"
+      },
+      {
+        "doc_idx": 4,
+        "text": "TYDE",
+        "label": "ticker",
+        "context": "...3 a share today with the release of its [TYDE] dividend distribution date of 29 June t..."
+      },
+      {
+        "doc_idx": 6,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...an 2021. 0.98 to 5.45, a 5.5x increase. [GME] only had a 5.5x pop the week after its ..."
+      },
+      {
+        "doc_idx": 6,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...t's safe to say this thing will blow to [GME] regard levels. I'm buying call options ..."
+      },
+      {
+        "doc_idx": 6,
+        "text": "BBBY",
+        "label": "ticker",
+        "context": "...entire option chain is over 80% ITM. If [BBBY] goes to 45 before Friday, it's safe to ..."
+      },
+      {
+        "doc_idx": 6,
+        "text": "BBBY",
+        "label": "ticker",
+        "context": "...ntire option chain went ITM. As of now, [BBBY]'s entire option chain is over 80% ITM. ..."
+      },
+      {
+        "doc_idx": 11,
+        "text": "FUBO",
+        "label": "ticker",
+        "context": "...and now offering betting for areas with [FUBO] Sportsbook, we're going to the moon"
+      },
+      {
+        "doc_idx": 13,
+        "text": "$VET",
+        "label": "ticker",
+        "context": "I've just purchased [$VET] here as it breaks through the daily and..."
+      },
+      {
+        "doc_idx": 14,
+        "text": "BBBY",
+        "label": "ticker",
+        "context": "...e whatever at this point. 3 day weekend [BBBY] break on the sub so maybe people will r..."
+      },
+      {
+        "doc_idx": 21,
+        "text": "EDXC",
+        "label": "ticker",
+        "context": "... have bought a bunch of crap as well as [EDXC]. I got in to EDXC around April when it ..."
+      },
+      {
+        "doc_idx": 22,
+        "text": "stock",
+        "label": "company",
+        "context": "... option trade. I bought leaps & own the [stock]. $BIG offers a 6.5% dividend yield and ..."
+      },
+      {
+        "doc_idx": 26,
+        "text": "$SIGA",
+        "label": "ticker",
+        "context": "...standing shares.With a marketcap of 10B [$SIGA]: **136.85 DOLLAR.**With a marketcap of ..."
+      },
+      {
+        "doc_idx": 26,
+        "text": "$SIGA",
+        "label": "ticker",
+        "context": "...136.85 DOLLAR.**With a marketcap of 50B [$SIGA]: **684.27 DOLLAR.**With a marketcap of ..."
+      },
+      {
+        "doc_idx": 26,
+        "text": "SIGA",
+        "label": "ticker",
+        "context": "...ed 175B at it's peak Covid-19 cycle.* **[SIGA] is currently: $12** | 850 million marke..."
+      },
+      {
+        "doc_idx": 26,
+        "text": "$SIGA",
+        "label": "ticker",
+        "context": "...84.27 DOLLAR.**With a marketcap of 175B [$SIGA]: **2400 DOLLAR.** *\\*Moderna ($MRNA) re..."
+      },
+      {
+        "doc_idx": 27,
+        "text": "BRBR",
+        "label": "ticker",
+        "context": "...nd I think we could see a potential for [BRBR] to really boom if they play their cards..."
+      },
+      {
+        "doc_idx": 27,
+        "text": "Dymatize",
+        "label": "company",
+        "context": "... Premier Protein, known for their brand [Dymatize]. I use this shit everyday and besides g..."
+      },
+      {
+        "doc_idx": 27,
+        "text": "Premier Protein",
+        "label": "company",
+        "context": "...the lead of whey. BUT, when they tested [Premier Protein], it passed. It's one of the only brands..."
+      },
+      {
+        "doc_idx": 27,
+        "text": "Premier Protein",
+        "label": "company",
+        "context": "...T:***  **BRBR (BellRing Brands)** makes [Premier Protein], known for their brand Dymatize. I use ..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "Microsoft",
+        "label": "company",
+        "context": "...using generative AI. As it now happens, [Microsoft] is reportedly planning to reduce the us..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "GitHub",
+        "label": "company",
+        "context": "...ts Claude Code push in favor of its own [GitHub] Copilot CLI. \"While Claude Code has bee..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "Microsoft",
+        "label": "company",
+        "context": "[Microsoft] reportedly cuts Claude Code for GitHub ..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "Microsoft",
+        "label": "company",
+        "context": "...AI tools because of high AI costs? * Is [Microsoft] doing this mainly for cost savings or t..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "GitHub",
+        "label": "company",
+        "context": "... it has also undermined Microsoft’s new [GitHub] Copilot CLI coding tool,\" Warren explai..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "Uber",
+        "label": "company",
+        "context": "...o the drawing board on its assumptions. [Uber]'s total research and development spend ..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "Microsoft",
+        "label": "company",
+        "context": "...opular addition, it has also undermined [Microsoft]’s new GitHub Copilot CLI coding tool,\" ..."
+      },
+      {
+        "doc_idx": 28,
+        "text": "Microsoft",
+        "label": "company",
+        "context": "...laude Code gained vast popularity among [Microsoft] employees over the past six months, whi..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "rklb",
+        "label": "ticker",
+        "context": "...t as much payload as neutron!!! Even if [rklb] pull neutron off it doesn't even compet..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "rklb",
+        "label": "ticker",
+        "context": "...80b market cap lol.  Everyone acts like [rklb] is the second coming of space X.. And t..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "Lunr",
+        "label": "ticker",
+        "context": "...ing less forward revenue projected. And [Lunr] is profitable! And Lunr is probably a l..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "Rklb",
+        "label": "ticker",
+        "context": "...X is overvalued then RKLB is 5x worst.  [Rklb] is sitting at 81b market cap as of this..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "Lunr",
+        "label": "ticker",
+        "context": "... projected. And Lunr is profitable! And [Lunr] is probably a little over valued right ..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "...ivate companies making rockets not just [space X]. Then you have the public company firef..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "Lunr",
+        "label": "ticker",
+        "context": "...ting overvalued. Still holding others + [Lunr] + Bksy etc. Now at 135 I bought puts. I..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "... rumour sell the news, the rumour being [space X] Ipo, the news event being the actual sp..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "RKLB",
+        "label": "ticker",
+        "context": "...extended. If space X Ipo does well then [RKLB] probably dips, if space X Ipo crashes t..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "...y is valued at 20x less than space X if [space X] is 1.5t to 2t market cap (as expected) ..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "rklb",
+        "label": "ticker",
+        "context": "...nuts imo.  Positions: I've been holding [rklb] shares since 4 dollars. Sold some at 80..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "... bed. It's incredibly over extended. If [space X] Ipo does well then RKLB probably dips, ..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "RKLB",
+        "label": "ticker",
+        "context": "If space X is overvalued then [RKLB] is 5x worst.  Rklb is sitting at 81b ma..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "... acts like rklb is the second coming of [space X].. And there is no other competition. We..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "...o does well then RKLB probably dips, if [space X] Ipo crashes than rklb will most certain..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "Lunr",
+        "label": "ticker",
+        "context": "...is turning a profit.  Market cap is 13x [Lunr] whilst having less forward revenue proj..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "If [space X] is overvalued then RKLB is 5x worst.  R..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "space X",
+        "label": "company",
+        "context": "...ut of buying puts here.  On top of that [space X] has the super profitable starlink makin..."
+      },
+      {
+        "doc_idx": 29,
+        "text": "Rklb",
+        "label": "ticker",
+        "context": "... think there is a high chance here that [Rklb] is going to shit the bed. It's incredib..."
+      },
+      {
+        "doc_idx": 30,
+        "text": "Yomiuri Shimbun",
+        "label": "company",
+        "context": "...kthroughs. According to reporting from *[Yomiuri Shimbun]*, Tokyo will contribute **$500 million*..."
+      },
+      {
+        "doc_idx": 30,
+        "text": "6702.T",
+        "label": "ticker",
+        "context": "..., DELL, ACN, and Japanese firm Fujitsu ([6702.T])."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...s friction for exactly the type of user [Robinhood] is built to monetize.  The irony is tha..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...ctive traders back into the market, and [Robinhood] is one of the clearest public companies..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...hat should matter for Robinhood because [Robinhood] benefits when users are active.  More a..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...ing platform instead of a side account  [Robinhood]’s business is already highly tied to ac..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...and blow themselves up faster. But from [Robinhood]’s perspective, increased activity is st..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "HOOD",
+        "label": "ticker",
+        "context": "...oll booth on retail speculation.  # Why [HOOD] specifically?  A lot of brokerages coul..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "HOOD",
+        "label": "ticker",
+        "context": "...ging. 4. Trading activity increases. 5. [HOOD] metrics/earnings eventually show whethe..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...nd margin risk.  That should matter for [Robinhood] because Robinhood benefits when users a..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "HOOD",
+        "label": "ticker",
+        "context": "...e it serves.  **Disclosure:** I am long [HOOD] via ROBN, so factor that bias into my t..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...s $260M, and equities revenue was $82M. [Robinhood] also reported 27.4M funded customers, a..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "HOOD",
+        "label": "ticker",
+        "context": "...benefit if trading activity increases.  [HOOD] is not just a brokerage anymore. It is ..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "... brand is built around retail trading.  [Robinhood] has:  * A huge retail user base * Heavy..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "HOOD",
+        "label": "ticker",
+        "context": "... 20, 2027. So this is not a guaranteed “[HOOD] moons next week” event. My thesis is th..."
+      },
+      {
+        "doc_idx": 32,
+        "text": "HOOD",
+        "label": "ticker",
+        "context": "...ty/margin engagement → better setup for [HOOD] metrics.**  The catalyst may play out i..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "... thing. CSRC is not randomly punishing. [$FUTU] was warned back in 2022. And CSRC is NO..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "... In Equity 2025 (About)|\\+89.4%|\\+68%|  [$FUTU] is the go to degen app for well regarde..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "Ant Financial",
+        "label": "company",
+        "context": "...hing to do with companies like Alibaba. [Ant Financial] isn't even in this case as Ant Financia..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "Ant Financial",
+        "label": "company",
+        "context": "...nt Financial isn't even in this case as [Ant Financial] actually followed the rules and offboar..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "...ee? That was an actual financial fraud. [$FUTU] isn't.  Luckin Coffee turned out to be ..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "... ethnically Chinese.  Here's the thing. [$FUTU] revenue growth is outside mainland Chin..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "Luckin Coffee",
+        "label": "company",
+        "context": "...n actual financial fraud. $FUTU isn't.  [Luckin Coffee] turned out to be a BUY the dip of a lif..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "...'s all logical.  Well here's the thing. [$FUTU] by fundamentals is an amazing company. ..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "...atory_commission_will/)  CSRC is fining [$FUTU] for allowing existing (accounts prior t..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "...o $FUTU back in 2022 with a warning but [$FUTU] ignored. CSRC is not going after $FUTU ..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "... $FUTU ignored. CSRC is not going after [$FUTU] to remove the company. It's been common..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "...back in 2022. And CSRC is NOT punishing [$FUTU] for all the other practice. It's just f..."
+      },
+      {
+        "doc_idx": 34,
+        "text": "$FUTU",
+        "label": "ticker",
+        "context": "...nue growth is outside mainland China as [$FUTU] was banned back in 2023 in mainland Chi..."
+      },
+      {
+        "doc_idx": 35,
+        "text": "XSP",
+        "label": "ticker",
+        "context": "...y SPX puts last friday and added back 1 [XSP] Put spread today & will add 1 additiona..."
+      },
+      {
+        "doc_idx": 36,
+        "text": "MSFT",
+        "label": "ticker",
+        "context": "...to all time highs for the likes of NOW, [MSFT] etc.?"
+      },
+      {
+        "doc_idx": 37,
+        "text": "QNC",
+        "label": "ticker",
+        "context": "...d33cf2-a878-4650-bb7b-ded4e8039484)     [QNC] is also releasing a QRNG, for you regar..."
+      },
+      {
+        "doc_idx": 37,
+        "text": "QNC",
+        "label": "ticker",
+        "context": "... Technologies Corp. (PLUG.CN).      Why [QNC]?  (Besides the 219% growth in one month..."
+      },
+      {
+        "doc_idx": 37,
+        "text": "QNC",
+        "label": "ticker",
+        "context": "...dian businesses, and mentioned Quantum. [QNC] is a Canadian company, so he must have ..."
+      },
+      {
+        "doc_idx": 38,
+        "text": "Plug Power",
+        "label": "company",
+        "context": "...re**.    # Why Plug Power Specifically  [Plug Power] is one of the **largest pure-play hydro..."
+      },
+      {
+        "doc_idx": 38,
+        "text": "Plug Power",
+        "label": "company",
+        "context": "...o alternative energy**.  That’s where **[Plug Power]** comes in.    # The Macro Thesis: Ener..."
+      },
+      {
+        "doc_idx": 38,
+        "text": "Plug Power",
+        "label": "company",
+        "context": "...ydrogen**.  For hydrogen producers like [Plug Power] this:  * dramatically improves margins ..."
+      },
+      {
+        "doc_idx": 39,
+        "text": "Meta",
+        "label": "company",
+        "context": "...ling of user accounts. One report notes [Meta] confirmed deleting around 10 million ac..."
+      },
+      {
+        "doc_idx": 39,
+        "text": "Meta",
+        "label": "company",
+        "context": "...nd harmful accounts. [Forbes Article on [Meta]](https://www.forbes.com/sites/daveywind..."
+      },
+      {
+        "doc_idx": 39,
+        "text": "Meta",
+        "label": "company",
+        "context": "...e Ray-Ban AI glasses, since one needs a [Meta] account to fully use all features? If t..."
+      },
+      {
+        "doc_idx": 39,
+        "text": "Meta",
+        "label": "company",
+        "context": "Will [Meta] Stock Flounder in 2026?  Could it be ti..."
+      },
+      {
+        "doc_idx": 39,
+        "text": "Meta",
+        "label": "company",
+        "context": "...my Meta position?  I am concerned about [Meta]'s disabling of user accounts. One repor..."
+      },
+      {
+        "doc_idx": 39,
+        "text": "Ray-Ban",
+        "label": "company",
+        "context": "... also negatively affect the sale of the [Ray-Ban] AI glasses, since one needs a Meta acco..."
+      },
+      {
+        "doc_idx": 40,
+        "text": "$GRAB",
+        "label": "ticker",
+        "context": "...he end of 2025:  If you’re not stacking [$GRAB] right now, you’re basically leaving fre..."
+      },
+      {
+        "doc_idx": 40,
+        "text": "Grab",
+        "label": "company",
+        "context": "...olatility. •  Profitability Trajectory: [Grab] achieved its first profitable quarter i..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...arnings mismatch, but he underestimates [AMD]'s potential impact. * The AI shift is g..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...y.  # 4. EPYC Playbook Applied to GPUs  [AMD] has a track record of methodical, gener..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...could stretch * Capital may rotate from [NVIDIA] to AMD over time  There is no expectati..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...?utm_source=chatgpt.com)).  He compares [NVIDIA] to Cisco in the dot-com era ([sahmcapit..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...r adoption and enterprise integration * [NVIDIA] guidance versus actual procurement deci..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...urin|Dominant market share|  This shows [AMD] can take share slowly and structurally...."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...m a discovery made outside the company. [AMD] could be next. * Burry is right about d..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "... versus B300 * Cloud providers adopting [AMD] GPUs at scale * ROCm developer adoption..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...itself, and I am bullish on AMD beating [NVIDIA] *just like they did with Intel.*"
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...0-44k for H200 - roughly one quarter of [NVIDIA]'s price.  [Microsoft, Meta, Oracle, and..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...tch * Capital may rotate from NVIDIA to [AMD] over time  There is no expectation of p..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...ion.  # 2. How NVIDIA Stumbled Into AI  [NVIDIA]’s AI dominance was not planned from day..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "Microsoft",
+        "label": "company",
+        "context": ".../nvidia_ai_hardware_competition/), with [Microsoft] using MI300X to power Azure OpenAI serv..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...ext discovery will not favor AMD.  # 3. [AMD]’s Hardware Readiness  MI300X launched w..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "... giving it a [36% memory advantage over [NVIDIA]'s H200](https://www.hpcwire.com/2023/12..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...ty is real. But Burry may underestimate [AMD]’s strategic position.  # 2. How NVIDIA ..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...ate AMD’s strategic position.  # 2. How [NVIDIA] Stumbled Into AI  NVIDIA’s AI dominance..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...niversity of Toronto trained AlexNet on [NVIDIA] GPUs, showing that deep neural networks..."
+      },
+      {
+        "doc_idx": 41,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "... slowly lose margin and market share as [AMD] scales * Enterprises may adopt ROCm at ..."
+      },
+      {
+        "doc_idx": 42,
+        "text": "AWS",
+        "label": "company",
+        "context": "...t’s insane growth.  Now compare that to [AWS]—Amazon’s cloud arm. Back in 2010, AWS d..."
+      },
+      {
+        "doc_idx": 42,
+        "text": "AWS",
+        "label": "company",
+        "context": "...o AWS—Amazon’s cloud arm. Back in 2010, [AWS] did around $500M in revenue, and by 201..."
+      },
+      {
+        "doc_idx": 42,
+        "text": "CoreWeave",
+        "label": "company",
+        "context": "[CoreWeave]: The Future of Search and AI Infrastruc..."
+      },
+      {
+        "doc_idx": 42,
+        "text": "CoreWeave",
+        "label": "company",
+        "context": "...frastructure at scale. That’s why I see [CoreWeave] not just as a backend provider, but as ..."
+      },
+      {
+        "doc_idx": 44,
+        "text": "CoreWeave",
+        "label": "company",
+        "context": "...I needs GPUs, GPUs need infrastructure, [CoreWeave] offers that infrastructure. But last ni..."
+      },
+      {
+        "doc_idx": 44,
+        "text": "CoreWeave",
+        "label": "company",
+        "context": "...onviction.  I've been pretty bullish on [CoreWeave] since more than one year. The thesis wa..."
+      },
+      {
+        "doc_idx": 44,
+        "text": "CoreWeave",
+        "label": "company",
+        "context": "...t $12B–$13B.  What´s your opinion about [CoreWeave]?  [Stoxcraft Snapshot showing the weak ..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Vida Ventures",
+        "label": "company",
+        "context": "...h Vida Ventures owns about 20% of KYTX. [Vida Ventures] has been involved with Gilead before he..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Gilead",
+        "label": "company",
+        "context": "... Sciences. Once again, just my opinion. [Gilead] is just a short drive to KYTX, about 30..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "... 5% of KYTX. Novo could make a play for [KYTX] but it would not go through. Insiders h..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "... about 2% in value to Gilead (obviously [KYTX] has to hit on it's new drugs). The prob..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Gilead",
+        "label": "company",
+        "context": "...ping Gilead buy another company and the [Gilead] board has some Vida Venture people on i..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Gilead",
+        "label": "company",
+        "context": "...een involved with Gilead before helping [Gilead] buy another company and the Gilead boar..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "...ades at. Novo Holdings owns about 5% of [KYTX]. Novo could make a play for KYTX but it..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "...t's new drugs). The problem may be that [KYTX] may only be worth $15.00. Other insider..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Bain Capital",
+        "label": "company",
+        "context": "...omney. I believe but not 100% sure that [Bain Capital] likes to sell companies and not run the..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "...pinion. Gilead is just a short drive to [KYTX], about 30 miles, maybe leading to cost ..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "...am not an insider, just an average Joe. [KYTX] is going to get bought out by Gilead Sc..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "...ng with Vida Ventures owns about 20% of [KYTX]. Vida Ventures has been involved with G..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Gilead",
+        "label": "company",
+        "context": "...ies, which funds operations into 2027.  [Gilead] (based in Foster City, CA) is close to ..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Gilead",
+        "label": "company",
+        "context": "...and this could add about 2% in value to [Gilead] (obviously KYTX has to hit on it's new ..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "Gilead",
+        "label": "company",
+        "context": "...t 30 miles, maybe leading to cost cuts. [Gilead] along with Vida Ventures owns about 20%..."
+      },
+      {
+        "doc_idx": 45,
+        "text": "KYTX",
+        "label": "ticker",
+        "context": "...ple on it. I believe both companies own [KYTX] at a much higher price than KYTX curren..."
+      },
+      {
+        "doc_idx": 46,
+        "text": "SciTec",
+        "label": "company",
+        "context": "...erial part of this story and huge imo.  [SciTec] has existing defense customers, lots of..."
+      },
+      {
+        "doc_idx": 46,
+        "text": "$FLY",
+        "label": "ticker",
+        "context": "[$FLY] me to the moooon  [Loaded to a half tit..."
+      },
+      {
+        "doc_idx": 47,
+        "text": "ALIT",
+        "label": "ticker",
+        "context": "...e721c39a29b50b37  Just bought 80 of the [ALIT] 21 Jan 2028 Calls.  Why I think ALIT (A..."
+      },
+      {
+        "doc_idx": 47,
+        "text": "Alight",
+        "label": "company",
+        "context": "...7.  \\- **Stealth AI play at $3/share-** [Alight] has been quietly implementing AI produc..."
+      },
+      {
+        "doc_idx": 47,
+        "text": "Alight",
+        "label": "company",
+        "context": "...Alight) can do very well from here:  \\- [Alight]'s biggest customers include over 6**0 F..."
+      },
+      {
+        "doc_idx": 47,
+        "text": "Alight",
+        "label": "company",
+        "context": "...ns about HR and benefits.\"*  \\-**95% of [Alight] customers are contracted**, for recurri..."
+      },
+      {
+        "doc_idx": 47,
+        "text": "ALIT",
+        "label": "ticker",
+        "context": "Just yolo'd 80 calls in [ALIT] LEAPs, a stealth AI play at $3/share  h..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "QXO",
+        "label": "ticker",
+        "context": "...M in QXO and holds a board seat.  While [QXO] is not a government contractor, these r..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "Apollo",
+        "label": "company",
+        "context": "...t.aspx)do you think you're smarter than [Apollo]?  TLDR; Tailwinds in the housing market..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "QXO",
+        "label": "ticker",
+        "context": "...rm Affinity Partners, invested $150M in [QXO] and holds a board seat.  While QXO is n..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "Apollo",
+        "label": "company",
+        "context": "...ible-Preferred-Equity-Investment-Led-by-[Apollo]-to-Fund-Future-Acquisitions/default.asp..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "QXO",
+        "label": "ticker",
+        "context": "...* Mortgage and building code standards  [QXO] is a technology-enabled industrial oper..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "QXO",
+        "label": "ticker",
+        "context": "[QXO]: A boring roofing roll up company with ..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "QXO",
+        "label": "ticker",
+        "context": "...n important, often overlooked aspect of [QXO] is its access to politically connected,..."
+      },
+      {
+        "doc_idx": 48,
+        "text": "QXO",
+        "label": "ticker",
+        "context": "...nvestors.qxo.com/news/news-details/2026/[QXO]-Announces-1-2-Billion-Convertible-Prefe..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "UiPath",
+        "label": "company",
+        "context": "...10%. In a world where AI's eating jobs, [UiPath]'s the shovel seller—helping corps deplo..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "$PATH",
+        "label": "ticker",
+        "context": "...0, with mega-cap AI earnings this week, [$PATH] is about to rip 20%, all in $20c.  This..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "UiPath",
+        "label": "company",
+        "context": "...glow-up: They're not just bots anymore. [UiPath]'s pivoting hard into \"agentic AI\"—smart..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "Salesforce",
+        "label": "company",
+        "context": "...0B+ unlock. UiPath's positioned as the \"[Salesforce] of automation.\" Next earnings in Decemb..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "UiPath",
+        "label": "company",
+        "context": "...t agentic AI? That's the $100B+ unlock. [UiPath]'s positioned as the \"Salesforce of auto..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "$PATH",
+        "label": "ticker",
+        "context": "$PATH is about to rip 20%  **[$PATH]** has given a 20% pullback since Trump ..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "OpenAI",
+        "label": "company",
+        "context": "...ime data from Snowflake, reasoning with [OpenAI], and deploying on NVIDIA hardware. That..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "$PATH",
+        "label": "ticker",
+        "context": "...to rip 20%, all in $20c.  This is where [$PATH] gets sexy.  * **Partnerships Galore**: ..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "UiPath",
+        "label": "company",
+        "context": "...uld juice enterprise adoption. Imagine: [UiPath] bots pulling real-time data from Snowfl..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "NVIDIA",
+        "label": "company",
+        "context": "...*Partnerships Galore**: Fresh ties with [NVIDIA] (for GPU-accelerated agents), OpenAI (L..."
+      },
+      {
+        "doc_idx": 49,
+        "text": "Snowflake",
+        "label": "company",
+        "context": "...UiPath bots pulling real-time data from [Snowflake], reasoning with OpenAI, and deploying o..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...gnitude, should have squoze by now with [GME] up more than 10x in the span of weeks. ..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "Game Stop",
+        "label": "company",
+        "context": "...more of the shares originally issued by [Game Stop]. In the process, they may have accident..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...he GME situation  I have been following [GME] since mid-September and over that time ..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...way of retail investors purchasing more [GME]. It's not just about a short squeeze, i..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...o owning a similarly enormous amount of [GME].\\~\\~ **Even if the average was just 10 ..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...days. There is way too much counterfeit [GME] stock out there and DTC, the clearing h..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...ty solid argument that close to 100% of [GME] is owned by these firms, if not more.  ..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "... There are are **71 million shares** of [GME] that have ever been issued by the compa..."
+      },
+      {
+        "doc_idx": 51,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...,000,000 shares** (including the 13% of [GME] stock is owned by Ryan Cohen). Now, I d..."
+      },
+      {
+        "doc_idx": 53,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "... So I do have a bias here. My target on [AMC] is $20-$24 area. I'm sure I'll get down..."
+      },
+      {
+        "doc_idx": 53,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "... ya go. Positions opened yesterday when [AMC] cracked the parabola. Plan is to exit b..."
+      },
+      {
+        "doc_idx": 53,
+        "text": "amc",
+        "label": "ticker",
+        "context": "...bola broke today I did buy some puts on [amc] (at a ridiculous 500% IV) . So I do hav..."
+      },
+      {
+        "doc_idx": 53,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "...ut I might open a long spot position on [AMC] at $20 next week. I don't hate AMC or a..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...a price still under $20  AMC is the new [GME], with better fundamentals and outlook. ..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...ext big short squeeze, and outperformed [GME] today by 165% with a price still under ..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "...-ratio  Coronavirus, the main cause for [AMC]'s big downturn, is on the way out as va..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "...tps://www.macrotrends.net/stocks/charts/[AMC]/amc-entertainment-holdings/debt-equity-..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...ness on this sub, AMC also outperformed [GME] by 165% by close today.  Also, #saveAMC..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "...y by 165% with a price still under $20  [AMC] is the new GME, with better fundamental..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "GME",
+        "label": "ticker",
+        "context": ".... People are actively looking for a new [GME] they feel they missed the boat on.  htt..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...s its all time high of $63. The current [GME] price scares away non-autist retail inv..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "...cks is that you can own more than one.  [AMC] opened today at 4x the price, after tre..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "...ng to parallel releases on HBO Max, but [AMC] is already throwing out deals to get pe..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "... https://www.marketbeat.com/stocks/NYSE/[AMC]/short-interest/  https://highshortinter..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "AMC",
+        "label": "ticker",
+        "context": "... the new GME: cousins, not competitors, [AMC] is the next big short squeeze, and outp..."
+      },
+      {
+        "doc_idx": 54,
+        "text": "GME",
+        "label": "ticker",
+        "context": "AMC is the new [GME]: cousins, not competitors, AMC is the n..."
+      },
+      {
+        "doc_idx": 56,
+        "text": "Intel",
+        "label": "company",
+        "context": "...is saved. Nana can rest now. Nvidia and [Intel] partnership  Here is the link. Trumped ..."
+      },
+      {
+        "doc_idx": 56,
+        "text": "Intel",
+        "label": "company",
+        "context": "[Intel] is saved. Nana can rest now. Nvidia and..."
+      },
+      {
+        "doc_idx": 56,
+        "text": "Intel",
+        "label": "company",
+        "context": "...p  Here is the link. Trumped will boost [Intel] even more. YOLO intel. 30$ premarket."
+      },
+      {
+        "doc_idx": 57,
+        "text": "OpenAI",
+        "label": "company",
+        "context": "....**  In a recent investor presentation, [OpenAI] projected 100B in ad revenue by 2030, a..."
+      },
+      {
+        "doc_idx": 59,
+        "text": "SOFI",
+        "label": "ticker",
+        "context": "...o or theta donation?  Positions:   125x [SOFI] $16C 5/15 @ $0.09   20x SOFI $16.5C 5/1..."
+      },
+      {
+        "doc_idx": 59,
+        "text": "SOFI",
+        "label": "ticker",
+        "context": "... * If the market gets a decent read and [SOFI] reclaims $16.10, I think $16.50 to $17 ..."
+      },
+      {
+        "doc_idx": 59,
+        "text": "SOFI",
+        "label": "ticker",
+        "context": "...@ $0.09   20x SOFI $16.5C 5/15 @ $0.04  [SOFI] is sitting around the mid-$15s after to..."
+      },
+      {
+        "doc_idx": 59,
+        "text": "SOFI",
+        "label": "ticker",
+        "context": "...ns:   125x SOFI $16C 5/15 @ $0.09   20x [SOFI] $16.5C 5/15 @ $0.04  SOFI is sitting ar..."
+      },
+      {
+        "doc_idx": 59,
+        "text": "SOFI",
+        "label": "ticker",
+        "context": "...ng-term investment.  The basic idea:  * [SOFI] traded between roughly $15.23 and $16.0..."
+      },
+      {
+        "doc_idx": 60,
+        "text": "CVS",
+        "label": "ticker",
+        "context": "...e are stocks other than AI ones  Bought [CVS] calls before the earnings, rolled into ..."
+      },
+      {
+        "doc_idx": 61,
+        "text": "Reddit",
+        "label": "company",
+        "context": "...rite \"common sense\" play  This is not a [Reddit] meme stock. They own Lexis Nexis plus a..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Tesla",
+        "label": "company",
+        "context": "... seamlessly marry at any point in time. [Tesla] & SpaceX often share engineering philos..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "... outer space. * **Long-Term Capacity:** [Velo3D] has unveiled a plan to scale to **400 p..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...ssive Government & Defense Contracts**  [Velo3D] has successfully positioned itself as a..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "$VELO",
+        "label": "ticker",
+        "context": "...technical leader at the helm, **Velo3D ([$VELO])** has hit a **critical inflection poin..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "... material/vendor expertise… Considering [Velo3D]’s current relationship with SpaceX, it ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...ws for a bit, do not falter autists:  **[Velo3D]** is an American additive manufacturing..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...sionary technical leader at the helm, **[Velo3D] ($VELO)** has hit a **critical inflecti..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...ebt Restructuring**  Trust in the \"new\" [Velo3D] is backed by significant capital moves:..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "... Momentus and helped manufactured using [Velo3D] technology. – This is not some trivial ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "... focuses on \"parts-as-a-service,\" where [Velo3D] manages production. This provides more ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "... that Velo3D has a direct connection to [SpaceX]’s raptor engine which uses their 3D Pri..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...or every existing customer.  **TL;DR:** [Velo3D] ($VELO) is an American defense infrastr..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Tesla",
+        "label": "company",
+        "context": "...with SpaceX, it wouldn’t surprise me if [Tesla] at some point leveraged Velo3D’s tech f..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "...ring Velo3D’s current relationship with [SpaceX], it wouldn’t surprise me if Tesla at so..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...Commercial Expansion:** Beyond defense, [Velo3D] partnered with **Andretti Global** for ..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...ms needing complex American made parts. [Velo3D] continues to push the envelope and vali..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "[Velo3D] ($VELO) - The Ultimate Print Job  My fe..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "... parts at scale.    * Keep in mind that [Velo3D] has a direct connection to SpaceX’s rap..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...* **U.S. Army Qualification:** In 2026, [Velo3D] became the first qualified additive man..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...ise me if Tesla at some point leveraged [Velo3D]’s tech for high complexity, iterative p..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Momentus",
+        "label": "company",
+        "context": "...of 2026).    * As recent as March 2026, [Momentus]’ successful deployed their Vigoride-7 m..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...Hybrid Global Manufacturing Network:**  [Velo3D] recently launched a certified global ma..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo3D",
+        "label": "company",
+        "context": "...t has effectively cleared the field for [Velo3D].  * **The \"China/Russia Ban\":** The **2..."
+      },
+      {
+        "doc_idx": 63,
+        "text": "Doximity",
+        "label": "company",
+        "context": "... to write with clarity)**  **1) What is [Doximity]:** Known as \"Linkedin for Doctors\", lea..."
+      },
+      {
+        "doc_idx": 63,
+        "text": "Doximity",
+        "label": "company",
+        "context": "... directly with no diversified cushion.  [Doximity] commands CPMs of $80-150+ for physician..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...ofitable revenue growth  I last made an [AMD] post 3 months ago on ValueInvesting bef..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "Upstart",
+        "label": "company",
+        "context": "...de flexibility with \\\\\\~2028 approval.  [Upstart] is unprecedented deep value for an AI c..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "upstart",
+        "label": "company",
+        "context": "...uary at $39.31.  The AI advantages that [upstart] has gives it a decade lead over others...."
+      },
+      {
+        "doc_idx": 65,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...price.  Upstart is in a similar boat to [AMD] was in 2024, where the company is compl..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "Upstart",
+        "label": "company",
+        "context": "[Upstart] is an immensely deep value and high gro..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...ng that AMD has a .7 peg ratio, stating [AMD] was the best value and growth stock, si..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "upstart",
+        "label": "company",
+        "context": "...co. Banks are increasingly relying upon [upstart] as their partner to make loans safety a..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "Upstart",
+        "label": "company",
+        "context": "...pany at just .21 peg ratio.  Long term, [Upstart] has legitimate 10x+ potential, and will..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "Upstart",
+        "label": "company",
+        "context": "...e loans safety and with higher volume.  [Upstart] also Applied for a bank charter which w..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...t 3 months ago on ValueInvesting before [AMD] went parabolic, highlighting that AMD h..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "Upstart",
+        "label": "company",
+        "context": "...as a .21 peg ratio currently. Meanwhile [Upstart] has reiterated insanely bullish guidanc..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "AMD",
+        "label": "ticker",
+        "context": "...e AMD went parabolic, highlighting that [AMD] has a .7 peg ratio, stating AMD was the..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "Upstart",
+        "label": "company",
+        "context": "...wing AI Credit infrastructure Platform  [Upstart] is a fully automated AI company with im..."
+      },
+      {
+        "doc_idx": 65,
+        "text": "Upstart",
+        "label": "company",
+        "context": "...2.75 billion with immense room to grow. [Upstart] is a B2B2C, with Loan applications hitt..."
+      },
+      {
+        "doc_idx": 66,
+        "text": "Meta",
+        "label": "company",
+        "context": "...ess and Tech Reporter Scott Budman said [Meta] hired a lot of people during and after ..."
+      },
+      {
+        "doc_idx": 66,
+        "text": "Meta",
+        "label": "company",
+        "context": "[Meta] to cut 8000 jobs (10% workforce) in May..."
+      },
+      {
+        "doc_idx": 66,
+        "text": "Meta",
+        "label": "company",
+        "context": "...to a report.  Sources told Reuters that [Meta], the parent company of Facebook and Ins..."
+      },
+      {
+        "doc_idx": 66,
+        "text": "Meta",
+        "label": "company",
+        "context": "...head as AI shift accelerates  Source:   [Meta] is planning to lay off 10% of its workf..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "Rocket Lab",
+        "label": "company",
+        "context": "...ably at those high traditional metrics, [Rocket Lab] should be $80B today and $300B if you b..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "Rocket Lab",
+        "label": "company",
+        "context": "...money can replicate SpaceX today.  When [Rocket Lab] were developing Electron, there were mo..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "Rocket Labs",
+        "label": "company",
+        "context": "...0B today.  Electron is less than 1/3 of [Rocket Labs] valuation today so lets adjust and say:..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "...inity. No amount of money can replicate [SpaceX] today.  When Rocket Lab were developing..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "Rocket Lab",
+        "label": "company",
+        "context": "...nd replicate Rocket Lab. Or just buying [Rocket Lab] for $50B today.  Electron is less than ..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "Rocket Lab",
+        "label": "company",
+        "context": "... of saying this is that, to get another [Rocket Lab], you would need to fund 100 companies t..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "Rocket Lab",
+        "label": "company",
+        "context": "...mall launch vehicle with cadence: ZERO  [Rocket Lab] is the 1 in >100 that succeeded.  The o..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX).",
+        "label": "company",
+        "context": "... x 100 P/S if the market is right about [SpaceX).]  For those curious, that puts RKLB at $..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "... SpaceX. Thus the replacement costs for [SpaceX] approaches infinity. No amount of money..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "...lly unlimited funding, cannot replicate [SpaceX]. Thus the replacement costs for SpaceX ..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX?",
+        "label": "company",
+        "context": "... Well, what is the replacement cost for [SpaceX?] How much different would it cost to bui..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX.",
+        "label": "company",
+        "context": "... the market says it's around $1.75T for [SpaceX.]  Arguably at those high traditional met..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "Rocket Lab",
+        "label": "company",
+        "context": "...art-ups $0.5B each to try and replicate [Rocket Lab]. Or just buying Rocket Lab for $50B tod..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "...fferent would it cost to build your own [SpaceX] vs. buying SpaceX as it exists today. W..."
+      },
+      {
+        "doc_idx": 67,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "...ost to build your own SpaceX vs. buying [SpaceX] as it exists today. What incentive is n..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Anthropic",
+        "label": "company",
+        "context": "...$ZM** \\- Both own tiny stakes (2-4B) of [Anthropic]- Maybe Zoom?  Who TF uses Zoom anymore?..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Spacex",
+        "label": "company",
+        "context": "... $SATS** \\- Set to acquire 11B worth of [Spacex] stock with their spectrum deal. Company..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "AGIX",
+        "label": "ticker",
+        "context": "...soon probably start their own country.  [AGIX] ETF - Owns \\~3% of Anthropic. Niche ETF..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Anthropic",
+        "label": "company",
+        "context": "...POs  **VCX** \\- Holds a ton of Open AI, [Anthropic], Spacex, Anduril - implied value/NAV is..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Anthropic",
+        "label": "company",
+        "context": "... uses Zoom anymore?  Nvidia owns 3%  of [Anthropic] - Who cares. They will soon probably st..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "SpaceX",
+        "label": "company",
+        "context": "...he best way to gain leverage before the [SpaceX]/Anthropic IPO frenzy? Let's put our hea..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Zoom",
+        "label": "company",
+        "context": "...t's the upside here?  **Salesforce $CRM [Zoom] $ZM** \\- Both own tiny stakes (2-4B) of..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Zoom",
+        "label": "company",
+        "context": "... of Anthropic- Maybe Zoom?  Who TF uses [Zoom] anymore?  Nvidia owns 3%  of Anthropic ..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Anthropic",
+        "label": "company",
+        "context": "... have been the trojan horse. Spacex and [Anthropic] is about 20% of it's holding. **but no ..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Spacex.",
+        "label": "company",
+        "context": "...t in this  **Alphabet** \\- Owns 6.1% of [Spacex.] Wont really move the needle. October Ca..."
+      },
+      {
+        "doc_idx": 68,
+        "text": "Anthropic",
+        "label": "company",
+        "context": "...e.. Calls?  **Amazon** \\- Owns \\~15% of [Anthropic]. Again. Massive company. 5% bump? What'..."
+      },
+      {
+        "doc_idx": 69,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...lation. A class action must be started, [Robinhood] has made plenty of money off selling in..."
+      },
+      {
+        "doc_idx": 69,
+        "text": "Robinhood",
+        "label": "company",
+        "context": "...t might take a couple of days, but send [Robinhood] to the ground and GME to the moon."
+      },
+      {
+        "doc_idx": 69,
+        "text": "ROBINHOOD",
+        "label": "company",
+        "context": "...ausing people to loose money now  LEAVE [ROBINHOOD]. They dont deserve to make money off us..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "RH",
+        "label": "ticker",
+        "context": "...o the rest. I have 18 shares holding on [RH] with average cost of $112. 1000EOD Boys..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...e money on GME.   This is the way. 💎🙌💎. [GME] GANG FOREVER 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 STRAIG..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...inced my mother to yolo her stocks into [GME] early on @90. She still continues to ad..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "GME",
+        "label": "ticker",
+        "context": "... this glorious energy into GME.  TL;DR: [GME] to 1,000 EOD, GME 5000 EONW. THE SUQEEZ..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...WILL NOT STOP UNTIL WE SEE ELON SHOOT A [GME] THEMED ROCKET FILLED WITH THE BURNT ASH..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...Put forth all this glorious energy into [GME].  TL;DR: GME to 1,000 EOD, GME 5000 EON..."
+      },
+      {
+        "doc_idx": 70,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...rgy into GME.  TL;DR: GME to 1,000 EOD, [GME] 5000 EONW. THE SUQEEZE HAS NOT SQUOZEN ..."
+      },
+      {
+        "doc_idx": 71,
+        "text": "GME",
+        "label": "ticker",
+        "context": "...uy order in for $10k per share to allow [GME] shareholders to exit.  Isn’t $700 billi..."
+      },
+      {
+        "doc_idx": 73,
+        "text": "Reddit",
+        "label": "company",
+        "context": "...e a sub and sent plea to Reddit admins. [Reddit] admins banned offenders and gave sub ba..."
+      }
+    ],
+    "boundary": [
+      {
+        "doc_idx": 41,
+        "gold_text": "OpenAI",
+        "pred_text": "Azure OpenAI",
+        "label": "company",
+        "context": "...), with Microsoft using MI300X to power [Azure OpenAI] services. This demonstrates enterprise ..."
+      },
+      {
+        "doc_idx": 49,
+        "gold_text": "UiPath Labs",
+        "pred_text": "UiPath",
+        "label": "company",
+        "context": "...e ScreenPlay (no-code AI scripting) and [UiPath Labs] for enterprise-scale agent building. Th..."
+      },
+      {
+        "doc_idx": 54,
+        "gold_text": "AMC",
+        "pred_text": "saveAMC",
+        "label": "ticker",
+        "context": "...med GME by 165% by close today.  Also, #[saveAMC] is already trending as it gains tractio..."
+      }
+    ],
+    "confusion": [
+      {
+        "doc_idx": 48,
+        "text": "QXO",
+        "gold_label": "ticker",
+        "pred_label": "company",
+        "context": "...ny with potential for explosive growth  [QXO] is a newly built public platform led by..."
+      },
+      {
+        "doc_idx": 59,
+        "text": "SOFI",
+        "gold_label": "ticker",
+        "pred_label": "company",
+        "context": "[SOFI] 5/15 calls: macro lotto or theta donati..."
+      },
+      {
+        "doc_idx": 59,
+        "text": "SOFI",
+        "gold_label": "ticker",
+        "pred_label": "company",
+        "context": "...16.50 to $17 is possible by Friday * If [SOFI] stays pinned under $16 or loses $15.20,..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "EOS",
+        "gold_label": "ticker",
+        "pred_label": "company",
+        "context": "...manufacturer. Foreign competitors (like [EOS] or Nikon SLM) often face higher hurdles..."
+      },
+      {
+        "doc_idx": 62,
+        "text": "Velo",
+        "gold_label": "company",
+        "pred_label": "ticker",
+        "context": "...ed for greatness & trades like crack. – [Velo] eliminates costly production bottleneck..."
+      },
+      {
+        "doc_idx": 63,
+        "text": "Snap",
+        "gold_label": "company",
+        "pred_label": "ticker",
+        "context": "...-tier platforms can't match. Pinterest, [Snap], and a sub-scale Doximity are structura..."
+      },
+      {
+        "doc_idx": 66,
+        "text": "Snap",
+        "gold_label": "company",
+        "pred_label": "ticker",
+        "context": "...panies have laid off workers recently.  [Snap], the parent company of Snapchat, announ..."
+      },
+      {
+        "doc_idx": 66,
+        "text": "meta",
+        "gold_label": "ticker",
+        "pred_label": "company",
+        "context": "... year.  The report of job cuts comes as [meta] has been spending less on virtual reali..."
+      }
+    ],
+    "per_doc": [
+      {
+        "doc_idx": 0,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "[https://finance.yahoo.com/news/bbby-bull-ken-griffin-10-130338501.html](https:/"
+      },
+      {
+        "doc_idx": 1,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "War is driven by profit. This is magnified by long-time inclusion of war compani"
+      },
+      {
+        "doc_idx": 2,
+        "n_errors": 4,
+        "n_fp": 0,
+        "n_fn": 4,
+        "preview": "On Friday, Google is expected to buy back over 15 Billion dollars worth of Googl"
+      },
+      {
+        "doc_idx": 3,
+        "n_errors": 2,
+        "n_fp": 1,
+        "n_fn": 1,
+        "preview": "Buy actual shares!!!! Not options, not CFDs, not spreadbet. Hodl those shares wi"
+      },
+      {
+        "doc_idx": 4,
+        "n_errors": 2,
+        "n_fp": 0,
+        "n_fn": 2,
+        "preview": "BBIG should take off well up over $3 a share today with the release of its TYDE "
+      },
+      {
+        "doc_idx": 5,
+        "n_errors": 1,
+        "n_fp": 1,
+        "n_fn": 0,
+        "preview": "Hello regards, JPow and Musk are going to send us to Nirvana, they will dump the"
+      },
+      {
+        "doc_idx": 6,
+        "n_errors": 5,
+        "n_fp": 1,
+        "n_fn": 4,
+        "preview": "BBBY just had a spike on its MACD from 0.48 to 1.61 a 3.3x increase. GME experie"
+      },
+      {
+        "doc_idx": 7,
+        "n_errors": 1,
+        "n_fp": 1,
+        "n_fn": 0,
+        "preview": "SPY dropped over $22 from the high today (exact $415), and we are still up since"
+      },
+      {
+        "doc_idx": 8,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Netflix has had nothing but woke dumpster fires for a long time. Also theyve mes"
+      },
+      {
+        "doc_idx": 9,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "A lot of paper hands getting out before blast off. Might looks scary now, but it"
+      },
+      {
+        "doc_idx": 10,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Lol AAPL fukd! Pamp everything else!"
+      },
+      {
+        "doc_idx": 11,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "FUBO is up 41% this week with a $35 52 week high. Currently at $5 a share, with "
+      },
+      {
+        "doc_idx": 12,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Multiple coin exchanges have restricted withdrawals (very troublesome). Others a"
+      },
+      {
+        "doc_idx": 13,
+        "n_errors": 2,
+        "n_fp": 1,
+        "n_fn": 1,
+        "preview": "I've just purchased $VET here as it breaks through the daily and weekly zone. On"
+      },
+      {
+        "doc_idx": 14,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "Seriously want to know the subs thoughts on SPCE. They have a lot of plans for s"
+      },
+      {
+        "doc_idx": 15,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "In short, I want to invest in index and reinvest dividend to use compounding. My"
+      },
+      {
+        "doc_idx": 16,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "FedEx on Thursday withdrew its full-year guidance and announced significant cost"
+      },
+      {
+        "doc_idx": 17,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Anyone noticing serious lag in options book quotes on BBBY? Seeing serious lag o"
+      },
+      {
+        "doc_idx": 18,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "A friend of mine wants me to join this friends and family raise for SCGX, $0.50 "
+      },
+      {
+        "doc_idx": 19,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Can someone smarter than I explain why what was done with GME and AMC was not ju"
+      },
+      {
+        "doc_idx": 20,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "The people in this sub remind me of a bunch of rock headed redards smackin a gia"
+      },
+      {
+        "doc_idx": 21,
+        "n_errors": 3,
+        "n_fp": 2,
+        "n_fn": 1,
+        "preview": "Hello fellow idiots. I have stumbled upon something that has made me money. With"
+      },
+      {
+        "doc_idx": 22,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "Big Lots is the perfect stock for those who want to YOLO into a short term call "
+      },
+      {
+        "doc_idx": 23,
+        "n_errors": 1,
+        "n_fp": 1,
+        "n_fn": 0,
+        "preview": "I might buy here if Im being honest. VIX over 9% means we should get a bounce wi"
+      },
+      {
+        "doc_idx": 24,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Apes... Need a little K to post where I might like to. $BBBY PSA for you below. "
+      },
+      {
+        "doc_idx": 25,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Just bought some more BBBY bc why not. I think its just a bump in the road but i"
+      },
+      {
+        "doc_idx": 26,
+        "n_errors": 6,
+        "n_fp": 2,
+        "n_fn": 4,
+        "preview": "**Who is with me in SIGA Technologies?** **Monkeypox/MPVX** **\\~10% increase** P"
+      },
+      {
+        "doc_idx": 27,
+        "n_errors": 4,
+        "n_fp": 0,
+        "n_fn": 4,
+        "preview": "The Great Protein Shortage of 2026 - DD  The great protein shortage of 2026 is c"
+      },
+      {
+        "doc_idx": 28,
+        "n_errors": 8,
+        "n_fp": 0,
+        "n_fn": 8,
+        "preview": "Microsoft reportedly cuts Claude Code for GitHub Copilot CLI. AI coding costs ma"
+      },
+      {
+        "doc_idx": 29,
+        "n_errors": 21,
+        "n_fp": 2,
+        "n_fn": 19,
+        "preview": "If space X is overvalued then RKLB is 5x worst.  Rklb is sitting at 81b market c"
+      },
+      {
+        "doc_idx": 30,
+        "n_errors": 2,
+        "n_fp": 0,
+        "n_fn": 2,
+        "preview": "Japan Joins U.S. ‘AI Manhattan Project,’ Pledging $500 Million to Counter China "
+      },
+      {
+        "doc_idx": 31,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "This entire bull run is being fuelled exclusively by short squeezes - there's no"
+      },
+      {
+        "doc_idx": 32,
+        "n_errors": 14,
+        "n_fp": 0,
+        "n_fn": 14,
+        "preview": "DD: HOOD Could Benefit as the $25K Pattern Day Trader Barrier Starts Falling Nex"
+      },
+      {
+        "doc_idx": 33,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Fellow Regarded Space Cadets 🚀  Questions for my fellow regards and SpaceX IPO h"
+      },
+      {
+        "doc_idx": 34,
+        "n_errors": 19,
+        "n_fp": 6,
+        "n_fn": 13,
+        "preview": "$FUTU Play ($30k in) Buying the Dip  We all know what happened.  [https://www.re"
+      },
+      {
+        "doc_idx": 35,
+        "n_errors": 3,
+        "n_fp": 2,
+        "n_fn": 1,
+        "preview": "Ultimate DD on why this is the TOP - Technical Analysis (Cumming Formation)  I a"
+      },
+      {
+        "doc_idx": 36,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "SaaSpocalypse > SaaSdemption - back to ATHs? Including MSFT  Is the AI supply ch"
+      },
+      {
+        "doc_idx": 37,
+        "n_errors": 5,
+        "n_fp": 2,
+        "n_fn": 3,
+        "preview": "Quantum will kill RSA. Here's how you get a piece of the downfall.  Hello fellow"
+      },
+      {
+        "doc_idx": 38,
+        "n_errors": 4,
+        "n_fp": 1,
+        "n_fn": 3,
+        "preview": "DD: PLUG INC ($PLUG) MASSIVE BULLISH OUTLOOK  # DD: Why I'm Going Long on Plug P"
+      },
+      {
+        "doc_idx": 39,
+        "n_errors": 6,
+        "n_fp": 0,
+        "n_fn": 6,
+        "preview": "Will Meta Stock Flounder in 2026?  Could it be time to consider selling my Meta "
+      },
+      {
+        "doc_idx": 40,
+        "n_errors": 5,
+        "n_fp": 3,
+        "n_fn": 2,
+        "preview": "Why $GRAB is the Undeniable Play for the end of 2025:  If you’re not stacking $G"
+      },
+      {
+        "doc_idx": 41,
+        "n_errors": 25,
+        "n_fp": 5,
+        "n_fn": 20,
+        "preview": "The AI Market: A Gradual Rotation  I want to share some analysis I’ve been think"
+      },
+      {
+        "doc_idx": 42,
+        "n_errors": 4,
+        "n_fp": 0,
+        "n_fn": 4,
+        "preview": "CoreWeave: The Future of Search and AI Infrastructure?  CoreWeave is arguably th"
+      },
+      {
+        "doc_idx": 43,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Is anyone in an AI dispersion trade  Bloomberg came out with trade ideas for 202"
+      },
+      {
+        "doc_idx": 44,
+        "n_errors": 3,
+        "n_fp": 0,
+        "n_fn": 3,
+        "preview": "I've been holding CoreWeave since more than one year but last night's earnings j"
+      },
+      {
+        "doc_idx": 45,
+        "n_errors": 17,
+        "n_fp": 1,
+        "n_fn": 16,
+        "preview": "(KYTX) – A Deep Value (300-400%) Autoimmune CAR-T Play with Big Pharma Links  IP"
+      },
+      {
+        "doc_idx": 46,
+        "n_errors": 2,
+        "n_fp": 0,
+        "n_fn": 2,
+        "preview": "$FLY me to the moooon  [Loaded to a half tittie](https://preview.redd.it/lxh30o6"
+      },
+      {
+        "doc_idx": 47,
+        "n_errors": 6,
+        "n_fp": 1,
+        "n_fn": 5,
+        "preview": "Just yolo'd 80 calls in ALIT LEAPs, a stealth AI play at $3/share  https://previ"
+      },
+      {
+        "doc_idx": 48,
+        "n_errors": 11,
+        "n_fp": 2,
+        "n_fn": 9,
+        "preview": "QXO: A boring roofing roll up company with potential for explosive growth  QXO i"
+      },
+      {
+        "doc_idx": 49,
+        "n_errors": 17,
+        "n_fp": 5,
+        "n_fn": 12,
+        "preview": "$PATH is about to rip 20%  **$PATH** has given a 20% pullback since Trump Tweet "
+      },
+      {
+        "doc_idx": 50,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "TripAdvisor doing things?  I have a bunch of old RSUs that I should've sold but "
+      },
+      {
+        "doc_idx": 51,
+        "n_errors": 13,
+        "n_fp": 4,
+        "n_fn": 9,
+        "preview": "The real reason Wall Street is terrified of the GME situation  I have been follo"
+      },
+      {
+        "doc_idx": 52,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "15 U.S.C.A. § 78i - the Illegality of Short Ladder Attacks (Legal insight)  Dear"
+      },
+      {
+        "doc_idx": 53,
+        "n_errors": 5,
+        "n_fp": 1,
+        "n_fn": 4,
+        "preview": "AMC target is $20 (don't hate the messenger).  I have no DD to share. I care abo"
+      },
+      {
+        "doc_idx": 54,
+        "n_errors": 18,
+        "n_fp": 4,
+        "n_fn": 14,
+        "preview": "AMC is the new GME: cousins, not competitors, AMC is the next big short squeeze,"
+      },
+      {
+        "doc_idx": 55,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Nearly half of planned US data centers have been delayed or canceled limited by "
+      },
+      {
+        "doc_idx": 56,
+        "n_errors": 4,
+        "n_fp": 1,
+        "n_fn": 3,
+        "preview": "Intel is saved. Nana can rest now. Nvidia and Intel partnership  Here is the lin"
+      },
+      {
+        "doc_idx": 57,
+        "n_errors": 4,
+        "n_fp": 3,
+        "n_fn": 1,
+        "preview": "OpenAI expects over half of all internet users will be active on its platform by"
+      },
+      {
+        "doc_idx": 58,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "The machine that makes chips possible now has its own ETF  ​  Been following the"
+      },
+      {
+        "doc_idx": 59,
+        "n_errors": 9,
+        "n_fp": 2,
+        "n_fn": 7,
+        "preview": "SOFI 5/15 calls: macro lotto or theta donation?  Positions:   125x SOFI $16C 5/1"
+      },
+      {
+        "doc_idx": 60,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "CVS about to break 100!!! Yes there are stocks other than AI ones  Bought CVS ca"
+      },
+      {
+        "doc_idx": 61,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "RELX is my new favorite \"common sense\" play  This is not a Reddit meme stock. Th"
+      },
+      {
+        "doc_idx": 62,
+        "n_errors": 42,
+        "n_fp": 17,
+        "n_fn": 25,
+        "preview": "Velo3D ($VELO) - The Ultimate Print Job  My fellow autists, forum permitting, I "
+      },
+      {
+        "doc_idx": 63,
+        "n_errors": 5,
+        "n_fp": 2,
+        "n_fn": 3,
+        "preview": "DD: Doximity will Fall Further  **(Put my thoughts in AI to write with clarity)*"
+      },
+      {
+        "doc_idx": 64,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "Sold covered calls on RKLB before earnings. Feeling sick.  Been holding since $6"
+      },
+      {
+        "doc_idx": 65,
+        "n_errors": 16,
+        "n_fp": 2,
+        "n_fn": 14,
+        "preview": "Upstart is an immensely deep value and high growing AI Credit infrastructure Pla"
+      },
+      {
+        "doc_idx": 66,
+        "n_errors": 8,
+        "n_fp": 2,
+        "n_fn": 6,
+        "preview": "Meta to cut 8000 jobs (10% workforce) in May. More layoffs ahead as AI shift acc"
+      },
+      {
+        "doc_idx": 67,
+        "n_errors": 16,
+        "n_fp": 1,
+        "n_fn": 15,
+        "preview": "Rockets Are Worth Their Weight in Gold (Aka RKLB to $519).  I didn't think I cou"
+      },
+      {
+        "doc_idx": 68,
+        "n_errors": 11,
+        "n_fp": 0,
+        "n_fn": 11,
+        "preview": "What's the best way to gain leverage before the SpaceX/Anthropic IPO frenzy? Let"
+      },
+      {
+        "doc_idx": 69,
+        "n_errors": 3,
+        "n_fp": 0,
+        "n_fn": 3,
+        "preview": "CLASS ACTION AGAINST ROBINHOOD. Allowing people to only sell is the definition o"
+      },
+      {
+        "doc_idx": 70,
+        "n_errors": 13,
+        "n_fp": 6,
+        "n_fn": 7,
+        "preview": "Can you say \"CLASS ACTION LAWSUIT\". Fuck you RobinHood  Edit 6: I created r/Clas"
+      },
+      {
+        "doc_idx": 71,
+        "n_errors": 1,
+        "n_fp": 0,
+        "n_fn": 1,
+        "preview": "It’s time for a government bailout of GME shareholders at $10,000 per share. Thi"
+      },
+      {
+        "doc_idx": 72,
+        "n_errors": 0,
+        "n_fp": 0,
+        "n_fn": 0,
+        "preview": "30 Seconds From Triggering Market Nuclear Bomb  I'm glad this place has quieted "
+      },
+      {
+        "doc_idx": 73,
+        "n_errors": 2,
+        "n_fp": 1,
+        "n_fn": 1,
+        "preview": "A dark part WallStreetBets history, and why it's important for you to know and r"
+      }
+    ]
+  }
+}

@@ -137,9 +137,29 @@ def load_test_with_provenance(folder: str):
                     "text": text,
                     "_file": file_path,
                     "_task_idx": task_idx,
+                    "_task_id": task.get("id"),
                 }
             )
     return result
+
+
+def build_labeled_index(labeled_folder: str) -> dict:
+    """Map task id → (file_path, task_idx) for every task in labeled_folder.
+
+    Used by apply_patches so additions are written to the authoritative source
+    files in data/labeled/ rather than the derived test files in data/test/.
+    Patches survive future re-splits because split_test_set.py copies the full
+    task object (including all annotations) from labeled/.
+    """
+    index = {}
+    for fp in glob.glob(os.path.join(labeled_folder, "*.json")):
+        with open(fp, encoding="utf-8") as f:
+            tasks = json.load(f)
+        for task_idx, task in enumerate(tasks):
+            tid = task.get("id")
+            if tid is not None:
+                index[tid] = (fp, task_idx)
+    return index
 
 
 def find_entity_span(
@@ -237,46 +257,76 @@ def make_ls_result(start: int, end: int, label: str, text: str) -> dict:
 
 
 def interactive_review(candidates: list[dict]) -> list[dict]:
-    """Ask the user to accept or reject each candidate (y/n/q)."""
+    """Ask the user to accept, relabel, or reject each candidate.
+
+    Keys
+    ----
+    y  Accept with the predicted label as-is
+    t  Accept but force label → ticker
+    c  Accept but force label → company
+    n  Skip (do not add to ground truth)
+    q  Quit — additions accepted so far will be applied
+    """
     approved = []
     total = len(candidates)
     print(f"\n{'='*70}")
-    print(f"  Review {total} engine-validated candidates (y=accept, n=skip, q=quit)")
+    print(f"  Review {total} engine-validated candidates")
+    print(f"  y=accept  t=accept as ticker  c=accept as company  n=skip  q=quit")
     print(f"{'='*70}\n")
     for i, c in enumerate(candidates, 1):
         print(f"[{i}/{total}]  label={c['label']}  text={c['text']!r}")
         print(f"  context: {c['context']}")
         print(f"  file: {c['_file']}  doc_idx={c['doc_idx']}")
         while True:
-            ans = input("  Accept? [y/n/q] ").strip().lower()
-            if ans in ("y", "n", "q"):
+            ans = input("  [y/t/c/n/q] ").strip().lower()
+            if ans in ("y", "t", "c", "n", "q"):
                 break
-        if ans == "y":
-            approved.append(c)
-        elif ans == "q":
+        if ans == "q":
             print("  Quitting review — changes accepted so far will be applied.")
             break
+        if ans == "n":
+            print()
+            continue
+        entry = dict(c)
+        if ans == "t":
+            entry["label"] = "ticker"
+        elif ans == "c":
+            entry["label"] = "company"
+        approved.append(entry)
         print()
     return approved
 
 
-def apply_patches(approved: list[dict], test_folder: str) -> None:
-    """Write approved span additions into the Label Studio JSON files."""
-    # Group by file so we only write each file once
+def apply_patches(approved: list[dict], labeled_folder: str) -> None:
+    """Write approved span additions into the source data/labeled/ JSON files.
+
+    Patches are written to labeled/ (not data/test/) so they survive future
+    calls to split_test_set.py, which wipes and regenerates data/test/.
+    """
+    labeled_index = build_labeled_index(labeled_folder)
+
+    # Resolve each candidate to its labeled-file location via task id
     by_file: dict[str, list[dict]] = {}
     for c in approved:
-        by_file.setdefault(c["_file"], []).append(c)
+        task_id = c.get("_task_id")
+        if task_id is None or task_id not in labeled_index:
+            print(f"  WARNING: task id={task_id!r} not found in {labeled_folder}, skipping")
+            continue
+        file_path, task_idx_in_labeled = labeled_index[task_id]
+        entry = dict(c)
+        entry["_labeled_file"] = file_path
+        entry["_labeled_task_idx"] = task_idx_in_labeled
+        by_file.setdefault(file_path, []).append(entry)
 
     for file_path, patches in by_file.items():
         with open(file_path, encoding="utf-8") as f:
             tasks = json.load(f)
 
         for patch in patches:
-            task = tasks[patch["_task_idx"]]
+            task = tasks[patch["_labeled_task_idx"]]
             annotation = task["annotations"][0]
             result = annotation.setdefault("result", [])
 
-            # Check if this exact span+label already exists
             already_there = any(
                 r.get("type") == "labels"
                 and r["value"]["start"] == patch["start"]
@@ -299,13 +349,18 @@ def main() -> None:
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument(
         "--errors",
-        default="errors_v17.json",
-        help="Path to the error JSON from error_analysis.py --save-json (default: errors_v17.json)",
+        required=True,
+        help="Path to the error JSON from error_analysis.py --save-json",
     )
     parser.add_argument(
         "--test-folder",
         default="data/test",
-        help="Test set folder to patch (default: data/test)",
+        help="Test set folder to read docs from (default: data/test)",
+    )
+    parser.add_argument(
+        "--labeled-folder",
+        default="data/labeled",
+        help="Source folder to write patches into (default: data/labeled)",
     )
     parser.add_argument(
         "--apply",
@@ -378,6 +433,7 @@ def main() -> None:
                 "end": end,
                 "_file": doc["_file"],
                 "_task_idx": doc["_task_idx"],
+                "_task_id": doc["_task_id"],
             }
         )
 
@@ -404,8 +460,8 @@ def main() -> None:
 
         if approved:
             print(f"\nApplying {len(approved)} addition(s)…")
-            apply_patches(approved, args.test_folder)
-            print("Done. Re-run the benchmark to see updated metrics.")
+            apply_patches(approved, args.labeled_folder)
+            print("Done. Re-run split_test_set.py then benchmark to see updated metrics.")
         else:
             print("No additions approved.")
     else:
