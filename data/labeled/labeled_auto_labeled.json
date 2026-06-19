@@ -16255,6 +16255,21 @@
             "from_name": "label",
             "to_name": "text",
             "origin": "manual"
+          },
+          {
+            "id": "patch_1023_1044",
+            "from_name": "label",
+            "to_name": "text",
+            "type": "labels",
+            "value": {
+              "start": 1023,
+              "end": 1044,
+              "text": "Quantum eMotion Corp.",
+              "labels": [
+                "company"
+              ]
+            },
+            "origin": "manual"
           }
         ]
       }
