@@ -85393,6 +85393,36 @@
             "to_name": "text",
             "type": "labels",
             "origin": "prediction"
+          },
+          {
+            "id": "patch_45_54",
+            "type": "labels",
+            "value": {
+              "start": 45,
+              "end": 54,
+              "text": "RobinHood",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
+          },
+          {
+            "id": "patch_136_142",
+            "type": "labels",
+            "value": {
+              "start": 136,
+              "end": 142,
+              "text": "reddit",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ],
         "was_cancelled": false,

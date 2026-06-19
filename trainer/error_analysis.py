@@ -121,16 +121,23 @@ def collect_pred_per_doc(all_outputs, flat_chunks, doc_chunk_ranges):
 
 
 def categorize_errors(pred_per_doc, gold_per_doc, dataset, context_chars=40):
-    """Split errors into pure-FP, pure-FN, boundary mismatches, label confusions.
+    """Split errors into five categories.
 
-    Each list contains dicts ready for tabular display. A boundary mismatch
-    consumes one FP and one FN; a label confusion likewise. Pure FP/FN are
-    what's left after those pairings.
+    Each list contains dicts ready for tabular display. Consuming a match
+    removes both the FP and FN from the pool before the next pass.
+
+    Pass order (most-specific first):
+      1. Label confusions    — exact same span, different label
+      2. Boundary mismatches — overlapping spans, same label
+      3. Cross-label boundary— overlapping spans, different label
+                               (e.g. gold "$FUTU/ticker" vs pred "FUTU/company")
+      4. Pure FP / FN        — everything else
     """
     pure_fp = []
     pure_fn = []
     boundary = []
     confusion = []
+    cross_boundary = []
     per_doc_counts = []
 
     for doc_idx, (pred, gold) in enumerate(zip(pred_per_doc, gold_per_doc)):
@@ -190,7 +197,32 @@ def categorize_errors(pred_per_doc, gold_per_doc, dataset, context_chars=40):
                 consumed_fp.add(fp)
                 consumed_fn.add(best_pair)
 
-        # 3. Anything still unconsumed is a pure FP / FN
+        # 3. Cross-label boundary: overlapping spans, different label
+        # e.g. gold "$FUTU/ticker" vs pred "FUTU/company" — both span and label are off
+        for fp in remaining_fps:
+            if fp in consumed_fp:
+                continue
+            fs, fe, fl = fp
+            for fn in remaining_fns:
+                if fn in consumed_fn:
+                    continue
+                ns, ne, nl = fn
+                if nl == fl:
+                    continue  # same-label already handled above
+                if fs < ne and ns < fe:  # spans overlap
+                    cross_boundary.append({
+                        "doc_idx": doc_idx,
+                        "gold_text": text[ns:ne],
+                        "gold_label": nl,
+                        "pred_text": text[fs:fe],
+                        "pred_label": fl,
+                        "context": _make_context(text, min(fs, ns), max(fe, ne), context_chars),
+                    })
+                    consumed_fp.add(fp)
+                    consumed_fn.add(fn)
+                    break
+
+        # 4. Anything still unconsumed is a pure FP / FN
         for fp in fps:
             if fp in consumed_fp:
                 continue
@@ -222,6 +254,7 @@ def categorize_errors(pred_per_doc, gold_per_doc, dataset, context_chars=40):
         "pure_fp": pure_fp,
         "pure_fn": pure_fn,
         "boundary": boundary,
+        "cross_boundary": cross_boundary,
         "confusion": confusion,
         "per_doc": per_doc_counts,
     }
@@ -252,8 +285,13 @@ def _aggregate(records, key_fields, top):
 
 def _summary_counts(categories, n_tp, total_pred, total_gold):
     """Header row showing the basic TP/FP/FN tally with derived P/R/F1."""
-    n_fp = len(categories["pure_fp"]) + len(categories["boundary"]) + len(categories["confusion"])
-    n_fn = len(categories["pure_fn"]) + len(categories["boundary"]) + len(categories["confusion"])
+    overlap_errors = (
+        len(categories["boundary"])
+        + len(categories["cross_boundary"])
+        + len(categories["confusion"])
+    )
+    n_fp = len(categories["pure_fp"]) + overlap_errors
+    n_fn = len(categories["pure_fn"]) + overlap_errors
     p = n_tp / total_pred if total_pred else 0.0
     r = n_tp / total_gold if total_gold else 0.0
     f1 = 2 * p * r / (p + r) if (p + r) else 0.0
@@ -283,6 +321,23 @@ def render_boundary_table(agg):
     for key, count, ex in agg:
         gold_text, pred_text, label = key
         table.add_row(str(count), gold_text, pred_text, label, ex["context"])
+    return table
+
+
+def render_cross_boundary_table(agg):
+    table = Table(
+        title="Cross-label boundary (overlapping spans, different label — e.g. $FUTU/ticker vs FUTU/company)",
+        show_lines=False,
+    )
+    table.add_column("#", justify="right", style="dim", width=4)
+    table.add_column("gold", style="green")
+    table.add_column("gold label", style="green")
+    table.add_column("predicted", style="yellow")
+    table.add_column("pred label", style="yellow")
+    table.add_column("example context")
+    for key, count, ex in agg:
+        gold_text, gold_label, pred_text, pred_label = key
+        table.add_row(str(count), gold_text, gold_label, pred_text, pred_label, ex["context"])
     return table
 
 
@@ -374,6 +429,7 @@ def main():
         f"  pure FP: {len(categories['pure_fp'])}  |  "
         f"pure FN: {len(categories['pure_fn'])}  |  "
         f"boundary: {len(categories['boundary'])}  |  "
+        f"cross-boundary: {len(categories['cross_boundary'])}  |  "
         f"label confusion: {len(categories['confusion'])}\n"
     )
 
@@ -388,6 +444,13 @@ def main():
     if categories["boundary"]:
         agg = _aggregate(categories["boundary"], ("gold_text", "pred_text", "label"), args.top)
         console.print(render_boundary_table(agg))
+    if categories["cross_boundary"]:
+        agg = _aggregate(
+            categories["cross_boundary"],
+            ("gold_text", "gold_label", "pred_text", "pred_label"),
+            args.top,
+        )
+        console.print(render_cross_boundary_table(agg))
     if categories["confusion"]:
         agg = _aggregate(categories["confusion"], ("text", "gold_label", "pred_label"), args.top)
         console.print(render_confusion_table(agg))
@@ -396,13 +459,18 @@ def main():
 
     if args.save_json:
         with open(args.save_json, "w", encoding="utf-8") as f:
-            json.dump({
-                "adapter": adapter_name,
-                "threshold": args.threshold,
-                "test_folder": args.test_folder,
-                "summary": {"tp": n_tp, "fp": n_fp, "fn": n_fn, "p": p, "r": r, "f1": f1},
-                "categories": categories,
-            }, f, indent=2, ensure_ascii=False)
+            json.dump(
+                {
+                    "adapter": adapter_name,
+                    "threshold": args.threshold,
+                    "test_folder": args.test_folder,
+                    "summary": {"tp": n_tp, "fp": n_fp, "fn": n_fn, "p": p, "r": r, "f1": f1},
+                    "categories": categories,
+                },
+                f,
+                indent=2,
+                ensure_ascii=False,
+            )
         console.print(f"[green]Full error data written to {args.save_json}[/green]")
 
     if device == "cuda" and adapter_path:
