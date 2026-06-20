@@ -84,8 +84,8 @@ def _compute_metrics(pred_per_doc, gold_per_doc, label_keys):
         counts["overall"]["fp"] += len(pred - gold)
         counts["overall"]["fn"] += len(gold - pred)
         for label in label_keys:
-            gp = {e for e in gold if e[2] == label}
-            pp = {e for e in pred if e[2] == label}
+            gp = {e for e in gold if e[1] == label}
+            pp = {e for e in pred if e[1] == label}
             counts[label]["tp"] += len(pp & gp)
             counts[label]["fp"] += len(pp - gp)
             counts[label]["fn"] += len(gp - pp)

@@ -62741,8 +62741,8 @@
             "type": "labels",
             "value": {
               "start": 3644,
-              "end": 3651,
-              "text": "SpaceX?",
+              "end": 3650,
+              "text": "SpaceX",
               "labels": [
                 "company"
               ]
@@ -62783,8 +62783,8 @@
             "type": "labels",
             "value": {
               "start": 5510,
-              "end": 5517,
-              "text": "SpaceX.",
+              "end": 5516,
+              "text": "SpaceX",
               "labels": [
                 "company"
               ]
@@ -62797,8 +62797,8 @@
             "type": "labels",
             "value": {
               "start": 5692,
-              "end": 5700,
-              "text": "SpaceX).",
+              "end": 5698,
+              "text": "SpaceX",
               "labels": [
                 "company"
               ]
@@ -75458,8 +75458,8 @@
             "type": "labels",
             "value": {
               "start": 493,
-              "end": 500,
-              "text": "Spacex.",
+              "end": 499,
+              "text": "Spacex",
               "labels": [
                 "company"
               ]

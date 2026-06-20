@@ -110,6 +110,17 @@ python trainer/benchmark.py
 
 Evaluates all adapter versions found under `models/`, calculates per-entity precision/recall/F1, and prints a Rich table. Uses chunked inference matching the training chunk size.
 
+### Scoring contract: set-based, deduplicated per document
+
+The project's goal is to know **what** a post is talking about, not how many times a symbol is repeated — an entity counts as caught if the model finds it **at least once** in the document. This mirrors the engine's public API, which returns a deduplicated *set* of tickers per text.
+
+Concretely, both gold and predictions are reduced to a set of `(normalized_surface, label)` keys **per document** before TP/FP/FN are tallied (`benchmark.normalize_entity` + `prepare_eval_inputs`/`evaluate_model`). Normalization folds case, surrounding whitespace, and a leading `$`, so `$GME`, `GME`, `gme`, and a repeated `GME` 16× in one post all collapse to a single `("GME", "ticker")` key.
+
+Consequences to keep in mind:
+- **Do not** "fix recall" by adding more training mentions of an already-known ticker (e.g. GME/AMC). Repeated mentions are free under this metric; a false negative now means the model missed an entity in *every* context it appeared in.
+- Because surfaces are normalized, boundary mismatches (`$AAPL` vs `AAPL`) no longer count as errors. `error_analysis.py` therefore reports only three categories: pure FP, pure FN, and label confusion (same normalized surface, conflicting label).
+- `error_analysis.py` and `benchmark.py` share this normalization, so `errors_v{N}.json` summary numbers match the benchmark table. Error records keep the *original* surface form (not the normalized key) so `patch_test_labels.py` can still locate spans.
+
 ## Code Style
 
 Black (line-length 88), Ruff, NumPy-style docstrings. Enforced via CI.

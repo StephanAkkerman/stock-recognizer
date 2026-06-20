@@ -133,6 +133,22 @@ def parse_all_label_studio_exports(folder_path):
     return clean_dataset
 
 
+def normalize_entity(surface):
+    """Canonicalize an entity surface form for set-based, dedup-per-document scoring.
+
+    The engine's public API (``recognize`` / ``recognize_ai``) returns a
+    *deduplicated set* of tickers per text — the project cares about *what* a
+    post is talking about, not how many times a symbol is repeated. Scoring
+    therefore treats an entity as caught when it appears at least once in a
+    document, and collapses repeated mentions of the same symbol to one key.
+
+    Folding ``$`` prefixes, surrounding whitespace and case makes ``$GME``,
+    ``GME``, ``gme`` and ``GME `` all compare equal (and ``$ AUG`` → ``AUG``).
+    """
+    collapsed = re.sub(r"\s+", " ", surface).strip()
+    return collapsed.lstrip("$").strip().upper()
+
+
 def calculate_metrics(tp, fp, fn):
     """Helper to safely calculate P, R, F1"""
     precision = tp / (tp + fp) if (tp + fp) > 0 else 0
@@ -239,19 +255,17 @@ def evaluate_model(
     for doc_idx, (start, end) in enumerate(doc_chunk_ranges):
         pred_entities = set()
         for chunk_idx in range(start, end):
-            _, _, offset = flat_chunks[chunk_idx]
+            _, chunk_text, _offset = flat_chunks[chunk_idx]
             raw_output = all_outputs[chunk_idx]
             if isinstance(raw_output, dict) and "entities" in raw_output:
                 for label, items in raw_output["entities"].items():
                     for item in items:
-                        pred_entities.add(
-                            (offset + item["start"], offset + item["end"], label)
-                        )
+                        surface = chunk_text[item["start"]:item["end"]]
+                        pred_entities.add((normalize_entity(surface), label))
             elif isinstance(raw_output, list):
                 for item in raw_output:
-                    pred_entities.add(
-                        (offset + item["start"], offset + item["end"], item["label"])
-                    )
+                    surface = chunk_text[item["start"]:item["end"]]
+                    pred_entities.add((normalize_entity(surface), item["label"]))
 
         gold_entities = gold_per_doc[doc_idx]
         gold_by_label = gold_by_label_per_doc[doc_idx]
@@ -262,7 +276,7 @@ def evaluate_model(
 
         for label in label_keys:
             gold_label = gold_by_label[label]
-            pred_label = {e for e in pred_entities if e[2] == label}
+            pred_label = {e for e in pred_entities if e[1] == label}
             metrics_counts[label]["tp"] += len(pred_label & gold_label)
             metrics_counts[label]["fp"] += len(pred_label - gold_label)
             metrics_counts[label]["fn"] += len(gold_label - pred_label)
@@ -337,10 +351,16 @@ def prepare_eval_inputs(dataset, label_keys):
             flat_chunks.append((doc_idx, chunk_text, offset))
         doc_chunk_ranges.append((start, len(flat_chunks)))
 
-        gold = {(e["start"], e["end"], e["label"]) for e in entry["entities"]}
+        # Dedup per document by (normalized surface, label): a ticker mentioned
+        # 16× in one post is a single gold key, matching the engine's set output.
+        text = entry["text"]
+        gold = {
+            (normalize_entity(text[e["start"]:e["end"]]), e["label"])
+            for e in entry["entities"]
+        }
         gold_per_doc.append(gold)
         gold_by_label_per_doc.append(
-            {label: {e for e in gold if e[2] == label} for label in label_keys}
+            {label: {e for e in gold if e[1] == label} for label in label_keys}
         )
 
     return flat_chunks, doc_chunk_ranges, gold_per_doc, gold_by_label_per_doc

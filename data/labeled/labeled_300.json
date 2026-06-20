@@ -8282,21 +8282,6 @@
           },
           {
             "value": {
-              "start": 236,
-              "end": 241,
-              "text": "stock",
-              "labels": [
-                "company"
-              ]
-            },
-            "id": "WiR_8UrVbO",
-            "from_name": "label",
-            "to_name": "text",
-            "type": "labels",
-            "origin": "prediction"
-          },
-          {
-            "value": {
               "start": 0,
               "end": 8,
               "text": "Big Lots",

@@ -1,7 +1,6 @@
 """Tests for trainer/benchmark.py engine evaluation path."""
 
-import types
-from unittest.mock import MagicMock, patch
+from unittest.mock import MagicMock
 
 import pytest
 
@@ -129,3 +128,86 @@ def test_engine_evaluate_model_returns_overall_key():
 
     assert "overall" in result
     assert set(result["overall"].keys()) == {"p", "r", "f1"}
+
+
+# ---------------------------------------------------------------------------
+# Set-based, dedup-per-document scoring (matches the engine's "caught once"
+# contract: recognize() returns a *set* of tickers, not per-occurrence spans).
+# ---------------------------------------------------------------------------
+
+def test_normalize_entity_folds_cashtag_case_and_whitespace():
+    from trainer.benchmark import normalize_entity
+
+    assert normalize_entity("$GME") == "GME"
+    assert normalize_entity("gme") == "GME"
+    assert normalize_entity("  GME ") == "GME"
+    assert normalize_entity("$ AUG") == "AUG"
+    assert normalize_entity("AMC Theatres") == "AMC THEATRES"
+
+
+def test_prepare_eval_inputs_dedups_repeated_mentions():
+    """A ticker mentioned many times in one doc collapses to a single gold key."""
+    from trainer.benchmark import prepare_eval_inputs
+
+    dataset = [
+        {
+            "text": "GME GME gme to the moon",
+            "entities": [
+                {"start": 0, "end": 3, "label": "ticker"},
+                {"start": 4, "end": 7, "label": "ticker"},
+                {"start": 8, "end": 11, "label": "ticker"},
+            ],
+        }
+    ]
+    _, _, gold_per_doc, gold_by_label = prepare_eval_inputs(dataset, ["ticker", "company"])
+
+    assert gold_per_doc[0] == {("GME", "ticker")}
+    assert gold_by_label[0]["ticker"] == {("GME", "ticker")}
+    assert gold_by_label[0]["company"] == set()
+
+
+class _FakeGmeModel:
+    """Fake GLiNER2 that tags every case-insensitive 'gme' occurrence per chunk."""
+
+    def batch_extract_entities(self, texts, labels, **kwargs):
+        outputs = []
+        for t in texts:
+            items = []
+            low = t.lower()
+            i = low.find("gme")
+            while i != -1:
+                items.append({"start": i, "end": i + 3})
+                i = low.find("gme", i + 1)
+            outputs.append({"entities": {"ticker": items}})
+        return outputs
+
+
+def test_evaluate_model_dedups_repeated_mentions_to_one_tp():
+    """Catching GME many times in a doc counts as a single TP, no FP/FN."""
+    from trainer.benchmark import evaluate_model, prepare_eval_inputs
+
+    dataset = [
+        {
+            "text": "GME GME gme are all the same ticker",
+            "entities": [
+                {"start": 0, "end": 3, "label": "ticker"},
+                {"start": 4, "end": 7, "label": "ticker"},
+                {"start": 8, "end": 11, "label": "ticker"},
+            ],
+        }
+    ]
+    flat_chunks, ranges, gold_per_doc, gold_by_label = prepare_eval_inputs(
+        dataset, ["ticker", "company"]
+    )
+
+    scores = evaluate_model(
+        _FakeGmeModel(),
+        flat_chunks,
+        ranges,
+        gold_per_doc,
+        gold_by_label,
+        label_descriptions={"ticker": "x", "company": "y"},
+    )
+    assert scores["overall"]["r"] == pytest.approx(1.0)
+    assert scores["overall"]["p"] == pytest.approx(1.0)
+    assert scores["ticker"]["f1"] == pytest.approx(1.0)

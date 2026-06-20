@@ -7,20 +7,23 @@ Run:
     python trainer/error_analysis.py --threshold 0.5 --top 30
     python trainer/error_analysis.py --save-json out.json  # full dump
 
-Four error categories are surfaced, aggregated by frequency:
+Scoring is **set-based and deduplicated per document** — the same contract the
+engine exposes (``recognize`` returns a *set* of tickers, so an entity is
+"caught" once it appears at least once in a post). Entities are keyed by
+``(normalized_surface, label)``; repeated mentions and ``$AAPL``/``AAPL`` form
+differences collapse to a single key. See ``benchmark.normalize_entity``.
 
-  1. **False positives** — predicted entity not in gold, no overlap with a gold
-     span. Surface here means "the model hallucinated this token as a ticker /
-     company." Highest-leverage signal for hard-negative mining.
-  2. **False negatives** — gold entity the model didn't predict at all. Tells
-     you what vocabulary or context patterns the model is missing.
-  3. **Boundary mismatches** — predicted span overlaps a same-label gold span
-     but the offsets differ (e.g. "$AAPL" vs "AAPL", "Apple Inc" vs "Apple").
-     These get counted as both FP and FN by the overall metric, exaggerating
-     the error.
-  4. **Label confusions** — same exact span, different label (e.g. "Apple"
-     predicted as ticker but gold says company). Indicates the descriptions
-     for ticker/company aren't separating the two cases.
+Three error categories are surfaced, aggregated by frequency:
+
+  1. **False positives** — a ``(surface, label)`` the model predicts that is not
+     in gold. Highest-leverage signal for hard-negative mining.
+  2. **False negatives** — a gold ``(surface, label)`` the model never predicts
+     anywhere in the document. Because scoring is deduped, an FN here means the
+     model missed the entity in *every* context it appears in — a genuine
+     vocabulary/context gap, not a dropped repeat.
+  3. **Label confusions** — same normalized surface, different label (e.g.
+     "SOFI" predicted as company but gold says ticker). Indicates the
+     descriptions for ticker/company aren't separating the two cases.
 
 Plus a per-document hotspot table — top docs by error count.
 """
@@ -40,6 +43,7 @@ try:
         DEFAULT_TEST_FOLDER,
         get_all_adapters,
         load_base_model,
+        normalize_entity,
         parse_all_label_studio_exports,
         prepare_eval_inputs,
     )
@@ -49,6 +53,7 @@ except ImportError:
         DEFAULT_TEST_FOLDER,
         get_all_adapters,
         load_base_model,
+        normalize_entity,
         parse_all_label_studio_exports,
         prepare_eval_inputs,
     )
@@ -101,145 +106,140 @@ def run_inference(model, flat_chunks, label_descriptions, threshold, batch_size=
     return all_outputs
 
 
+def _iter_chunk_items(raw):
+    """Yield (start, end, label) for every entity in one chunk's model output."""
+    if isinstance(raw, dict) and "entities" in raw:
+        for label, items in raw["entities"].items():
+            for item in items:
+                yield item["start"], item["end"], label
+    elif isinstance(raw, list):
+        for item in raw:
+            yield item["start"], item["end"], item["label"]
+
+
 def collect_pred_per_doc(all_outputs, flat_chunks, doc_chunk_ranges):
-    """Map chunk-local model outputs back to a per-document set of (start,end,label)."""
+    """Map chunk-local model outputs to a per-document set of (norm_text, label).
+
+    Deduplicated per document to match the engine's set output and
+    ``benchmark.evaluate_model`` — repeated mentions collapse to one key.
+    """
     pred_per_doc = []
-    for doc_idx, (start, end) in enumerate(doc_chunk_ranges):
+    for _doc_idx, (start, end) in enumerate(doc_chunk_ranges):
         pred = set()
         for chunk_idx in range(start, end):
-            _, _, offset = flat_chunks[chunk_idx]
-            raw = all_outputs[chunk_idx]
-            if isinstance(raw, dict) and "entities" in raw:
-                for label, items in raw["entities"].items():
-                    for item in items:
-                        pred.add((offset + item["start"], offset + item["end"], label))
-            elif isinstance(raw, list):
-                for item in raw:
-                    pred.add((offset + item["start"], offset + item["end"], item["label"]))
+            _, chunk_text, _offset = flat_chunks[chunk_idx]
+            for s, e, label in _iter_chunk_items(all_outputs[chunk_idx]):
+                pred.add((normalize_entity(chunk_text[s:e]), label))
         pred_per_doc.append(pred)
     return pred_per_doc
 
 
-def categorize_errors(pred_per_doc, gold_per_doc, dataset, context_chars=40):
-    """Split errors into five categories.
+def collect_pred_contexts(all_outputs, flat_chunks, doc_chunk_ranges, context_chars=40):
+    """Per-doc dict {(norm_text, label): {"surface", "context"}} from model output.
 
-    Each list contains dicts ready for tabular display. Consuming a match
-    removes both the FP and FN from the pool before the next pass.
+    The dict is keyed by the normalized surface (so it dedups per document), but
+    keeps the *original* surface form and one example context snippet for the
+    FP / confusion tables and for downstream span-locating in patch_test_labels.
+    """
+    out = []
+    for _doc_idx, (start, end) in enumerate(doc_chunk_ranges):
+        ctx = {}
+        for chunk_idx in range(start, end):
+            _, chunk_text, _offset = flat_chunks[chunk_idx]
+            for s, e, label in _iter_chunk_items(all_outputs[chunk_idx]):
+                surface = chunk_text[s:e]
+                key = (normalize_entity(surface), label)
+                ctx.setdefault(
+                    key,
+                    {"surface": surface, "context": _make_context(chunk_text, s, e, context_chars)},
+                )
+        out.append(ctx)
+    return out
 
-    Pass order (most-specific first):
-      1. Label confusions    — exact same span, different label
-      2. Boundary mismatches — overlapping spans, same label
-      3. Cross-label boundary— overlapping spans, different label
-                               (e.g. gold "$FUTU/ticker" vs pred "FUTU/company")
-      4. Pure FP / FN        — everything else
+
+def collect_gold_contexts(dataset, context_chars=40):
+    """Per-doc dict {(norm_text, label): {"surface", "context"}} from gold annotations."""
+    out = []
+    for entry in dataset:
+        text = entry["text"]
+        ctx = {}
+        for e in entry["entities"]:
+            surface = text[e["start"]:e["end"]]
+            key = (normalize_entity(surface), e["label"])
+            ctx.setdefault(
+                key,
+                {"surface": surface, "context": _make_context(text, e["start"], e["end"], context_chars)},
+            )
+        out.append(ctx)
+    return out
+
+
+def categorize_errors(pred_ctx_per_doc, gold_ctx_per_doc, dataset):
+    """Split deduped per-document errors into three categories.
+
+    Inputs are the ``{(norm_text, label): context}`` maps from
+    ``collect_pred_contexts`` / ``collect_gold_contexts``. Because entities are
+    keyed by normalized surface, boundary mismatches (``$AAPL`` vs ``AAPL``)
+    collapse away — only pure FP, pure FN, and label confusions remain.
+
+      1. Label confusions — same normalized surface, different label.
+      2. Pure FP         — predicted ``(surface, label)`` not in gold.
+      3. Pure FN         — gold ``(surface, label)`` the model never predicts.
     """
     pure_fp = []
     pure_fn = []
-    boundary = []
     confusion = []
-    cross_boundary = []
     per_doc_counts = []
 
-    for doc_idx, (pred, gold) in enumerate(zip(pred_per_doc, gold_per_doc)):
-        text = dataset[doc_idx]["text"]
+    for doc_idx, (pred_ctx, gold_ctx) in enumerate(
+        zip(pred_ctx_per_doc, gold_ctx_per_doc)
+    ):
+        pred = set(pred_ctx)
+        gold = set(gold_ctx)
         fps = pred - gold
         fns = gold - pred
 
-        # 1. Label confusions: exact span match, different label
-        fp_by_span = defaultdict(list)
-        fn_by_span = defaultdict(list)
-        for fp in fps:
-            fp_by_span[(fp[0], fp[1])].append(fp)
-        for fn in fns:
-            fn_by_span[(fn[0], fn[1])].append(fn)
+        # 1. Label confusions: same surface present in both FP and FN pools
+        #    under a different label (e.g. SOFI ticker→company).
+        fp_labels = defaultdict(set)
+        fn_labels = defaultdict(set)
+        for surface, label in fps:
+            fp_labels[surface].add(label)
+        for surface, label in fns:
+            fn_labels[surface].add(label)
 
-        confused_spans = set(fp_by_span) & set(fn_by_span)
         consumed_fp = set()
         consumed_fn = set()
-        for span in confused_spans:
-            for fp in fp_by_span[span]:
-                for fn in fn_by_span[span]:
-                    if fp[2] != fn[2]:
-                        confusion.append({
-                            "doc_idx": doc_idx,
-                            "text": text[span[0]:span[1]],
-                            "gold_label": fn[2],
-                            "pred_label": fp[2],
-                            "context": _make_context(text, span[0], span[1], context_chars),
-                        })
-                        consumed_fp.add(fp)
-                        consumed_fn.add(fn)
-
-        # 2. Boundary mismatches: same label, overlapping spans
-        remaining_fps = [fp for fp in fps if fp not in consumed_fp]
-        remaining_fns = [fn for fn in fns if fn not in consumed_fn]
-        for fp in remaining_fps:
-            fs, fe, fl = fp
-            best_pair = None
-            for fn in remaining_fns:
-                ns, ne, nl = fn
-                if nl != fl:
-                    continue
-                if fn in consumed_fn:
-                    continue
-                if fs < ne and ns < fe:
-                    best_pair = fn
-                    break
-            if best_pair is not None:
-                ns, ne, _ = best_pair
-                boundary.append({
-                    "doc_idx": doc_idx,
-                    "gold_text": text[ns:ne],
-                    "pred_text": text[fs:fe],
-                    "label": fl,
-                    "context": _make_context(text, min(fs, ns), max(fe, ne), context_chars),
-                })
-                consumed_fp.add(fp)
-                consumed_fn.add(best_pair)
-
-        # 3. Cross-label boundary: overlapping spans, different label
-        # e.g. gold "$FUTU/ticker" vs pred "FUTU/company" — both span and label are off
-        for fp in remaining_fps:
-            if fp in consumed_fp:
-                continue
-            fs, fe, fl = fp
-            for fn in remaining_fns:
-                if fn in consumed_fn:
-                    continue
-                ns, ne, nl = fn
-                if nl == fl:
-                    continue  # same-label already handled above
-                if fs < ne and ns < fe:  # spans overlap
-                    cross_boundary.append({
+        for norm in set(fp_labels) & set(fn_labels):
+            for pred_label in fp_labels[norm]:
+                for gold_label in fn_labels[norm]:
+                    if pred_label == gold_label:
+                        continue
+                    src = gold_ctx.get((norm, gold_label)) or pred_ctx.get((norm, pred_label))
+                    confusion.append({
                         "doc_idx": doc_idx,
-                        "gold_text": text[ns:ne],
-                        "gold_label": nl,
-                        "pred_text": text[fs:fe],
-                        "pred_label": fl,
-                        "context": _make_context(text, min(fs, ns), max(fe, ne), context_chars),
+                        "text": src["surface"],
+                        "gold_label": gold_label,
+                        "pred_label": pred_label,
+                        "context": src["context"],
                     })
-                    consumed_fp.add(fp)
-                    consumed_fn.add(fn)
-                    break
+                    consumed_fp.add((norm, pred_label))
+                    consumed_fn.add((norm, gold_label))
 
-        # 4. Anything still unconsumed is a pure FP / FN
-        for fp in fps:
-            if fp in consumed_fp:
-                continue
+        # 2 & 3. Everything unconsumed is a pure FP / FN.
+        for key in fps - consumed_fp:
             pure_fp.append({
                 "doc_idx": doc_idx,
-                "text": text[fp[0]:fp[1]],
-                "label": fp[2],
-                "context": _make_context(text, fp[0], fp[1], context_chars),
+                "text": pred_ctx[key]["surface"],
+                "label": key[1],
+                "context": pred_ctx[key]["context"],
             })
-        for fn in fns:
-            if fn in consumed_fn:
-                continue
+        for key in fns - consumed_fn:
             pure_fn.append({
                 "doc_idx": doc_idx,
-                "text": text[fn[0]:fn[1]],
-                "label": fn[2],
-                "context": _make_context(text, fn[0], fn[1], context_chars),
+                "text": gold_ctx[key]["surface"],
+                "label": key[1],
+                "context": gold_ctx[key]["context"],
             })
 
         per_doc_counts.append({
@@ -247,14 +247,12 @@ def categorize_errors(pred_per_doc, gold_per_doc, dataset, context_chars=40):
             "n_errors": len(fps) + len(fns),
             "n_fp": len(fps),
             "n_fn": len(fns),
-            "preview": text[:80].replace("\n", " "),
+            "preview": dataset[doc_idx]["text"][:80].replace("\n", " "),
         })
 
     return {
         "pure_fp": pure_fp,
         "pure_fn": pure_fn,
-        "boundary": boundary,
-        "cross_boundary": cross_boundary,
         "confusion": confusion,
         "per_doc": per_doc_counts,
     }
@@ -280,22 +278,8 @@ def _aggregate(records, key_fields, top):
         key = tuple(r[f] for f in key_fields)
         counter[key] += 1
         examples.setdefault(key, r)
-    return [(key, count, examples[key]) for key, count in counter.most_common(top)]
-
-
-def _summary_counts(categories, n_tp, total_pred, total_gold):
-    """Header row showing the basic TP/FP/FN tally with derived P/R/F1."""
-    overlap_errors = (
-        len(categories["boundary"])
-        + len(categories["cross_boundary"])
-        + len(categories["confusion"])
-    )
-    n_fp = len(categories["pure_fp"]) + overlap_errors
-    n_fn = len(categories["pure_fn"]) + overlap_errors
-    p = n_tp / total_pred if total_pred else 0.0
-    r = n_tp / total_gold if total_gold else 0.0
-    f1 = 2 * p * r / (p + r) if (p + r) else 0.0
-    return n_fp, n_fn, p, r, f1
+    n = top if (top and top > 0) else None  # None / 0 → return everything
+    return [(key, count, examples[key]) for key, count in counter.most_common(n)]
 
 
 def render_fp_fn_table(title, agg, label_col):
@@ -311,38 +295,8 @@ def render_fp_fn_table(title, agg, label_col):
     return table
 
 
-def render_boundary_table(agg):
-    table = Table(title="Boundary mismatches (FP overlapping FN, same label)", show_lines=False)
-    table.add_column("#", justify="right", style="dim", width=4)
-    table.add_column("gold", style="green")
-    table.add_column("predicted", style="yellow")
-    table.add_column("label")
-    table.add_column("example context")
-    for key, count, ex in agg:
-        gold_text, pred_text, label = key
-        table.add_row(str(count), gold_text, pred_text, label, ex["context"])
-    return table
-
-
-def render_cross_boundary_table(agg):
-    table = Table(
-        title="Cross-label boundary (overlapping spans, different label — e.g. $FUTU/ticker vs FUTU/company)",
-        show_lines=False,
-    )
-    table.add_column("#", justify="right", style="dim", width=4)
-    table.add_column("gold", style="green")
-    table.add_column("gold label", style="green")
-    table.add_column("predicted", style="yellow")
-    table.add_column("pred label", style="yellow")
-    table.add_column("example context")
-    for key, count, ex in agg:
-        gold_text, gold_label, pred_text, pred_label = key
-        table.add_row(str(count), gold_text, gold_label, pred_text, pred_label, ex["context"])
-    return table
-
-
 def render_confusion_table(agg):
-    table = Table(title="Label confusions (same span, different label)", show_lines=False)
+    table = Table(title="Label confusions (same surface, different label)", show_lines=False)
     table.add_column("#", justify="right", style="dim", width=4)
     table.add_column("text", style="bold")
     table.add_column("gold→pred")
@@ -354,13 +308,14 @@ def render_confusion_table(agg):
 
 
 def render_doc_hotspots(per_doc, top):
-    table = Table(title=f"Top {top} documents by error count", show_lines=False)
+    n = top if (top and top > 0) else None
+    table = Table(title=f"Top {n or 'all'} documents by error count", show_lines=False)
     table.add_column("doc", justify="right", style="dim", width=5)
     table.add_column("errors", justify="right")
     table.add_column("FP", justify="right", style="yellow")
     table.add_column("FN", justify="right", style="red")
     table.add_column("preview")
-    sorted_docs = sorted(per_doc, key=lambda d: d["n_errors"], reverse=True)[:top]
+    sorted_docs = sorted(per_doc, key=lambda d: d["n_errors"], reverse=True)[:n]
     for d in sorted_docs:
         if d["n_errors"] == 0:
             continue
@@ -380,8 +335,8 @@ def main():
                         help="'latest' (default), 'base', or a version like 'v4' / '4'.")
     parser.add_argument("--threshold", type=float, default=0.75,
                         help="Confidence threshold (default 0.75, matches benchmark).")
-    parser.add_argument("--top", type=int, default=20,
-                        help="How many top entries per error category (default 20).")
+    parser.add_argument("--top", type=int, default=50,
+                        help="Max rows per error table (default 50; use 0 to show all).")
     parser.add_argument("--context", type=int, default=40,
                         help="Chars of context on each side of an error (default 40).")
     parser.add_argument("--test-folder", default=DEFAULT_TEST_FOLDER,
@@ -397,12 +352,13 @@ def main():
         raise SystemExit(1)
 
     label_keys = list(DEFAULT_LABELS.keys())
-    flat_chunks, doc_chunk_ranges, gold_per_doc, _ = prepare_eval_inputs(dataset, label_keys)
-    total_gold = sum(len(g) for g in gold_per_doc)
+    flat_chunks, doc_chunk_ranges, _, _ = prepare_eval_inputs(dataset, label_keys)
+    gold_ctx_per_doc = collect_gold_contexts(dataset, args.context)
+    total_gold = sum(len(g) for g in gold_ctx_per_doc)
     console.print(
         f"Adapter: [bold cyan]{adapter_name}[/bold cyan] @ threshold={args.threshold}\n"
         f"Test set: [bold green]{len(dataset)}[/bold green] docs, "
-        f"[bold green]{total_gold}[/bold green] gold entities, "
+        f"[bold green]{total_gold}[/bold green] unique gold entities (deduped per doc), "
         f"[bold green]{len(flat_chunks)}[/bold green] chunks"
     )
 
@@ -414,43 +370,43 @@ def main():
         model = base_model
 
     all_outputs = run_inference(model, flat_chunks, DEFAULT_LABELS, args.threshold)
-    pred_per_doc = collect_pred_per_doc(all_outputs, flat_chunks, doc_chunk_ranges)
-    total_pred = sum(len(p) for p in pred_per_doc)
-    n_tp = sum(len(p & g) for p, g in zip(pred_per_doc, gold_per_doc))
+    pred_ctx_per_doc = collect_pred_contexts(
+        all_outputs, flat_chunks, doc_chunk_ranges, args.context
+    )
+    total_pred = sum(len(p) for p in pred_ctx_per_doc)
+    n_tp = sum(
+        len(set(p) & set(g))
+        for p, g in zip(pred_ctx_per_doc, gold_ctx_per_doc)
+    )
 
-    categories = categorize_errors(pred_per_doc, gold_per_doc, dataset, args.context)
-    n_fp, n_fn, p, r, f1 = _summary_counts(categories, n_tp, total_pred, total_gold)
+    categories = categorize_errors(pred_ctx_per_doc, gold_ctx_per_doc, dataset)
+    # Set-based counts: FP = |pred| - TP, FN = |gold| - TP (exact, deduped).
+    n_fp = total_pred - n_tp
+    n_fn = total_gold - n_tp
+    p = n_tp / total_pred if total_pred else 0.0
+    r = n_tp / total_gold if total_gold else 0.0
+    f1 = 2 * p * r / (p + r) if (p + r) else 0.0
 
     console.print(
         f"\n[bold]TP={n_tp}  FP={n_fp}  FN={n_fn}[/bold]   "
-        f"P={p:.2%}  R={r:.2%}  F1={f1:.2%}"
+        f"P={p:.2%}  R={r:.2%}  F1={f1:.2%}   "
+        f"[dim](set-based, deduped per document)[/dim]"
     )
     console.print(
         f"  pure FP: {len(categories['pure_fp'])}  |  "
         f"pure FN: {len(categories['pure_fn'])}  |  "
-        f"boundary: {len(categories['boundary'])}  |  "
-        f"cross-boundary: {len(categories['cross_boundary'])}  |  "
         f"label confusion: {len(categories['confusion'])}\n"
     )
 
+    top_label = args.top if args.top and args.top > 0 else "all"
     if categories["pure_fp"]:
         agg = _aggregate(categories["pure_fp"], ("text", "label"), args.top)
         console.print(render_fp_fn_table(
-            f"Top {args.top} false positives (hallucinated entities)", agg, "label"))
+            f"Top {top_label} false positives (hallucinated entities)", agg, "label"))
     if categories["pure_fn"]:
         agg = _aggregate(categories["pure_fn"], ("text", "label"), args.top)
         console.print(render_fp_fn_table(
-            f"Top {args.top} false negatives (missed entities)", agg, "label"))
-    if categories["boundary"]:
-        agg = _aggregate(categories["boundary"], ("gold_text", "pred_text", "label"), args.top)
-        console.print(render_boundary_table(agg))
-    if categories["cross_boundary"]:
-        agg = _aggregate(
-            categories["cross_boundary"],
-            ("gold_text", "gold_label", "pred_text", "pred_label"),
-            args.top,
-        )
-        console.print(render_cross_boundary_table(agg))
+            f"Top {top_label} false negatives (missed entities)", agg, "label"))
     if categories["confusion"]:
         agg = _aggregate(categories["confusion"], ("text", "gold_label", "pred_label"), args.top)
         console.print(render_confusion_table(agg))
