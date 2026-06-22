@@ -63,7 +63,11 @@ class StockRecognizer:
                     self.company_to_ticker[base_name] = ticker
 
         # Simplified Regex: Just find blocks of 2-6 letters
-        self.ticker_re = re.compile(r"\b[A-Z]{2,6}\b")
+        # Match an UPPERCASE 2-6 letter core, optionally followed by a
+        # plural/possessive 's' ("AAPLs", "MSFT's"). Crucially this runs against
+        # the ORIGINAL text (not an uppercased copy) so lowercase prose words
+        # ("don't", "edit", "away") are NOT matched — only ticker-style caps.
+        self.ticker_re = re.compile(r"\b[A-Z]{2,6}(?:['’]?[sS])?\b")
         self.cashtag_re = re.compile(r"\$([A-Z]{1,6})\b")
         self.logger = logging.getLogger(__name__)
 
@@ -126,15 +130,15 @@ class StockRecognizer:
             if clean_tag:
                 found.add(clean_tag)
 
-        # 2. Plain Text Regex
+        # 2. Plain Text Regex — match already-uppercase ticker-style tokens in
+        # the original text (case carries the signal: "AMC" is a ticker, "amc"
+        # / "away" / "don't" are prose). Skip dot-suffix fragments like .SA/.KL.
         if not self._is_mostly_uppercase(text):
-            text_upper = text.upper()
-            # Match 2-6 uppercase chunks, but skip dot-suffix fragments like .SA/.KL
-            for match in self.ticker_re.finditer(text_upper):
+            for match in self.ticker_re.finditer(text):
                 start, end = match.span()
-                if start > 0 and text_upper[start - 1] == ".":
+                if start > 0 and text[start - 1] == ".":
                     continue
-                if end < len(text_upper) and text_upper[end] == ".":
+                if end < len(text) and text[end] == ".":
                     continue
                 raw_token = match.group(0)
                 clean_t = self._clean_token(raw_token)

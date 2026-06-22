@@ -83,7 +83,11 @@ def get_all_adapters(models_dir="./models"):
             continue
 
         valid_adapters.append(
-            {"version": v, "name": f"GLiNER2 Large + Adapter v{v}", "path": weights_path}
+            {
+                "version": v,
+                "name": f"GLiNER2 Large + Adapter v{v}",
+                "path": weights_path,
+            }
         )
 
     valid_adapters.sort(key=lambda x: x["version"])
@@ -260,11 +264,11 @@ def evaluate_model(
             if isinstance(raw_output, dict) and "entities" in raw_output:
                 for label, items in raw_output["entities"].items():
                     for item in items:
-                        surface = chunk_text[item["start"]:item["end"]]
+                        surface = chunk_text[item["start"] : item["end"]]
                         pred_entities.add((normalize_entity(surface), label))
             elif isinstance(raw_output, list):
                 for item in raw_output:
-                    surface = chunk_text[item["start"]:item["end"]]
+                    surface = chunk_text[item["start"] : item["end"]]
                     pred_entities.add((normalize_entity(surface), item["label"]))
 
         gold_entities = gold_per_doc[doc_idx]
@@ -293,7 +297,7 @@ def _resolve_gold_tickers(engine, entry):
     gold = set()
     text = entry["text"]
     for ann in entry["entities"]:
-        span_text = text[ann["start"]:ann["end"]]
+        span_text = text[ann["start"] : ann["end"]]
         cleaned = engine._clean_token(span_text)
         if not cleaned:
             continue
@@ -301,7 +305,9 @@ def _resolve_gold_tickers(engine, entry):
             gold.add(cleaned)
         else:
             base = cleaned.split()[0]
-            resolved = engine.company_to_ticker.get(cleaned) or engine.company_to_ticker.get(base)
+            resolved = engine.company_to_ticker.get(
+                cleaned
+            ) or engine.company_to_ticker.get(base)
             if resolved:
                 gold.add(resolved)
     return frozenset(gold)
@@ -355,7 +361,7 @@ def prepare_eval_inputs(dataset, label_keys):
         # 16× in one post is a single gold key, matching the engine's set output.
         text = entry["text"]
         gold = {
-            (normalize_entity(text[e["start"]:e["end"]]), e["label"])
+            (normalize_entity(text[e["start"] : e["end"]]), e["label"])
             for e in entry["entities"]
         }
         gold_per_doc.append(gold)
@@ -394,7 +400,9 @@ def _load_training_metadata(adapter_path):
     """
     if not adapter_path:
         return None
-    metadata_path = os.path.join(os.path.dirname(adapter_path), "training_metadata.json")
+    metadata_path = os.path.join(
+        os.path.dirname(adapter_path), "training_metadata.json"
+    )
     if not os.path.exists(metadata_path):
         return None
     try:
@@ -417,10 +425,18 @@ def _flatten_metadata_into_params(metadata):
 
     # Flat keys that the existing _render_params table expects.
     for k in (
-        "num_epochs", "batch_size", "effective_batch_size",
-        "encoder_lr", "task_lr", "max_grad_norm",
-        "lora_r", "lora_alpha", "lora_dropout",
-        "early_stopping", "early_stopping_patience", "val_fraction",
+        "num_epochs",
+        "batch_size",
+        "effective_batch_size",
+        "encoder_lr",
+        "task_lr",
+        "max_grad_norm",
+        "lora_r",
+        "lora_alpha",
+        "lora_dropout",
+        "early_stopping",
+        "early_stopping_patience",
+        "val_fraction",
     ):
         if cfg.get(k) is not None:
             flat[k] = cfg[k]
@@ -595,9 +611,15 @@ if __name__ == "__main__":
         action="store_true",
         help="Evaluate via StockRecognizer.recognize_ai() instead of raw model",
     )
+    parser.add_argument(
+        "--no-cache",
+        action="store_true",
+        help="Ignore cached results and recompute (use after changing engine code; "
+        "the cache is keyed by test-set hash + adapter and can't see code changes).",
+    )
     args = parser.parse_args()
 
-    NUM_VERSIONS_TO_TEST = None  # None = test all adapters
+    NUM_VERSIONS_TO_TEST = 1  # None = test all adapters
     BATCH_SIZE = 32
 
     dataset = parse_all_label_studio_exports(DEFAULT_TEST_FOLDER)
@@ -634,7 +656,7 @@ if __name__ == "__main__":
         rows = []
         to_evaluate = []
         for name, adapter_path in model_configs:
-            cached = get_cached(store, name, test_hash)
+            cached = None if args.no_cache else get_cached(store, name, test_hash)
             if cached:
                 rows.append(
                     {
@@ -688,11 +710,15 @@ if __name__ == "__main__":
                     )
                     metrics = _metrics_only(scores)
                     params = (
-                        dict(derive_adapter_params(adapter_path)) if adapter_path else {}
+                        dict(derive_adapter_params(adapter_path))
+                        if adapter_path
+                        else {}
                     )
                     # Same metadata merge as benchmark_adapter() — keeps the
                     # standalone-benchmark code path in sync with the post-train one.
-                    metadata = _load_training_metadata(adapter_path) if adapter_path else None
+                    metadata = (
+                        _load_training_metadata(adapter_path) if adapter_path else None
+                    )
                     if metadata:
                         params.update(_flatten_metadata_into_params(metadata))
                     put_result(store, name, test_hash, metrics, params=params)
@@ -721,8 +747,12 @@ if __name__ == "__main__":
         console.print(_render_params(rows))
 
         if args.engine:
-            console.print("\n[cyan]Engine evaluation (StockRecognizer.recognize_ai + regex)...[/cyan]")
-            eng_table = Table(title="Engine Benchmark (production F1)", show_lines=False)
+            console.print(
+                "\n[cyan]Engine evaluation (StockRecognizer.recognize_ai + regex)...[/cyan]"
+            )
+            eng_table = Table(
+                title="Engine Benchmark (production F1)", show_lines=False
+            )
             eng_table.add_column("Adapter", style="cyan", width=35)
             eng_table.add_column("Precision", justify="right")
             eng_table.add_column("Recall", justify="right")
@@ -731,11 +761,15 @@ if __name__ == "__main__":
             store_dirty = False
             for adapter in available_adapters:
                 entry = store["results"].get(adapter["name"], {}).get(test_hash)
-                if entry and entry.get("engine_metrics"):
+                if entry and entry.get("engine_metrics") and not args.no_cache:
                     eng_metrics = entry["engine_metrics"]
-                    console.print(f"  [dim]{adapter['name']}: using cached engine metrics[/dim]")
+                    console.print(
+                        f"  [dim]{adapter['name']}: using cached engine metrics[/dim]"
+                    )
                 else:
-                    console.print(f"  [dim]Loading engine for {adapter['name']}...[/dim]")
+                    console.print(
+                        f"  [dim]Loading engine for {adapter['name']}...[/dim]"
+                    )
                     eng_metrics = engine_evaluate_model(
                         adapter["path"], dataset, model_name=adapter["name"]
                     )

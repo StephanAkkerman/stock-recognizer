@@ -52,7 +52,7 @@ COMPANY_SEEDS = {
     "SNOWFLAKE": "SNOW",
     "MICRON": "MU",
     "CANON": "CAJPY",
-    "INTEL": "INTC",  # Added these
+    "INTEL": "INTC",
 }
 
 AMBIGUOUS_WORDS = {
@@ -500,4 +500,28 @@ AMBIGUOUS_WORDS = {
     "YELL",
     "YOUR",
     "ZERO",
+    # --- Caps acronyms / jargon written in uppercase in WSB posts that collide
+    # with obscure ticker symbols (surface here after case-aware matching). ---
+    "MIN",  # minute / minimum
+    "EDIT",  # "EDIT:" post addendum
+    "GPU",
+    "GPUS",
+    "EPS",  # earnings per share
+    "PDT",  # pattern day trader
+    "RSI",  # relative strength index
+    "RSU",  # restricted stock units
+    "WTF",
+    "EUV",  # lithography
+    "HBM",  # high-bandwidth memory
+    "IEEPA",  # trade-law acronym
+    "DLA",  # Defense Logistics Agency
+    "FX",  # foreign exchange
+    "HQ",  # headquarters
+    # --- Common words the AI path emits as "company" and mis-resolves to an
+    # obscure ticker (financial->FISI, stock->SYBT, strategic->STRA). ---
+    "FINANCIAL",
+    "STOCK",
+    "STRATEGIC",
+    # --- Indices are not tradeable tickers per the labeling policy. ---
+    "SPX",
 }

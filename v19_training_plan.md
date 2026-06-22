@@ -13,34 +13,65 @@ in a post). See the "Scoring contract" section in `CLAUDE.md`.
 Re-scoring v18 the way the engine actually behaves (a post that says GME 16× needs
 GME found *once*) flips the diagnosis:
 
-| metric | old per-occurrence | **set-based (true)** |
-|---|---|---|
-| precision | 0.826 | **0.801** |
-| recall | 0.553 | **0.906** |
-| F1 | 0.662 | **0.850** |
-| TP / FP / FN | 365 / 77 / 295 | **270 / 67 / 28** |
+| metric | old per-occurrence | set-based | **+ P2 gold fixes** |
+|---|---|---|---|
+| precision | 0.826 | 0.801 | **0.804** |
+| recall | 0.553 | 0.906 | **0.925** |
+| F1 | 0.662 | 0.850 | **0.860** |
+| TP / FP / FN | 365 / 77 / 295 | 270 / 67 / 28 | **271 / 66 / 22** |
 
-**Recall is not the problem — it's 91%.** The model already finds almost
+**Recall is not the problem — it's 92%.** The model already finds almost
 everything Reddit talks about. The 295 "false negatives" were overwhelmingly
 repeated mentions of tickers (GME, AMC, $FUTU) the model caught at least once;
-they vanished under dedup (FN: 295 → 28).
+they vanished under dedup (FN: 295 → 28), and the P2 gold fixes took it to 22.
 
-**Precision (80%) is now the weaker side and the v19 target.** The earlier P0 —
-"add training data for GME/AMC/Velo3D/etc." — is **retired**: those were
-measurement artifacts, and adding more mentions of known tickers buys nothing
+**Precision looks like the weaker side at 80% — but read the next section first.**
+The earlier P0 ("add training data for GME/AMC/Velo3D/etc.") is **retired**: those
+were measurement artifacts, and adding more mentions of known tickers buys nothing
 under the dedup metric.
 
-## Error composition
+## ⚠️ Raw-model FP ≠ production FP — measure the engine
+
+`error_analysis.py` scores the **raw GLiNER model**. But the product is
+`recognize_ai()`, which drops `AMBIGUOUS_WORDS` and keeps only mentions that
+**resolve to a ticker**. Replicating that filter on the 63 raw FPs:
+
+- **~46 are dropped by the engine** (don't resolve to anything) — e.g. `Burry`,
+  `Monkeypox`, `EPYC`, `DRAM`, `Murica`, `Melvin`, most of doc 62's jargon. They
+  inflate raw-model FP but **never reach production output**.
+- **17 resolve to a ticker; 2 of those (`TSLA`→TSLA, `QXO`→QXO) are correct**
+  (already in gold). So **≈15 are true production FPs**, and they fall into two
+  fixable patterns:
+
+  **(1) Common word → obscure ticker** — `financial`→FISI, `capital`→CBNK,
+  `stock`→SYBT, `strategic`→STRA, `Tenet`→THC, `fico`→FICO, `SPX`→FLOW,
+  `RHs`→RHS. None are in `AMBIGUOUS_WORDS` (but `here`/`now`/`dyor` already are).
+
+  **(2) Multi-word jargon → first-word collision** — `Laser Powder Bed
+  Fusion`→LASE, `Rapid Production Solutions`→RPID, `Andretti Global`→POLE,
+  `Big Pharma Links`→BCYP, `United Waste`→PRKS. The engine resolves a phrase by
+  `base_name = m_clean.split()[0]`. Notably these phrases ARE in
+  `patch_test_labels.COMPANY_BLOCKLIST` — but **that blocklist is not used by the
+  engine.**
+
+**UPDATE — measured, and then fixed.** The engine (`--engine`) benchmark showed
+production precision was **41%** (stuck there across all 18 versions), confirming
+this is an *engine* problem, not a model one. The P0 fix below took it to
+**87.8%** (F1 58%→93%). Raw-model precision (0.80) is a training diagnostic, not
+the product number.
+
+## Error composition (raw model)
 
 | category | count |
 |---|---|
-| pure FP (hallucination) | 64 |
-| pure FN (genuinely missed everywhere) | 25 |
+| pure FP (raw) | 63 → **≈15 reach production** |
+| pure FN (genuinely missed everywhere) | 19 |
 | label confusion | 3 |
 
-FP now outnumbers FN ~2.4:1. The work is precision.
+The precision work is now mostly an **engine-resolution** problem, not a
+retraining one.
 
-## The single biggest lever: doc 62 (Velo3D)
+## Doc 62 (Velo3D) — big in raw FP, mostly harmless in production
 
 | doc | errors | FP | FN | topic |
 |---|---|---|---|---|
@@ -50,15 +81,19 @@ FP now outnumbers FN ~2.4:1. The work is precision.
 | 67 | 4 | 1 | 3 | RKLB |
 | 70 | 4 | 4 | 0 | RobinHood class-action |
 
-One document holds **16 of 67 total FPs (24%)**. Every other doc is now ≤4 errors.
-Doc 62 is over-predicting company/ticker entities en masse (likely Velo3D product
-names, internal divisions, and manufacturing jargon tagged as companies). Fixing
-this one doc's training/test annotations is the highest-ROI action available.
+Doc 62 holds 16 of 66 raw FPs, but per the section above **most don't reach
+production** (`Murica`, `defense & aerospace`, `IDIQ`, `CA HQ`, `EPYC`, `LPBF`,
+`nufacturers`, `significant capital`… resolve to nothing). The handful that *do*
+leak (`Laser Powder Bed Fusion`→LASE, `Rapid Production Solutions`→RPID,
+`Andretti Global`→POLE) are first-word resolution collisions — fixed at the
+engine, not by re-annotating the doc. So doc 62 is **raw-model hygiene, not the
+precision emergency it looked like.** Hard-negative mining it is now P3, not P0.
 
 ## False positives, bucketed (the precision work)
 
-**A. Genuine hallucinations — need hard negatives.** Words, slang, acronyms and
-non-tradeable entities the model should suppress:
+**A. Genuine hallucinations — but harmless unless they resolve.** Words/slang/
+acronyms the raw model emits. Only the ones that resolve to a ticker (see ⚠️
+section) actually hurt; the rest are cosmetic raw-model noise:
 
 ```
 here ×3, financial ×2, spreadbet, Fed, chest, fundamentals, capital,
@@ -90,21 +125,25 @@ that coincidentally matches obscure DB symbols. Do not `--auto` it.
 - `Azure OpenAI` (pred) vs `OpenAI` (gold) — model grabbed the qualifier; gold
   `OpenAI` is correct. This is a **model boundary error, not a gold bug** → P1.
 
-## False negatives, bucketed (small, mostly not training gaps)
+## False negatives (now just 19, post-P2 — small and clean)
 
-**Test-set labeling errors — fix gold, don't train (P2, DONE):**
-- ✅ `stock` labeled `company` ("own the [stock]", task 514) — not an entity, removed.
-- ✅ `Quantum Emotion ($QNC` malformed span (task 8000187) — re-spanned (see C).
+**Test-set labeling errors — fixed in P2 (DONE):**
+- ✅ `stock`/company removed; ✅ `Quantum Emotion` re-spanned; ✅ 4 SpaceX spans
+  de-punctuated.
 
 **Genuine vocabulary gaps (real, but few):**
 ```
-TYDE, BBBY, Lunr, $FLY, 6702.T (Japanese ticker), DOW (index),
+TYDE, BBBY, Lunr, 6702.T (Japanese ticker), AGIX (Anthropic-ETF),
 Dymatize, Premier Protein, Yomiuri Shimbun, UiPath Labs, Salesforce,
-Ray-Ban, Reddit (RDDT)
+Ray-Ban, Reddit (RDDT), DOW (index)
 ```
 
-**Edge cases / form gaps:**
+**Form gaps / notable misses:**
+- `$FLY` — a **cashtag** missed ("[$FLY] me to the moooon"); the wordplay context
+  ("fly me to the moon") likely masked it. Cashtags should be near-100% — worth a
+  look.
 - `meta` lowercase ("as [meta] has been spending") — case generalization.
+- `Velo` / `Snap` — short-forms; also appear in the confusion table.
 - `GME` used as a verb ("[GME] that money!") — arguably shouldn't be gold.
 
 ## Label confusions (3) — NOT a data-consistency problem (verified, P2)
@@ -132,23 +171,42 @@ contexts.)
 Versions auto-increment: `train.py::get_next_version()` creates
 `models/reddit_adapter_v19/` and self-benchmarks. No manual bump.
 
-### P0 — Doc 62 (Velo3D): kill the 16-FP cluster
-- [ ] Manually review doc 62 in both `data/test/` and `data/labeled/`. Identify
-      which Velo3D product names / divisions / jargon the model tags as
-      entities, and add them as **hard negatives** (unlabeled context) in
-      training. This one fix addresses ~24% of all FPs.
+### P0 — Engine precision fix ✅ MOSTLY DONE — production F1 58% → 93%
 
-### P1 — Precision: hard-negative mining (Bucket A)
-- [ ] Add negative/unlabeled contexts for the genuine hallucinations:
-      `here`, `financial`, `Fed`, `chest`, `fundamentals`, `capital`,
-      `Southeast Asia`, `starlink`, `Monkeypox`, `spreadbet`, `CHYNA`,
-      plus `SPX` (index) and `MPVX` (unresolvable) reclassified from Bucket B.
-- [ ] Acronyms/bodies (`CSRC`, `EOY`, `DYOR`, `$ AUG`) — these already have
-      blocklist entries in `patch_test_labels.py`; verify the *engine* suppresses
-      them and consider extending `AMBIGUOUS_WORDS` / description text rather than
-      relying on the model alone.
-- [ ] `Azure OpenAI`→`OpenAI` boundary over-grab and the `TSLA/company` dup-label
-      are model errors — varied training contexts, not data fixes.
+The real problem was the **engine**, not the model: precision sat at ~41% across
+*all 18 versions* while the regex path uppercased the whole post and matched every
+prose word (`don't`→DON, `edit`→EDIT, `away`→AWAY) against `valid_tickers`.
+
+- [x] **Case-aware matching** (`engine.py`): `ticker_re` now matches an uppercase
+      2–6 letter core (+ optional plural/possessive `s`) against the **original**
+      text, not an uppercased copy. Lowercase prose no longer matches; `AAPLs`/
+      `MSFT's` still do. Regex-only precision **34% → 83%** (FP 214 → 19).
+- [x] **`AMBIGUOUS_WORDS` additions** (`constants.py`): caps acronyms (`MIN`,
+      `EDIT`, `GPU(S)`, `EPS`, `PDT`, `RSI`, `RSU`, `WTF`, `EUV`, `HBM`, `IEEPA`,
+      `DLA`, `FX`, `HQ`) + AI-path word collisions (`FINANCIAL`, `STOCK`,
+      `STRATEGIC`) + `SPX` (index). This also fixes the AI path, which checks
+      `AMBIGUOUS_WORDS`.
+- [x] **Verified**: engine (production) v18 **P=41.4%→87.8%, R=98.5%→98.0%,
+      F1=58.3%→92.6%**. `test_financial_jargon_shield` now passes; no regressions.
+- [ ] **Remaining: multi-word → first-word over-resolution** (the residual lever).
+      `recognize_ai` resolves a phrase by `base_name = m_clean.split()[0]`, so
+      `Laser Powder Bed Fusion`→LASE, `United Waste`→PRKS, `American Express`→AAL.
+      This still powers `test_very_long_post` extras (AAL, PRKS, CAPE) and the
+      doc-62 leaks. Tightening it is delicate — base_name also gives recall
+      (`Micron`→MU) — so require a fuller match or port the
+      `patch_test_labels.COMPANY_BLOCKLIST` phrases into the engine. Needs care.
+- [ ] Pre-existing, unrelated: `test_ethe_post` fails because **`ETHE` isn't in
+      `valid_tickers`** (market-data gap), and `test_reddit_post` leaks `EVEX`
+      (AI hallucination of "eve"). Both are separate from the regex fix.
+
+### P1 — Hard-negative mining (only for FPs that actually resolve)
+- [ ] Target the ~15 production-leaking FPs, not all 63 raw FPs. Add negative/
+      unlabeled contexts so the *model* stops emitting `financial`, `capital`,
+      `stock`, `strategic`, `Tenet`, `SPX`, plus the doc-62 phrases that resolve
+      (`Laser Powder Bed Fusion`, `Rapid Production Solutions`, `Andretti Global`).
+- [ ] Skip hard-negatives for the ~46 non-resolving raw FPs (`Burry`, `Monkeypox`,
+      `Murica`, `EPYC`, `DRAM`, …) unless they're cheap to include — they don't
+      hurt production.
 - [ ] Reuse the `negatives_mined.json` workflow (`data/labeled/negatives_mined.json.bak`).
 
 ### P2 — Test-set hygiene ✅ DONE
@@ -169,12 +227,15 @@ Versions auto-increment: `train.py::get_next_version()` creates
 - Net effect: ≈ −1 FP, −4 FN. Augmented copies of edited tasks still hold the old
   versions — regenerate in P4 (do not hand-edit swapped text).
 
-### P3 — Targeted recall / confusion top-ups (low priority — recall is 91%)
+### P3 — Raw-model hygiene + recall/confusion top-ups (low priority)
+- [ ] Doc 62 (Velo3D) hard-negative pass — *demoted from P0*; cleans the raw model
+      but most of its FPs don't reach production.
 - [ ] **Add `EOS` training examples** (currently zero) — the only confusion with a
       real data root cause.
+- [ ] Check the `$FLY` cashtag miss — cashtag recall should be near-100%.
 - [ ] Add a few examples for the genuine vocab gaps: `Salesforce`, `UiPath Labs`,
-      `Lunr`, `Ray-Ban`, `Reddit`/RDDT, `6702.T`. Skip index/verb edge cases
-      (`DOW`, verb-`GME`).
+      `Lunr`, `Ray-Ban`, `Reddit`/RDDT, `6702.T`, `AGIX`. Skip index/verb edge
+      cases (`DOW`, verb-`GME`).
 
 ### P4 — Rebuild + train + verify
 - [ ] `python utils/augment_data.py` to regenerate `data/augmented/`.
@@ -182,5 +243,6 @@ Versions auto-increment: `train.py::get_next_version()` creates
 - [ ] `pytest` + `ruff check .` clean.
 - [ ] `python trainer/train.py` → v19, auto-benchmark.
 - [ ] `python trainer/error_analysis.py --adapter v19 --save-json errors_v19.json`
-      and compare against this table. **Target: lift precision from 0.80 toward
-      0.85+ without dropping recall below ~0.90.** F1 goal: > 0.87.
+      (raw-model diagnostic) **and** `python trainer/benchmark.py` (engine/product
+      metric). **Primary target: production (engine) precision** via the P0 fixes —
+      most of which need no retrain. Hold recall ≥ 0.92 (raw); F1 goal > 0.87.
