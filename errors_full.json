@@ -1,0 +1,2080 @@
+{
+  "adapter": "GLiNER2 Large + Adapter v18",
+  "mode": "engine",
+  "summary": {
+    "tp": 1216,
+    "fp": 304,
+    "fn": 40,
+    "p": 0.8,
+    "r": 0.9681528662420382,
+    "f1": 0.8760806916426513
+  },
+  "fp": [
+    {
+      "doc_idx": 6,
+      "text": "WENC",
+      "label": "ticker",
+      "context": "Supreme Court is going to decide on the case of West Virginia v. EPA tomorrow an"
+    },
+    {
+      "doc_idx": 21,
+      "text": "CBNK",
+      "label": "ticker",
+      "context": "The penny is basically worthless. That's what hedgies want you to think. Sure, w"
+    },
+    {
+      "doc_idx": 28,
+      "text": "NYC",
+      "label": "ticker",
+      "context": "...ing toward legalizing weed in the city. [NYC] pretty much wants a different type of f..."
+    },
+    {
+      "doc_idx": 29,
+      "text": "GOOG",
+      "label": "ticker",
+      "context": "...e planet. https://ycharts.com/companies/[GOOG]/stock_buyback"
+    },
+    {
+      "doc_idx": 41,
+      "text": "CTB",
+      "label": "ticker",
+      "context": "... shares (0.15% of free float). High Avg [CTB] of 356% suggests that rally is starting..."
+    },
+    {
+      "doc_idx": 44,
+      "text": "APE",
+      "label": "ticker",
+      "context": "...now, so hop on the train and ride it to [ape] city. The shorting will only help us. D..."
+    },
+    {
+      "doc_idx": 54,
+      "text": "TSE",
+      "label": "ticker",
+      "context": "... fan of dollar tree and metro inc. (MRU-[TSE]). My reasoning is metro owns the most l..."
+    },
+    {
+      "doc_idx": 57,
+      "text": "BAM",
+      "label": "ticker",
+      "context": "... HKD, rioted everything to the DP UNTIL [BAM] 3 days later sees $1900. Look at it and..."
+    },
+    {
+      "doc_idx": 75,
+      "text": "MSM",
+      "label": "ticker",
+      "context": "...WSB specialty is buying when Cramer and [MSM] starts baiting. And here we are now, BB..."
+    },
+    {
+      "doc_idx": 76,
+      "text": "UK",
+      "label": "ticker",
+      "context": "...$800M contract on its hand and the EU + [UK] + China all announcing massive investme..."
+    },
+    {
+      "doc_idx": 83,
+      "text": "RC",
+      "label": "ticker",
+      "context": "...utstanding. We all know that its either [RC] pulled out and theyre bankrupt, or BBBY..."
+    },
+    {
+      "doc_idx": 85,
+      "text": "FDBC",
+      "label": "ticker",
+      "context": "I'm down, but I'm down way less than the S&P. According to my Fidelity performan"
+    },
+    {
+      "doc_idx": 86,
+      "text": "APE",
+      "label": "ticker",
+      "context": "...ent to sell up to $1.4 billion worth of [APE] shares. The so-called APE shares, or AM..."
+    },
+    {
+      "doc_idx": 88,
+      "text": "BULL",
+      "label": "ticker",
+      "context": "... days. I have a basic cash account on we[bull]. Reading over their account types, I'm ..."
+    },
+    {
+      "doc_idx": 89,
+      "text": "BAF",
+      "label": "ticker",
+      "context": "Stocks can crash lots still. There is a serious correction happening, and only t"
+    },
+    {
+      "doc_idx": 90,
+      "text": "PS",
+      "label": "ticker",
+      "context": "[PS]: I'm new in investing. Need to know a s..."
+    },
+    {
+      "doc_idx": 96,
+      "text": "DRUG",
+      "label": "ticker",
+      "context": "...ating earnings, GOT APPROVAL TO ENTER A [DRUG] INTO EUROPES (which is huge!) market an..."
+    },
+    {
+      "doc_idx": 129,
+      "text": "ATAK",
+      "label": "ticker",
+      "context": "... WINNING, HODLBIG RED CANDLE:NICE SHORT [ATAK], STILL HODL Ps if someone could make a ..."
+    },
+    {
+      "doc_idx": 129,
+      "text": "PS",
+      "label": "ticker",
+      "context": "... RED CANDLE:NICE SHORT ATAK, STILL HODL [Ps] if someone could make a meme about this..."
+    },
+    {
+      "doc_idx": 134,
+      "text": "LNG",
+      "label": "ticker",
+      "context": "appears to be a good play in the RNG/[LNG] sector and still very cheap. They have ..."
+    },
+    {
+      "doc_idx": 134,
+      "text": "RNG",
+      "label": "ticker",
+      "context": "appears to be a good play in the [RNG]/LNG sector and still very cheap. They h..."
+    },
+    {
+      "doc_idx": 138,
+      "text": "PG",
+      "label": "ticker",
+      "context": "... investments in R&D. New contracts with [PG]&E, BP, US Army, US Air Force, FDA, and ..."
+    },
+    {
+      "doc_idx": 138,
+      "text": "SG",
+      "label": "ticker",
+      "context": "...Foundry, Apollo.. Second, they ate huge [SG]&A costs last year as a result of the IP..."
+    },
+    {
+      "doc_idx": 142,
+      "text": "BMGL",
+      "label": "ticker",
+      "context": "The DXY is at 20 year highs while inflation is at 40yr highs and interest rates "
+    },
+    {
+      "doc_idx": 143,
+      "text": "IMO",
+      "label": "ticker",
+      "context": "... well as the largest market to sell to. [IMO] $300 price target too low. BABA to the ..."
+    },
+    {
+      "doc_idx": 161,
+      "text": "GCDT",
+      "label": "ticker",
+      "context": "Stocks green as Blake Griffin signs with the Celtics. Wall Street bullish on a C"
+    },
+    {
+      "doc_idx": 161,
+      "text": "UK",
+      "label": "ticker",
+      "context": "...s championship run in 2022-2023 season. [UK] Prime Minister Liz Truss declined to co..."
+    },
+    {
+      "doc_idx": 166,
+      "text": "RC",
+      "label": "ticker",
+      "context": "...have shorted the sgit out of a company! [RC] is not a factor. Making the shorts cove..."
+    },
+    {
+      "doc_idx": 170,
+      "text": "HOOD",
+      "label": "ticker",
+      "context": "Today robin[hood] took the liberty of selling my contacts..."
+    },
+    {
+      "doc_idx": 184,
+      "text": "LEO",
+      "label": "ticker",
+      "context": "...ection between terrestrial gateways and [LEO] that can beam 5G to Smartphones. Theyre..."
+    },
+    {
+      "doc_idx": 184,
+      "text": "SOS",
+      "label": "ticker",
+      "context": "...le and Globalstar teamed up for the new [SOS] Emergency Service - this service is ava..."
+    },
+    {
+      "doc_idx": 252,
+      "text": "UK",
+      "label": "ticker",
+      "context": "...uys shares what broker can I use in the [UK] that is good. Also I have tried trading..."
+    },
+    {
+      "doc_idx": 279,
+      "text": "NS",
+      "label": "ticker",
+      "context": "...yout-432SI-2838227 Reliance Industries ([NS]:RELI), an India-based conglomerate head..."
+    },
+    {
+      "doc_idx": 280,
+      "text": "GF",
+      "label": "ticker",
+      "context": "...ning, just we closed out a position And [GF] yourself."
+    },
+    {
+      "doc_idx": 280,
+      "text": "RH",
+      "label": "ticker",
+      "context": "...$5 I didnt even know I owed for some BS [RH] Gold. No warning, just we closed out a ..."
+    },
+    {
+      "doc_idx": 300,
+      "text": "JEF",
+      "label": "ticker",
+      "context": "On SpaceX IPO day, the retards type S P C into their app...  They're either gonn"
+    },
+    {
+      "doc_idx": 302,
+      "text": "BBU",
+      "label": "ticker",
+      "context": "...s like older towers.  **Baseband Units ([BBU])** — the \"brain\" of the tower. It proce..."
+    },
+    {
+      "doc_idx": 302,
+      "text": "MIMO",
+      "label": "ticker",
+      "context": "...als back to it. Modern 5G uses \"Massive [MIMO]\" — towers with 64, 128, even 256 antenn..."
+    },
+    {
+      "doc_idx": 302,
+      "text": "NFLX",
+      "label": "ticker",
+      "context": "Nokia is quietly becoming the backbone of AI infrastructure and nobody noticed 🚀"
+    },
+    {
+      "doc_idx": 302,
+      "text": "UK",
+      "label": "ticker",
+      "context": "...gic investment), Motorola Solutions for [UK] defence.  Defence contracts are sticky,..."
+    },
+    {
+      "doc_idx": 312,
+      "text": "IRR",
+      "label": "ticker",
+      "context": "...olid but not extraordinary (e.g., lower [IRR] than a typical “home run” outcome).  Cu..."
+    },
+    {
+      "doc_idx": 313,
+      "text": "CAKE",
+      "label": "ticker",
+      "context": "...riday is overblown.  # THE ICING ON THE [CAKE]  The data deals are the icing on the ca..."
+    },
+    {
+      "doc_idx": 313,
+      "text": "CPA",
+      "label": "ticker",
+      "context": "... help with ad placement and drive lower [CPA] thus raising ad prices, it helps engine..."
+    },
+    {
+      "doc_idx": 313,
+      "text": "CTO",
+      "label": "ticker",
+      "context": "...f ads. Amit puntambekar will be the new [CTO] who’s prior experience includes 5 years..."
+    },
+    {
+      "doc_idx": 313,
+      "text": "CTOS",
+      "label": "ticker",
+      "context": "... you, and I believe that’s what the new [CTOs] goal is. With over 500m weekly users, b..."
+    },
+    {
+      "doc_idx": 313,
+      "text": "ML",
+      "label": "ticker",
+      "context": "...r experience includes 5 years in the AI/[ML] side of meta working on content recomme..."
+    },
+    {
+      "doc_idx": 313,
+      "text": "XYZ",
+      "label": "ticker",
+      "context": "Why the app you’re using should be a stock you own ($RDDT)  Let me start by sayi"
+    },
+    {
+      "doc_idx": 315,
+      "text": "PC",
+      "label": "ticker",
+      "context": "Next bottleneck is high spec [PC] for local agentic workflow.  Listen her..."
+    },
+    {
+      "doc_idx": 315,
+      "text": "RTX",
+      "label": "ticker",
+      "context": "... be the bagholder.   We just got Nvidia [RTX] Spark yesterday,  designed to power PCs..."
+    },
+    {
+      "doc_idx": 316,
+      "text": "MOAT",
+      "label": "ticker",
+      "context": "...ed in the next 5 years. * Second, TSM’s [MOAT] is greater than any other company in th..."
+    },
+    {
+      "doc_idx": 316,
+      "text": "TX",
+      "label": "ticker",
+      "context": "...ken about making a fab plant in Austin, [TX], but I find it unlikely they'll have mu..."
+    },
+    {
+      "doc_idx": 320,
+      "text": "ASIC",
+      "label": "ticker",
+      "context": "...e this high, competitors want in.**  \\- [ASIC] takes inference share from NVDA.  \\- Ch..."
+    },
+    {
+      "doc_idx": 320,
+      "text": "CAAS",
+      "label": "ticker",
+      "context": "The Capex Unwind Thesis 2027 - 2028  Hello regards.  What do railroads in the 18"
+    },
+    {
+      "doc_idx": 320,
+      "text": "GEMI",
+      "label": "ticker",
+      "context": "The Capex Unwind Thesis 2027 - 2028  Hello regards.  What do railroads in the 18"
+    },
+    {
+      "doc_idx": 320,
+      "text": "GOOGL",
+      "label": "ticker",
+      "context": "The Capex Unwind Thesis 2027 - 2028  Hello regards.  What do railroads in the 18"
+    },
+    {
+      "doc_idx": 320,
+      "text": "ROI",
+      "label": "ticker",
+      "context": "...AI issuers have to pay more interest -> [ROI] compresses -> capex demand degrades.  \\..."
+    },
+    {
+      "doc_idx": 323,
+      "text": "INTC",
+      "label": "ticker",
+      "context": "... MSFT 5 day moving averages compared to [INTC] \\(flipped for viewing convenience\\)](ht..."
+    },
+    {
+      "doc_idx": 323,
+      "text": "MS",
+      "label": "ticker",
+      "context": "...ch as oil breaking a new high.  [Shitty [MS] Paint rendition of MSFT 5 day moving av..."
+    },
+    {
+      "doc_idx": 324,
+      "text": "GPS",
+      "label": "ticker",
+      "context": "...owly, based on the low side effects the [GPS] therapy can still possibly get a regula..."
+    },
+    {
+      "doc_idx": 326,
+      "text": "API",
+      "label": "ticker",
+      "context": "...ands-network-as-code-ecosystem-advances-[api]-based-agentic-ai-with-google-cloud-mwc2..."
+    },
+    {
+      "doc_idx": 336,
+      "text": "CL",
+      "label": "ticker",
+      "context": "[CL] Futures ↗️  So serious question: Why is..."
+    },
+    {
+      "doc_idx": 338,
+      "text": "UFO",
+      "label": "ticker",
+      "context": "SpaceX IPO rushed ahead of disclosure?  With the US government talking about UAP"
+    },
+    {
+      "doc_idx": 339,
+      "text": "GB",
+      "label": "ticker",
+      "context": "... Node|TSMC N3|TSMC 4NP| |HBM Memory|288 [GB] HBM3E|192 GB HBM3E| |Memory Bandwidth|8..."
+    },
+    {
+      "doc_idx": 339,
+      "text": "JP",
+      "label": "ticker",
+      "context": "... very opaque for both companies. I'm no [JP] Morgan analyst so please cut me some sl..."
+    },
+    {
+      "doc_idx": 340,
+      "text": "ADC",
+      "label": "ticker",
+      "context": "...ug designation already in pocket.  HER2 [ADC] BLA filing this year — Trastuzumab pami..."
+    },
+    {
+      "doc_idx": 340,
+      "text": "CARE",
+      "label": "ticker",
+      "context": "...SCO is the opening act.  WHY YOU SHOULD [CARE]:  Pumitamig vs Keytruda (ROSETTA Lung-0..."
+    },
+    {
+      "doc_idx": 340,
+      "text": "OS",
+      "label": "ticker",
+      "context": "...amous NSCLC second line, already showed [OS] benefit at ELCC in March. Pivotal stage..."
+    },
+    {
+      "doc_idx": 340,
+      "text": "PD",
+      "label": "ticker",
+      "context": "...ging a knife to a Merck gunfight. Their [PD]-L1 + VEGF-A bispecific goes head-to-hea..."
+    },
+    {
+      "doc_idx": 340,
+      "text": "TSM",
+      "label": "ticker",
+      "context": "...is going to price in a Keytruda killer. [TSM] of the oncology world moment.  Gotistob..."
+    },
+    {
+      "doc_idx": 341,
+      "text": "AGI",
+      "label": "ticker",
+      "context": "... AI bubble relies on the narrative that [AGI] will happen soon... What if it never fu..."
+    },
+    {
+      "doc_idx": 346,
+      "text": "CMS",
+      "label": "ticker",
+      "context": "...ers for Medicare and Medicaid Services ([CMS]) assigned a permanent health care commo..."
+    },
+    {
+      "doc_idx": 346,
+      "text": "EMA",
+      "label": "ticker",
+      "context": "...2026. My bullish estimate is $40+ (with [EMA] approval, EU partnership, and stronger ..."
+    },
+    {
+      "doc_idx": 346,
+      "text": "MGMT",
+      "label": "ticker",
+      "context": "...at TA-TMA. On the recent earnings call, [mgmt] said that this drug has already achieve..."
+    },
+    {
+      "doc_idx": 347,
+      "text": "GEMI",
+      "label": "ticker",
+      "context": "Tech savvy & smart regards: how you use AI on research or trading?  I think I’m "
+    },
+    {
+      "doc_idx": 347,
+      "text": "RDDT",
+      "label": "ticker",
+      "context": "Tech savvy & smart regards: how you use AI on research or trading?  I think I’m "
+    },
+    {
+      "doc_idx": 351,
+      "text": "RHM",
+      "label": "ticker",
+      "context": "[$RHM] - Why did the CEO buy his own stock thr..."
+    },
+    {
+      "doc_idx": 353,
+      "text": "APRN",
+      "label": "ticker",
+      "context": "Two $FLY posts. Two times told I was regarded. Am I still regarded?  **Act I:** "
+    },
+    {
+      "doc_idx": 353,
+      "text": "III",
+      "label": "ticker",
+      "context": "...are you seeing the pattern here?  **Act [III]:** I remain regarded. The position, how..."
+    },
+    {
+      "doc_idx": 353,
+      "text": "XYZ",
+      "label": "ticker",
+      "context": "Two $FLY posts. Two times told I was regarded. Am I still regarded?  **Act I:** "
+    },
+    {
+      "doc_idx": 355,
+      "text": "CITR",
+      "label": "ticker",
+      "context": "[DD] - Figma Ligma FIG  A lot of people aren't ready to hear this, but FIG stock"
+    },
+    {
+      "doc_idx": 355,
+      "text": "GOOGL",
+      "label": "ticker",
+      "context": "[DD] - Figma Ligma FIG  A lot of people aren't ready to hear this, but FIG stock"
+    },
+    {
+      "doc_idx": 355,
+      "text": "SEAT",
+      "label": "ticker",
+      "context": "... a core business. \"*AI DISRUPTION RISK, [SEAT]-BASED MODEL BREAKING, -X% OFF ITS IPO H..."
+    },
+    {
+      "doc_idx": 355,
+      "text": "UI",
+      "label": "ticker",
+      "context": "...* Can *probably* create a killer coding [UI] * Already can bring engineers, designer..."
+    },
+    {
+      "doc_idx": 355,
+      "text": "VC",
+      "label": "ticker",
+      "context": "...rends come end of August when the final [VC]/investor lockup period ends which will ..."
+    },
+    {
+      "doc_idx": 356,
+      "text": "KDK",
+      "label": "ticker",
+      "context": "... or early stage explorers like NRED and [KDK] working on future primary supply - the ..."
+    },
+    {
+      "doc_idx": 357,
+      "text": "GCT",
+      "label": "ticker",
+      "context": "... and my take on the company  My take on [GCT] Semiconductor: I got in thinking it’s j..."
+    },
+    {
+      "doc_idx": 357,
+      "text": "NVDA",
+      "label": "ticker",
+      "context": "Gcts semiconductor and my take on the company  My take on GCT Semiconductor: I g"
+    },
+    {
+      "doc_idx": 358,
+      "text": "DEEP",
+      "label": "ticker",
+      "context": "...:   **National Security.**  Firefly has [DEEP] national security / military industrial..."
+    },
+    {
+      "doc_idx": 359,
+      "text": "DC",
+      "label": "ticker",
+      "context": "...ference architecture. Co-author of 800V [DC] standards with Nvidia and ABB. Stock ba..."
+    },
+    {
+      "doc_idx": 359,
+      "text": "EA",
+      "label": "ticker",
+      "context": "...; Adj. EPS $3.33 (vs. consensus $3.32), [EA] backlog $13.2B (+31% YoY), datacenter o..."
+    },
+    {
+      "doc_idx": 359,
+      "text": "GE",
+      "label": "ticker",
+      "context": "...datacenter power stack from medium-volta[ge] connection through rack-level liquid co..."
+    },
+    {
+      "doc_idx": 359,
+      "text": "TX",
+      "label": "ticker",
+      "context": "... Power Transformers - Eaton Nacogdoches [TX] plant among few US-spec 3-phase large t..."
+    },
+    {
+      "doc_idx": 360,
+      "text": "GOAT",
+      "label": "ticker",
+      "context": "...n build new products.   **BUT he is the [GOAT] of corporate plagiarism.** This man saw..."
+    },
+    {
+      "doc_idx": 360,
+      "text": "TAIL",
+      "label": "ticker",
+      "context": "$META DD - Why you should bet on the lizard king  **Position:** 1900 shares  Alr"
+    },
+    {
+      "doc_idx": 361,
+      "text": "BYND",
+      "label": "ticker",
+      "context": "SAP is up nearly 10% in 5 days. Is this finally the rebound?  I have been watchi"
+    },
+    {
+      "doc_idx": 368,
+      "text": "GEMI",
+      "label": "ticker",
+      "context": "Going balls deep in $HPE because its not overvalued and I'm out of other ideas  "
+    },
+    {
+      "doc_idx": 368,
+      "text": "HP",
+      "label": "ticker",
+      "context": "...ise is the move.  Yes, I know, you hear [HP] and think shitty laptops that your corp..."
+    },
+    {
+      "doc_idx": 369,
+      "text": "PRS",
+      "label": "ticker",
+      "context": "...t will go up dramatically. Instead of 2 [PRs] per week I'll be expected to do 10+ PRs..."
+    },
+    {
+      "doc_idx": 369,
+      "text": "PS",
+      "label": "ticker",
+      "context": "...cerely,  -grizzly_teddy, /r/wsb regard  [PS]: my only current holdings are two share..."
+    },
+    {
+      "doc_idx": 370,
+      "text": "AES",
+      "label": "ticker",
+      "context": "...e giant) and before that, 12 years at **[AES] Corporation** managing capital-intensiv..."
+    },
+    {
+      "doc_idx": 370,
+      "text": "JUNE",
+      "label": "ticker",
+      "context": "...hat's a green flag in a trench coat.  **[JUNE] 11 IS THE CATALYST**  Q4 FY26 earnings ..."
+    },
+    {
+      "doc_idx": 371,
+      "text": "ABC",
+      "label": "ticker",
+      "context": "...aid off nearly 200 employees across its [ABC] News division and entertainment network..."
+    },
+    {
+      "doc_idx": 372,
+      "text": "AGI",
+      "label": "ticker",
+      "context": "...**All major AI companies have predicted [AGI] (Artificial General Intelligence) would..."
+    },
+    {
+      "doc_idx": 373,
+      "text": "CNS",
+      "label": "ticker",
+      "context": "...paying **cash value for an FDA-approved [CNS]-penetrant lung-cancer pill with 80 % ma..."
+    },
+    {
+      "doc_idx": 380,
+      "text": "BIXI",
+      "label": "ticker",
+      "context": "MSTR: Why 2026 Could Be a Massive Year  TL;DR: MicroStrategy (MSTR) is trading b"
+    },
+    {
+      "doc_idx": 380,
+      "text": "BTC",
+      "label": "ticker",
+      "context": "...ide & Market Factors -  Macro risk-off: [BTC] dropped 30-40% from October highs due t..."
+    },
+    {
+      "doc_idx": 380,
+      "text": "EBTC",
+      "label": "ticker",
+      "context": "MSTR: Why 2026 Could Be a Massive Year  TL;DR: MicroStrategy (MSTR) is trading b"
+    },
+    {
+      "doc_idx": 381,
+      "text": "FF",
+      "label": "ticker",
+      "context": "...nd her sister on a yacht railing lines o[ff] a solid gold piece of glass given to yo..."
+    },
+    {
+      "doc_idx": 381,
+      "text": "UL",
+      "label": "ticker",
+      "context": "...owing the World Series up in the wonderf[ul] state of Canada, you would have seen th..."
+    },
+    {
+      "doc_idx": 385,
+      "text": "PS",
+      "label": "ticker",
+      "context": "...the housing market - COOP/RKT play  [htt[ps]://www.resiclubanalytics.com/p/housing-m..."
+    },
+    {
+      "doc_idx": 386,
+      "text": "CPG",
+      "label": "ticker",
+      "context": "...ring the bill they receive from AWS and [CPG]. Snapchat is the only company that has ..."
+    },
+    {
+      "doc_idx": 393,
+      "text": "AZRE",
+      "label": "ticker",
+      "context": "The AI Market: A Gradual Rotation  I want to share some analysis I’ve been think"
+    },
+    {
+      "doc_idx": 397,
+      "text": "FCF",
+      "label": "ticker",
+      "context": "...25B**|**$136.80B**| |**PV of Cumulative [FCF] + Net Cash**|**$4.11B**|**$4.91B**|**$5..."
+    },
+    {
+      "doc_idx": 397,
+      "text": "PV",
+      "label": "ticker",
+      "context": "...8B|$90.0B|$201.0B| |**Jan 2026 Mkt Cap ([PV])**|**$17.76B**|**$36.94B**|**$61.25B**|..."
+    },
+    {
+      "doc_idx": 397,
+      "text": "ROIC",
+      "label": "ticker",
+      "context": "...er than growth because Reddit is a high [ROIC] business; 20 is too low for a capital l..."
+    },
+    {
+      "doc_idx": 400,
+      "text": "REIT",
+      "label": "ticker",
+      "context": "...nism. The Golden Arches are basically a [REIT] with extra steps.  The Numbers That Sho..."
+    },
+    {
+      "doc_idx": 402,
+      "text": "AR",
+      "label": "ticker",
+      "context": "...bigger profits.  Tech Boost: Snapchat’s [AR] (like Lenses) could merge with Google’s..."
+    },
+    {
+      "doc_idx": 405,
+      "text": "RF",
+      "label": "ticker",
+      "context": "...s a leading provider of radiofrequency ([RF]) based minimally invasive medical techn..."
+    },
+    {
+      "doc_idx": 406,
+      "text": "SMA",
+      "label": "ticker",
+      "context": "[SMA] 8 Cross above SMA 21  SMA 8 crossing ov..."
+    },
+    {
+      "doc_idx": 407,
+      "text": "ROIC",
+      "label": "ticker",
+      "context": "...d P/E ~15x on expected $2.80+ EPS, with [ROIC] accelerating on AI margins. The dip emb..."
+    },
+    {
+      "doc_idx": 408,
+      "text": "FAA",
+      "label": "ticker",
+      "context": "...ale eVTOL aircraft for years, has major [FAA] certification progress, has military te..."
+    },
+    {
+      "doc_idx": 411,
+      "text": "COOP",
+      "label": "ticker",
+      "context": "...ares after a bit of digging into them.  [COOP] DEAL AND WHY IT IS BULLISH  Rocket Comp..."
+    },
+    {
+      "doc_idx": 412,
+      "text": "ADES",
+      "label": "ticker",
+      "context": "AI may be a bubble, but the sentiment in China is different - Why I am bullish o"
+    },
+    {
+      "doc_idx": 412,
+      "text": "JD",
+      "label": "ticker",
+      "context": "... leveraging AI for recommendations 4. **[JD] Dot Com** \\- Advanced logistics and AI-..."
+    },
+    {
+      "doc_idx": 412,
+      "text": "PDD",
+      "label": "ticker",
+      "context": "... cloud services provider in China​ 3. **[PDD] Holdings**  \\- E-commerce platform leve..."
+    },
+    {
+      "doc_idx": 412,
+      "text": "PEG",
+      "label": "ticker",
+      "context": "AI may be a bubble, but the sentiment in China is different - Why I am bullish o"
+    },
+    {
+      "doc_idx": 412,
+      "text": "PEW",
+      "label": "ticker",
+      "context": "...sentiment here in the USA. Here's what [[Pew] has found in surveys](https://www.pewre..."
+    },
+    {
+      "doc_idx": 413,
+      "text": "BEP",
+      "label": "ticker",
+      "context": "...se spreads expire 12/17/2027 and have a [BEP] adjusting for rolling of $339 per share..."
+    },
+    {
+      "doc_idx": 413,
+      "text": "FIG",
+      "label": "ticker",
+      "context": "...ensitive government cloud environments ([FIG] has this as well).  This is sticky ARR ..."
+    },
+    {
+      "doc_idx": 415,
+      "text": "MFGP",
+      "label": "ticker",
+      "context": "$300-$400 Oil 2026? Looking for cheapest way to leverage $100 into lambo  I’m be"
+    },
+    {
+      "doc_idx": 415,
+      "text": "WTI",
+      "label": "ticker",
+      "context": "...e Bab al-Mandab simultaneously, driving [WTI] to 300+/barrel. I want to turn $100 int..."
+    },
+    {
+      "doc_idx": 417,
+      "text": "BEN",
+      "label": "ticker",
+      "context": "...Time * Regular Show * Powerpuff Girls * [Ben] 10 * Steven Universe  Warner Bros. Anim..."
+    },
+    {
+      "doc_idx": 417,
+      "text": "CO",
+      "label": "ticker",
+      "context": "NFLX acquiring WBD is a good thing. Some Due Diligence  A few reasons why i thin"
+    },
+    {
+      "doc_idx": 417,
+      "text": "DC",
+      "label": "ticker",
+      "context": "...u really think we would be better off?  [DC] Comics Universe  * Batman * Superman * ..."
+    },
+    {
+      "doc_idx": 417,
+      "text": "IP",
+      "label": "ticker",
+      "context": "...vice and shareholders  1. NFLX gets the [IP] for the below and that would be huge be..."
+    },
+    {
+      "doc_idx": 417,
+      "text": "LEGO",
+      "label": "ticker",
+      "context": "... set of franchises:  * The Matrix * The [Lego] Movie * Mad Max (including *Fury Road* ..."
+    },
+    {
+      "doc_idx": 417,
+      "text": "NBA",
+      "label": "ticker",
+      "context": "...would gain rights relationships for:  * [NBA] (TNT) * NHL * MLB postseason (TBS) * NC..."
+    },
+    {
+      "doc_idx": 417,
+      "text": "TV",
+      "label": "ticker",
+      "context": "...mazon Prime Video, Disney+, Hulu, Apple [TV]+, Youtube, Roku etc. I think they can w..."
+    },
+    {
+      "doc_idx": 417,
+      "text": "WB",
+      "label": "ticker",
+      "context": "...uphoria * Barry * Curb Your Enthusiasm  [WB] Film Library  A huge and historic set o..."
+    },
+    {
+      "doc_idx": 420,
+      "text": "BCYP",
+      "label": "ticker",
+      "context": "Meta Shares Move 2% Higher, whatsapp ads (positive) and scale.ai investment (neg"
+    },
+    {
+      "doc_idx": 422,
+      "text": "DTE",
+      "label": "ticker",
+      "context": "...sence, which is why I’ve bought some 30 [DTE] RTX 215C. However, in the previous thre..."
+    },
+    {
+      "doc_idx": 424,
+      "text": "JP",
+      "label": "ticker",
+      "context": "...ssive gap (divergence) between U.S. and [JP] rates.  * Wide Gap: Free money. Everyon..."
+    },
+    {
+      "doc_idx": 427,
+      "text": "TW",
+      "label": "ticker",
+      "context": "[DD] Taiwan Glass (1802.[TW]) is the critical 2nd source for AI GPUs..."
+    },
+    {
+      "doc_idx": 428,
+      "text": "BTM",
+      "label": "ticker",
+      "context": "...couldn’t tell, I am telling you to LONG [BTM] ENERGY, SPECIFICALLY XE AND OTHER BTM N..."
+    },
+    {
+      "doc_idx": 430,
+      "text": "IQ",
+      "label": "ticker",
+      "context": "...k to long term investing for health and [IQ] reasons 😂  So this is my experience and..."
+    },
+    {
+      "doc_idx": 430,
+      "text": "WTI",
+      "label": "ticker",
+      "context": "...rainer.  I had 6x contracts   Bought 2x [WTI] oil @ 62$ - Sold @ 72$— December   Boug..."
+    },
+    {
+      "doc_idx": 436,
+      "text": "HGRAF",
+      "label": "ticker",
+      "context": "[$HGRAF] has officially made me a millionaire bu..."
+    },
+    {
+      "doc_idx": 436,
+      "text": "JHX",
+      "label": "ticker",
+      "context": "$HGRAF has officially made me a millionaire but I want to make way more. You can"
+    },
+    {
+      "doc_idx": 436,
+      "text": "MATH",
+      "label": "ticker",
+      "context": "...,000 tons of high quality graphene, the [math] gets a little crazier on where you can ..."
+    },
+    {
+      "doc_idx": 436,
+      "text": "SPOT",
+      "label": "ticker",
+      "context": "...ations came through. WE ARE NOW IN THAT [SPOT] and that is why you have seen the insan..."
+    },
+    {
+      "doc_idx": 436,
+      "text": "UK",
+      "label": "ticker",
+      "context": "...ing Innovation Center out of Manchester [UK], Look it up jesus christ shouldn't have..."
+    },
+    {
+      "doc_idx": 437,
+      "text": "EBR",
+      "label": "ticker",
+      "context": "...otal fuel costs by 80% or more. * **The [EBR]-II Heritage (Proven Physics)**: Unlike ..."
+    },
+    {
+      "doc_idx": 437,
+      "text": "PPA",
+      "label": "ticker",
+      "context": ".... * **Prepayments:** Management expects [PPA] conversions to begin in 1H 2026, which ..."
+    },
+    {
+      "doc_idx": 437,
+      "text": "SFR",
+      "label": "ticker",
+      "context": "...al designs, Oklo’s Sodium Fast Reactor ([SFR]) is a scaled-up replica of EBR-II, a re..."
+    },
+    {
+      "doc_idx": 437,
+      "text": "SMR",
+      "label": "ticker",
+      "context": "...1h19806/oklo_is_undervalued_relative_to_[smr]/), I noted that the stock was deeply un..."
+    },
+    {
+      "doc_idx": 441,
+      "text": "SMH",
+      "label": "ticker",
+      "context": "...6db64b4e0c679221f350e47ead18419685c7b9  [smh]"
+    },
+    {
+      "doc_idx": 442,
+      "text": "BCYP",
+      "label": "ticker",
+      "context": "(KYTX) – A Deep Value (300-400%) Autoimmune CAR-T Play with Big Pharma Links  IP"
+    },
+    {
+      "doc_idx": 442,
+      "text": "CAR",
+      "label": "ticker",
+      "context": "...X) – A Deep Value (300-400%) Autoimmune [CAR]-T Play with Big Pharma Links  IPO’d in ..."
+    },
+    {
+      "doc_idx": 447,
+      "text": "HIM",
+      "label": "ticker",
+      "context": "He, his, [$HIM]!  Watch out for the breakout!  https://..."
+    },
+    {
+      "doc_idx": 450,
+      "text": "APE",
+      "label": "ticker",
+      "context": "Telesat - $TSAT - Insider DD and generational opportunity  **Intro:**   **-** I "
+    },
+    {
+      "doc_idx": 453,
+      "text": "SAAQ",
+      "label": "ticker",
+      "context": "$FLY me to the moooon  [Loaded to a half tittie](https://preview.redd.it/lxh30o6"
+    },
+    {
+      "doc_idx": 455,
+      "text": "HR",
+      "label": "ticker",
+      "context": "...p employers make better decisions about [HR] and benefits.\"*  \\-**95% of Alight cust..."
+    },
+    {
+      "doc_idx": 457,
+      "text": "PJM",
+      "label": "ticker",
+      "context": "...nts.  the grid interconnection queue in [PJM] was the actual bottleneck on AI buildou..."
+    },
+    {
+      "doc_idx": 457,
+      "text": "SMR",
+      "label": "ticker",
+      "context": "On-site power generation approval removes the AI infrastructure bottleneck, and "
+    },
+    {
+      "doc_idx": 459,
+      "text": "COO",
+      "label": "ticker",
+      "context": "...on Tim Apple got picked up by everyone. [COO], Jeff Apple, stepping down even though ..."
+    },
+    {
+      "doc_idx": 459,
+      "text": "EMA",
+      "label": "ticker",
+      "context": "...nse:** Short duration SMA crossing over [EMA] on the 1H. $212.50 has been a difficult..."
+    },
+    {
+      "doc_idx": 459,
+      "text": "IP",
+      "label": "ticker",
+      "context": "[AAPL] [$ip] & Sell  Time to hold on capital.  TLDR;..."
+    },
+    {
+      "doc_idx": 459,
+      "text": "SMA",
+      "label": "ticker",
+      "context": "... **Technical nonsense:** Short duration [SMA] crossing over EMA on the 1H. $212.50 ha..."
+    },
+    {
+      "doc_idx": 460,
+      "text": "LNG",
+      "label": "ticker",
+      "context": "...he geometrically expanding price of oil+[LNG].  The economic rapture we will soon see..."
+    },
+    {
+      "doc_idx": 461,
+      "text": "UBER",
+      "label": "ticker",
+      "context": "[UBER] Growth Potential  Stock is trading 20% ..."
+    },
+    {
+      "doc_idx": 462,
+      "text": "DTE",
+      "label": "ticker",
+      "context": "...r for me.  Mainly SPY option plays, 1-3 [DTE], short term trades.  Had my regard mome..."
+    },
+    {
+      "doc_idx": 465,
+      "text": "PMI",
+      "label": "ticker",
+      "context": "... want real macro data (NFP, CPI, global [PMI]) to confirm before adding significant e..."
+    },
+    {
+      "doc_idx": 465,
+      "text": "WTI",
+      "label": "ticker",
+      "context": "...a trades post.  In the past month:  * **[WTI] crude**: -7.16% → $91.98/bbl * **Brent*..."
+    },
+    {
+      "doc_idx": 470,
+      "text": "AIFA",
+      "label": "ticker",
+      "context": "AMZN's KUIPER is worth $500BN (part of $4T AMZN)..and it's being priced at $0.  "
+    },
+    {
+      "doc_idx": 470,
+      "text": "MOD",
+      "label": "ticker",
+      "context": "AMZN's KUIPER is worth $500BN (part of $4T AMZN)..and it's being priced at $0.  "
+    },
+    {
+      "doc_idx": 470,
+      "text": "PIAI",
+      "label": "ticker",
+      "context": "AMZN's KUIPER is worth $500BN (part of $4T AMZN)..and it's being priced at $0.  "
+    },
+    {
+      "doc_idx": 470,
+      "text": "UBER",
+      "label": "ticker",
+      "context": "...iterally point is market expansion like [Uber] and Uber EATS\\].  They just inked a dea..."
+    },
+    {
+      "doc_idx": 475,
+      "text": "MA",
+      "label": "ticker",
+      "context": "... flow. One trader's eyeing the 200-week [MA] break for \"multiples.\" Even with some p..."
+    },
+    {
+      "doc_idx": 476,
+      "text": "IMO",
+      "label": "ticker",
+      "context": "...why this shit has tanked to the gutter. [IMO] this shit is a risk free play. It’s in ..."
+    },
+    {
+      "doc_idx": 478,
+      "text": "NASDAQ",
+      "label": "ticker",
+      "context": "...mpany, that will do it. Remember Cisco ([$NASDAQ]:CSCO)? They were gonna run the internet..."
+    },
+    {
+      "doc_idx": 478,
+      "text": "XETR",
+      "label": "ticker",
+      "context": "...rting point of the ETF I am looking at: [$XETR]:XDEW . Currently, I hold my S&P positio..."
+    },
+    {
+      "doc_idx": 479,
+      "text": "IMO",
+      "label": "ticker",
+      "context": "...nt and searching algos to OpenAI/Google [IMO]?"
+    },
+    {
+      "doc_idx": 485,
+      "text": "EA",
+      "label": "ticker",
+      "context": "...ive multi-phase campaigns.| |**EW/SEAD ([EA]-18G Growlers, F-16 Wild Weasels)**|6 Gr..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "EW",
+      "label": "ticker",
+      "context": "...aught since the Iraq War.  https://previ[ew].redd.it/xa7rzt3s4glg1.png?width=856&for..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "KC",
+      "label": "ticker",
+      "context": "...aign Indication| |:-|:-|:-| |**Tankers ([KC]-135/KC-46 equivalents)**|107+ total: 31..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "MC",
+      "label": "ticker",
+      "context": "...ies for pararescue teams. Additional KC/[MC]/HC-130 variants noted for CSAR and heli..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "MQ",
+      "label": "ticker",
+      "context": "..., sustained missions.| |**Drones/Recon ([MQ]-4C, U-2S, RQ-4B)**|3+ MQ-4C; U-2S fligh..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "RC",
+      "label": "ticker",
+      "context": "...rikes from U.S. soil.| |**Recon/SIGINT ([RC]-135 Family)**|Rivet Joint (64-14848) wi..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "SOAR",
+      "label": "ticker",
+      "context": "... like Air Force Pararescue (PJs), 160th [SOAR] \"Night Stalkers\" (special aviation for ..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "UAE",
+      "label": "ticker",
+      "context": "...ing mega-complexes across Saudi Arabia, [UAE], Kuwait, Oman etc. creating a long-live..."
+    },
+    {
+      "doc_idx": 485,
+      "text": "UK",
+      "label": "ticker",
+      "context": "...nean route (higher than 2025 op); 19 in [UK]/Germany for surge.|Signals preparation ..."
+    },
+    {
+      "doc_idx": 486,
+      "text": "DRAM",
+      "label": "ticker",
+      "context": "DD: Why Micron (MU) and Memory ([DRAM] ETF) is still an Undervalued Play in th..."
+    },
+    {
+      "doc_idx": 490,
+      "text": "BTC",
+      "label": "ticker",
+      "context": "... years in most realistic scenarios.**   [BTC] down → MSTR dies fast.   BTC flat → MST..."
+    },
+    {
+      "doc_idx": 490,
+      "text": "GENI",
+      "label": "ticker",
+      "context": "MSTR Is Living on Borrowed Time  **TL;DR:**   **My take: MSTR doesn’t survive mo"
+    },
+    {
+      "doc_idx": 493,
+      "text": "FCF",
+      "label": "ticker",
+      "context": "...sive Free Cash Flow margins (nearly 32% [FCF] conversion) and essentially have negati..."
+    },
+    {
+      "doc_idx": 493,
+      "text": "IMG",
+      "label": "ticker",
+      "context": "...e bad news. They crushed Q4 and the new [IMG] Arena deal is printing.  Right now, dar..."
+    },
+    {
+      "doc_idx": 495,
+      "text": "COG",
+      "label": "ticker",
+      "context": "Cigs Are Good For You: Why Oral Turns Me on!  TLDR: Altria is a deep value buy. "
+    },
+    {
+      "doc_idx": 495,
+      "text": "MOS",
+      "label": "ticker",
+      "context": "...h gave an intrinsic value of $78 with a [MOS] of 35%. I then did a sensitivity table ..."
+    },
+    {
+      "doc_idx": 496,
+      "text": "IMO",
+      "label": "ticker",
+      "context": "... a merger with his other ventures. This [IMO] is a red flag. If the 5 day moving aver..."
+    },
+    {
+      "doc_idx": 496,
+      "text": "MA",
+      "label": "ticker",
+      "context": "...emingly acting as resistance. The 5 day [MA] is trending down. Given the high valuat..."
+    },
+    {
+      "doc_idx": 496,
+      "text": "PS",
+      "label": "ticker",
+      "context": "...nths in the markets.  [SPY - 10 min](htt[ps]://preview.redd.it/frjxjemixxhg1.jpg?wid..."
+    },
+    {
+      "doc_idx": 499,
+      "text": "MOD",
+      "label": "ticker",
+      "context": "GME Institutions Hold 177% of Float Why the Squeeze is not Squoze  This is actua"
+    },
+    {
+      "doc_idx": 499,
+      "text": "XYZ",
+      "label": "ticker",
+      "context": "...dings percentages. Let's assume Company [XYZ] has 20 million shares outstanding and I..."
+    },
+    {
+      "doc_idx": 501,
+      "text": "DM",
+      "label": "ticker",
+      "context": "...stion as I can on the thread and in the [DM]'s\\]  \\[Edit 2: A few astute monkeys hav..."
+    },
+    {
+      "doc_idx": 504,
+      "text": "BBQ",
+      "label": "ticker",
+      "context": "...s.   Are you even American if you don't [BBQ] on a Weber?  [Weber Grills $WEBR](https..."
+    },
+    {
+      "doc_idx": 504,
+      "text": "WEBR",
+      "label": "ticker",
+      "context": "[$WEBR]: 40% Short Interest - Grilled Tendies &..."
+    },
+    {
+      "doc_idx": 506,
+      "text": "JP",
+      "label": "ticker",
+      "context": "...s the perfect time to squeeze and teach [JP] Morgan and COMEX who’s boss.  The best ..."
+    },
+    {
+      "doc_idx": 507,
+      "text": "DJCO",
+      "label": "ticker",
+      "context": "Daily Discussion Thread for April 20, 2021  Your daily trading discussion thread"
+    },
+    {
+      "doc_idx": 508,
+      "text": "CME",
+      "label": "ticker",
+      "context": "...o your house, but rather it goes to the [CME] warehouse.  You can go pick it up from ..."
+    },
+    {
+      "doc_idx": 508,
+      "text": "JP",
+      "label": "ticker",
+      "context": "...y previous post I implied it was likely [JP] Morgan naked shorting.  They have a his..."
+    },
+    {
+      "doc_idx": 509,
+      "text": "APE",
+      "label": "ticker",
+      "context": "FUCK SILVER. Here's the move AFTER the squeeze has squoze: Cannabis! 🚀🌱🚀🌱  EDIT:"
+    },
+    {
+      "doc_idx": 509,
+      "text": "JP",
+      "label": "ticker",
+      "context": "...ve all eyes on us, instead of taking on [JP] Morgan, let's help out the **millions**..."
+    },
+    {
+      "doc_idx": 509,
+      "text": "NBA",
+      "label": "ticker",
+      "context": "...ready the official sports drink for TWO [NBA] teams** they represent a unique opportu..."
+    },
+    {
+      "doc_idx": 509,
+      "text": "RDDT",
+      "label": "ticker",
+      "context": "FUCK SILVER. Here's the move AFTER the squeeze has squoze: Cannabis! 🚀🌱🚀🌱  EDIT:"
+    },
+    {
+      "doc_idx": 510,
+      "text": "AR",
+      "label": "ticker",
+      "context": "... net income of approximately $5B this ye[ar] which are \"account receivable\"  > Accou..."
+    },
+    {
+      "doc_idx": 514,
+      "text": "JCAP",
+      "label": "ticker",
+      "context": "THE DEFLATION GLITCH: Why $2 Bills are the ultimate hedge against the Fed  Liste"
+    },
+    {
+      "doc_idx": 514,
+      "text": "PEG",
+      "label": "ticker",
+      "context": "THE DEFLATION GLITCH: Why $2 Bills are the ultimate hedge against the Fed  Liste"
+    },
+    {
+      "doc_idx": 516,
+      "text": "ECON",
+      "label": "ticker",
+      "context": "...is overstated.  And no, this isn’t some [Econ] 101 dropout yelling “the numbers are fa..."
+    },
+    {
+      "doc_idx": 516,
+      "text": "ET",
+      "label": "ticker",
+      "context": "...aid:  >Gradual cooling in the labor mark[et] has continued. Unemployment is now up t..."
+    },
+    {
+      "doc_idx": 518,
+      "text": "COST",
+      "label": "ticker",
+      "context": "...sts $1.10  Your toilet paper equivalent [cost] drops to:  ~$2.20 per roll  And if hype..."
+    },
+    {
+      "doc_idx": 522,
+      "text": "SHEL",
+      "label": "ticker",
+      "context": "TikTok's most popular influencer sold his company for $975m... to a sketchy Chin"
+    },
+    {
+      "doc_idx": 528,
+      "text": "FTC",
+      "label": "ticker",
+      "context": "...free as in beer that you pay for.  2024 [FTC] found them guilty of deceptive advertis..."
+    },
+    {
+      "doc_idx": 528,
+      "text": "IRS",
+      "label": "ticker",
+      "context": "...loaded the tax forms directly from papa [IRS], asked me a few questions about how muc..."
+    },
+    {
+      "doc_idx": 538,
+      "text": "JCAP",
+      "label": "ticker",
+      "context": "THE DEFLATION GLITCH: Why $2 Bills are the ultimate hedge against the Fed  Liste"
+    },
+    {
+      "doc_idx": 538,
+      "text": "PEG",
+      "label": "ticker",
+      "context": "THE DEFLATION GLITCH: Why $2 Bills are the ultimate hedge against the Fed  Liste"
+    },
+    {
+      "doc_idx": 540,
+      "text": "ECON",
+      "label": "ticker",
+      "context": "...is overstated.  And no, this isn’t some [Econ] 101 dropout yelling “the numbers are fa..."
+    },
+    {
+      "doc_idx": 540,
+      "text": "ET",
+      "label": "ticker",
+      "context": "...aid:  >Gradual cooling in the labor mark[et] has continued. Unemployment is now up t..."
+    },
+    {
+      "doc_idx": 543,
+      "text": "SF",
+      "label": "ticker",
+      "context": "...o just got laid off from $300k+ jobs in [SF] and LA, they were in tech so it's not t..."
+    },
+    {
+      "doc_idx": 549,
+      "text": "BIXI",
+      "label": "ticker",
+      "context": "Iran launches missiles? It's already priced in  Don't even ask the question. The"
+    },
+    {
+      "doc_idx": 549,
+      "text": "LAB",
+      "label": "ticker",
+      "context": "Iran launches missiles? It's already priced in  Don't even ask the question. The"
+    },
+    {
+      "doc_idx": 553,
+      "text": "API",
+      "label": "ticker",
+      "context": "... both RuneScape 3 bonds (via WeirdGloop [API]) and S&P 500 (via quantmod) 2. Inner jo..."
+    },
+    {
+      "doc_idx": 553,
+      "text": "SD",
+      "label": "ticker",
+      "context": "...x more volatile than the S&P 500 (daily [SD]: 2.35% vs 1.09%) * This higher volatili..."
+    },
+    {
+      "doc_idx": 563,
+      "text": "PORT",
+      "label": "ticker",
+      "context": "...o that guy, i should have YOLO'd a FULL [PORT] at the time but didnt have the balls li..."
+    },
+    {
+      "doc_idx": 566,
+      "text": "SP",
+      "label": "ticker",
+      "context": "...inion (over a 60% increase from current [SP] of $13).  VG made a local high of $17.5..."
+    },
+    {
+      "doc_idx": 566,
+      "text": "TERM",
+      "label": "ticker",
+      "context": "...YoY PPI, anyway?  # WHAT ABOUT THE LONG-[TERM]?  So far, I've laid out the case for US..."
+    },
+    {
+      "doc_idx": 566,
+      "text": "WTI",
+      "label": "ticker",
+      "context": "...ptions are the US/North Sea/Russia, and [WTI] is cheaper than Brent by about $5-10/ba..."
+    },
+    {
+      "doc_idx": 567,
+      "text": "GOOGL",
+      "label": "ticker",
+      "context": "SaaSpocalypse canceled?  Figma reported today and beat eps by 66% (0.10 vs 0.06)"
+    },
+    {
+      "doc_idx": 577,
+      "text": "ACT",
+      "label": "ticker",
+      "context": "...cious  Edit post-Q1 call: It could, in f[act], go tits up another quarter in a row. N..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "ADP",
+      "label": "ticker",
+      "context": "...ing jobs on both a recruiter version of [ADP] and a public version. They're not actin..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "CO",
+      "label": "ticker",
+      "context": "...d 'Microvast Energy Inc' they formed in [CO], and pull out their TX entity 'Microvas..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "DE",
+      "label": "ticker",
+      "context": "...linking to hard evidence, yeah? You deci[de] if you believe it or not.  March 16: Th..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "ESS",
+      "label": "ticker",
+      "context": "...lanning to make at Clarksville for both [ESS] and vehicles. You can see a picture of ..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "ID",
+      "label": "ticker",
+      "context": "...ents. But it has to be 1 year old to avo[id] legal issues about shell companies and ..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "IP",
+      "label": "ticker",
+      "context": "...e they're going to stash all their best [IP]/patents. But it has to be 1 year old to..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "NMP",
+      "label": "ticker",
+      "context": "... - which don't need the toxic solvents ([NMP]) that require the air permit.  April 3:..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "PEG",
+      "label": "ticker",
+      "context": "$MVST DD: US battery company carving out assets, acting real suspicious  Edit po"
+    },
+    {
+      "doc_idx": 577,
+      "text": "TX",
+      "label": "ticker",
+      "context": "...' they formed in CO, and pull out their [TX] entity 'Microvast Inc', leaving the sta..."
+    },
+    {
+      "doc_idx": 577,
+      "text": "ZSL",
+      "label": "ticker",
+      "context": "...months' worth of packs for the Volterra [ZSL] refuse trucks, helping bridge Microvast..."
+    },
+    {
+      "doc_idx": 581,
+      "text": "MFI",
+      "label": "ticker",
+      "context": "...le bullish flags. Price action, RSI and [MFI] break-outs on the monthly. Gaussian cha..."
+    },
+    {
+      "doc_idx": 581,
+      "text": "TBH",
+      "label": "ticker",
+      "context": "... 4-5 weeks! Obligatory em dashes:— — —  [TBH] though I don't care about fundamentals...."
+    },
+    {
+      "doc_idx": 583,
+      "text": "CAPE",
+      "label": "ticker",
+      "context": "...or IEEPA tariff refunds. CBP opened the [CAPE] refund portal on April 20th. The refund..."
+    },
+    {
+      "doc_idx": 583,
+      "text": "GOOGL",
+      "label": "ticker",
+      "context": "$BIRK May 13th Earnings DD: The Triple Tariff Catalyst. Why Illegal Taxes and Re"
+    },
+    {
+      "doc_idx": 585,
+      "text": "BYND",
+      "label": "ticker",
+      "context": "HIVE Digital Technologies ($HIVE) - Turnaround Play  I will start out by saying "
+    },
+    {
+      "doc_idx": 586,
+      "text": "CRCL",
+      "label": "ticker",
+      "context": "Circle stop loss robbed me of 20k - 30k swing  yeah - that was me, the guy hitti"
+    },
+    {
+      "doc_idx": 587,
+      "text": "AG",
+      "label": "ticker",
+      "context": "...B Agriculture Fund (DBA), Bunge (BA, an [AG] / food co), Xylem (XYL, water technolog..."
+    },
+    {
+      "doc_idx": 587,
+      "text": "DB",
+      "label": "ticker",
+      "context": "... they came out for Traine (TT), Invesco [DB] Agriculture Fund (DBA), Bunge (BA, an A..."
+    },
+    {
+      "doc_idx": 587,
+      "text": "GEMI",
+      "label": "ticker",
+      "context": "El Niño Strategy  \"El Niño is coming faster than expected and chances are rising"
+    },
+    {
+      "doc_idx": 589,
+      "text": "EUV",
+      "label": "ticker",
+      "context": "...w tight lithography capacity still is.  [$EUV] is the first ETF specifically focused o..."
+    },
+    {
+      "doc_idx": 590,
+      "text": "ET",
+      "label": "ticker",
+      "context": "... Macro reports drop tomorrow at 8:30 AM [ET] * If the market gets a decent read and ..."
+    },
+    {
+      "doc_idx": 593,
+      "text": "OCC",
+      "label": "ticker",
+      "context": "...update on the US national bank charter ([OCC] conditional approval). Forward P/E sits..."
+    },
+    {
+      "doc_idx": 598,
+      "text": "XYZ",
+      "label": "ticker",
+      "context": "...e and how its gonna be the next (insert [xyz]) company to the moon. Is it just a mark..."
+    },
+    {
+      "doc_idx": 600,
+      "text": "CF",
+      "label": "ticker",
+      "context": "...s PE of 3.85, with an EBITDA of 22.57B, [CF] of 16.17B, FCF of 4.81B (**25% FCF yiel..."
+    },
+    {
+      "doc_idx": 600,
+      "text": "FCF",
+      "label": "ticker",
+      "context": "...with an EBITDA of 22.57B, CF of 16.17B, [FCF] of 4.81B (**25% FCF yield.....**), net ..."
+    },
+    {
+      "doc_idx": 603,
+      "text": "SG",
+      "label": "ticker",
+      "context": "...racted sequentially for three quarters. [SG]&A leverage has masked this, but inflati..."
+    },
+    {
+      "doc_idx": 604,
+      "text": "CM",
+      "label": "ticker",
+      "context": "...s. Every new Sapphire sold to a network [CM] makes the platform more valuable for ev..."
+    },
+    {
+      "doc_idx": 604,
+      "text": "POLE",
+      "label": "ticker",
+      "context": "Velo3D ($VELO) - The Ultimate Print Job  My fellow autists, forum permitting, I "
+    },
+    {
+      "doc_idx": 604,
+      "text": "RPID",
+      "label": "ticker",
+      "context": "Velo3D ($VELO) - The Ultimate Print Job  My fellow autists, forum permitting, I "
+    },
+    {
+      "doc_idx": 604,
+      "text": "SLM",
+      "label": "ticker",
+      "context": "... Foreign competitors (like EOS or Nikon [SLM]) often face higher hurdles for certain ..."
+    },
+    {
+      "doc_idx": 604,
+      "text": "SPOT",
+      "label": "ticker",
+      "context": "...o the gallows for a bit.  **Position:** [SPOT], June $12.5s & December $30s  [](  []("
+    },
+    {
+      "doc_idx": 605,
+      "text": "PFGC",
+      "label": "ticker",
+      "context": "DD: Doximity will Fall Further  **(Put my thoughts in AI to write with clarity)*"
+    },
+    {
+      "doc_idx": 607,
+      "text": "IP",
+      "label": "ticker",
+      "context": "...gging into the $MSFT / OpenAI relationsh[ip], and it looks like Microsoft is playing..."
+    },
+    {
+      "doc_idx": 621,
+      "text": "SAN",
+      "label": "ticker",
+      "context": "...leged confidentiality breach  Source:   [SAN] JOSE, Calif., April 27, 2026 (GLOBE NEW..."
+    },
+    {
+      "doc_idx": 626,
+      "text": "BFS",
+      "label": "ticker",
+      "context": "...tle III government funding, Brownsville [BFS] in October), for me fair value at 30% o..."
+    },
+    {
+      "doc_idx": 626,
+      "text": "EIS",
+      "label": "ticker",
+      "context": "...k away. Watch for Allseas confirmation, [EIS] scoping update, DIBC funding traction, ..."
+    },
+    {
+      "doc_idx": 626,
+      "text": "III",
+      "label": "ticker",
+      "context": "... Q1 earnings May 13, possible DPA Title [III] government funding, Brownsville BFS in ..."
+    },
+    {
+      "doc_idx": 626,
+      "text": "LMT",
+      "label": "ticker",
+      "context": "$TMC Betting On American Critical Minerals Sovereignty The Mother Of All Bottle "
+    },
+    {
+      "doc_idx": 634,
+      "text": "PBC",
+      "label": "ticker",
+      "context": "...le will invest $10 billion in Anthropic [PBC], with another $30 billion potentially t..."
+    },
+    {
+      "doc_idx": 634,
+      "text": "PEG",
+      "label": "ticker",
+      "context": "Google to invest $10B in Anthropic at $350B valuation with up to $30B more tied "
+    },
+    {
+      "doc_idx": 637,
+      "text": "CPA",
+      "label": "ticker",
+      "context": "... just gonna yolo the gain anyway  get a [CPA] who's actually done OZ work. not a gene..."
+    },
+    {
+      "doc_idx": 637,
+      "text": "IRS",
+      "label": "ticker",
+      "context": "...oney this year, you have a tax problem. [IRS] is about to do to your account what 0dt..."
+    },
+    {
+      "doc_idx": 637,
+      "text": "OZ",
+      "label": "ticker",
+      "context": "...n anyway  get a CPA who's actually done [OZ] work. not a generic w-2 CPA. vet the QO..."
+    },
+    {
+      "doc_idx": 638,
+      "text": "SPB",
+      "label": "ticker",
+      "context": "What's the best way to gain leverage before the SpaceX/Anthropic IPO frenzy? Let"
+    },
+    {
+      "doc_idx": 639,
+      "text": "SP",
+      "label": "ticker",
+      "context": "...tiated at 1000. And MU got added to the [SP] 100 in March which means index funds go..."
+    },
+    {
+      "doc_idx": 640,
+      "text": "PS",
+      "label": "ticker",
+      "context": ".../S is 24.  Ignore the P/E cause it had E[PS] of $5 just in 2019, so if you ignore th..."
+    },
+    {
+      "doc_idx": 641,
+      "text": "AAL",
+      "label": "ticker",
+      "context": "IF EVERYBODY JUST DID THE OPPOSITE OF WHATEVER I DO THEY CAN BECOME A MILLIONARI"
+    },
+    {
+      "doc_idx": 642,
+      "text": "MFG",
+      "label": "ticker",
+      "context": "SOFI -9% premarket as earnings meet EPS but tech platform revenue falls 27% desp"
+    },
+    {
+      "doc_idx": 647,
+      "text": "QLC",
+      "label": "ticker",
+      "context": "...gains. The upcoming ramp of BiCS8-based [QLC] enterprise SSDs is expected to reinforc..."
+    },
+    {
+      "doc_idx": 647,
+      "text": "SSD",
+      "label": "ticker",
+      "context": "SanDisk -6% after-hours on Q3 FY26: $5.95B revenue vs $4.73B est, $23.41 EPS vs "
+    },
+    {
+      "doc_idx": 649,
+      "text": "PEG",
+      "label": "ticker",
+      "context": "$CAR will end badly for everyone involved  Remember regards, the goal of the mar"
+    },
+    {
+      "doc_idx": 653,
+      "text": "TD",
+      "label": "ticker",
+      "context": "...d, Revolut, TastyWorks, Charles Schwab, [TD] Ameritrade, Webull, Degiro, Wells Fargo..."
+    },
+    {
+      "doc_idx": 656,
+      "text": "EL",
+      "label": "ticker",
+      "context": "...YOU ARE DOING THE RIGHT THING WITH $AMC [EL] PRES KNOWS AND IS STILL HOLDING.**"
+    },
+    {
+      "doc_idx": 658,
+      "text": "FLEX",
+      "label": "ticker",
+      "context": "...d may incorporate the use of short term [FLEX] options. These trades are commonly refe..."
+    },
+    {
+      "doc_idx": 658,
+      "text": "XYZ",
+      "label": "ticker",
+      "context": "...e experienced with GME:  \"Assuming that [XYZ] (e.g. GME) is a hard to borrow security..."
+    },
+    {
+      "doc_idx": 659,
+      "text": "IRS",
+      "label": "ticker",
+      "context": "...dition to the millions they owed to the [IRS], and banned from future trading on the ..."
+    },
+    {
+      "doc_idx": 659,
+      "text": "TV",
+      "label": "ticker",
+      "context": "...haracter of J. R. Ewing in the original [TV] series Dallas (1978–91) and the Duke Br..."
+    },
+    {
+      "doc_idx": 661,
+      "text": "DDS",
+      "label": "ticker",
+      "context": "...Credit to u/HeyItsPixeL one of the best [DDs] I’ve ever read  GUYS HOLD I CANT STRESS..."
+    },
+    {
+      "doc_idx": 661,
+      "text": "ROSE",
+      "label": "ticker",
+      "context": "...0:41AM):**  CBOE Volatility Index (VIX) [ROSE] 10 % AND THE WHOLE MARKET IS TAKING DIP..."
+    },
+    {
+      "doc_idx": 661,
+      "text": "VIA",
+      "label": "ticker",
+      "context": "...NOUGH  (9:51AM): THEY ARE SHORTING $GME [VIA] 63(!) DIFFERENT ETFS**  **EDIT2 (10AM):..."
+    },
+    {
+      "doc_idx": 661,
+      "text": "XRT",
+      "label": "ticker",
+      "context": "...eCitizen1984  for the find!)  EDIT6:  **[XRT] GME holdings increased from 3% testerda..."
+    },
+    {
+      "doc_idx": 662,
+      "text": "DON",
+      "label": "ticker",
+      "context": "....   WE LIKE THE STOCK. THOSE FUCKS JUST [DON]’T LET US BUY IT. How is GameStop and AM..."
+    },
+    {
+      "doc_idx": 662,
+      "text": "IBM",
+      "label": "ticker",
+      "context": "Why the fuck are we acting like we lost? We made GME go from 4 to 400 and it too"
+    },
+    {
+      "doc_idx": 662,
+      "text": "TV",
+      "label": "ticker",
+      "context": "...controlled by the enemy. Those fucks in [TV] acting like they actually called GME fa..."
+    },
+    {
+      "doc_idx": 666,
+      "text": "BANG",
+      "label": "ticker",
+      "context": "... I’d recommend simply getting in on the [$BANG] GANG- Blackberry, AMC, Nokia, and GME. ..."
+    },
+    {
+      "doc_idx": 666,
+      "text": "BYND",
+      "label": "ticker",
+      "context": "The Silver Squeeze is a hedge-fund coordinated attack so they can keep fighting "
+    }
+  ],
+  "fn": [
+    {
+      "doc_idx": 30,
+      "text": "OPEN",
+      "label": "ticker",
+      "context": "... at SPCE and CLOV price action, I think [OPEN] could be a multi-bagger next several we..."
+    },
+    {
+      "doc_idx": 130,
+      "text": "FLOW",
+      "label": "ticker",
+      "context": "Spx down 100 lmfao"
+    },
+    {
+      "doc_idx": 173,
+      "text": "AMP",
+      "label": "ticker",
+      "context": "...ay, so please recommend what to do with [AMP]. &#x200B; I want to make a decision aft..."
+    },
+    {
+      "doc_idx": 176,
+      "text": "AMC",
+      "label": "ticker",
+      "context": "Do not have any positions in BBBY as I think its mega regarded to invest in a fa"
+    },
+    {
+      "doc_idx": 176,
+      "text": "GME",
+      "label": "ticker",
+      "context": "Do not have any positions in BBBY as I think its mega regarded to invest in a fa"
+    },
+    {
+      "doc_idx": 186,
+      "text": "HERE",
+      "label": "ticker",
+      "context": "...n right now. Even if it drops more from [here] you are getting a great price for it, I..."
+    },
+    {
+      "doc_idx": 212,
+      "text": "BBBY",
+      "label": "ticker",
+      "context": "Seriouslywe get ityoure invested in BBBYbut there are already countless posts ab"
+    },
+    {
+      "doc_idx": 221,
+      "text": "GOOGL",
+      "label": "ticker",
+      "context": "Thinking about spending $1000 but im not sure if i should use it on Volta or Cha"
+    },
+    {
+      "doc_idx": 251,
+      "text": "BYND",
+      "label": "ticker",
+      "context": "I am back again with even more hope. Even tho we didnt get $15 cuz some dumbasse"
+    },
+    {
+      "doc_idx": 285,
+      "text": "FLOW",
+      "label": "ticker",
+      "context": "So I have read that there will be over $3T in SPY / SPX / e-mini / etc options e"
+    },
+    {
+      "doc_idx": 286,
+      "text": "CS",
+      "label": "ticker",
+      "context": "..., naked, and MMs (Citadel, Susquehanna, [CS], GS, etc.) are pulling every stop in th..."
+    },
+    {
+      "doc_idx": 293,
+      "text": "BBBY",
+      "label": "ticker",
+      "context": "the stock was green today what else do I need to say ?Investor Conference next W"
+    },
+    {
+      "doc_idx": 304,
+      "text": "PFBI",
+      "label": "ticker",
+      "context": "The Great Protein Shortage of 2026 - DD  The great protein shortage of 2026 is c"
+    },
+    {
+      "doc_idx": 310,
+      "text": "ON",
+      "label": "ticker",
+      "context": "Micr[on] tops $1T market cap. $MU +19% after UBS..."
+    },
+    {
+      "doc_idx": 337,
+      "text": "BE",
+      "label": "ticker",
+      "context": "...CEL is one of 3 fuel cell players among [BE], PLUG. Coming in hot like juggernaut in..."
+    },
+    {
+      "doc_idx": 345,
+      "text": "SNOW",
+      "label": "ticker",
+      "context": "...gs  Hi Regards,  Did you happen to play [SNOW] into earnings and catch the big pop? We..."
+    },
+    {
+      "doc_idx": 354,
+      "text": "FLOW",
+      "label": "ticker",
+      "context": "Ultimate DD on why this is the TOP - Technical Analysis (Cumming Formation)  I a"
+    },
+    {
+      "doc_idx": 361,
+      "text": "AZRE",
+      "label": "ticker",
+      "context": "SAP is up nearly 10% in 5 days. Is this finally the rebound?  I have been watchi"
+    },
+    {
+      "doc_idx": 367,
+      "text": "NOW",
+      "label": "ticker",
+      "context": "...back to all time highs for the likes of [NOW], MSFT etc.?"
+    },
+    {
+      "doc_idx": 382,
+      "text": "SNOW",
+      "label": "ticker",
+      "context": "...D 11/15 $200Cs** and some **NVDA, SOFI, [SNOW] lotto tickets**, but I’m ready to redep..."
+    },
+    {
+      "doc_idx": 408,
+      "text": "UBER",
+      "label": "ticker",
+      "context": "...nd major investment. It also has Delta, [Uber]-related air taxi assets through Blade, ..."
+    },
+    {
+      "doc_idx": 434,
+      "text": "FLOW",
+      "label": "ticker",
+      "context": "I predicted market will touch 6800 (SPX), took 0DTE, but came out too early ! Lo"
+    },
+    {
+      "doc_idx": 457,
+      "text": "SO",
+      "label": "ticker",
+      "context": "...ayers absorb the fixed costs. EXC, DUK, [SO] haven't priced this.  details are thin,..."
+    },
+    {
+      "doc_idx": 475,
+      "text": "CRM",
+      "label": "ticker",
+      "context": "$PATH is about to rip 20%  **$PATH** has given a 20% pullback since Trump Tweet "
+    },
+    {
+      "doc_idx": 476,
+      "text": "USA",
+      "label": "ticker",
+      "context": "...nning off the declining cable networks ([USA], CNBC, MSNBC) in early 2026. This remov..."
+    },
+    {
+      "doc_idx": 477,
+      "text": "FLOW",
+      "label": "ticker",
+      "context": "Nice 0DTE SPY scalp for almost $6k, with scaling and exit strategy explained  ht"
+    },
+    {
+      "doc_idx": 527,
+      "text": "HERE",
+      "label": "ticker",
+      "context": "...ame more connected than ever globally, t[here] has been no significant downtrend in th..."
+    },
+    {
+      "doc_idx": 528,
+      "text": "SYBT",
+      "label": "ticker",
+      "context": "Claude just did my taxes. $INTU is cooked  **TL;DR:** I used Claude Code to do m"
+    },
+    {
+      "doc_idx": 537,
+      "text": "CSSE",
+      "label": "ticker",
+      "context": "I am financially ruined (short selling Korean fried chicken companies)  I have l"
+    },
+    {
+      "doc_idx": 566,
+      "text": "NAAC",
+      "label": "ticker",
+      "context": "VENTURE GLOBAL ($VG): THE EASIEST ENERGY PLAY OF 2026?  **Feel free to scroll pa"
+    },
+    {
+      "doc_idx": 577,
+      "text": "SHEL",
+      "label": "ticker",
+      "context": "$MVST DD: US battery company carving out assets, acting real suspicious  Edit po"
+    },
+    {
+      "doc_idx": 585,
+      "text": "CM",
+      "label": "ticker",
+      "context": "HIVE Digital Technologies ($HIVE) - Turnaround Play  I will start out by saying "
+    },
+    {
+      "doc_idx": 602,
+      "text": "GCAC",
+      "label": "ticker",
+      "context": "PriceSmart PSMT: Colombia elections are a potential catalyst for growth  PriceSm"
+    },
+    {
+      "doc_idx": 616,
+      "text": "DAIO",
+      "label": "ticker",
+      "context": "Every Layer of the AI Money Printer Got Front-Run. Except One.  Everyone called "
+    },
+    {
+      "doc_idx": 616,
+      "text": "JUST",
+      "label": "ticker",
+      "context": "...eed it at every advanced node and Qatar [just] got blown up.  Every single time: one g..."
+    },
+    {
+      "doc_idx": 642,
+      "text": "GCAC",
+      "label": "ticker",
+      "context": "SOFI -9% premarket as earnings meet EPS but tech platform revenue falls 27% desp"
+    },
+    {
+      "doc_idx": 643,
+      "text": "ROSE",
+      "label": "ticker",
+      "context": "... Western Digital jumped 11% and SanDisk [rose] 4%. Memory ‌chipmaker Micron Technology..."
+    },
+    {
+      "doc_idx": 647,
+      "text": "FISI",
+      "label": "ticker",
+      "context": "SanDisk -6% after-hours on Q3 FY26: $5.95B revenue vs $4.73B est, $23.41 EPS vs "
+    },
+    {
+      "doc_idx": 652,
+      "text": "KNW",
+      "label": "ticker",
+      "context": "An Open Letter to Melvin Capital, CNBC, Boomers, and WSB   **Mods do not delete,"
+    },
+    {
+      "doc_idx": 652,
+      "text": "OPEN",
+      "label": "ticker",
+      "context": "An [Open] Letter to Melvin Capital, CNBC, Boomers..."
+    }
+  ]
+}

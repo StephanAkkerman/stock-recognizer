@@ -33,8 +33,10 @@ class StockRecognizer:
         try:
             etf_index = fd.ETFs().select().index
             etf_tickers = {
-                t for t in etf_index
-                if isinstance(t, str) and not any(ext in t for ext in EXCHANGE_BLACKLIST)
+                t
+                for t in etf_index
+                if isinstance(t, str)
+                and not any(ext in t for ext in EXCHANGE_BLACKLIST)
             }
         except Exception:
             etf_tickers = set()
@@ -173,8 +175,10 @@ class StockRecognizer:
         # tokens as company when context is ambiguous).
         _all_caps_re = re.compile(r"^[A-Z][A-Z0-9]{0,5}$")
         promoted = [
-            m for m in entities.get("company", [])
-            if _all_caps_re.match(str(m)) and str(m).upper().replace("$", "") in self.valid_tickers
+            m
+            for m in entities.get("company", [])
+            if _all_caps_re.match(str(m))
+            and str(m).upper().replace("$", "") in self.valid_tickers
         ]
         company_entities = [m for m in entities.get("company", []) if m not in promoted]
         ticker_entities = list(entities.get("ticker", [])) + promoted
@@ -194,12 +198,12 @@ class StockRecognizer:
                 continue
 
             # 3. Try to resolve as a Company Name
-            # (Matches "Micron" -> "MU")
+            # (Matches "Micron" -> "MU", "Micron Technology" -> "MU")
             base_name = m_clean.split()[0]
             ticker_map = self.company_to_ticker.get(
                 m_clean, self.company_to_ticker.get(base_name)
             )
-            if ticker_map:
+            if ticker_map and ticker_map not in AMBIGUOUS_WORDS:
                 found.add(ticker_map)
 
         return list(found)

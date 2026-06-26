@@ -1,0 +1,148 @@
+{
+  "adapter": "GLiNER2 Large + Adapter v18",
+  "mode": "engine",
+  "summary": {
+    "tp": 197,
+    "fp": 18,
+    "fn": 4,
+    "p": 0.9162790697674419,
+    "r": 0.9800995024875622,
+    "f1": 0.9471153846153845
+  },
+  "fp": [
+    {
+      "doc_idx": 2,
+      "text": "GOOG",
+      "label": "ticker",
+      "context": "...e planet. https://ycharts.com/companies/[GOOG]/stock_buyback"
+    },
+    {
+      "doc_idx": 37,
+      "text": "FF",
+      "label": "ticker",
+      "context": "...nd her sister on a yacht railing lines o[ff] a solid gold piece of glass given to yo..."
+    },
+    {
+      "doc_idx": 37,
+      "text": "UL",
+      "label": "ticker",
+      "context": "...owing the World Series up in the wonderf[ul] state of Canada, you would have seen th..."
+    },
+    {
+      "doc_idx": 41,
+      "text": "AZRE",
+      "label": "ticker",
+      "context": "The AI Market: A Gradual Rotation  I want to share some analysis I’ve been think"
+    },
+    {
+      "doc_idx": 45,
+      "text": "BCYP",
+      "label": "ticker",
+      "context": "(KYTX) – A Deep Value (300-400%) Autoimmune CAR-T Play with Big Pharma Links  IP"
+    },
+    {
+      "doc_idx": 45,
+      "text": "CAR",
+      "label": "ticker",
+      "context": "...X) – A Deep Value (300-400%) Autoimmune [CAR]-T Play with Big Pharma Links  IPO’d in ..."
+    },
+    {
+      "doc_idx": 46,
+      "text": "SAAQ",
+      "label": "ticker",
+      "context": "$FLY me to the moooon  [Loaded to a half tittie](https://preview.redd.it/lxh30o6"
+    },
+    {
+      "doc_idx": 47,
+      "text": "HR",
+      "label": "ticker",
+      "context": "...p employers make better decisions about [HR] and benefits.\"*  \\-**95% of Alight cust..."
+    },
+    {
+      "doc_idx": 49,
+      "text": "MA",
+      "label": "ticker",
+      "context": "... flow. One trader's eyeing the 200-week [MA] break for \"multiples.\" Even with some p..."
+    },
+    {
+      "doc_idx": 58,
+      "text": "EUV",
+      "label": "ticker",
+      "context": "...w tight lithography capacity still is.  [$EUV] is the first ETF specifically focused o..."
+    },
+    {
+      "doc_idx": 59,
+      "text": "ET",
+      "label": "ticker",
+      "context": "... Macro reports drop tomorrow at 8:30 AM [ET] * If the market gets a decent read and ..."
+    },
+    {
+      "doc_idx": 62,
+      "text": "CM",
+      "label": "ticker",
+      "context": "...s. Every new Sapphire sold to a network [CM] makes the platform more valuable for ev..."
+    },
+    {
+      "doc_idx": 62,
+      "text": "POLE",
+      "label": "ticker",
+      "context": "Velo3D ($VELO) - The Ultimate Print Job  My fellow autists, forum permitting, I "
+    },
+    {
+      "doc_idx": 62,
+      "text": "RPID",
+      "label": "ticker",
+      "context": "Velo3D ($VELO) - The Ultimate Print Job  My fellow autists, forum permitting, I "
+    },
+    {
+      "doc_idx": 62,
+      "text": "SLM",
+      "label": "ticker",
+      "context": "... Foreign competitors (like EOS or Nikon [SLM]) often face higher hurdles for certain ..."
+    },
+    {
+      "doc_idx": 62,
+      "text": "SPOT",
+      "label": "ticker",
+      "context": "...o the gallows for a bit.  **Position:** [SPOT], June $12.5s & December $30s  [](  []("
+    },
+    {
+      "doc_idx": 63,
+      "text": "PFGC",
+      "label": "ticker",
+      "context": "DD: Doximity will Fall Further  **(Put my thoughts in AI to write with clarity)*"
+    },
+    {
+      "doc_idx": 68,
+      "text": "SPB",
+      "label": "ticker",
+      "context": "What's the best way to gain leverage before the SpaceX/Anthropic IPO frenzy? Let"
+    }
+  ],
+  "fn": [
+    {
+      "doc_idx": 27,
+      "text": "PFBI",
+      "label": "ticker",
+      "context": "The Great Protein Shortage of 2026 - DD  The great protein shortage of 2026 is c"
+    },
+    {
+      "doc_idx": 35,
+      "text": "FLOW",
+      "label": "ticker",
+      "context": "Ultimate DD on why this is the TOP - Technical Analysis (Cumming Formation)  I a"
+    },
+    {
+      "doc_idx": 36,
+      "text": "NOW",
+      "label": "ticker",
+      "context": "...back to all time highs for the likes of [NOW], MSFT etc.?"
+    },
+    {
+      "doc_idx": 49,
+      "text": "CRM",
+      "label": "ticker",
+      "context": "$PATH is about to rip 20%  **$PATH** has given a 20% pullback since Trump Tweet "
+    }
+  ]
+}

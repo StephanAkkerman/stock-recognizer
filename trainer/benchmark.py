@@ -614,8 +614,15 @@ if __name__ == "__main__":
     parser.add_argument(
         "--no-cache",
         action="store_true",
-        help="Ignore cached results and recompute (use after changing engine code; "
-        "the cache is keyed by test-set hash + adapter and can't see code changes).",
+        help="Re-run NER model inference even if cached results exist. "
+        "Use when the model weights or evaluation logic change.",
+    )
+    parser.add_argument(
+        "--no-engine-cache",
+        action="store_true",
+        help="Re-run the engine evaluation even if cached engine_metrics exist. "
+        "Use after changing engine code (AMBIGUOUS_WORDS, resolution logic, etc.). "
+        "Much faster than --no-cache: NER inference results are still read from cache.",
     )
     args = parser.parse_args()
 
@@ -761,7 +768,7 @@ if __name__ == "__main__":
             store_dirty = False
             for adapter in available_adapters:
                 entry = store["results"].get(adapter["name"], {}).get(test_hash)
-                if entry and entry.get("engine_metrics") and not args.no_cache:
+                if entry and entry.get("engine_metrics") and not args.no_cache and not args.no_engine_cache:
                     eng_metrics = entry["engine_metrics"]
                     console.print(
                         f"  [dim]{adapter['name']}: using cached engine metrics[/dim]"

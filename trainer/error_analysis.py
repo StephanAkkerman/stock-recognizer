@@ -41,6 +41,7 @@ try:
     from trainer.benchmark import (
         DEFAULT_LABELS,
         DEFAULT_TEST_FOLDER,
+        _resolve_gold_tickers,
         get_all_adapters,
         load_base_model,
         normalize_entity,
@@ -51,6 +52,7 @@ except ImportError:
     from benchmark import (
         DEFAULT_LABELS,
         DEFAULT_TEST_FOLDER,
+        _resolve_gold_tickers,
         get_all_adapters,
         load_base_model,
         normalize_entity,
@@ -307,6 +309,72 @@ def render_confusion_table(agg):
     return table
 
 
+def _find_ticker_context(text, ticker, context_chars):
+    """Return a context snippet around the first occurrence of ticker in text."""
+    import re
+    m = re.search(rf"\$?{re.escape(ticker)}\b", text, re.IGNORECASE)
+    if m:
+        return _make_context(text, m.start(), m.end(), context_chars)
+    return text[: context_chars * 2].replace("\n", " ")
+
+
+def engine_categorize_errors(dataset, adapter_path, context_chars=40):
+    """Run the full engine pipeline and surface FP/FN at the resolved-ticker level.
+
+    Uses StockRecognizer.recognize_ai() for predictions and the same
+    _resolve_gold_tickers logic as benchmark.engine_evaluate_model so the
+    numbers match exactly.
+
+    Returns (fp_records, fn_records, per_doc, summary) where summary is a dict
+    with tp/fp/fn/p/r/f1 aggregated across all documents.
+    """
+    from stock_recognizer.engine import StockRecognizer
+
+    engine = StockRecognizer(use_ai=True, adapter_path=adapter_path)
+
+    fp_records, fn_records, per_doc = [], [], []
+    total_tp = total_fp = total_fn = 0
+    for doc_idx, entry in enumerate(dataset):
+        text = entry["text"]
+        gold_set = _resolve_gold_tickers(engine, entry)
+        pred_set = frozenset(engine.recognize_ai(text))
+
+        fps = pred_set - gold_set
+        fns = gold_set - pred_set
+        tp = len(pred_set & gold_set)
+        total_tp += tp
+        total_fp += len(fps)
+        total_fn += len(fns)
+
+        for ticker in sorted(fps):
+            fp_records.append({
+                "doc_idx": doc_idx,
+                "text": ticker,
+                "label": "ticker",
+                "context": _find_ticker_context(text, ticker, context_chars),
+            })
+        for ticker in sorted(fns):
+            fn_records.append({
+                "doc_idx": doc_idx,
+                "text": ticker,
+                "label": "ticker",
+                "context": _find_ticker_context(text, ticker, context_chars),
+            })
+        per_doc.append({
+            "doc_idx": doc_idx,
+            "n_errors": len(fps) + len(fns),
+            "n_fp": len(fps),
+            "n_fn": len(fns),
+            "preview": text[:80].replace("\n", " "),
+        })
+
+    p = total_tp / (total_tp + total_fp) if (total_tp + total_fp) else 0.0
+    r = total_tp / (total_tp + total_fn) if (total_tp + total_fn) else 0.0
+    f1 = 2 * p * r / (p + r) if (p + r) else 0.0
+    summary = {"tp": total_tp, "fp": total_fp, "fn": total_fn, "p": p, "r": r, "f1": f1}
+    return fp_records, fn_records, per_doc, summary
+
+
 def render_doc_hotspots(per_doc, top):
     n = top if (top and top > 0) else None
     table = Table(title=f"Top {n or 'all'} documents by error count", show_lines=False)
@@ -343,6 +411,10 @@ def main():
                         help=f"Held-out test set folder (default {DEFAULT_TEST_FOLDER}).")
     parser.add_argument("--save-json", default=None,
                         help="Optional path to dump the full categorised error data as JSON.")
+    parser.add_argument("--engine", action="store_true",
+                        help="Analyse the full StockRecognizer.recognize_ai() pipeline "
+                             "instead of the raw NER model. FPs/FNs are at the resolved-ticker "
+                             "level. No GPU load — uses cached engine.")
     args = parser.parse_args()
 
     adapter_name, adapter_path = resolve_adapter(args.adapter)
@@ -351,6 +423,42 @@ def main():
         console.print(f"[red]No data in {args.test_folder}.[/red]")
         raise SystemExit(1)
 
+    top_label = args.top if args.top and args.top > 0 else "all"
+
+    # ── Engine mode: full StockRecognizer pipeline, no GPU needed ──────────────
+    if args.engine:
+        console.print(
+            f"[cyan]Engine error analysis[/cyan]: [bold]{adapter_name}[/bold]\n"
+            f"Test set: [bold green]{len(dataset)}[/bold green] docs"
+        )
+        fp_records, fn_records, per_doc, summary = engine_categorize_errors(
+            dataset, adapter_path, args.context
+        )
+        console.print(
+            f"\n[bold]TP={summary['tp']}  FP={summary['fp']}  FN={summary['fn']}[/bold]   "
+            f"P={summary['p']:.2%}  R={summary['r']:.2%}  F1={summary['f1']:.2%}   "
+            f"[dim](resolved-ticker level)[/dim]\n"
+        )
+        if fp_records:
+            agg = _aggregate(fp_records, ("text", "label"), args.top)
+            console.print(render_fp_fn_table(
+                f"Top {top_label} engine false positives", agg, "label"))
+        if fn_records:
+            agg = _aggregate(fn_records, ("text", "label"), args.top)
+            console.print(render_fp_fn_table(
+                f"Top {top_label} engine false negatives", agg, "label"))
+        console.print(render_doc_hotspots(per_doc, args.top))
+        if args.save_json:
+            with open(args.save_json, "w", encoding="utf-8") as f:
+                json.dump(
+                    {"adapter": adapter_name, "mode": "engine",
+                     "summary": summary, "fp": fp_records, "fn": fn_records},
+                    f, indent=2, ensure_ascii=False,
+                )
+            console.print(f"[green]Written to {args.save_json}[/green]")
+        return
+
+    # ── NER model mode: raw model output vs. gold spans ────────────────────────
     label_keys = list(DEFAULT_LABELS.keys())
     flat_chunks, doc_chunk_ranges, _, _ = prepare_eval_inputs(dataset, label_keys)
     gold_ctx_per_doc = collect_gold_contexts(dataset, args.context)
@@ -380,7 +488,6 @@ def main():
     )
 
     categories = categorize_errors(pred_ctx_per_doc, gold_ctx_per_doc, dataset)
-    # Set-based counts: FP = |pred| - TP, FN = |gold| - TP (exact, deduped).
     n_fp = total_pred - n_tp
     n_fn = total_gold - n_tp
     p = n_tp / total_pred if total_pred else 0.0
@@ -398,7 +505,6 @@ def main():
         f"label confusion: {len(categories['confusion'])}\n"
     )
 
-    top_label = args.top if args.top and args.top > 0 else "all"
     if categories["pure_fp"]:
         agg = _aggregate(categories["pure_fp"], ("text", "label"), args.top)
         console.print(render_fp_fn_table(

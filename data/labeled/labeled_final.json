@@ -50249,6 +50249,21 @@
             "to_name": "text",
             "type": "labels",
             "origin": "manual"
+          },
+          {
+            "id": "patch_7904_7908",
+            "type": "labels",
+            "value": {
+              "start": 7904,
+              "end": 7908,
+              "text": "SPOT",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ],
         "was_cancelled": false,

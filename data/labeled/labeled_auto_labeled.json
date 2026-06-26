@@ -10610,7 +10610,23 @@
     "annotations": [
       {
         "was_cancelled": false,
-        "result": []
+        "result": [
+          {
+            "id": "patch_547_553",
+            "type": "labels",
+            "value": {
+              "start": 547,
+              "end": 553,
+              "text": "Reddit",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
+          }
+        ]
       }
     ]
   },
@@ -25071,6 +25087,21 @@
                 "company"
               ]
             }
+          },
+          {
+            "id": "patch_5584_5588",
+            "type": "labels",
+            "value": {
+              "start": 5584,
+              "end": 5588,
+              "text": "SPOT",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ]
       }
@@ -27239,7 +27270,23 @@
     "annotations": [
       {
         "was_cancelled": false,
-        "result": []
+        "result": [
+          {
+            "id": "patch_0_4",
+            "type": "labels",
+            "value": {
+              "start": 0,
+              "end": 4,
+              "text": "UBER",
+              "labels": [
+                "ticker"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
+          }
+        ]
       }
     ]
   },
@@ -28334,6 +28381,21 @@
                 "ticker"
               ]
             }
+          },
+          {
+            "id": "patch_2121_2125",
+            "type": "labels",
+            "value": {
+              "start": 2121,
+              "end": 2125,
+              "text": "Uber",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ]
       }
@@ -33978,6 +34040,21 @@
                 "ticker"
               ]
             }
+          },
+          {
+            "id": "patch_1099_1105",
+            "type": "labels",
+            "value": {
+              "start": 1099,
+              "end": 1105,
+              "text": "reddit",
+              "labels": [
+                "company"
+              ]
+            },
+            "from_name": "label",
+            "to_name": "text",
+            "origin": "manual"
           }
         ]
       }

@@ -517,11 +517,56 @@ AMBIGUOUS_WORDS = {
     "DLA",  # Defense Logistics Agency
     "FX",  # foreign exchange
     "HQ",  # headquarters
+    "CLI",  # command-line interface
+    "CS",   # computer science
+    "TA",   # technical analysis
+    "GLP",  # GLP-1 receptor agonist drug class
+    "UK",   # United Kingdom (country)
+    "PS",   # postscript ("PS: …")
+    "XYZ",  # placeholder / example name
+    "IMO",  # "in my opinion"
+    "WTI",  # West Texas Intermediate crude oil benchmark
+    "IP",   # intellectual property
+    "TV",   # television
+    "IRS",  # Internal Revenue Service
+    "AGI",  # artificial general intelligence
+    "EMA",  # European Medicines Agency / exponential moving average
+    "API",  # application programming interface
+    "DC",   # direct current
+    "CPA",  # cost per acquisition
+    "SG",   # SG&A (selling, general & administrative)
+    "III",  # Roman numeral / "Act III"
+    "TX",   # Texas (state abbreviation)
+    "NBA",  # National Basketball Association
+    "ECON", # economics / "Econ 101"
+    # --- Financial metrics written in caps that collide with obscure tickers. ---
+    "TTM",  # trailing twelve months
+    "ARR",  # annual recurring revenue
+    "DCF",  # discounted cash flow
+    "NAV",  # net asset value
+    "PT",   # price target
+    "FCF",  # free cash flow
+    "ROIC", # return on invested capital
+    "DTE",  # days to expiration (options)
+    "SMA",  # simple moving average
+    # --- Options/market-structure jargon. ---
+    "LEAP",  # singular of LEAPs (long-dated options); LEAPS already blocked
+    "ATHS",  # "ATHs" (all-time highs plural) via S-strip; ATH already blocked
+    "IPOS",  # "IPOs" plural via S-strip; IPO already blocked
+    # --- Regex S-strip collisions: plural/abbreviation → obscure ticker. ---
+    "CLAS",  # "CLASS" → CLAS via S-strip (class-action posts)
+    "MMS",   # "MMs" (market makers) → MMS via S-strip
+    "RHS",   # "RHs" (Robinhood plural) → RHS via S-strip
     # --- Common words the AI path emits as "company" and mis-resolves to an
-    # obscure ticker (financial->FISI, stock->SYBT, strategic->STRA). ---
+    # obscure ticker (financial->FISI, stock->SYBT, strategic->STRA,
+    # tenet->THC, capital->CBNK, azure->AZRE, si->SI). ---
     "FINANCIAL",
     "STOCK",
     "STRATEGIC",
+    "TENET",
+    "CAPITAL",
+    "AZURE",  # Microsoft Azure cloud; base-name resolves to Azure Power Global (AZRE)
+    "SI",     # short interest metric; Silvergate Capital (SI) is bankrupt
     # --- Indices are not tradeable tickers per the labeling policy. ---
     "SPX",
 }
