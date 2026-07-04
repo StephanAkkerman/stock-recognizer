@@ -2,14 +2,12 @@
 __pycache__/
 *.py[cod]
 *$py.class
-augmented/
-kaggle_wsb.csv
 
-models/
 # C extensions
 *.so
 
 CLAUDE.md
+.claude
 
 # Distribution / packaging
 .Python
