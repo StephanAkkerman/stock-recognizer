@@ -49,22 +49,23 @@ pip install stock-recognizer
 ```python
 from stock_recognizer import StockRecognizer
 
-# Initialize (Market Data only for speed)
-recognizer = StockRecognizer(use_ai=False)
+# Default: use_ai=True, most accurate.
+# First run downloads the fine-tuned adapter from the HF Hub (cached after that)
+recognizer = StockRecognizer()
 
 text = "$PLAB DD: easy to understand TSMC supplier"
-tickers = recognizer.recognize(text)
-print(tickers) # ['PLAB'] (TSMC needs AI mapping)
-
-# Initialize with AI for deep extraction
-recognizer_ai = StockRecognizer(use_ai=True)
-tickers_ai = recognizer_ai.recognize_ai(text)
+tickers_ai = recognizer.recognize_ai(text)
 print(tickers_ai) # ['PLAB', 'TSM']
+
+# Opt out of AI for a lighter, faster, regex + market-data-only path
+fast_recognizer = StockRecognizer(use_ai=False)
+tickers = fast_recognizer.recognize(text)
+print(tickers) # ['PLAB'] (TSMC needs AI mapping)
 ```
 
 ## Model Training 🧠
 
-The GLiNER2 adapter behind `recognize_ai()` — scraping, labeling policy, training, and benchmarking — lives in the sibling [`stock-recognizer-model`](https://github.com/StephanAkkerman/stock-recognizer-model) repo. Trained adapters are published to [`StephanAkkerman/stock-recognizer-model`](https://huggingface.co/StephanAkkerman/stock-recognizer-model) on the Hugging Face Hub.
+The GLiNER2 adapter behind `recognize_ai()` — scraping, labeling policy, training, and benchmarking — lives in the sibling [`stock-recognizer-model`](https://github.com/StephanAkkerman/stock-recognizer-model) repo. `StockRecognizer(use_ai=True)` fetches the trained adapter automatically from [`StephanAkkerman/stock-recognizer-model`](https://huggingface.co/StephanAkkerman/stock-recognizer-model) on the Hugging Face Hub (pass `adapter_path=` to use a local adapter instead, or `adapter_revision=` to pin a different published version).
 
 ---
 

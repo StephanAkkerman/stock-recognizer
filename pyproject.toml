@@ -10,7 +10,8 @@ dependencies = [
     "pandas",
     "gliner2",
     "transformers",
-    "torch"
+    "torch",
+    "huggingface_hub"
 ]
 
 [build-system]

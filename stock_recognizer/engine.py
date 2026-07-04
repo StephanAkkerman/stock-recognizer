@@ -4,6 +4,7 @@ import re
 
 import financedatabase as fd
 from gliner2 import GLiNER2
+from huggingface_hub import snapshot_download
 
 from .constants import (
     AMBIGUOUS_WORDS,
@@ -13,10 +14,24 @@ from .constants import (
     US_MAJOR_EXCHANGES,
 )
 
+# Published LoRA adapter that recognize_ai() loads by default. Trained in the
+# sibling stock-recognizer-model repo; see its utils/hf/push_model_to_hf.py.
+# Pinned to a tag rather than "main" — main's adapter_config.json has drifted
+# from the tagged checkpoints before (a task_type mismatch that breaks
+# PeftModel.from_pretrained), so tags are the only reproducible reference.
+DEFAULT_ADAPTER_REPO = "StephanAkkerman/stock-recognizer-model"
+DEFAULT_ADAPTER_REVISION = "v18"
+
 
 class StockRecognizer:
 
-    def __init__(self, use_ai=False, include_global_majors=False, adapter_path=None):
+    def __init__(
+        self,
+        use_ai=True,
+        include_global_majors=False,
+        adapter_path=None,
+        adapter_revision=DEFAULT_ADAPTER_REVISION,
+    ):
         print("Initializing Market Intelligence v0.1.7...")
         equities = fd.Equities()
 
@@ -86,14 +101,26 @@ class StockRecognizer:
             # 1. Load the Large base model
             self.extractor = GLiNER2.from_pretrained("fastino/gliner2-large-v1")
 
-            # 2. Snap on your custom adapter
-            # Use the provided path, fallback if none provided
-            if adapter_path and os.path.exists(adapter_path):
-                self.extractor.load_adapter(adapter_path)
+            # 2. Snap on the fine-tuned adapter: use a local path if given,
+            # otherwise fetch the published one from the HF Hub (cached
+            # locally by huggingface_hub after the first download).
+            resolved_adapter_path = adapter_path
+            if not resolved_adapter_path:
+                try:
+                    resolved_adapter_path = snapshot_download(
+                        repo_id=DEFAULT_ADAPTER_REPO, revision=adapter_revision
+                    )
+                except Exception:
+                    self.logger.warning(
+                        f"Could not download adapter from {DEFAULT_ADAPTER_REPO} "
+                        f"(revision={adapter_revision}); using the base model without "
+                        "fine-tuning."
+                    )
+                    resolved_adapter_path = None
 
-            if adapter_path and os.path.exists(adapter_path):
-                self.logger.info(f"Loading LoRA adapter from {adapter_path}...")
-                self.extractor.load_adapter(adapter_path)
+            if resolved_adapter_path and os.path.exists(resolved_adapter_path):
+                self.logger.info(f"Loading LoRA adapter from {resolved_adapter_path}...")
+                self.extractor.load_adapter(resolved_adapter_path)
 
             # 3. Store the label descriptions — must match ENTITY_DESCRIPTIONS in train.py
             self.ai_labels = {
