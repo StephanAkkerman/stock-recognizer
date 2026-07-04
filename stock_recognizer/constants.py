@@ -53,6 +53,7 @@ COMPANY_SEEDS = {
     "MICRON": "MU",
     "CANON": "CAJPY",
     "INTEL": "INTC",
+    "BLACKROCK": "BLK",
 }
 
 AMBIGUOUS_WORDS = {
@@ -569,4 +570,72 @@ AMBIGUOUS_WORDS = {
     "SI",     # short interest metric; Silvergate Capital (SI) is bankrupt
     # --- Indices are not tradeable tickers per the labeling policy. ---
     "SPX",
+    # --- C-suite / business-role abbreviations. ---
+    "COO",   # chief operating officer
+    "CTO",   # chief technology officer
+    "CTOS",  # "CTOs" plural via S-strip
+    "MGMT",  # management
+    # --- Government / regulatory bodies (not publicly traded). ---
+    "FAA",   # Federal Aviation Administration
+    "FTC",   # Federal Trade Commission
+    "OCC",   # Office of the Comptroller of the Currency
+    "PJM",   # PJM Interconnection grid operator
+    # --- Financial metrics that collide with obscure tickers. ---
+    "ROI",   # return on investment
+    "IRR",   # internal rate of return
+    "PV",    # present value
+    "CTB",   # cost to borrow
+    "PMI",   # purchasing managers index / private mortgage insurance
+    "BTM",   # behind-the-meter energy term
+    "REIT",  # real estate investment trust (category, not the ETF ticker)
+    # --- Crypto / digital assets (not US equity exchange securities). ---
+    "BTC",   # Bitcoin
+    # --- Geographic codes that are not US ticker symbols. ---
+    "JP",    # Japan / "JP Morgan" shorthand
+    "UAE",   # United Arab Emirates
+    "TSE",   # Toronto Stock Exchange code (exchange prefix, not a ticker)
+    # --- Technology / engineering jargon. ---
+    "ASIC",  # application-specific integrated circuit
+    "DRAM",  # dynamic random-access memory
+    "QLC",   # quad-level cell NAND flash
+    "MIMO",  # multiple-input multiple-output antenna technology
+    "BBU",   # baseband unit (telecom infrastructure)
+    "SFR",   # sodium fast reactor
+    "EBR",   # experimental breeder reactor designation
+    "PPA",   # power purchase agreement
+    "PBC",   # public benefit corporation
+    # --- Internet / WSB slang that collides with obscure tickers. ---
+    "TBH",   # to be honest
+    "GEMI",  # Gemini (AI product) — engine frequently hallucinates this
+    # --- Common English words / phrases that collide with obscure tickers. ---
+    "DRUG",  # common noun
+    "GOAT",  # "greatest of all time"
+    "MATH",  # mathematics
+    "BBQ",   # barbecue
+    "JUNE",  # full month name (JUN already blocked)
+    "TERM",  # common English word
+    "BANG",  # slang / meme-stock group acronym
+    "SOAR",  # common verb / military unit abbreviation
+    "CAPE",  # CAPE ratio / customs portal
+    "SP",    # S&P index fragment / "share price" abbreviation
+    "WB",    # Warner Bros (legacy ticker; company is now WBD)
+    "TILT",  # WSB / poker slang for emotional trading ("went on tilt")
+    "EVE",   # common word (evening / "eve of") — company_to_ticker resolves to EVEX
+    # --- Bad company-name base-words: common words/names that map to obscure
+    # tickers via company_to_ticker, producing wrong resolutions. ---
+    "GREEN",     # adjective → GCDT (Green Circle Biotech)
+    "GLOBAL",    # adjective → GBLI (Global Indemnity)
+    "CHINA",     # country name → CAAS (China Automotive)
+    "BITCOIN",   # crypto → BIXI (Bitcoin Infrastructure); BTC already blocked
+    "FIDELITY",  # private brokerage → FDBC (Fidelity D&D Bancorp)
+    "JEFFERSON", # common name → JCAP (Jefferson Capital)
+    "SPECTRUM",  # common noun → SPB (Spectrum Brands)
+    "SIMPSON",   # common name → SSD (Simpson Manufacturing)
+    "BASEL",     # city name → BMGL (Basel Medical Group)
+    "BEYOND",    # common preposition/adverb → BYND (Beyond Meat); "Beyond Meat" still resolves via 2-word key
+    # --- Tech/finance abbreviations that collide with real tickers. ---
+    "SSD",    # solid-state drive (storage tech) collides with Simpson Manufacturing (SSD)
+    "SMR",    # small modular reactor (nuclear energy jargon) collides with NuScale Power (SMR)
+    "TAIL",   # tail risk (finance jargon) collides with Cambria Tail Risk ETF (TAIL)
+    "UFO",    # cultural usage collides with Procure Space ETF (UFO)
 }

@@ -60,9 +60,16 @@ class StockRecognizer:
                     .replace("INC", "")
                     .strip()
                 )
-                base_name = name.split()[0]
+                words = name.split()
+                base_name = words[0]
                 if len(base_name) > 2 and base_name not in self.company_to_ticker:
                     self.company_to_ticker[base_name] = ticker
+                # Two-word prefix key so "American Express" → AXP without
+                # falling back to base_name "AMERICAN" → AAL.
+                if len(words) >= 3:
+                    two_word = f"{words[0]} {words[1]}"
+                    if two_word not in self.company_to_ticker:
+                        self.company_to_ticker[two_word] = ticker
 
         # Simplified Regex: Just find blocks of 2-6 letters
         # Match an UPPERCASE 2-6 letter core, optionally followed by a
@@ -125,7 +132,13 @@ class StockRecognizer:
             return []
 
         # 1. Cashtags (Golden Rule)
-        for tag in self.cashtag_re.findall(text.upper()):
+        upper_text = text.upper()
+        for m in self.cashtag_re.finditer(upper_text):
+            # Skip exchange-prefix format: $NASDAQ:CSCO → NASDAQ is the exchange,
+            # not the ticker. CSCO will be caught by the ticker_re pass below.
+            if upper_text[m.end() : m.end() + 1] == ":":
+                continue
+            tag = m.group(1)
             clean_tag = self._clean_token(tag)
             # Cashtags are explicit user intent; trust them even if the
             # symbol is absent from the current market snapshot.
@@ -184,7 +197,16 @@ class StockRecognizer:
         ticker_entities = list(entities.get("ticker", [])) + promoted
         all_ai_mentions = company_entities + ticker_entities
 
+        # Pre-compute once for the surface-form guard below.
+        text_upper = text.upper()
+
         for mention in all_ai_mentions:
+            # Surface-form guard: GLiNER2 does span detection, so every
+            # legitimate extraction must appear verbatim in the document.
+            # If it doesn't, the model hallucinated the entity and we drop it.
+            if str(mention).upper() not in text_upper:
+                continue
+
             # 1. Clean the mention
             m_clean = self._clean_token(mention)
             if any(ext in m_clean for ext in EXCHANGE_BLACKLIST):
@@ -199,10 +221,17 @@ class StockRecognizer:
 
             # 3. Try to resolve as a Company Name
             # (Matches "Micron" -> "MU", "Micron Technology" -> "MU")
-            base_name = m_clean.split()[0]
-            ticker_map = self.company_to_ticker.get(
-                m_clean, self.company_to_ticker.get(base_name)
-            )
+            words_list = m_clean.split()
+            if len(words_list) > 1:
+                # Multi-word: exact match first, then 2-word prefix.
+                # Never fall back to a bare first-word key — that would
+                # let "American Express" resolve via "AMERICAN" → AAL.
+                two_word = f"{words_list[0]} {words_list[1]}"
+                ticker_map = self.company_to_ticker.get(
+                    m_clean
+                ) or self.company_to_ticker.get(two_word)
+            else:
+                ticker_map = self.company_to_ticker.get(m_clean)
             if ticker_map and ticker_map not in AMBIGUOUS_WORDS:
                 found.add(ticker_map)
 

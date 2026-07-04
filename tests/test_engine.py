@@ -386,7 +386,10 @@ https://preview.redd.it/ur547m9ndp0h1.png?width=1195&format=png&auto=webp&s=3d6a
     assert "RL" in results
     assert "TPR" in results
     assert "DAL" in results
-    assert len(results) == 7
+    # American Express is explicitly named as a premium brand stock in this post.
+    # Resolution now correctly maps to AXP (was AAL before the 2-word prefix fix).
+    assert "AXP" in results
+    assert len(results) == 8
 
 
 def test_common_slang(recognizer):
