@@ -10,9 +10,6 @@
   <a href="https://github.com/psf/black"><img src="https://img.shields.io/badge/code%20style-black-000000.svg" alt="Code style: black"></a>
 </p>
 
-> [!WARNING]
-> This project is still in its alpha stage. The API is not stable and may change without warning. Use with caution and expect breaking changes. I am still busy optimizing the engine.
-
 ## Introduction
 
 A lightweight, hybrid Python library for extracting stock tickers and company names from messy social media text (Reddit, Twitter, etc.).
@@ -65,7 +62,7 @@ print(tickers) # ['PLAB'] (TSMC needs AI mapping)
 
 ## Model Training 🧠
 
-The GLiNER2 adapter behind `recognize_ai()` — scraping, labeling policy, training, and benchmarking — lives in the sibling [`stock-recognizer-model`](https://github.com/StephanAkkerman/stock-recognizer-model) repo. `StockRecognizer(use_ai=True)` fetches the trained adapter automatically from [`StephanAkkerman/stock-recognizer-model`](https://huggingface.co/StephanAkkerman/stock-recognizer-model) on the Hugging Face Hub (pass `adapter_path=` to use a local adapter instead, or `adapter_revision=` to pin a different published version).
+The GLiNER2 adapter behind `recognize_ai()` — scraping, labeling policy, training, and benchmarking — lives in the sibling [`stock-recognizer-model`](https://github.com/StephanAkkerman/stock-recognizer-model) repo. `StockRecognizer()` (`use_ai=True` by default) fetches the trained adapter automatically from [`StephanAkkerman/stock-recognizer-model`](https://huggingface.co/StephanAkkerman/stock-recognizer-model) on the Hugging Face Hub (pass `adapter_path=` to use a local adapter instead, or `adapter_revision=` to pin a different published version).
 
 ---
 
