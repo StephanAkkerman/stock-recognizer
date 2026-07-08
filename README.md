@@ -12,7 +12,7 @@
 
 ## Introduction
 
-A lightweight, hybrid Python library for extracting stock tickers and company names from messy social media text (Reddit, Twitter, etc.).
+A hybrid Python library for extracting stock tickers and company names from messy social media text (Reddit, Twitter, etc.) — fast regex + market-data matching, with a GLiNER2 AI model layered on by default for higher recall. Pass `use_ai=False` for a lightweight, dependency-light instance when you only need the regex path.
 
 The goal is to answer **"what stocks is this post talking about?"** — `recognize()` returns a deduplicated **set** of tickers per text. A symbol mentioned once or twenty times yields the same result; the focus is coverage of *which* tickers appear, not counting every occurrence. Accuracy is measured the same way (set-based, deduplicated per document), so a ticker only needs to be caught once to count as found.
 

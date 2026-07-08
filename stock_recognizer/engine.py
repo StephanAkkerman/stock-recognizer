@@ -32,7 +32,6 @@ class StockRecognizer:
         adapter_path=None,
         adapter_revision=DEFAULT_ADAPTER_REVISION,
     ):
-        print("Initializing Market Intelligence v0.1.7...")
         equities = fd.Equities()
 
         exchanges = set(US_MAJOR_EXCHANGES)
@@ -119,7 +118,9 @@ class StockRecognizer:
                     resolved_adapter_path = None
 
             if resolved_adapter_path and os.path.exists(resolved_adapter_path):
-                self.logger.info(f"Loading LoRA adapter from {resolved_adapter_path}...")
+                self.logger.info(
+                    f"Loading LoRA adapter from {resolved_adapter_path}..."
+                )
                 self.extractor.load_adapter(resolved_adapter_path)
 
             # 3. Store the label descriptions — must match ENTITY_DESCRIPTIONS in train.py
