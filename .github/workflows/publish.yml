@@ -44,29 +44,50 @@ jobs:
                       if "version" in project:
                           return project["version"]
 
-                      attr = pyproject["tool"]["setuptools"]["dynamic"]["version"]["attr"]
-                      module, _, name = attr.rpartition(".")
-                      parts = module.split(".")
-                      for base in (pathlib.Path(), pathlib.Path("src")):
-                          path = base.joinpath(*parts).with_suffix(".py")
-                          if not path.exists():
-                              path = base.joinpath(*parts) / "__init__.py"
-                          if path.exists():
-                              break
-                      else:
-                          raise SystemExit(f"Could not locate module for {attr!r}")
+                      tool = pyproject.get("tool", {})
 
+                      # setuptools: [tool.setuptools.dynamic] version = {attr = "pkg.mod.__version__"}
+                      attr = (
+                          tool.get("setuptools", {})
+                          .get("dynamic", {})
+                          .get("version", {})
+                          .get("attr")
+                      )
+                      if attr:
+                          module, _, name = attr.rpartition(".")
+                          parts = module.split(".")
+                          for base in (pathlib.Path(), pathlib.Path("src")):
+                              path = base.joinpath(*parts).with_suffix(".py")
+                              if not path.exists():
+                                  path = base.joinpath(*parts) / "__init__.py"
+                              if path.exists():
+                                  break
+                          else:
+                              raise SystemExit(f"Could not locate module for {attr!r}")
+                          return read_literal(path, name)
+
+                      # hatchling: [tool.hatch.version] path = "src/pkg/_version.py"
+                      hatch_path = tool.get("hatch", {}).get("version", {}).get("path")
+                      if hatch_path:
+                          return read_literal(pathlib.Path(hatch_path), "__version__")
+
+                      raise SystemExit(
+                          "pyproject declares a dynamic version but neither "
+                          "[tool.setuptools.dynamic] nor [tool.hatch.version] says where to read it"
+                      )
+
+                  def read_literal(path: pathlib.Path, name: str) -> str:
                       # Read it statically: importing would need the package's
                       # dependencies installed just to learn a string.
+                      if not path.exists():
+                          raise SystemExit(f"Version file not found: {path}")
                       for node in ast.parse(path.read_text(encoding="utf-8")).body:
                           if isinstance(node, ast.Assign) and isinstance(
                               node.value, ast.Constant
                           ):
-                              if any(
-                                  getattr(t, "id", None) == name for t in node.targets
-                              ):
+                              if any(getattr(t, "id", None) == name for t in node.targets):
                                   return node.value.value
-                      raise SystemExit(f"Could not resolve {attr!r} in {path}")
+                      raise SystemExit(f"Could not resolve {name!r} in {path}")
 
                   tag = os.environ["RELEASE_TAG"].strip()
                   tag_version = tag[1:] if tag.startswith("v") else tag
