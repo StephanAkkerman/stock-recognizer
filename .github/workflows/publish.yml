@@ -26,20 +26,55 @@ jobs:
                   RELEASE_TAG: ${{ github.ref_name }}
               run: |
                   python - <<'PY'
+                  import ast
                   import os
+                  import pathlib
                   import tomllib
+
+                  # Resolves the version whether pyproject declares it inline
+                  # or reads it from the package via [tool.setuptools.dynamic].
+                  # Single-sourcing the version is what stops a release from
+                  # needing two edits, and this keeps one workflow usable in
+                  # repos that have made that move and repos that have not.
+                  def project_version() -> str:
+                      with open("pyproject.toml", "rb") as f:
+                          pyproject = tomllib.load(f)
+
+                      project = pyproject["project"]
+                      if "version" in project:
+                          return project["version"]
+
+                      attr = pyproject["tool"]["setuptools"]["dynamic"]["version"]["attr"]
+                      module, _, name = attr.rpartition(".")
+                      parts = module.split(".")
+                      for base in (pathlib.Path(), pathlib.Path("src")):
+                          path = base.joinpath(*parts).with_suffix(".py")
+                          if not path.exists():
+                              path = base.joinpath(*parts) / "__init__.py"
+                          if path.exists():
+                              break
+                      else:
+                          raise SystemExit(f"Could not locate module for {attr!r}")
+
+                      # Read it statically: importing would need the package's
+                      # dependencies installed just to learn a string.
+                      for node in ast.parse(path.read_text(encoding="utf-8")).body:
+                          if isinstance(node, ast.Assign) and isinstance(
+                              node.value, ast.Constant
+                          ):
+                              if any(
+                                  getattr(t, "id", None) == name for t in node.targets
+                              ):
+                                  return node.value.value
+                      raise SystemExit(f"Could not resolve {attr!r} in {path}")
 
                   tag = os.environ["RELEASE_TAG"].strip()
                   tag_version = tag[1:] if tag.startswith("v") else tag
+                  version = project_version()
 
-                  with open("pyproject.toml", "rb") as f:
-                      pyproject = tomllib.load(f)
-
-                  project_version = pyproject["project"]["version"]
-
-                  if tag_version != project_version:
+                  if tag_version != version:
                       raise SystemExit(
-                          f"Release tag version '{tag_version}' does not match pyproject version '{project_version}'."
+                          f"Release tag version '{tag_version}' does not match package version '{version}'."
                       )
 
                   print(f"Version check passed: {tag_version}")
