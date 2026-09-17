@@ -1,6 +1,6 @@
 [project]
 name = "stock-recognizer"
-version = "0.2.0"
+dynamic = ["version"]
 authors = [{ name="Stephan Akkerman", email="stephan@akkerman.ai" }]
 description = "High-precision stock ticker and company recognition for social media."
 readme = "README.md"
@@ -20,6 +20,11 @@ build-backend = "setuptools.build_meta"
 
 [project.urls]
 "Homepage" = "https://github.com/StephanAkkerman/stock-recognizer"
+
+# Single source of truth for the version: the package's `_version.py`.
+# A release bumps that one literal; this reads it, so the two cannot drift.
+[tool.setuptools.dynamic]
+version = { attr = "stock_recognizer._version.__version__" }
 
 [tool.setuptools.packages.find]
 where = ["."]

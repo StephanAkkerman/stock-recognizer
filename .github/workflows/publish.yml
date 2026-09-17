@@ -26,20 +26,76 @@ jobs:
                   RELEASE_TAG: ${{ github.ref_name }}
               run: |
                   python - <<'PY'
+                  import ast
                   import os
+                  import pathlib
                   import tomllib
+
+                  # Resolves the version whether pyproject declares it inline
+                  # or reads it from the package via [tool.setuptools.dynamic].
+                  # Single-sourcing the version is what stops a release from
+                  # needing two edits, and this keeps one workflow usable in
+                  # repos that have made that move and repos that have not.
+                  def project_version() -> str:
+                      with open("pyproject.toml", "rb") as f:
+                          pyproject = tomllib.load(f)
+
+                      project = pyproject["project"]
+                      if "version" in project:
+                          return project["version"]
+
+                      tool = pyproject.get("tool", {})
+
+                      # setuptools: [tool.setuptools.dynamic] version = {attr = "pkg.mod.__version__"}
+                      attr = (
+                          tool.get("setuptools", {})
+                          .get("dynamic", {})
+                          .get("version", {})
+                          .get("attr")
+                      )
+                      if attr:
+                          module, _, name = attr.rpartition(".")
+                          parts = module.split(".")
+                          for base in (pathlib.Path(), pathlib.Path("src")):
+                              path = base.joinpath(*parts).with_suffix(".py")
+                              if not path.exists():
+                                  path = base.joinpath(*parts) / "__init__.py"
+                              if path.exists():
+                                  break
+                          else:
+                              raise SystemExit(f"Could not locate module for {attr!r}")
+                          return read_literal(path, name)
+
+                      # hatchling: [tool.hatch.version] path = "src/pkg/_version.py"
+                      hatch_path = tool.get("hatch", {}).get("version", {}).get("path")
+                      if hatch_path:
+                          return read_literal(pathlib.Path(hatch_path), "__version__")
+
+                      raise SystemExit(
+                          "pyproject declares a dynamic version but neither "
+                          "[tool.setuptools.dynamic] nor [tool.hatch.version] says where to read it"
+                      )
+
+                  def read_literal(path: pathlib.Path, name: str) -> str:
+                      # Read it statically: importing would need the package's
+                      # dependencies installed just to learn a string.
+                      if not path.exists():
+                          raise SystemExit(f"Version file not found: {path}")
+                      for node in ast.parse(path.read_text(encoding="utf-8")).body:
+                          if isinstance(node, ast.Assign) and isinstance(
+                              node.value, ast.Constant
+                          ):
+                              if any(getattr(t, "id", None) == name for t in node.targets):
+                                  return node.value.value
+                      raise SystemExit(f"Could not resolve {name!r} in {path}")
 
                   tag = os.environ["RELEASE_TAG"].strip()
                   tag_version = tag[1:] if tag.startswith("v") else tag
+                  version = project_version()
 
-                  with open("pyproject.toml", "rb") as f:
-                      pyproject = tomllib.load(f)
-
-                  project_version = pyproject["project"]["version"]
-
-                  if tag_version != project_version:
+                  if tag_version != version:
                       raise SystemExit(
-                          f"Release tag version '{tag_version}' does not match pyproject version '{project_version}'."
+                          f"Release tag version '{tag_version}' does not match package version '{version}'."
                       )
 
                   print(f"Version check passed: {tag_version}")

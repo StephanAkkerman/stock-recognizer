@@ -1,4 +1,4 @@
+from ._version import __version__
 from .engine import StockRecognizer
 
-__version__ = "0.2.0"
-__all__ = ["StockRecognizer"]
+__all__ = ["StockRecognizer", "__version__"]
