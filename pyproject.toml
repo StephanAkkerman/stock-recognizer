@@ -9,6 +9,10 @@ dependencies = [
     "financedatabase>=2.2.0",
     "pandas",
     "gliner2",
+    # gliner2 2.x imports peft to load LoRA adapters but only declares it in
+    # its `local` extra, which also caps transformers<5; depend on it directly
+    # instead of on gliner2[local] so transformers 5 stays installable.
+    "peft>=0.10,<1",
     "transformers",
     "torch",
     "huggingface_hub"
