@@ -1,3 +1,9 @@
-financedatabase
+financedatabase>=2.2.0
 pandas
-gliner2[local]
+# Not gliner2[local]: that extra caps transformers<5. peft is what it adds that
+# gliner2 needs at import time (see pyproject.toml).
+gliner2
+peft>=0.10,<1
+transformers
+torch
+huggingface_hub
